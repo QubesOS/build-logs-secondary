@@ -1,0 +1,471 @@
+2023-05-11 20:45:21.224865 +0000 > starting log
+2023-05-11 20:45:21.226236 +0000 build-ubuntu42: > starting build with log
+2023-05-11 20:45:21.226260 +0000 build-ubuntu42: >> args:
+2023-05-11 20:45:21.226273 +0000 build-ubuntu42: >>   ()
+2023-05-11 20:45:21.226283 +0000 build-ubuntu42: >> component:
+2023-05-11 20:45:21.226292 +0000 build-ubuntu42: >>   linux-kernel
+2023-05-11 20:45:21.226301 +0000 build-ubuntu42: >> distributions:
+2023-05-11 20:45:21.226313 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-05-11 20:45:54.176184 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2382 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-11 20:45:54.578559 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2382 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-11 20:45:55.064913 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2382 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-11 20:45:55.653280 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp2382 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component linux-kernel --git-branch stable-6.1 --git-url https://github.com/QubesOS/qubes-linux-kernel.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only''.
+2023-05-11 20:45:56.051257 +0000 build-ubuntu42: output: + unset CLEAN
+2023-05-11 20:45:56.051317 +0000 build-ubuntu42: output: + CLEAN=0
+2023-05-11 20:45:56.051350 +0000 build-ubuntu42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-05-11 20:45:56.051394 +0000 build-ubuntu42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component linux-kernel --git-branch stable-6.1 --git-url https://github.com/QubesOS/qubes-linux-kernel.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only
+2023-05-11 20:45:56.063154 +0000 build-ubuntu42: output: + OPTS=' --component '\''linux-kernel'\'' --git-branch '\''stable-6.1'\'' --git-url '\''https://github.com/QubesOS/qubes-linux-kernel.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-11 20:45:56.063228 +0000 build-ubuntu42: output: + eval set -- ' --component '\''linux-kernel'\'' --git-branch '\''stable-6.1'\'' --git-url '\''https://github.com/QubesOS/qubes-linux-kernel.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-11 20:45:56.063257 +0000 build-ubuntu42: output: ++ set -- --component linux-kernel --git-branch stable-6.1 --git-url https://github.com/QubesOS/qubes-linux-kernel.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only --
+2023-05-11 20:45:56.063272 +0000 build-ubuntu42: output: + [[ 12 -gt 0 ]]
+2023-05-11 20:45:56.063283 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:45:56.063294 +0000 build-ubuntu42: output: + COMPONENT=linux-kernel
+2023-05-11 20:45:56.063303 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.063311 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.063319 +0000 build-ubuntu42: output: + [[ 10 -gt 0 ]]
+2023-05-11 20:45:56.063327 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:45:56.063335 +0000 build-ubuntu42: output: + BRANCH=stable-6.1
+2023-05-11 20:45:56.063343 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.063374 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.063384 +0000 build-ubuntu42: output: + [[ 8 -gt 0 ]]
+2023-05-11 20:45:56.066210 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:45:56.066262 +0000 build-ubuntu42: output: + GIT_URL=https://github.com/QubesOS/qubes-linux-kernel.git
+2023-05-11 20:45:56.066276 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066287 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066298 +0000 build-ubuntu42: output: + [[ 6 -gt 0 ]]
+2023-05-11 20:45:56.066307 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:45:56.066317 +0000 build-ubuntu42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-05-11 20:45:56.066326 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066333 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066341 +0000 build-ubuntu42: output: + [[ 4 -gt 0 ]]
+2023-05-11 20:45:56.066349 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:45:56.066359 +0000 build-ubuntu42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-05-11 20:45:56.066367 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066374 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066382 +0000 build-ubuntu42: output: + [[ 2 -gt 0 ]]
+2023-05-11 20:45:56.066390 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:45:56.066398 +0000 build-ubuntu42: output: + FETCH_VERSIONS_ONLY=1
+2023-05-11 20:45:56.066410 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066419 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-11 20:45:56.066427 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:45:56.066435 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:45:56.066443 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-11 20:45:56.066451 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-11 20:45:56.066458 +0000 build-ubuntu42: output: -]*$ ]]
+2023-05-11 20:45:56.066466 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-11 20:45:56.066507 +0000 build-ubuntu42: output: -]*$ ]]
+2023-05-11 20:45:56.066516 +0000 build-ubuntu42: output: + [[ -n linux-kernel ]]
+2023-05-11 20:45:56.066523 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-11 20:45:56.066531 +0000 build-ubuntu42: output: + REPO=linux-kernel
+2023-05-11 20:45:56.066540 +0000 build-ubuntu42: output: + '[' -z /builder/keyring ']'
+2023-05-11 20:45:56.066548 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-11 20:45:56.066555 +0000 build-ubuntu42: output: + GIT_SUFFIX=.git
+2023-05-11 20:45:56.066563 +0000 build-ubuntu42: output: + '[' -z stable-6.1 ']'
+2023-05-11 20:45:56.066571 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-11 20:45:56.066580 +0000 build-ubuntu42: output: + '[' -z https://github.com/QubesOS/qubes-linux-kernel.git ']'
+2023-05-11 20:45:56.066589 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-11 20:45:56.066597 +0000 build-ubuntu42: output: + case ${IGNORE_MISSING=0} in
+2023-05-11 20:45:56.066604 +0000 build-ubuntu42: output: + :
+2023-05-11 20:45:56.066612 +0000 build-ubuntu42: output: + case ${GIT_CLONE_FAST=0} in
+2023-05-11 20:45:56.066619 +0000 build-ubuntu42: output: + :
+2023-05-11 20:45:56.066627 +0000 build-ubuntu42: output: + GIT_OPTIONS=()
+2023-05-11 20:45:56.066634 +0000 build-ubuntu42: output: + [[ 0 = \1 ]]
+2023-05-11 20:45:56.066642 +0000 build-ubuntu42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-05-11 20:45:56.066652 +0000 build-ubuntu42: output: + [[ stable-6.1 =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-05-11 20:45:56.072025 +0000 build-ubuntu42: output: + [[ linux-kernel =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-05-11 20:45:56.072087 +0000 build-ubuntu42: output: + trap exit_clean 0 1 2 3 6 15
+2023-05-11 20:45:56.072107 +0000 build-ubuntu42: output: + fresh_clone=false
+2023-05-11 20:45:56.072121 +0000 build-ubuntu42: output: + [[ '' = \1 ]]
+2023-05-11 20:45:56.072133 +0000 build-ubuntu42: output: + [[ -d linux-kernel ]]
+2023-05-11 20:45:56.072144 +0000 build-ubuntu42: output: + rm -f -- linux-kernel
+2023-05-11 20:45:56.072154 +0000 build-ubuntu42: output: + print_headers
+2023-05-11 20:45:56.072190 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-11 20:45:56.072205 +0000 build-ubuntu42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-linux-kernel.git stable-6.1'
+2023-05-11 20:45:56.072217 +0000 build-ubuntu42: output: + echo '-> Updating sources for linux-kernel...'
+2023-05-11 20:45:56.072229 +0000 build-ubuntu42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-linux-kernel.git stable-6.1...'
+2023-05-11 20:45:56.072242 +0000 build-ubuntu42: output: + git clone -n -q -b stable-6.1 https://github.com/QubesOS/qubes-linux-kernel.git linux-kernel
+2023-05-11 20:45:56.072252 +0000 build-ubuntu42: output: -> Updating sources for linux-kernel...
+2023-05-11 20:45:56.072263 +0000 build-ubuntu42: output: --> Fetching from https://github.com/QubesOS/qubes-linux-kernel.git stable-6.1...
+2023-05-11 20:46:48.417689 +0000 build-ubuntu42: output: + '[' 1 == 1 ']'
+2023-05-11 20:46:48.427262 +0000 build-ubuntu42: output: ++ git -C linux-kernel describe '--match=v*' --abbrev=0 HEAD
+2023-05-11 20:46:48.427316 +0000 build-ubuntu42: output: + vtag=v6.1.26-1
+2023-05-11 20:46:48.427335 +0000 build-ubuntu42: output: + '[' -n v6.1.26-1 ']'
+2023-05-11 20:46:48.427348 +0000 build-ubuntu42: output: + VERIFY_REF='v6.1.26-1^{commit}'
+2023-05-11 20:46:48.427357 +0000 build-ubuntu42: output: + fresh_clone=:
+2023-05-11 20:46:48.427367 +0000 build-ubuntu42: output: + export CHECK=signed-tag
+2023-05-11 20:46:48.427375 +0000 build-ubuntu42: output: + CHECK=signed-tag
+2023-05-11 20:46:48.427383 +0000 build-ubuntu42: output: + verify=true
+2023-05-11 20:46:48.427392 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-11 20:46:48.427399 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-11 20:46:48.427410 +0000 build-ubuntu42: output: ++ git -C linux-kernel rev-parse -q --verify 'v6.1.26-1^{commit}'
+2023-05-11 20:46:48.427427 +0000 build-ubuntu42: output: + VERIFY_REF=b5cdf3609acec4d7b7f48c37e32ac77204063c1d
+2023-05-11 20:46:48.427436 +0000 build-ubuntu42: output: + '[' true = false ']'
+2023-05-11 20:46:48.427446 +0000 build-ubuntu42: output: + [[ signed-tag == \s\i\g\n\e\d\-\t\a\g\-\o\r\-\c\o\m\m\i\t ]]
+2023-05-11 20:46:48.427455 +0000 build-ubuntu42: output: + echo '--> Verifying tags...'
+2023-05-11 20:46:48.427463 +0000 build-ubuntu42: output: ++ readlink -m /builder/keyring
+2023-05-11 20:46:48.427497 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-05-11 20:46:48.449817 +0000 build-ubuntu42: output: + GNUPGHOME=/builder/keyring
+2023-05-11 20:46:48.449871 +0000 build-ubuntu42: output: + export GNUPGHOME
+2023-05-11 20:46:48.449888 +0000 build-ubuntu42: output: + '[' '!' -d /builder/keyring ']'
+2023-05-11 20:46:48.449899 +0000 build-ubuntu42: output: + mkdir -p /builder/keyring
+2023-05-11 20:46:48.449909 +0000 build-ubuntu42: output: + chmod 700 /builder/keyring
+2023-05-11 20:46:48.462114 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-05-11 20:46:48.513711 +0000 build-ubuntu42: output: gpg: keybox '/builder/keyring/pubring.kbx' created
+2023-05-11 20:46:48.551800 +0000 build-ubuntu42: output: gpg: /builder/keyring/trustdb.gpg: trustdb created
+2023-05-11 20:46:48.551867 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: public key "Qubes Master Signing Key" imported
+2023-05-11 20:46:48.564746 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: public key "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" imported
+2023-05-11 20:46:48.576422 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: public key "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" imported
+2023-05-11 20:46:48.578943 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-05-11 20:46:48.579000 +0000 build-ubuntu42: output: gpg:               imported: 3
+2023-05-11 20:46:48.579016 +0000 build-ubuntu42: output: gpg: no ultimately trusted keys found
+2023-05-11 20:46:48.589989 +0000 build-ubuntu42: output: + gpg --import-ownertrust
+2023-05-11 20:46:48.590068 +0000 build-ubuntu42: output: + echo 427F11FD0FAA4B080123F01CDDFA1A3E36879494:6:
+2023-05-11 20:46:48.590087 +0000 build-ubuntu42: output: gpg: inserting ownertrust of 6
+2023-05-11 20:46:48.590102 +0000 build-ubuntu42: output: + '[' /builder/plugins/fetch/keys/qubes-developers-keys.asc -nt /builder/keyring/pubring.gpg ']'
+2023-05-11 20:46:48.590116 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-05-11 20:46:48.590135 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: "Qubes Master Signing Key" not changed
+2023-05-11 20:46:48.590149 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" not changed
+2023-05-11 20:46:48.590165 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" not changed
+2023-05-11 20:46:48.590183 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-05-11 20:46:48.590193 +0000 build-ubuntu42: output: gpg:              unchanged: 3
+2023-05-11 20:46:48.590202 +0000 build-ubuntu42: output: + touch /builder/keyring/pubring.gpg
+2023-05-11 20:46:48.590211 +0000 build-ubuntu42: output: + gpgconf --kill gpg-agent
+2023-05-11 20:46:48.607377 +0000 build-ubuntu42: output: + pushd linux-kernel
+2023-05-11 20:46:48.607436 +0000 build-ubuntu42: output: + expected_hash=b5cdf3609acec4d7b7f48c37e32ac77204063c1d
+2023-05-11 20:46:48.607455 +0000 build-ubuntu42: output: + hash_len=40
+2023-05-11 20:46:48.607495 +0000 build-ubuntu42: output: + '[' 40 -ne 40 ']'
+2023-05-11 20:46:48.607512 +0000 build-ubuntu42: output: + [[ b5cdf3609acec4d7b7f48c37e32ac77204063c1d =~ ^[a-f0-9]+$ ]]
+2023-05-11 20:46:48.607526 +0000 build-ubuntu42: output: + format='%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-05-11 20:46:48.609606 +0000 build-ubuntu42: output: ++ head -c 500
+2023-05-11 20:46:48.609666 +0000 build-ubuntu42: output: ++ git tag --points-at=b5cdf3609acec4d7b7f48c37e32ac77204063c1d '--format=%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-05-11 20:46:48.642050 +0000 build-ubuntu42: output: + tags=f1b8630bc8862e361c961add6097955feb34194b:b5cdf3609acec4d7b7f48c37e32ac77204063c1d:
+2023-05-11 20:46:48.642110 +0000 build-ubuntu42: output: + for tag in $tags
+2023-05-11 20:46:48.642128 +0000 build-ubuntu42: output: + (( 82 != hash_len * 2 + 2 ))
+2023-05-11 20:46:48.642147 +0000 build-ubuntu42: output: + [[ :b5cdf3609acec4d7b7f48c37e32ac77204063c1d: == \:\b\5\c\d\f\3\6\0\9\a\c\e\c\4\d\7\b\7\f\4\8\c\3\7\e\3\2\a\c\7\7\2\0\4\0\6\3\c\1\d\: ]]
+2023-05-11 20:46:48.642161 +0000 build-ubuntu42: output: + tag=f1b8630bc8862e361c961add6097955feb34194b
+2023-05-11 20:46:48.642172 +0000 build-ubuntu42: output: + verify_git_obj tag f1b8630bc8862e361c961add6097955feb34194b
+2023-05-11 20:46:48.642182 +0000 build-ubuntu42: output: + local content newsig_number
+2023-05-11 20:46:48.642195 +0000 build-ubuntu42: output: ++ git -c gpg.program=gpg -c gpg.minTrustLevel=fully verify-tag --raw -- f1b8630bc8862e361c961add6097955feb34194b
+2023-05-11 20:46:48.652171 +0000 build-ubuntu42: output: + content='[GNUPG:] NEWSIG
+2023-05-11 20:46:48.652229 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.652246 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID Y4UWdSWZmL8hyp5q4OP/G0hFsFw 2023-04-28 1682694412
+2023-05-11 20:46:48.652259 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.652271 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.652282 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.652293 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.652306 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-11 20:46:48.652343 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-04-28 1682694412 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-11 20:46:48.652357 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.652367 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-11 20:46:48.653453 +0000 build-ubuntu42: output: ++ printf '%s\n' '[GNUPG:] NEWSIG
+2023-05-11 20:46:48.653522 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.653538 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID Y4UWdSWZmL8hyp5q4OP/G0hFsFw 2023-04-28 1682694412
+2023-05-11 20:46:48.653550 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.653562 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.653573 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.653583 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.653595 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-11 20:46:48.653610 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-04-28 1682694412 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-11 20:46:48.653622 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.653630 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-11 20:46:48.653638 +0000 build-ubuntu42: output: ++ grep -c '^\[GNUPG:] NEWSIG'
+2023-05-11 20:46:48.664418 +0000 build-ubuntu42: output: + newsig_number=1
+2023-05-11 20:46:48.664465 +0000 build-ubuntu42: output: + '[' 1 = 1 ']'
+2023-05-11 20:46:48.664513 +0000 build-ubuntu42: output: + printf '%s\n' '[GNUPG:] NEWSIG
+2023-05-11 20:46:48.664525 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.664536 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID Y4UWdSWZmL8hyp5q4OP/G0hFsFw 2023-04-28 1682694412
+2023-05-11 20:46:48.664546 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.664555 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.664564 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.664574 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-11 20:46:48.664585 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-11 20:46:48.664599 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-04-28 1682694412 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-11 20:46:48.664610 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-11 20:46:48.664618 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-11 20:46:48.664627 +0000 build-ubuntu42: output: ---> Good tag f1b8630bc8862e361c961add6097955feb34194b
+2023-05-11 20:46:48.669437 +0000 build-ubuntu42: output: + grep '^\[GNUPG:] TRUST_\(FULLY\|ULTIMATE\) 0 pgp\>'
+2023-05-11 20:46:48.669523 +0000 build-ubuntu42: output: + echo '---> Good tag f1b8630bc8862e361c961add6097955feb34194b'
+2023-05-11 20:46:48.669542 +0000 build-ubuntu42: output: + '[' -z x ']'
+2023-05-11 20:46:48.669555 +0000 build-ubuntu42: output: + popd
+2023-05-11 20:46:48.669589 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-11 20:46:48.669604 +0000 build-ubuntu42: output: + pushd linux-kernel
+2023-05-11 20:46:48.669615 +0000 build-ubuntu42: output: ++ exec git rev-parse --abbrev-ref HEAD
+2023-05-11 20:46:48.669625 +0000 build-ubuntu42: output: + CURRENT_BRANCH=stable-6.1
+2023-05-11 20:46:48.669635 +0000 build-ubuntu42: output: + '[' stable-6.1 '!=' stable-6.1 ']'
+2023-05-11 20:46:48.669642 +0000 build-ubuntu42: output: + :
+2023-05-11 20:46:48.669650 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-11 20:46:48.669658 +0000 build-ubuntu42: output: + red='.[1;31m'
+2023-05-11 20:46:48.669667 +0000 build-ubuntu42: output: + green='.[1;32m'
+2023-05-11 20:46:48.669674 +0000 build-ubuntu42: output: + normal='.[0;0m'
+2023-05-11 20:46:48.669683 +0000 build-ubuntu42: output: ++ git name-rev --name-only stable-6.1
+2023-05-11 20:46:48.707265 +0000 build-ubuntu42: output: --> Switching branch from stable-6.1 branch to .[1;32mstable-6.1.[0;0m
+2023-05-11 20:46:48.713200 +0000 build-ubuntu42: output: Your branch is up to date with 'origin/stable-6.1'.
+2023-05-11 20:46:48.713795 +0000 build-ubuntu42: output: --> Updating submodules
+2023-05-11 20:46:48.717374 +0000 build-ubuntu42: output: + '[' -n 'tags/v6.1.26-1^0' ']'
+2023-05-11 20:46:48.717430 +0000 build-ubuntu42: output: + echo '--> Switching branch from stable-6.1 branch to .[1;32mstable-6.1.[0;0m'
+2023-05-11 20:46:48.717448 +0000 build-ubuntu42: output: + :
+2023-05-11 20:46:48.717464 +0000 build-ubuntu42: output: + git checkout -B stable-6.1 b5cdf3609acec4d7b7f48c37e32ac77204063c1d
+2023-05-11 20:46:48.717503 +0000 build-ubuntu42: output: Reset branch 'stable-6.1'
+2023-05-11 20:46:48.717513 +0000 build-ubuntu42: output: + :
+2023-05-11 20:46:48.717523 +0000 build-ubuntu42: output: + '[' -e .gitmodules ']'
+2023-05-11 20:46:48.717532 +0000 build-ubuntu42: output: + echo -e '--> Updating submodules'
+2023-05-11 20:46:48.717541 +0000 build-ubuntu42: output: + git submodule init
+2023-05-11 20:46:48.750962 +0000 build-ubuntu42: output: Submodule 'dummy-backlight' (https://github.com/QubesOS/qubes-dummy-backlight) registered for path 'dummy-backlight'
+2023-05-11 20:46:48.751020 +0000 build-ubuntu42: output: Submodule 'dummy-psu' (https://github.com/QubesOS/qubes-dummy-psu) registered for path 'dummy-psu'
+2023-05-11 20:46:48.751890 +0000 build-ubuntu42: output: Submodule 'linux-utils' (https://github.com/QubesOS/qubes-linux-utils.git) registered for path 'linux-utils'
+2023-05-11 20:46:48.756429 +0000 build-ubuntu42: output: Submodule 'v4l2loopback' (https://github.com/umlaeute/v4l2loopback) registered for path 'v4l2loopback'
+2023-05-11 20:46:48.757038 +0000 build-ubuntu42: output: + git submodule update --recursive
+2023-05-11 20:46:48.785617 +0000 build-ubuntu42: output: Cloning into '/builder/linux-kernel/dummy-backlight'...
+2023-05-11 20:46:50.521524 +0000 build-ubuntu42: output: Cloning into '/builder/linux-kernel/dummy-psu'...
+2023-05-11 20:46:52.454042 +0000 build-ubuntu42: output: Cloning into '/builder/linux-kernel/linux-utils'...
+2023-05-11 20:46:55.845204 +0000 build-ubuntu42: output: Cloning into '/builder/linux-kernel/v4l2loopback'...
+2023-05-11 20:46:58.503994 +0000 build-ubuntu42: output: Submodule path 'dummy-backlight': checked out '33420931ad20f1e3edc805d0db89da2a73c044cb'
+2023-05-11 20:46:58.518280 +0000 build-ubuntu42: output: Submodule path 'dummy-psu': checked out '49475d88d94e079bda8212ddb8489f1654615047'
+2023-05-11 20:46:58.553791 +0000 build-ubuntu42: output: Submodule path 'linux-utils': checked out '97271bab41f588b0c9dc8cbcf3ff70bd775e1ec3'
+2023-05-11 20:46:58.569097 +0000 build-ubuntu42: output: Submodule path 'v4l2loopback': checked out '1ecf810f0d687b647caa3050ae30cf51b5902afd'
+2023-05-11 20:46:58.581613 +0000 build-ubuntu42: output: + popd
+2023-05-11 20:46:58.589882 +0000 build-ubuntu42: output: + exit_clean
+2023-05-11 20:46:58.589930 +0000 build-ubuntu42: output: + local exit_code=0
+2023-05-11 20:46:58.589943 +0000 build-ubuntu42: output: + '[' 0 -gt 0 ']'
+2023-05-11 20:46:58.589970 +0000 build-ubuntu42: output: + exit 0
+2023-05-11 20:46:58.592309 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2382 qubesbuilder.FileCopyOut+__builder__linux-kernel /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-05-11 20:47:29.015112 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2377 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-11 20:47:29.280130 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2377 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-11 20:47:29.697284 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2377 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-11 20:47:30.011442 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2377 bash -c 'rm -rf /builder/incoming/linux-kernel /builder/linux-kernel'
+2023-05-11 20:47:30.341342 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2377 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-kernel
+2023-05-11 20:47:33.425668 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2377 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-kernel /builder'
+2023-05-11 20:47:33.826216 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp2377 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-kernel --file-name linux-6.1.26.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign --uncompress''.
+2023-05-11 20:47:34.101306 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-11 20:47:34.101383 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-kernel --file-name linux-6.1.26.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign --uncompress
+2023-05-11 20:47:34.113107 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/linux-kernel'\'' --file-name '\''linux-6.1.26.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign'\'' --uncompress --'
+2023-05-11 20:47:34.113165 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/linux-kernel'\'' --file-name '\''linux-6.1.26.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign'\'' --uncompress --'
+2023-05-11 20:47:34.113188 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/linux-kernel --file-name linux-6.1.26.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign --uncompress --
+2023-05-11 20:47:34.113451 +0000 build-ubuntu42: output: + [[ 10 -gt 0 ]]
+2023-05-11 20:47:34.113473 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:47:34.113484 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/linux-kernel
+2023-05-11 20:47:34.113493 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.113525 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.113534 +0000 build-ubuntu42: output: + [[ 8 -gt 0 ]]
+2023-05-11 20:47:34.113542 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:47:34.113550 +0000 build-ubuntu42: output: + FILE_NAME=linux-6.1.26.tar.xz
+2023-05-11 20:47:34.113558 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.113589 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.113599 +0000 build-ubuntu42: output: + [[ 6 -gt 0 ]]
+2023-05-11 20:47:34.113767 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:47:34.113793 +0000 build-ubuntu42: output: + FILE_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz
+2023-05-11 20:47:34.113803 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.113811 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.114228 +0000 build-ubuntu42: output: + [[ 4 -gt 0 ]]
+2023-05-11 20:47:34.114396 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:47:34.114419 +0000 build-ubuntu42: output: + SIGNATURE_URL=https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign
+2023-05-11 20:47:34.114428 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.114436 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.114443 +0000 build-ubuntu42: output: + [[ 2 -gt 0 ]]
+2023-05-11 20:47:34.114591 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:47:34.114610 +0000 build-ubuntu42: output: + UNCOMPRESS=1
+2023-05-11 20:47:34.114619 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.114626 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:47:34.114634 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-11 20:47:34.114787 +0000 build-ubuntu42: output: + '[' -z https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz ']'
+2023-05-11 20:47:34.114809 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-11 20:47:34.114820 +0000 build-ubuntu42: output: + '[' -z linux-6.1.26.tar.xz ']'
+2023-05-11 20:47:34.114831 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-6.1.26.tar.xz
+2023-05-11 20:47:34.114839 +0000 build-ubuntu42: output: + '[' -n /builder/linux-kernel ']'
+2023-05-11 20:47:34.115039 +0000 build-ubuntu42: output: + mkdir -p /builder/linux-kernel
+2023-05-11 20:47:34.115062 +0000 build-ubuntu42: output: + cd /builder/linux-kernel
+2023-05-11 20:47:34.115078 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-6.1.26.tar.xz -- https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.xz
+2023-05-11 20:48:21.913029 +0000 build-ubuntu42: output: + '[' 1 == 1 ']'
+2023-05-11 20:48:21.913088 +0000 build-ubuntu42: output: + '[' linux-6.1.26.tar.xz '!=' linux-6.1.26.tar.xz ']'
+2023-05-11 20:48:21.913105 +0000 build-ubuntu42: output: + '[' linux-6.1.26.tar '!=' linux-6.1.26.tar.xz ']'
+2023-05-11 20:48:21.913116 +0000 build-ubuntu42: output: + unxz untrusted_linux-6.1.26.tar.xz
+2023-05-11 20:48:41.245711 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-6.1.26.tar
+2023-05-11 20:48:41.245769 +0000 build-ubuntu42: output: + '[' -n https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign ']'
+2023-05-11 20:48:41.245788 +0000 build-ubuntu42: output: ++ basename https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign
+2023-05-11 20:48:41.254142 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=linux-6.1.26.tar.sign
+2023-05-11 20:48:41.254196 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-6.1.26.tar.sign
+2023-05-11 20:48:41.254220 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-6.1.26.tar.sign https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.26.tar.sign
+2023-05-11 20:48:42.130320 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2377 qubesbuilder.FileCopyOut+__builder__linux-kernel__untrusted_linux-6.1.26.tar /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp2wx7wct7
+2023-05-11 20:49:18.425432 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2377 qubesbuilder.FileCopyOut+__builder__linux-kernel__untrusted_linux-6.1.26.tar.sign /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp2wx7wct7
+2023-05-11 20:49:41.746563 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp2wx7wct7 --untrusted-file /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign --pubkey-file /home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc --pubkey-file /home/user/builder-r4.2/sources/linux-kernel/kernel.org-1-key.asc'.
+2023-05-11 20:49:41.754828 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-11 20:49:41.754917 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp2wx7wct7 --untrusted-file /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign --pubkey-file /home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc --pubkey-file /home/user/builder-r4.2/sources/linux-kernel/kernel.org-1-key.asc
+2023-05-11 20:49:41.754954 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp2wx7wct7'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/linux-kernel/kernel.org-1-key.asc'\'' --'
+2023-05-11 20:49:41.754985 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp2wx7wct7'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/linux-kernel/kernel.org-1-key.asc'\'' --'
+2023-05-11 20:49:41.755013 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp2wx7wct7 --untrusted-file /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign --pubkey-file /home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc --pubkey-file /home/user/builder-r4.2/sources/linux-kernel/kernel.org-1-key.asc --
+2023-05-11 20:49:41.755022 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-05-11 20:49:41.755030 +0000 build-ubuntu42: output: + [[ 11 -gt 0 ]]
+2023-05-11 20:49:41.755038 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:49:41.755048 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp2wx7wct7
+2023-05-11 20:49:41.755055 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.755063 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.755070 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-11 20:49:41.755078 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:49:41.755088 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar
+2023-05-11 20:49:41.755096 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.755103 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756603 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-11 20:49:41.756648 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:49:41.756664 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign
+2023-05-11 20:49:41.756674 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756702 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756712 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-11 20:49:41.756720 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:49:41.756728 +0000 build-ubuntu42: output: + PUBKEY_FILE+=("$2")
+2023-05-11 20:49:41.756735 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756742 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756749 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-11 20:49:41.756756 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:49:41.756764 +0000 build-ubuntu42: output: + PUBKEY_FILE+=("$2")
+2023-05-11 20:49:41.756771 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756778 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756785 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-11 20:49:41.756792 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-11 20:49:41.756799 +0000 build-ubuntu42: output: + shift
+2023-05-11 20:49:41.756806 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-11 20:49:41.756817 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar ']'
+2023-05-11 20:49:41.756827 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp2wx7wct7 ']'
+2023-05-11 20:49:41.756836 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp2wx7wct7
+2023-05-11 20:49:41.760646 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar
+2023-05-11 20:49:41.763593 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-6.1.26.tar
+2023-05-11 20:49:41.763647 +0000 build-ubuntu42: output: + FILE_NAME=linux-6.1.26.tar
+2023-05-11 20:49:41.763664 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-11 20:49:41.763680 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign ']'
+2023-05-11 20:49:41.763691 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-11 20:49:41.763704 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign ']'
+2023-05-11 20:49:41.763716 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc ']'
+2023-05-11 20:49:41.763728 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign ']'
+2023-05-11 20:49:41.763739 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign ']'
+2023-05-11 20:49:41.763749 +0000 build-ubuntu42: output: + '[' '!' -e /home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc ']'
+2023-05-11 20:49:41.763758 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-11 20:49:41.763768 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign ']'
+2023-05-11 20:49:41.763779 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc ']'
+2023-05-11 20:49:41.763789 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign
+2023-05-11 20:49:41.763799 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-6.1.26.tar.sign
+2023-05-11 20:49:41.763808 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=linux-6.1.26.tar.sign
+2023-05-11 20:49:41.763816 +0000 build-ubuntu42: output: ++ mktemp -u
+2023-05-11 20:49:41.766697 +0000 build-ubuntu42: output: + keyring=/tmp/tmp.vLU921apAy
+2023-05-11 20:49:41.766750 +0000 build-ubuntu42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-05-11 20:49:41.766773 +0000 build-ubuntu42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.vLU921apAy -q --import /home/user/builder-r4.2/sources/linux-kernel/kernel.org-2-key.asc
+2023-05-11 20:49:41.788171 +0000 build-ubuntu42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-05-11 20:49:41.788230 +0000 build-ubuntu42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.vLU921apAy -q --import /home/user/builder-r4.2/sources/linux-kernel/kernel.org-1-key.asc
+2023-05-11 20:49:41.793286 +0000 build-ubuntu42: output: + gpgv --keyring /tmp/tmp.vLU921apAy /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar
+2023-05-11 20:50:13.452887 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar.sign /home/user/builder-r4.2/tmp/tmp2wx7wct7/linux-6.1.26.tar.sign
+2023-05-11 20:50:13.452947 +0000 build-ubuntu42: output: + rm -rf /tmp/tmp.vLU921apAy
+2023-05-11 20:50:13.452969 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp2wx7wct7/untrusted_linux-6.1.26.tar /home/user/builder-r4.2/tmp/tmp2wx7wct7/linux-6.1.26.tar
+2023-05-11 20:51:03.782977 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2696 bash -c 'rm -rf /builder/incoming/linux-kernel /builder/linux-kernel'
+2023-05-11 20:51:20.196415 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2696 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-kernel
+2023-05-11 20:51:24.237876 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2696 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-kernel /builder'
+2023-05-11 20:51:24.560171 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp2696 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/linux-kernel/hash /builder/linux-kernel/vtags && cd /builder && git -C /builder/linux-kernel rev-parse '\''HEAD^{}'\'' >> /builder/linux-kernel/hash && git -C /builder/linux-kernel tag --points-at HEAD --list '\''v*'\'' >> /builder/linux-kernel/vtags''.
+2023-05-11 20:51:24.876292 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2696 qubesbuilder.FileCopyOut+__builder__linux-kernel__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpfc5boomy
+2023-05-11 20:51:25.187627 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2696 qubesbuilder.FileCopyOut+__builder__linux-kernel__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpfc5boomy
+2023-05-11 20:51:48.308795 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp6293 bash -c 'rm -rf /builder/incoming/linux-kernel /builder/linux-kernel'
+2023-05-11 20:51:49.044428 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp6293 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-kernel
+2023-05-11 20:52:08.009347 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp6293 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-kernel /builder'
+2023-05-11 20:52:08.322737 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp6293 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/linux-kernel/modules && cd /builder && git -C /builder/linux-kernel/linux-utils rev-parse HEAD >> /builder/linux-kernel/modules && git -C /builder/linux-kernel/dummy-psu rev-parse HEAD >> /builder/linux-kernel/modules && git -C /builder/linux-kernel/dummy-backlight rev-parse HEAD >> /builder/linux-kernel/modules && git -C /builder/linux-kernel/v4l2loopback rev-parse HEAD >> /builder/linux-kernel/modules''.
+2023-05-11 20:52:08.666526 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6293 qubesbuilder.FileCopyOut+__builder__linux-kernel__modules /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpfc5boomy
+2023-05-11 20:52:31.813457 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9480 bash -c 'rm -rf /builder/incoming/linux-kernel /builder/linux-kernel'
+2023-05-11 20:52:49.681108 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9480 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-kernel
+2023-05-11 20:52:52.376197 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9480 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-kernel /builder'
+2023-05-11 20:52:52.699107 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9480 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-11 20:52:53.023996 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9480 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-11 20:52:53.386166 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9480 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-11 20:52:53.650643 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp9480 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/linux-utils linux-utils-97271bab41f588b0.tar.gz linux-utils/ && /builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/dummy-psu dummy-psu-49475d88d94e079b.tar.gz dummy-psu/ && /builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/dummy-backlight dummy-backlight-33420931ad20f1e3.tar.gz dummy-backlight/ && /builder/plugins/fetch/scripts/create-archive /builder/linux-kernel/v4l2loopback v4l2loopback-1ecf810f0d687b64.tar.gz v4l2loopback/''.
+2023-05-11 20:52:53.979041 +0000 build-ubuntu42: output: ++ head -1
+2023-05-11 20:52:53.982749 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-05-11 20:52:53.982811 +0000 build-ubuntu42: output: ++ tar --version
+2023-05-11 20:52:54.003939 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-05-11 20:52:54.003988 +0000 build-ubuntu42: output: ++ readlink -f /builder/linux-kernel/linux-utils
+2023-05-11 20:52:54.007160 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/linux-utils
+2023-05-11 20:52:54.008864 +0000 build-ubuntu42: output: /builder/linux-kernel/linux-utils ~
+2023-05-11 20:52:54.010326 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-11 20:52:54.010387 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=linux-utils-97271bab41f588b0.tar
+2023-05-11 20:52:54.010407 +0000 build-ubuntu42: output: + '[' xlinux-utils/ '!=' x ']'
+2023-05-11 20:52:54.010422 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=linux-utils/
+2023-05-11 20:52:54.010434 +0000 build-ubuntu42: output: + pushd /builder/linux-kernel/linux-utils
+2023-05-11 20:52:54.011067 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-05-11 20:52:54.041380 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1603593639
+2023-05-11 20:52:54.041426 +0000 build-ubuntu42: output: ++ head -n1
+2023-05-11 20:52:54.041438 +0000 build-ubuntu42: output: ++ sort -V
+2023-05-11 20:52:54.042032 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-11 20:52:54.047673 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-05-11 20:52:54.047731 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1603593639 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%linux-utils/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude linux-utils-97271bab41f588b0.tar -cf linux-utils-97271bab41f588b0.tar .
+2023-05-11 20:52:54.051949 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-11 20:52:54.051996 +0000 build-ubuntu42: output: + gzip -fn linux-utils-97271bab41f588b0.tar
+2023-05-11 20:52:54.061492 +0000 build-ubuntu42: output: ~
+2023-05-11 20:52:54.062613 +0000 build-ubuntu42: output: + popd
+2023-05-11 20:52:54.065288 +0000 build-ubuntu42: output: ++ head -1
+2023-05-11 20:52:54.065338 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-05-11 20:52:54.066721 +0000 build-ubuntu42: output: ++ tar --version
+2023-05-11 20:52:54.070077 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-05-11 20:52:54.070135 +0000 build-ubuntu42: output: ++ readlink -f /builder/linux-kernel/dummy-psu
+2023-05-11 20:52:54.070884 +0000 build-ubuntu42: output: /builder/linux-kernel/dummy-psu ~
+2023-05-11 20:52:54.072220 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/dummy-psu
+2023-05-11 20:52:54.072296 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-11 20:52:54.072319 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=dummy-psu-49475d88d94e079b.tar
+2023-05-11 20:52:54.072333 +0000 build-ubuntu42: output: + '[' xdummy-psu/ '!=' x ']'
+2023-05-11 20:52:54.072345 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=dummy-psu/
+2023-05-11 20:52:54.072356 +0000 build-ubuntu42: output: + pushd /builder/linux-kernel/dummy-psu
+2023-05-11 20:52:54.072366 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-05-11 20:52:54.073329 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1602292420
+2023-05-11 20:52:54.076444 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-11 20:52:54.076526 +0000 build-ubuntu42: output: ++ sort -V
+2023-05-11 20:52:54.076543 +0000 build-ubuntu42: output: ++ head -n1
+2023-05-11 20:52:54.079738 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-05-11 20:52:54.079805 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1602292420 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%dummy-psu/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude dummy-psu-49475d88d94e079b.tar -cf dummy-psu-49475d88d94e079b.tar .
+2023-05-11 20:52:54.083680 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-11 20:52:54.083736 +0000 build-ubuntu42: output: + gzip -fn dummy-psu-49475d88d94e079b.tar
+2023-05-11 20:52:54.087164 +0000 build-ubuntu42: output: + popd
+2023-05-11 20:52:54.087215 +0000 build-ubuntu42: output: ~
+2023-05-11 20:52:54.093388 +0000 build-ubuntu42: output: ++ head -1
+2023-05-11 20:52:54.093443 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-05-11 20:52:54.093458 +0000 build-ubuntu42: output: ++ tar --version
+2023-05-11 20:52:54.095742 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-05-11 20:52:54.096542 +0000 build-ubuntu42: output: ++ readlink -f /builder/linux-kernel/dummy-backlight
+2023-05-11 20:52:54.098264 +0000 build-ubuntu42: output: /builder/linux-kernel/dummy-backlight ~
+2023-05-11 20:52:54.100222 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/dummy-backlight
+2023-05-11 20:52:54.100281 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-11 20:52:54.100301 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=dummy-backlight-33420931ad20f1e3.tar
+2023-05-11 20:52:54.100315 +0000 build-ubuntu42: output: + '[' xdummy-backlight/ '!=' x ']'
+2023-05-11 20:52:54.100327 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=dummy-backlight/
+2023-05-11 20:52:54.100337 +0000 build-ubuntu42: output: + pushd /builder/linux-kernel/dummy-backlight
+2023-05-11 20:52:54.101492 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-05-11 20:52:54.105813 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1600607528
+2023-05-11 20:52:54.105866 +0000 build-ubuntu42: output: ++ sort -V
+2023-05-11 20:52:54.105881 +0000 build-ubuntu42: output: ++ head -n1
+2023-05-11 20:52:54.105898 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-11 20:52:54.108631 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-05-11 20:52:54.108703 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1600607528 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%dummy-backlight/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude dummy-backlight-33420931ad20f1e3.tar -cf dummy-backlight-33420931ad20f1e3.tar .
+2023-05-11 20:52:54.110911 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-11 20:52:54.110967 +0000 build-ubuntu42: output: + gzip -fn dummy-backlight-33420931ad20f1e3.tar
+2023-05-11 20:52:54.114644 +0000 build-ubuntu42: output: + popd
+2023-05-11 20:52:54.114699 +0000 build-ubuntu42: output: ~
+2023-05-11 20:52:54.119348 +0000 build-ubuntu42: output: ++ head -1
+2023-05-11 20:52:54.119403 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-05-11 20:52:54.119418 +0000 build-ubuntu42: output: ++ tar --version
+2023-05-11 20:52:54.120921 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-05-11 20:52:54.124824 +0000 build-ubuntu42: output: ++ readlink -f /builder/linux-kernel/v4l2loopback
+2023-05-11 20:52:54.124889 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/linux-kernel/v4l2loopback
+2023-05-11 20:52:54.124907 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-11 20:52:54.124927 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=v4l2loopback-1ecf810f0d687b64.tar
+2023-05-11 20:52:54.124938 +0000 build-ubuntu42: output: + '[' xv4l2loopback/ '!=' x ']'
+2023-05-11 20:52:54.124949 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=v4l2loopback/
+2023-05-11 20:52:54.128876 +0000 build-ubuntu42: output: + pushd /builder/linux-kernel/v4l2loopback
+2023-05-11 20:52:54.128935 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-05-11 20:52:54.128954 +0000 build-ubuntu42: output: /builder/linux-kernel/v4l2loopback ~
+2023-05-11 20:52:54.128968 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1659652207
+2023-05-11 20:52:54.128980 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-11 20:52:54.128991 +0000 build-ubuntu42: output: ++ head -n1
+2023-05-11 20:52:54.129002 +0000 build-ubuntu42: output: ++ sort -V
+2023-05-11 20:52:54.131349 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-05-11 20:52:54.131423 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1659652207 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%v4l2loopback/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude v4l2loopback-1ecf810f0d687b64.tar -cf v4l2loopback-1ecf810f0d687b64.tar .
+2023-05-11 20:52:54.136611 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-11 20:52:54.136664 +0000 build-ubuntu42: output: + gzip -fn v4l2loopback-1ecf810f0d687b64.tar
+2023-05-11 20:52:54.144257 +0000 build-ubuntu42: output: ~
+2023-05-11 20:52:54.152864 +0000 build-ubuntu42: output: + popd
+2023-05-11 20:52:54.173167 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9480 qubesbuilder.FileCopyOut+__builder__linux-kernel__linux-utils__linux-utils-97271bab41f588b0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/linux-kernel
+2023-05-11 20:52:54.486005 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9480 qubesbuilder.FileCopyOut+__builder__linux-kernel__dummy-psu__dummy-psu-49475d88d94e079b.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/linux-kernel
+2023-05-11 20:52:54.766738 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9480 qubesbuilder.FileCopyOut+__builder__linux-kernel__dummy-backlight__dummy-backlight-33420931ad20f1e3.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/linux-kernel
+2023-05-11 20:52:54.953661 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9480 qubesbuilder.FileCopyOut+__builder__linux-kernel__v4l2loopback__v4l2loopback-1ecf810f0d687b64.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/linux-kernel
+2023-05-11 20:52:59.439559 +0000 build-ubuntu42: > done
+2023-05-11 20:52:59.439607 +0000 > closing log
