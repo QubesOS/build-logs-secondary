@@ -1,0 +1,114 @@
+2023-05-16 01:56:18.835820 +0000 > starting log
+2023-05-16 01:56:18.836092 +0000 build-ubuntu42: > starting build with log
+2023-05-16 01:56:18.836109 +0000 build-ubuntu42: >> args:
+2023-05-16 01:56:18.836119 +0000 build-ubuntu42: >>   ()
+2023-05-16 01:56:18.836128 +0000 build-ubuntu42: >> component:
+2023-05-16 01:56:18.836136 +0000 build-ubuntu42: >>   core-agent-linux
+2023-05-16 01:56:18.836146 +0000 build-ubuntu42: >>     commit-hash: aac61f6cdcd719cfbdfa55bc4a9edd38fe31edea
+2023-05-16 01:56:18.836160 +0000 build-ubuntu42: >>     source-hash: 2ffb2571e066b01ecdb9306c678532438122a44ce0882de45db81777bd43f828792b32442746775c1357acf8cc7990c9556f4e9b5680090580c6465a548774f6
+2023-05-16 01:56:18.836174 +0000 build-ubuntu42: >> distributions:
+2023-05-16 01:56:18.836185 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-05-16 01:56:18.836195 +0000 build-ubuntu42: core-agent-linux: source already fetched. Updating.
+2023-05-16 01:56:37.602980 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7881 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-16 01:56:38.209114 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7881 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-16 01:56:38.887149 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7881 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-16 01:56:39.374640 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7881 bash -c 'rm -rf /builder/incoming/core-agent-linux /builder/core-agent-linux'
+2023-05-16 01:56:39.693992 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7881 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/core-agent-linux
+2023-05-16 01:56:40.536021 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7881 bash -c 'mkdir -p /builder && mv /builder/incoming/core-agent-linux /builder'
+2023-05-16 01:56:40.754414 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp7881 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component core-agent-linux --git-branch main --git-url https://github.com/QubesOS/qubes-core-agent-linux.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only''.
+2023-05-16 01:56:41.157361 +0000 build-ubuntu42: output: + unset CLEAN
+2023-05-16 01:56:41.157408 +0000 build-ubuntu42: output: + CLEAN=0
+2023-05-16 01:56:41.157432 +0000 build-ubuntu42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-05-16 01:56:41.157475 +0000 build-ubuntu42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component core-agent-linux --git-branch main --git-url https://github.com/QubesOS/qubes-core-agent-linux.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only
+2023-05-16 01:56:41.176391 +0000 build-ubuntu42: output: + OPTS=' --component '\''core-agent-linux'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-core-agent-linux.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-16 01:56:41.176449 +0000 build-ubuntu42: output: + eval set -- ' --component '\''core-agent-linux'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-core-agent-linux.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-16 01:56:41.176487 +0000 build-ubuntu42: output: ++ set -- --component core-agent-linux --git-branch main --git-url https://github.com/QubesOS/qubes-core-agent-linux.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only --
+2023-05-16 01:56:41.176499 +0000 build-ubuntu42: output: + [[ 12 -gt 0 ]]
+2023-05-16 01:56:41.176509 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-16 01:56:41.176518 +0000 build-ubuntu42: output: + COMPONENT=core-agent-linux
+2023-05-16 01:56:41.176526 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.176534 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.176541 +0000 build-ubuntu42: output: + [[ 10 -gt 0 ]]
+2023-05-16 01:56:41.176549 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-16 01:56:41.176556 +0000 build-ubuntu42: output: + BRANCH=main
+2023-05-16 01:56:41.176564 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.176572 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.176579 +0000 build-ubuntu42: output: + [[ 8 -gt 0 ]]
+2023-05-16 01:56:41.176586 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-16 01:56:41.176596 +0000 build-ubuntu42: output: + GIT_URL=https://github.com/QubesOS/qubes-core-agent-linux.git
+2023-05-16 01:56:41.178220 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178256 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178267 +0000 build-ubuntu42: output: + [[ 6 -gt 0 ]]
+2023-05-16 01:56:41.178275 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-16 01:56:41.178285 +0000 build-ubuntu42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-05-16 01:56:41.178293 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178300 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178308 +0000 build-ubuntu42: output: + [[ 4 -gt 0 ]]
+2023-05-16 01:56:41.178315 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-16 01:56:41.178323 +0000 build-ubuntu42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-05-16 01:56:41.178331 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178338 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178345 +0000 build-ubuntu42: output: + [[ 2 -gt 0 ]]
+2023-05-16 01:56:41.178353 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-16 01:56:41.178360 +0000 build-ubuntu42: output: + FETCH_VERSIONS_ONLY=1
+2023-05-16 01:56:41.178368 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178375 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-16 01:56:41.178382 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-16 01:56:41.178389 +0000 build-ubuntu42: output: + shift
+2023-05-16 01:56:41.178397 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-16 01:56:41.178405 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-16 01:56:41.178412 +0000 build-ubuntu42: output: -]*$ ]]
+2023-05-16 01:56:41.178420 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-16 01:56:41.178427 +0000 build-ubuntu42: output: -]*$ ]]
+2023-05-16 01:56:41.178435 +0000 build-ubuntu42: output: + [[ -n core-agent-linux ]]
+2023-05-16 01:56:41.178442 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-16 01:56:41.178450 +0000 build-ubuntu42: output: + REPO=core-agent-linux
+2023-05-16 01:56:41.178460 +0000 build-ubuntu42: output: + '[' -z /builder/keyring ']'
+2023-05-16 01:56:41.178468 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-16 01:56:41.179619 +0000 build-ubuntu42: output: + GIT_SUFFIX=.git
+2023-05-16 01:56:41.179646 +0000 build-ubuntu42: output: + '[' -z main ']'
+2023-05-16 01:56:41.179656 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-16 01:56:41.179667 +0000 build-ubuntu42: output: + '[' -z https://github.com/QubesOS/qubes-core-agent-linux.git ']'
+2023-05-16 01:56:41.179675 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-16 01:56:41.179717 +0000 build-ubuntu42: output: + case ${IGNORE_MISSING=0} in
+2023-05-16 01:56:41.179728 +0000 build-ubuntu42: output: + :
+2023-05-16 01:56:41.179737 +0000 build-ubuntu42: output: + case ${GIT_CLONE_FAST=0} in
+2023-05-16 01:56:41.179745 +0000 build-ubuntu42: output: + :
+2023-05-16 01:56:41.179757 +0000 build-ubuntu42: output: + GIT_OPTIONS=()
+2023-05-16 01:56:41.179766 +0000 build-ubuntu42: output: + [[ 0 = \1 ]]
+2023-05-16 01:56:41.179774 +0000 build-ubuntu42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-05-16 01:56:41.179783 +0000 build-ubuntu42: output: + [[ main =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-05-16 01:56:41.179793 +0000 build-ubuntu42: output: + [[ core-agent-linux =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-05-16 01:56:41.179801 +0000 build-ubuntu42: output: + trap exit_clean 0 1 2 3 6 15
+2023-05-16 01:56:41.179809 +0000 build-ubuntu42: output: + fresh_clone=false
+2023-05-16 01:56:41.179816 +0000 build-ubuntu42: output: + [[ '' = \1 ]]
+2023-05-16 01:56:41.179824 +0000 build-ubuntu42: output: + [[ -d core-agent-linux ]]
+2023-05-16 01:56:41.179832 +0000 build-ubuntu42: output: + cd core-agent-linux
+2023-05-16 01:56:41.179841 +0000 build-ubuntu42: output: ++ git rev-parse --is-shallow-repository
+2023-05-16 01:56:41.272981 +0000 build-ubuntu42: output: -> Updating sources for core-agent-linux...
+2023-05-16 01:56:41.273031 +0000 build-ubuntu42: output: --> Fetching from https://github.com/QubesOS/qubes-core-agent-linux.git main...
+2023-05-16 01:56:41.273043 +0000 build-ubuntu42: output: + is_shallow=false
+2023-05-16 01:56:41.273053 +0000 build-ubuntu42: output: + [[ 0 -ne 1 ]]
+2023-05-16 01:56:41.273062 +0000 build-ubuntu42: output: + [[ false = \t\r\u\e ]]
+2023-05-16 01:56:41.273070 +0000 build-ubuntu42: output: + print_headers
+2023-05-16 01:56:41.273077 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-16 01:56:41.273087 +0000 build-ubuntu42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-core-agent-linux.git main'
+2023-05-16 01:56:41.273097 +0000 build-ubuntu42: output: + echo '-> Updating sources for core-agent-linux...'
+2023-05-16 01:56:41.273108 +0000 build-ubuntu42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-core-agent-linux.git main...'
+2023-05-16 01:56:41.273119 +0000 build-ubuntu42: output: + git fetch -q --tags -- https://github.com/QubesOS/qubes-core-agent-linux.git main
+2023-05-16 01:56:45.453096 +0000 build-ubuntu42: output: ++ git rev-parse -q --verify 'FETCH_HEAD^{commit}'
+2023-05-16 01:56:45.453144 +0000 build-ubuntu42: output: + rev=1ffe87e1a7d6d81f0ee6f064952e4f0d373ebb10
+2023-05-16 01:56:45.453157 +0000 build-ubuntu42: output: + '[' 1 == 1 ']'
+2023-05-16 01:56:45.453169 +0000 build-ubuntu42: output: + git tag --points-at 1ffe87e1a7d6d81f0ee6f064952e4f0d373ebb10
+2023-05-16 01:56:45.456982 +0000 build-ubuntu42: output: + grep -q '^v'
+2023-05-16 01:56:45.474556 +0000 build-ubuntu42: output: + echo 'No version tag'
+2023-05-16 01:56:45.474604 +0000 build-ubuntu42: output: + rm -f .git/FETCH_HEAD
+2023-05-16 01:56:45.474615 +0000 build-ubuntu42: output: + exit 0
+2023-05-16 01:56:45.474625 +0000 build-ubuntu42: output: + exit_clean
+2023-05-16 01:56:45.474632 +0000 build-ubuntu42: output: + local exit_code=0
+2023-05-16 01:56:45.474640 +0000 build-ubuntu42: output: + '[' 0 -gt 0 ']'
+2023-05-16 01:56:45.474647 +0000 build-ubuntu42: output: + exit 0
+2023-05-16 01:56:45.477352 +0000 build-ubuntu42: output: No version tag
+2023-05-16 01:56:45.504596 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7881 qubesbuilder.FileCopyOut+__builder__core-agent-linux /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-05-16 01:56:50.195794 +0000 build-ubuntu42: > done
+2023-05-16 01:56:50.195852 +0000 > closing log
