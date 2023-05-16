@@ -1,0 +1,829 @@
+2023-05-16 12:43:15.701353 +0000 > starting log
+2023-05-16 12:43:15.701637 +0000 build-archlinux42: > starting build with log
+2023-05-16 12:43:15.701653 +0000 build-archlinux42: >> args:
+2023-05-16 12:43:15.701662 +0000 build-archlinux42: >>   ()
+2023-05-16 12:43:15.701670 +0000 build-archlinux42: >> component:
+2023-05-16 12:43:15.701679 +0000 build-archlinux42: >>   windows-tools-cross
+2023-05-16 12:43:15.701688 +0000 build-archlinux42: >>     commit-hash: 94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:15.701702 +0000 build-archlinux42: >>     source-hash: 3d980a5ddcb0432f91bb1ab022552e6f6fa68a1c9a57a2f3f4bdb134a0e2ab5a950557d24eea121d4c0c6f3056dc6abbd347c3f7fe4590cbf0c83748cb4b8099
+2023-05-16 12:43:15.701715 +0000 build-archlinux42: >> distributions:
+2023-05-16 12:43:15.701726 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-05-16 12:43:15.701735 +0000 build-archlinux42: windows-tools-cross: source already fetched. Updating.
+2023-05-16 12:43:32.587956 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7788 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-16 12:43:33.139197 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7788 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-16 12:43:33.624378 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7788 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-16 12:43:33.969859 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7788 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:43:34.312428 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7788 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:43:35.037356 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7788 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:43:35.349616 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp7788 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component windows-tools-cross --git-branch main --git-url https://github.com/QubesOS/qubes-windows-tools-cross.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only''.
+2023-05-16 12:43:35.685214 +0000 build-archlinux42: output: + unset CLEAN
+2023-05-16 12:43:35.685263 +0000 build-archlinux42: output: + CLEAN=0
+2023-05-16 12:43:35.685288 +0000 build-archlinux42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-05-16 12:43:35.686419 +0000 build-archlinux42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component windows-tools-cross --git-branch main --git-url https://github.com/QubesOS/qubes-windows-tools-cross.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only
+2023-05-16 12:43:35.716618 +0000 build-archlinux42: output: + OPTS=' --component '\''windows-tools-cross'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-windows-tools-cross.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-16 12:43:35.716675 +0000 build-archlinux42: output: + eval set -- ' --component '\''windows-tools-cross'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-windows-tools-cross.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-16 12:43:35.716713 +0000 build-archlinux42: output: ++ set -- --component windows-tools-cross --git-branch main --git-url https://github.com/QubesOS/qubes-windows-tools-cross.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only --
+2023-05-16 12:43:35.716725 +0000 build-archlinux42: output: + [[ 12 -gt 0 ]]
+2023-05-16 12:43:35.716734 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:43:35.716743 +0000 build-archlinux42: output: + COMPONENT=windows-tools-cross
+2023-05-16 12:43:35.716751 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716758 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716765 +0000 build-archlinux42: output: + [[ 10 -gt 0 ]]
+2023-05-16 12:43:35.716772 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:43:35.716779 +0000 build-archlinux42: output: + BRANCH=main
+2023-05-16 12:43:35.716786 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716794 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716802 +0000 build-archlinux42: output: + [[ 8 -gt 0 ]]
+2023-05-16 12:43:35.716809 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:43:35.716841 +0000 build-archlinux42: output: + GIT_URL=https://github.com/QubesOS/qubes-windows-tools-cross.git
+2023-05-16 12:43:35.716849 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716856 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716863 +0000 build-archlinux42: output: + [[ 6 -gt 0 ]]
+2023-05-16 12:43:35.716871 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:43:35.716879 +0000 build-archlinux42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-05-16 12:43:35.716885 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716892 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716904 +0000 build-archlinux42: output: + [[ 4 -gt 0 ]]
+2023-05-16 12:43:35.716912 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:43:35.716921 +0000 build-archlinux42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-05-16 12:43:35.716928 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716935 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716942 +0000 build-archlinux42: output: + [[ 2 -gt 0 ]]
+2023-05-16 12:43:35.716949 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:43:35.716956 +0000 build-archlinux42: output: + FETCH_VERSIONS_ONLY=1
+2023-05-16 12:43:35.716963 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716970 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:43:35.716977 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:43:35.716984 +0000 build-archlinux42: output: + shift
+2023-05-16 12:43:35.716991 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:43:35.716998 +0000 build-archlinux42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-16 12:43:35.717005 +0000 build-archlinux42: output: -]*$ ]]
+2023-05-16 12:43:35.717013 +0000 build-archlinux42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-16 12:43:35.717019 +0000 build-archlinux42: output: -]*$ ]]
+2023-05-16 12:43:35.717027 +0000 build-archlinux42: output: + [[ -n windows-tools-cross ]]
+2023-05-16 12:43:35.717034 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-05-16 12:43:35.717042 +0000 build-archlinux42: output: + REPO=windows-tools-cross
+2023-05-16 12:43:35.717050 +0000 build-archlinux42: output: + '[' -z /builder/keyring ']'
+2023-05-16 12:43:35.717057 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-05-16 12:43:35.717065 +0000 build-archlinux42: output: + GIT_SUFFIX=.git
+2023-05-16 12:43:35.717072 +0000 build-archlinux42: output: + '[' -z main ']'
+2023-05-16 12:43:35.717079 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:43:35.717088 +0000 build-archlinux42: output: + '[' -z https://github.com/QubesOS/qubes-windows-tools-cross.git ']'
+2023-05-16 12:43:35.717692 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:43:35.717729 +0000 build-archlinux42: output: + case ${IGNORE_MISSING=0} in
+2023-05-16 12:43:35.717737 +0000 build-archlinux42: output: + :
+2023-05-16 12:43:35.717746 +0000 build-archlinux42: output: + case ${GIT_CLONE_FAST=0} in
+2023-05-16 12:43:35.717753 +0000 build-archlinux42: output: + :
+2023-05-16 12:43:35.717760 +0000 build-archlinux42: output: + GIT_OPTIONS=()
+2023-05-16 12:43:35.717767 +0000 build-archlinux42: output: + [[ 0 = \1 ]]
+2023-05-16 12:43:35.717775 +0000 build-archlinux42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-05-16 12:43:35.717784 +0000 build-archlinux42: output: + [[ main =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-05-16 12:43:35.717793 +0000 build-archlinux42: output: + [[ windows-tools-cross =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-05-16 12:43:35.719308 +0000 build-archlinux42: output: + trap exit_clean 0 1 2 3 6 15
+2023-05-16 12:43:35.719351 +0000 build-archlinux42: output: + fresh_clone=false
+2023-05-16 12:43:35.719361 +0000 build-archlinux42: output: + [[ '' = \1 ]]
+2023-05-16 12:43:35.719370 +0000 build-archlinux42: output: + [[ -d windows-tools-cross ]]
+2023-05-16 12:43:35.719378 +0000 build-archlinux42: output: + cd windows-tools-cross
+2023-05-16 12:43:35.719387 +0000 build-archlinux42: output: ++ git rev-parse --is-shallow-repository
+2023-05-16 12:43:35.789511 +0000 build-archlinux42: output: + is_shallow=false
+2023-05-16 12:43:35.789556 +0000 build-archlinux42: output: + [[ 0 -ne 1 ]]
+2023-05-16 12:43:35.789567 +0000 build-archlinux42: output: + [[ false = \t\r\u\e ]]
+2023-05-16 12:43:35.789592 +0000 build-archlinux42: output: + print_headers
+2023-05-16 12:43:35.789602 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-05-16 12:43:35.789612 +0000 build-archlinux42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-windows-tools-cross.git main'
+2023-05-16 12:43:35.789622 +0000 build-archlinux42: output: + echo '-> Updating sources for windows-tools-cross...'
+2023-05-16 12:43:35.789631 +0000 build-archlinux42: output: -> Updating sources for windows-tools-cross...
+2023-05-16 12:43:35.789821 +0000 build-archlinux42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-windows-tools-cross.git main...'
+2023-05-16 12:43:35.789846 +0000 build-archlinux42: output: + git fetch -q --tags -- https://github.com/QubesOS/qubes-windows-tools-cross.git main
+2023-05-16 12:43:35.789857 +0000 build-archlinux42: output: --> Fetching from https://github.com/QubesOS/qubes-windows-tools-cross.git main...
+2023-05-16 12:43:37.244859 +0000 build-archlinux42: output: ++ git rev-parse -q --verify 'FETCH_HEAD^{commit}'
+2023-05-16 12:43:37.245321 +0000 build-archlinux42: output: + rev=94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:37.245359 +0000 build-archlinux42: output: + '[' 1 == 1 ']'
+2023-05-16 12:43:37.251473 +0000 build-archlinux42: output: + git tag --points-at 94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:37.251518 +0000 build-archlinux42: output: + grep -q '^v'
+2023-05-16 12:43:37.251531 +0000 build-archlinux42: output: + VERIFY_REF=94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:37.251540 +0000 build-archlinux42: output: + fresh_clone=false
+2023-05-16 12:43:37.251548 +0000 build-archlinux42: output: + cd -
+2023-05-16 12:43:37.251556 +0000 build-archlinux42: output: + export CHECK=signed-tag
+2023-05-16 12:43:37.251564 +0000 build-archlinux42: output: + CHECK=signed-tag
+2023-05-16 12:43:37.251571 +0000 build-archlinux42: output: + verify=true
+2023-05-16 12:43:37.251578 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-05-16 12:43:37.251585 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-05-16 12:43:37.253119 +0000 build-archlinux42: output: ++ git -C windows-tools-cross rev-parse -q --verify 94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:37.258216 +0000 build-archlinux42: output: + VERIFY_REF=94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:37.258279 +0000 build-archlinux42: output: + '[' true = false ']'
+2023-05-16 12:43:37.258293 +0000 build-archlinux42: output: + [[ signed-tag == \s\i\g\n\e\d\-\t\a\g\-\o\r\-\c\o\m\m\i\t ]]
+2023-05-16 12:43:37.258302 +0000 build-archlinux42: output: + echo '--> Verifying tags...'
+2023-05-16 12:43:37.258310 +0000 build-archlinux42: output: ++ readlink -m /builder/keyring
+2023-05-16 12:43:37.258318 +0000 build-archlinux42: output: --> Verifying tags...
+2023-05-16 12:43:37.258706 +0000 build-archlinux42: output: + GNUPGHOME=/builder/keyring
+2023-05-16 12:43:37.258734 +0000 build-archlinux42: output: + export GNUPGHOME
+2023-05-16 12:43:37.258744 +0000 build-archlinux42: output: + '[' '!' -d /builder/keyring ']'
+2023-05-16 12:43:37.258752 +0000 build-archlinux42: output: + mkdir -p /builder/keyring
+2023-05-16 12:43:37.258760 +0000 build-archlinux42: output: + chmod 700 /builder/keyring
+2023-05-16 12:43:37.260783 +0000 build-archlinux42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-05-16 12:43:37.304627 +0000 build-archlinux42: output: gpg: keybox '/builder/keyring/pubring.kbx' created
+2023-05-16 12:43:37.311198 +0000 build-archlinux42: output: gpg: /builder/keyring/trustdb.gpg: trustdb created
+2023-05-16 12:43:37.311245 +0000 build-archlinux42: output: gpg: key DDFA1A3E36879494: public key "Qubes Master Signing Key" imported
+2023-05-16 12:43:37.344416 +0000 build-archlinux42: output: gpg: key 063938BA42CFA724: public key "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" imported
+2023-05-16 12:43:37.347318 +0000 build-archlinux42: output: gpg: key DA0434BC706E1FCF: public key "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" imported
+2023-05-16 12:43:37.348589 +0000 build-archlinux42: output: gpg: Total number processed: 3
+2023-05-16 12:43:37.348633 +0000 build-archlinux42: output: gpg:               imported: 3
+2023-05-16 12:43:37.348645 +0000 build-archlinux42: output: gpg: no ultimately trusted keys found
+2023-05-16 12:43:37.352920 +0000 build-archlinux42: output: + echo 427F11FD0FAA4B080123F01CDDFA1A3E36879494:6:
+2023-05-16 12:43:37.352987 +0000 build-archlinux42: output: + gpg --import-ownertrust
+2023-05-16 12:43:37.353000 +0000 build-archlinux42: output: gpg: inserting ownertrust of 6
+2023-05-16 12:43:37.353012 +0000 build-archlinux42: output: + '[' /builder/plugins/fetch/keys/qubes-developers-keys.asc -nt /builder/keyring/pubring.gpg ']'
+2023-05-16 12:43:37.353023 +0000 build-archlinux42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-05-16 12:43:37.360550 +0000 build-archlinux42: output: gpg: key DDFA1A3E36879494: "Qubes Master Signing Key" not changed
+2023-05-16 12:43:37.360597 +0000 build-archlinux42: output: gpg: key 063938BA42CFA724: "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" not changed
+2023-05-16 12:43:37.360612 +0000 build-archlinux42: output: gpg: key DA0434BC706E1FCF: "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" not changed
+2023-05-16 12:43:37.360622 +0000 build-archlinux42: output: gpg: Total number processed: 3
+2023-05-16 12:43:37.360631 +0000 build-archlinux42: output: gpg:              unchanged: 3
+2023-05-16 12:43:37.360639 +0000 build-archlinux42: output: + touch /builder/keyring/pubring.gpg
+2023-05-16 12:43:37.360647 +0000 build-archlinux42: output: + gpgconf --kill gpg-agent
+2023-05-16 12:43:37.370020 +0000 build-archlinux42: output: + pushd windows-tools-cross
+2023-05-16 12:43:37.370066 +0000 build-archlinux42: output: + expected_hash=94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:37.370077 +0000 build-archlinux42: output: + hash_len=40
+2023-05-16 12:43:37.370086 +0000 build-archlinux42: output: + '[' 40 -ne 40 ']'
+2023-05-16 12:43:37.370103 +0000 build-archlinux42: output: + [[ 94ddd1bc83dab63d6b6af57c7f43e0152b69c03b =~ ^[a-f0-9]+$ ]]
+2023-05-16 12:43:37.370114 +0000 build-archlinux42: output: + format='%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-05-16 12:43:37.370141 +0000 build-archlinux42: output: ++ head -c 500
+2023-05-16 12:43:37.370156 +0000 build-archlinux42: output: ++ git tag --points-at=94ddd1bc83dab63d6b6af57c7f43e0152b69c03b '--format=%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-05-16 12:43:37.372476 +0000 build-archlinux42: output: + tags=e7885b2440a0b2691be3d7fb6bdd35383bd3f1d6:94ddd1bc83dab63d6b6af57c7f43e0152b69c03b:
+2023-05-16 12:43:37.372517 +0000 build-archlinux42: output: + for tag in $tags
+2023-05-16 12:43:37.372528 +0000 build-archlinux42: output: + (( 82 != hash_len * 2 + 2 ))
+2023-05-16 12:43:37.372541 +0000 build-archlinux42: output: + [[ :94ddd1bc83dab63d6b6af57c7f43e0152b69c03b: == \:\9\4\d\d\d\1\b\c\8\3\d\a\b\6\3\d\6\b\6\a\f\5\7\c\7\f\4\3\e\0\1\5\2\b\6\9\c\0\3\b\: ]]
+2023-05-16 12:43:37.372551 +0000 build-archlinux42: output: + tag=e7885b2440a0b2691be3d7fb6bdd35383bd3f1d6
+2023-05-16 12:43:37.372561 +0000 build-archlinux42: output: + verify_git_obj tag e7885b2440a0b2691be3d7fb6bdd35383bd3f1d6
+2023-05-16 12:43:37.372569 +0000 build-archlinux42: output: + local content newsig_number
+2023-05-16 12:43:37.372580 +0000 build-archlinux42: output: ++ git -c gpg.program=gpg -c gpg.minTrustLevel=fully verify-tag --raw -- e7885b2440a0b2691be3d7fb6bdd35383bd3f1d6
+2023-05-16 12:43:37.379752 +0000 build-archlinux42: output: + content='[GNUPG:] NEWSIG
+2023-05-16 12:43:37.379800 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-16 12:43:37.379838 +0000 build-archlinux42: output: [GNUPG:] SIG_ID ON+x65w1aQ8Vl+KcF2/HZltmkTo 2023-05-16 1684240664
+2023-05-16 12:43:37.379851 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-16 12:43:37.379862 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.379872 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.379881 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.379893 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-16 12:43:37.379910 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-05-16 1684240664 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-16 12:43:37.379920 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-16 12:43:37.383185 +0000 build-archlinux42: output: ++ printf '%s\n' '[GNUPG:] NEWSIG
+2023-05-16 12:43:37.383230 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-16 12:43:37.383243 +0000 build-archlinux42: output: [GNUPG:] SIG_ID ON+x65w1aQ8Vl+KcF2/HZltmkTo 2023-05-16 1684240664
+2023-05-16 12:43:37.383253 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-16 12:43:37.383262 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.383272 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.383281 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.383293 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-16 12:43:37.383306 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-05-16 1684240664 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-16 12:43:37.383315 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-16 12:43:37.383323 +0000 build-archlinux42: output: ++ grep -c '^\[GNUPG:] NEWSIG'
+2023-05-16 12:43:37.385630 +0000 build-archlinux42: output: + newsig_number=1
+2023-05-16 12:43:37.385672 +0000 build-archlinux42: output: + '[' 1 = 1 ']'
+2023-05-16 12:43:37.385683 +0000 build-archlinux42: output: + grep '^\[GNUPG:] TRUST_\(FULLY\|ULTIMATE\) 0 pgp\>'
+2023-05-16 12:43:37.385692 +0000 build-archlinux42: output: + printf '%s\n' '[GNUPG:] NEWSIG
+2023-05-16 12:43:37.385701 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-16 12:43:37.385717 +0000 build-archlinux42: output: [GNUPG:] SIG_ID ON+x65w1aQ8Vl+KcF2/HZltmkTo 2023-05-16 1684240664
+2023-05-16 12:43:37.385727 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-16 12:43:37.385736 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.385745 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.385754 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-16 12:43:37.385765 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-16 12:43:37.385779 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-05-16 1684240664 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-16 12:43:37.386157 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-16 12:43:37.388908 +0000 build-archlinux42: output: + echo '---> Good tag e7885b2440a0b2691be3d7fb6bdd35383bd3f1d6'
+2023-05-16 12:43:37.388968 +0000 build-archlinux42: output: + '[' -z x ']'
+2023-05-16 12:43:37.388979 +0000 build-archlinux42: output: + popd
+2023-05-16 12:43:37.388987 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-05-16 12:43:37.388996 +0000 build-archlinux42: output: + pushd windows-tools-cross
+2023-05-16 12:43:37.389005 +0000 build-archlinux42: output: ---> Good tag e7885b2440a0b2691be3d7fb6bdd35383bd3f1d6
+2023-05-16 12:43:37.389503 +0000 build-archlinux42: output: ++ exec git rev-parse --abbrev-ref HEAD
+2023-05-16 12:43:37.392089 +0000 build-archlinux42: output: + CURRENT_BRANCH=main
+2023-05-16 12:43:37.392132 +0000 build-archlinux42: output: + '[' main '!=' main ']'
+2023-05-16 12:43:37.392142 +0000 build-archlinux42: output: + false
+2023-05-16 12:43:37.392151 +0000 build-archlinux42: output: + false
+2023-05-16 12:43:37.392159 +0000 build-archlinux42: output: + echo '--> Merging...'
+2023-05-16 12:43:37.392171 +0000 build-archlinux42: output: + git -c merge.verifySignatures=no merge --ff-only --commit -q 94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-05-16 12:43:37.392180 +0000 build-archlinux42: output: --> Merging...
+2023-05-16 12:43:37.396759 +0000 build-archlinux42: output: + tracking_branch=refs/remotes//main
+2023-05-16 12:43:37.396805 +0000 build-archlinux42: output: + '[' -f .git/refs/remotes//main ']'
+2023-05-16 12:43:37.396837 +0000 build-archlinux42: output: + '[' -e .gitmodules ']'
+2023-05-16 12:43:37.396848 +0000 build-archlinux42: output: + echo -e '--> Updating submodules'
+2023-05-16 12:43:37.396856 +0000 build-archlinux42: output: + git submodule init
+2023-05-16 12:43:37.396864 +0000 build-archlinux42: output: --> Updating submodules
+2023-05-16 12:43:37.465918 +0000 build-archlinux42: output: + git submodule update --recursive
+2023-05-16 12:43:37.529991 +0000 build-archlinux42: output: + popd
+2023-05-16 12:43:37.530975 +0000 build-archlinux42: output: + exit_clean
+2023-05-16 12:43:37.531020 +0000 build-archlinux42: output: + local exit_code=0
+2023-05-16 12:43:37.531031 +0000 build-archlinux42: output: + '[' 0 -gt 0 ']'
+2023-05-16 12:43:37.531039 +0000 build-archlinux42: output: + exit 0
+2023-05-16 12:43:37.596529 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7788 qubesbuilder.FileCopyOut+__builder__windows-tools-cross /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-05-16 12:43:41.454001 +0000 build-archlinux42: windows-tools-cross: file xenbus-8.2.2.tar already downloaded. Skipping.
+2023-05-16 12:43:41.454047 +0000 build-archlinux42: windows-tools-cross: file xeniface-8.2.2.tar already downloaded. Skipping.
+2023-05-16 12:43:41.456927 +0000 build-archlinux42: windows-tools-cross: file xenvbd-8.2.2.tar already downloaded. Skipping.
+2023-05-16 12:43:41.456973 +0000 build-archlinux42: windows-tools-cross: file xennet-8.2.2.tar already downloaded. Skipping.
+2023-05-16 12:43:58.547969 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7731 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-16 12:43:58.832712 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7731 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-16 12:43:59.097597 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7731 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-16 12:43:59.353281 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7731 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:43:59.607367 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7731 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:44:00.238761 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7731 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:44:00.514275 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp7731 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/windows-tools-cross --file-name xenvif-8.2.2.tar --file-url https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar''.
+2023-05-16 12:44:00.763244 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-16 12:44:00.763303 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/windows-tools-cross --file-name xenvif-8.2.2.tar --file-url https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar
+2023-05-16 12:44:00.768971 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''xenvif-8.2.2.tar'\'' --file-url '\''https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar'\'' --'
+2023-05-16 12:44:00.769023 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''xenvif-8.2.2.tar'\'' --file-url '\''https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar'\'' --'
+2023-05-16 12:44:00.769041 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/windows-tools-cross --file-name xenvif-8.2.2.tar --file-url https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar --
+2023-05-16 12:44:00.769052 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:44:00.769061 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:00.769071 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/windows-tools-cross
+2023-05-16 12:44:00.769084 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:00.769093 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:00.769100 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:44:00.769108 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:00.769115 +0000 build-archlinux42: output: + FILE_NAME=xenvif-8.2.2.tar
+2023-05-16 12:44:00.769140 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:00.769148 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:00.769156 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:44:00.769163 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:00.769174 +0000 build-archlinux42: output: + FILE_URL=https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar
+2023-05-16 12:44:00.769182 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:00.769189 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:00.769196 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:44:00.769203 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:00.769210 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:00.769219 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:44:00.769229 +0000 build-archlinux42: output: + '[' -z https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar ']'
+2023-05-16 12:44:00.769239 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-16 12:44:00.769247 +0000 build-archlinux42: output: + '[' -z xenvif-8.2.2.tar ']'
+2023-05-16 12:44:00.769256 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_xenvif-8.2.2.tar
+2023-05-16 12:44:00.769264 +0000 build-archlinux42: output: + '[' -n /builder/windows-tools-cross ']'
+2023-05-16 12:44:00.769272 +0000 build-archlinux42: output: + mkdir -p /builder/windows-tools-cross
+2023-05-16 12:44:00.775951 +0000 build-archlinux42: output: + cd /builder/windows-tools-cross
+2023-05-16 12:44:00.776001 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_xenvif-8.2.2.tar -- https://xenbits.xenproject.org/pvdrivers/win/8.2.2/xenvif.tar#/xenvif-8.2.2.tar
+2023-05-16 12:44:09.800841 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-05-16 12:44:09.800900 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:44:09.809170 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7731 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__untrusted_xenvif-8.2.2.tar /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpb5v2nhjr
+2023-05-16 12:44:13.525979 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpb5v2nhjr --untrusted-file /home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512'.
+2023-05-16 12:44:13.532496 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-16 12:44:13.532573 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpb5v2nhjr --untrusted-file /home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512
+2023-05-16 12:44:13.532603 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpb5v2nhjr'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512'\'' --'
+2023-05-16 12:44:13.532628 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpb5v2nhjr'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512'\'' --'
+2023-05-16 12:44:13.532673 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpb5v2nhjr --untrusted-file /home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512 --
+2023-05-16 12:44:13.532685 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-05-16 12:44:13.532695 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-05-16 12:44:13.532703 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:13.532714 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpb5v2nhjr
+2023-05-16 12:44:13.532722 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.532731 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.532739 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:44:13.532747 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:13.532762 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar
+2023-05-16 12:44:13.532772 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.534888 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.534927 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:44:13.534958 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:13.534968 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-05-16 12:44:13.534976 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.534983 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.534991 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:44:13.534998 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:13.535009 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512
+2023-05-16 12:44:13.535017 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.535024 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.535031 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:44:13.535038 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:13.535045 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:13.535052 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:44:13.535062 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar ']'
+2023-05-16 12:44:13.535071 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpb5v2nhjr ']'
+2023-05-16 12:44:13.535080 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpb5v2nhjr
+2023-05-16 12:44:13.538614 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar
+2023-05-16 12:44:13.538658 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_xenvif-8.2.2.tar
+2023-05-16 12:44:13.538669 +0000 build-archlinux42: output: + FILE_NAME=xenvif-8.2.2.tar
+2023-05-16 12:44:13.540810 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512 ']'
+2023-05-16 12:44:13.540870 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512 ']'
+2023-05-16 12:44:13.540883 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512 ']'
+2023-05-16 12:44:13.540892 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:44:13.540900 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-05-16 12:44:13.540908 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:44:13.540915 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:44:13.540944 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512 ']'
+2023-05-16 12:44:13.540953 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-05-16 12:44:13.540962 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-05-16 12:44:13.545232 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/windows-tools-cross/xenvif-8.2.2.tar.sha512
+2023-05-16 12:44:13.545285 +0000 build-archlinux42: output: ++ printf '%s  -\n' 268fe9189004a68cda0fb01ee1f88e19b11ed7df8d9bebc6eedff9686f9b23f5659f256163fbe654995b623f758ae4b7c2bc8afed40d063d7bc32e1f029795b7
+2023-05-16 12:44:13.580353 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpb5v2nhjr/untrusted_xenvif-8.2.2.tar /home/user/builder-r4.2/tmp/tmpb5v2nhjr/xenvif-8.2.2.tar
+2023-05-16 12:44:30.554211 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8839 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-16 12:44:30.991467 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8839 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-16 12:44:31.258698 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8839 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-16 12:44:31.599551 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8839 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:44:31.935535 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8839 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:44:32.668732 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8839 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:44:32.983932 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp8839 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/windows-tools-cross --file-name wix311-binaries.zip --file-url https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip''.
+2023-05-16 12:44:33.296714 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-16 12:44:33.296789 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/windows-tools-cross --file-name wix311-binaries.zip --file-url https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip
+2023-05-16 12:44:33.311941 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''wix311-binaries.zip'\'' --file-url '\''https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip'\'' --'
+2023-05-16 12:44:33.312006 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''wix311-binaries.zip'\'' --file-url '\''https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip'\'' --'
+2023-05-16 12:44:33.312028 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/windows-tools-cross --file-name wix311-binaries.zip --file-url https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip --
+2023-05-16 12:44:33.312041 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:44:33.312051 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:33.312061 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/windows-tools-cross
+2023-05-16 12:44:33.312069 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:33.312077 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:33.312105 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:44:33.312115 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:33.312124 +0000 build-archlinux42: output: + FILE_NAME=wix311-binaries.zip
+2023-05-16 12:44:33.312132 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:33.312139 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:33.312146 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:44:33.312153 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:33.312164 +0000 build-archlinux42: output: + FILE_URL=https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip
+2023-05-16 12:44:33.312172 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:33.312179 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:33.312186 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:44:33.312194 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:44:33.312200 +0000 build-archlinux42: output: + shift
+2023-05-16 12:44:33.312208 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:44:33.312218 +0000 build-archlinux42: output: + '[' -z https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip ']'
+2023-05-16 12:44:33.312229 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-16 12:44:33.312237 +0000 build-archlinux42: output: + '[' -z wix311-binaries.zip ']'
+2023-05-16 12:44:33.312246 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_wix311-binaries.zip
+2023-05-16 12:44:33.312254 +0000 build-archlinux42: output: + '[' -n /builder/windows-tools-cross ']'
+2023-05-16 12:44:33.312262 +0000 build-archlinux42: output: + mkdir -p /builder/windows-tools-cross
+2023-05-16 12:44:33.315802 +0000 build-archlinux42: output: + cd /builder/windows-tools-cross
+2023-05-16 12:44:33.315889 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_wix311-binaries.zip -- https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip
+2023-05-16 12:44:58.867628 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-05-16 12:44:58.867685 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:44:58.881420 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8839 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__untrusted_wix311-binaries.zip /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpexkpmevy
+2023-05-16 12:45:02.644626 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpexkpmevy --untrusted-file /home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512'.
+2023-05-16 12:45:02.645586 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-16 12:45:02.645644 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpexkpmevy --untrusted-file /home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512
+2023-05-16 12:45:02.647251 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpexkpmevy'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512'\'' --'
+2023-05-16 12:45:02.647326 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpexkpmevy'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512'\'' --'
+2023-05-16 12:45:02.647349 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpexkpmevy --untrusted-file /home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512 --
+2023-05-16 12:45:02.647359 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-05-16 12:45:02.647367 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-05-16 12:45:02.647375 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:02.651111 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpexkpmevy
+2023-05-16 12:45:02.651151 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651160 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651168 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:45:02.651176 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:02.651186 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip
+2023-05-16 12:45:02.651194 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651202 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651209 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:45:02.651216 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:02.651224 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-05-16 12:45:02.651231 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651238 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651245 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:45:02.651252 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:02.651263 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512
+2023-05-16 12:45:02.651270 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651277 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651284 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:45:02.651292 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:02.651298 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:02.651306 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:45:02.651315 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip ']'
+2023-05-16 12:45:02.651324 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpexkpmevy ']'
+2023-05-16 12:45:02.651333 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpexkpmevy
+2023-05-16 12:45:02.651343 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip
+2023-05-16 12:45:02.655423 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_wix311-binaries.zip
+2023-05-16 12:45:02.655462 +0000 build-archlinux42: output: + FILE_NAME=wix311-binaries.zip
+2023-05-16 12:45:02.655474 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2023-05-16 12:45:02.655485 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2023-05-16 12:45:02.655513 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2023-05-16 12:45:02.655522 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:45:02.655530 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-05-16 12:45:02.655537 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:45:02.655545 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:45:02.655555 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512 ']'
+2023-05-16 12:45:02.655562 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-05-16 12:45:02.655570 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-05-16 12:45:02.655580 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/windows-tools-cross/wix311-binaries.zip.sha512
+2023-05-16 12:45:02.660118 +0000 build-archlinux42: output: ++ printf '%s  -\n' a8c3c2243489fc79e7a18b321ed03133354d43620dd265f087d32ba508f7baf769d32d12b1ccbc22f924573e205ebda7fd8d8ca5e35d5d4a7181af4997657a20
+2023-05-16 12:45:02.717447 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpexkpmevy/untrusted_wix311-binaries.zip /home/user/builder-r4.2/tmp/tmpexkpmevy/wix311-binaries.zip
+2023-05-16 12:45:19.669541 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp457 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-16 12:45:20.014149 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp457 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-16 12:45:20.265907 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp457 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-16 12:45:20.540593 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp457 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:45:20.821101 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp457 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:45:21.653587 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp457 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:45:21.952945 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp457 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/windows-tools-cross --file-name dotNetFx40_Full_x86_x64.exe --file-url https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe''.
+2023-05-16 12:45:22.235256 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-16 12:45:22.235328 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/windows-tools-cross --file-name dotNetFx40_Full_x86_x64.exe --file-url https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:45:22.242136 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''dotNetFx40_Full_x86_x64.exe'\'' --file-url '\''https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe'\'' --'
+2023-05-16 12:45:22.242200 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''dotNetFx40_Full_x86_x64.exe'\'' --file-url '\''https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe'\'' --'
+2023-05-16 12:45:22.242247 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/windows-tools-cross --file-name dotNetFx40_Full_x86_x64.exe --file-url https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe --
+2023-05-16 12:45:22.242262 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:45:22.242273 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:22.242283 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/windows-tools-cross
+2023-05-16 12:45:22.242291 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:22.242299 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:22.242307 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:45:22.242315 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:22.242323 +0000 build-archlinux42: output: + FILE_NAME=dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:45:22.242331 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:22.242338 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:22.243907 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:45:22.243943 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:22.243963 +0000 build-archlinux42: output: + FILE_URL=https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:45:22.243974 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:22.243982 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:22.243991 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:45:22.243999 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:45:22.244007 +0000 build-archlinux42: output: + shift
+2023-05-16 12:45:22.244015 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:45:22.244028 +0000 build-archlinux42: output: + '[' -z https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe ']'
+2023-05-16 12:45:22.244040 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-16 12:45:22.244049 +0000 build-archlinux42: output: + '[' -z dotNetFx40_Full_x86_x64.exe ']'
+2023-05-16 12:45:22.244059 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:45:22.244068 +0000 build-archlinux42: output: + '[' -n /builder/windows-tools-cross ']'
+2023-05-16 12:45:22.244076 +0000 build-archlinux42: output: + mkdir -p /builder/windows-tools-cross
+2023-05-16 12:45:22.244085 +0000 build-archlinux42: output: + cd /builder/windows-tools-cross
+2023-05-16 12:45:22.244104 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_dotNetFx40_Full_x86_x64.exe -- https://web.archive.org/web/20100818223107/http://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:46:05.062784 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-05-16 12:46:05.062882 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:46:05.094523 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp457 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__untrusted_dotNetFx40_Full_x86_x64.exe /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp9wv9mam2
+2023-05-16 12:46:13.129969 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp9wv9mam2 --untrusted-file /home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512'.
+2023-05-16 12:46:13.132278 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-16 12:46:13.132347 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp9wv9mam2 --untrusted-file /home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512
+2023-05-16 12:46:13.132374 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp9wv9mam2'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512'\'' --'
+2023-05-16 12:46:13.132398 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp9wv9mam2'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512'\'' --'
+2023-05-16 12:46:13.132419 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp9wv9mam2 --untrusted-file /home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 --
+2023-05-16 12:46:13.132428 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-05-16 12:46:13.132437 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-05-16 12:46:13.132444 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:13.132454 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp9wv9mam2
+2023-05-16 12:46:13.132461 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132468 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132476 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:46:13.132483 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:13.132494 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:46:13.132501 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132508 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132515 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:46:13.132522 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:13.132530 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-05-16 12:46:13.132537 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132543 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132550 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:46:13.132558 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:13.132568 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512
+2023-05-16 12:46:13.132576 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132583 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132590 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:46:13.132597 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:13.132620 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:13.132629 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:46:13.132640 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe ']'
+2023-05-16 12:46:13.132649 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp9wv9mam2 ']'
+2023-05-16 12:46:13.132658 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp9wv9mam2
+2023-05-16 12:46:13.132949 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:46:13.134865 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:46:13.134909 +0000 build-archlinux42: output: + FILE_NAME=dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:46:13.134923 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2023-05-16 12:46:13.134936 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2023-05-16 12:46:13.134947 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2023-05-16 12:46:13.134955 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:46:13.134962 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-05-16 12:46:13.134969 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:46:13.134976 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:46:13.134987 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512 ']'
+2023-05-16 12:46:13.134994 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-05-16 12:46:13.135002 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-05-16 12:46:13.139327 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/windows-tools-cross/dotNetFx40_Full_x86_x64.exe.sha512
+2023-05-16 12:46:13.139374 +0000 build-archlinux42: output: ++ printf '%s  -\n' 241ba3f82f37818407bc00909c160b653b45a1a3d156e043b87ba18a7819294716705c952c7b46516c4afd86e6f99bad23e7235b951a371ae6728107f19e5f23
+2023-05-16 12:46:13.306681 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmp9wv9mam2/untrusted_dotNetFx40_Full_x86_x64.exe /home/user/builder-r4.2/tmp/tmp9wv9mam2/dotNetFx40_Full_x86_x64.exe
+2023-05-16 12:46:31.694039 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1260 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-16 12:46:32.448085 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1260 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-16 12:46:49.994769 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1260 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-16 12:46:50.884862 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1260 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:46:51.276246 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1260 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:46:52.554354 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1260 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:46:52.971249 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp1260 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/windows-tools-cross --file-name devcon.tar.gz --file-url https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz''.
+2023-05-16 12:46:53.365844 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-16 12:46:53.365921 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/windows-tools-cross --file-name devcon.tar.gz --file-url https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz
+2023-05-16 12:46:53.394184 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''devcon.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz'\'' --'
+2023-05-16 12:46:53.394248 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/windows-tools-cross'\'' --file-name '\''devcon.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz'\'' --'
+2023-05-16 12:46:53.395151 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/windows-tools-cross --file-name devcon.tar.gz --file-url https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz --
+2023-05-16 12:46:53.395184 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:46:53.395197 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:53.395209 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/windows-tools-cross
+2023-05-16 12:46:53.395219 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:53.395228 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:53.395236 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:46:53.395244 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:53.395253 +0000 build-archlinux42: output: + FILE_NAME=devcon.tar.gz
+2023-05-16 12:46:53.395260 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:53.395268 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:53.395275 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:46:53.395283 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:53.395295 +0000 build-archlinux42: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz
+2023-05-16 12:46:53.395303 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:53.395310 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:53.395318 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:46:53.395325 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:46:53.395332 +0000 build-archlinux42: output: + shift
+2023-05-16 12:46:53.395340 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:46:53.395351 +0000 build-archlinux42: output: + '[' -z https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz ']'
+2023-05-16 12:46:53.395362 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-16 12:46:53.395370 +0000 build-archlinux42: output: + '[' -z devcon.tar.gz ']'
+2023-05-16 12:46:53.395379 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_devcon.tar.gz
+2023-05-16 12:46:53.395387 +0000 build-archlinux42: output: + '[' -n /builder/windows-tools-cross ']'
+2023-05-16 12:46:53.395396 +0000 build-archlinux42: output: + mkdir -p /builder/windows-tools-cross
+2023-05-16 12:46:53.395535 +0000 build-archlinux42: output: + cd /builder/windows-tools-cross
+2023-05-16 12:46:53.395586 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_devcon.tar.gz -- https://ftp.qubes-os.org/distfiles/devcon-9f03207ae1e8df83325f067de84494ae55ab5e97.tar.gz#/devcon.tar.gz
+2023-05-16 12:46:54.775950 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-05-16 12:46:54.776004 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:46:54.798885 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1260 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__untrusted_devcon.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp1os5me97
+2023-05-16 12:47:01.102696 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp1os5me97 --untrusted-file /home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512'.
+2023-05-16 12:47:01.102747 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-16 12:47:01.102787 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp1os5me97 --untrusted-file /home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512
+2023-05-16 12:47:01.102838 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp1os5me97'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512'\'' --'
+2023-05-16 12:47:01.102867 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp1os5me97'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512'\'' --'
+2023-05-16 12:47:01.102887 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp1os5me97 --untrusted-file /home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512 --
+2023-05-16 12:47:01.102895 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-05-16 12:47:01.102904 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-05-16 12:47:01.102912 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:47:01.102921 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp1os5me97
+2023-05-16 12:47:01.102929 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.102936 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.102943 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-05-16 12:47:01.105968 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:47:01.106019 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz
+2023-05-16 12:47:01.106032 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.106040 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.106048 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-05-16 12:47:01.106056 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:47:01.106064 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-05-16 12:47:01.106071 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.106101 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.106111 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-05-16 12:47:01.106119 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:47:01.106129 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512
+2023-05-16 12:47:01.106137 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.106144 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.106152 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-05-16 12:47:01.106159 +0000 build-archlinux42: output: + case "$1" in
+2023-05-16 12:47:01.106165 +0000 build-archlinux42: output: + shift
+2023-05-16 12:47:01.106173 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-05-16 12:47:01.106182 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz ']'
+2023-05-16 12:47:01.106191 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1os5me97 ']'
+2023-05-16 12:47:01.106200 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp1os5me97
+2023-05-16 12:47:01.110378 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz
+2023-05-16 12:47:01.110423 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_devcon.tar.gz
+2023-05-16 12:47:01.110435 +0000 build-archlinux42: output: + FILE_NAME=devcon.tar.gz
+2023-05-16 12:47:01.110446 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2023-05-16 12:47:01.110458 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2023-05-16 12:47:01.110468 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2023-05-16 12:47:01.110476 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:47:01.110484 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-05-16 12:47:01.110491 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:47:01.110498 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-05-16 12:47:01.110508 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512 ']'
+2023-05-16 12:47:01.110516 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-05-16 12:47:01.110524 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-05-16 12:47:01.112649 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/windows-tools-cross/devcon.tar.gz.sha512
+2023-05-16 12:47:01.112986 +0000 build-archlinux42: output: ++ printf '%s  -\n' 2aa9f390d9a7b4d2a357f9d5ac4dff79ebb4f01f120a3e2419ff0d49e24977c08396f1d84764494eb4e6c8e0098e2190c557fcfbf85c19e1b02ca24758784a32
+2023-05-16 12:47:01.117002 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmp1os5me97/untrusted_devcon.tar.gz /home/user/builder-r4.2/tmp/tmp1os5me97/devcon.tar.gz
+2023-05-16 12:47:22.296385 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5881 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:47:39.821624 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp5881 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:47:41.404785 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5881 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:47:41.658601 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp5881 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/windows-tools-cross/hash /builder/windows-tools-cross/vtags && cd /builder && git -C /builder/windows-tools-cross rev-parse '\''HEAD^{}'\'' >> /builder/windows-tools-cross/hash && git -C /builder/windows-tools-cross tag --points-at HEAD --list '\''v*'\'' >> /builder/windows-tools-cross/vtags''.
+2023-05-16 12:47:42.094750 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5881 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpwxrua0go
+2023-05-16 12:47:42.441720 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5881 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpwxrua0go
+2023-05-16 12:48:07.504788 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5280 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:48:07.910646 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp5280 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:48:08.666173 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5280 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:48:09.054375 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp5280 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/windows-tools-cross/modules && cd /builder && git -C /builder/windows-tools-cross/qubes-core-vchan-xen rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-core-agent-windows rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-core-qubesdb rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-windows-utils rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-gui-common rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-gui-agent-windows rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface rev-parse HEAD >> /builder/windows-tools-cross/modules''.
+2023-05-16 12:48:09.343246 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5280 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__modules /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpwxrua0go
+2023-05-16 12:48:33.445363 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1709 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-05-16 12:48:34.095297 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-05-16 12:48:51.950866 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1709 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-05-16 12:48:52.283199 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1709 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-16 12:48:52.620343 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-16 12:48:53.041485 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1709 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-16 12:48:53.441896 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp1709 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-vchan-xen qubes-core-vchan-xen-ab3de83c88bdf5ce.tar.gz qubes-core-vchan-xen/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-agent-windows qubes-core-agent-windows-b42d97a244e65058.tar.gz qubes-core-agent-windows/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-qubesdb qubes-core-qubesdb-e94f2c908b04de45.tar.gz qubes-core-qubesdb/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-windows-utils qubes-windows-utils-f50e3c72f384445c.tar.gz qubes-windows-utils/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-gui-common qubes-gui-common-d39f0576ae18626e.tar.gz qubes-gui-common/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-gui-agent-windows qubes-gui-agent-windows-506be63e2b3dfcf7.tar.gz qubes-gui-agent-windows/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar.gz qubes-installer-qubes-os-windows-tools/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar.gz qubes-vmm-xen-windows-pvdrivers/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar.gz qubes-vmm-xen-win-pvdrivers-xeniface/''.
+2023-05-16 12:48:53.763232 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:53.764005 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:53.765273 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:53.847856 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:53.847909 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-vchan-xen
+2023-05-16 12:48:53.847929 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-vchan-xen
+2023-05-16 12:48:53.847941 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:53.847952 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-core-vchan-xen-ab3de83c88bdf5ce.tar
+2023-05-16 12:48:53.847963 +0000 build-archlinux42: output: + '[' xqubes-core-vchan-xen/ '!=' x ']'
+2023-05-16 12:48:53.847972 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-core-vchan-xen/
+2023-05-16 12:48:53.847982 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-core-vchan-xen
+2023-05-16 12:48:53.847990 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:53.847999 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-core-vchan-xen ~
+2023-05-16 12:48:53.904901 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1645474118
+2023-05-16 12:48:53.904961 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:53.904981 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:53.905543 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:53.917292 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:53.917360 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1645474118 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-vchan-xen/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-vchan-xen-ab3de83c88bdf5ce.tar -cf qubes-core-vchan-xen-ab3de83c88bdf5ce.tar .
+2023-05-16 12:48:53.919745 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:53.919842 +0000 build-archlinux42: output: + gzip -fn qubes-core-vchan-xen-ab3de83c88bdf5ce.tar
+2023-05-16 12:48:53.932728 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:53.932786 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:53.934492 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:53.936184 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:53.939264 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:53.942207 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:53.943689 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-agent-windows
+2023-05-16 12:48:53.947052 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-agent-windows
+2023-05-16 12:48:53.947108 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:53.947129 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-core-agent-windows-b42d97a244e65058.tar
+2023-05-16 12:48:53.947143 +0000 build-archlinux42: output: + '[' xqubes-core-agent-windows/ '!=' x ']'
+2023-05-16 12:48:53.947156 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-core-agent-windows/
+2023-05-16 12:48:53.947167 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-core-agent-windows
+2023-05-16 12:48:53.947178 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-core-agent-windows ~
+2023-05-16 12:48:53.950683 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:53.951671 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1684237621
+2023-05-16 12:48:53.952156 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:53.955944 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:53.959719 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:53.959775 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:53.959835 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1684237621 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-agent-windows/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-agent-windows-b42d97a244e65058.tar -cf qubes-core-agent-windows-b42d97a244e65058.tar .
+2023-05-16 12:48:53.979065 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:53.979120 +0000 build-archlinux42: output: + gzip -fn qubes-core-agent-windows-b42d97a244e65058.tar
+2023-05-16 12:48:53.998849 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:53.998907 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.004276 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:54.004331 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:54.004349 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:54.016110 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:54.016170 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-qubesdb
+2023-05-16 12:48:54.016190 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-qubesdb
+2023-05-16 12:48:54.016206 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:54.016221 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-core-qubesdb-e94f2c908b04de45.tar
+2023-05-16 12:48:54.016232 +0000 build-archlinux42: output: + '[' xqubes-core-qubesdb/ '!=' x ']'
+2023-05-16 12:48:54.016244 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-core-qubesdb/
+2023-05-16 12:48:54.018583 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-core-qubesdb
+2023-05-16 12:48:54.018638 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-core-qubesdb ~
+2023-05-16 12:48:54.020085 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:54.020964 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1649537558
+2023-05-16 12:48:54.028528 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:54.028581 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:54.028599 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:54.028610 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:54.028633 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1649537558 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-qubesdb/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-qubesdb-e94f2c908b04de45.tar -cf qubes-core-qubesdb-e94f2c908b04de45.tar .
+2023-05-16 12:48:54.034790 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:54.034867 +0000 build-archlinux42: output: + gzip -fn qubes-core-qubesdb-e94f2c908b04de45.tar
+2023-05-16 12:48:54.043854 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:54.043909 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.046526 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:54.047612 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:54.052789 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:54.053568 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:54.054237 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-windows-utils
+2023-05-16 12:48:54.056414 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-windows-utils
+2023-05-16 12:48:54.056469 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:54.056491 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-windows-utils-f50e3c72f384445c.tar
+2023-05-16 12:48:54.056505 +0000 build-archlinux42: output: + '[' xqubes-windows-utils/ '!=' x ']'
+2023-05-16 12:48:54.056517 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-windows-utils/
+2023-05-16 12:48:54.056528 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-windows-utils
+2023-05-16 12:48:54.056538 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:54.056550 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-windows-utils ~
+2023-05-16 12:48:54.062108 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1684236843
+2023-05-16 12:48:54.062166 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:54.063190 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:54.066769 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:54.066846 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:54.066882 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1684236843 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-windows-utils/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-windows-utils-f50e3c72f384445c.tar -cf qubes-windows-utils-f50e3c72f384445c.tar .
+2023-05-16 12:48:54.071938 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:54.071991 +0000 build-archlinux42: output: + gzip -fn qubes-windows-utils-f50e3c72f384445c.tar
+2023-05-16 12:48:54.081795 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:54.081875 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.087165 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:54.087218 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:54.087234 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:54.095121 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:54.097686 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-gui-common
+2023-05-16 12:48:54.098892 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-gui-common
+2023-05-16 12:48:54.098940 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:54.098978 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-gui-common-d39f0576ae18626e.tar
+2023-05-16 12:48:54.098995 +0000 build-archlinux42: output: + '[' xqubes-gui-common/ '!=' x ']'
+2023-05-16 12:48:54.099006 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-gui-common/
+2023-05-16 12:48:54.099018 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-gui-common
+2023-05-16 12:48:54.099029 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-gui-common ~
+2023-05-16 12:48:54.102808 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:54.102887 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1647880228
+2023-05-16 12:48:54.106901 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:54.106953 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:54.108860 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:54.110608 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:54.110676 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1647880228 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-gui-common/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-gui-common-d39f0576ae18626e.tar -cf qubes-gui-common-d39f0576ae18626e.tar .
+2023-05-16 12:48:54.118730 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:54.118790 +0000 build-archlinux42: output: + gzip -fn qubes-gui-common-d39f0576ae18626e.tar
+2023-05-16 12:48:54.121663 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:54.121717 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.125073 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:54.125854 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:54.130210 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:54.133241 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:54.134023 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-gui-agent-windows
+2023-05-16 12:48:54.137700 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-gui-agent-windows
+2023-05-16 12:48:54.137759 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:54.137779 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-gui-agent-windows-506be63e2b3dfcf7.tar
+2023-05-16 12:48:54.137795 +0000 build-archlinux42: output: + '[' xqubes-gui-agent-windows/ '!=' x ']'
+2023-05-16 12:48:54.137808 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-gui-agent-windows/
+2023-05-16 12:48:54.137845 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-gui-agent-windows
+2023-05-16 12:48:54.137856 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:54.137867 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-gui-agent-windows ~
+2023-05-16 12:48:54.142323 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1684236886
+2023-05-16 12:48:54.142377 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:54.145245 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:54.145303 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:54.148359 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:54.148428 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1684236886 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-gui-agent-windows/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-gui-agent-windows-506be63e2b3dfcf7.tar -cf qubes-gui-agent-windows-506be63e2b3dfcf7.tar .
+2023-05-16 12:48:54.155911 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:54.155963 +0000 build-archlinux42: output: + gzip -fn qubes-gui-agent-windows-506be63e2b3dfcf7.tar
+2023-05-16 12:48:54.174494 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.175151 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:54.182188 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:54.182828 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:54.182896 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:54.186939 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:54.189423 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2023-05-16 12:48:54.191517 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2023-05-16 12:48:54.191573 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:54.191594 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar
+2023-05-16 12:48:54.191610 +0000 build-archlinux42: output: + '[' xqubes-installer-qubes-os-windows-tools/ '!=' x ']'
+2023-05-16 12:48:54.191622 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-installer-qubes-os-windows-tools/
+2023-05-16 12:48:54.191634 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2023-05-16 12:48:54.191645 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools ~
+2023-05-16 12:48:54.193668 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:54.201697 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1647879996
+2023-05-16 12:48:54.202667 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:54.203136 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:54.203734 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:54.214341 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:54.214409 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1647879996 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-installer-qubes-os-windows-tools/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar -cf qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar .
+2023-05-16 12:48:54.225382 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:54.225436 +0000 build-archlinux42: output: + gzip -fn qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar
+2023-05-16 12:48:54.245413 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:54.245466 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.249440 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:54.250277 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:54.254835 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:54.262164 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:54.262677 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2023-05-16 12:48:54.264795 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2023-05-16 12:48:54.264866 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:54.264884 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar
+2023-05-16 12:48:54.264897 +0000 build-archlinux42: output: + '[' xqubes-vmm-xen-windows-pvdrivers/ '!=' x ']'
+2023-05-16 12:48:54.264908 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-vmm-xen-windows-pvdrivers/
+2023-05-16 12:48:54.264919 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2023-05-16 12:48:54.264929 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers ~
+2023-05-16 12:48:54.265531 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:54.269184 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1647655413
+2023-05-16 12:48:54.269961 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:54.272740 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:54.275974 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:54.280674 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:54.280742 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1647655413 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-vmm-xen-windows-pvdrivers/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar -cf qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar .
+2023-05-16 12:48:54.288934 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:54.288989 +0000 build-archlinux42: output: + gzip -fn qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar
+2023-05-16 12:48:54.307930 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.311246 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:54.316304 +0000 build-archlinux42: output: ++ awk '{print $4}'
+2023-05-16 12:48:54.316356 +0000 build-archlinux42: output: ++ tar --version
+2023-05-16 12:48:54.316374 +0000 build-archlinux42: output: ++ head -1
+2023-05-16 12:48:54.322137 +0000 build-archlinux42: output: + TAR_VERSION=1.34
+2023-05-16 12:48:54.325864 +0000 build-archlinux42: output: ++ readlink -f /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2023-05-16 12:48:54.325920 +0000 build-archlinux42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2023-05-16 12:48:54.325938 +0000 build-archlinux42: output: + GIT_ARCHIVE_TYPE=gz
+2023-05-16 12:48:54.325953 +0000 build-archlinux42: output: + GIT_TARBALL_NAME=qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar
+2023-05-16 12:48:54.325966 +0000 build-archlinux42: output: + '[' xqubes-vmm-xen-win-pvdrivers-xeniface/ '!=' x ']'
+2023-05-16 12:48:54.325977 +0000 build-archlinux42: output: + GIT_ARCHIVE_PREFIX=qubes-vmm-xen-win-pvdrivers-xeniface/
+2023-05-16 12:48:54.325988 +0000 build-archlinux42: output: + pushd /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2023-05-16 12:48:54.325997 +0000 build-archlinux42: output: ++ git log -1 --format=%ct
+2023-05-16 12:48:54.326007 +0000 build-archlinux42: output: /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface ~
+2023-05-16 12:48:54.329951 +0000 build-archlinux42: output: + SOURCE_DATE_EPOCH=1642760675
+2023-05-16 12:48:54.333747 +0000 build-archlinux42: output: ++ head -n1
+2023-05-16 12:48:54.339709 +0000 build-archlinux42: output: ++ printf '%s\n' 1.34 1.28
+2023-05-16 12:48:54.339767 +0000 build-archlinux42: output: ++ sort -V
+2023-05-16 12:48:54.339789 +0000 build-archlinux42: output: + '[' 1.28 == 1.28 ']'
+2023-05-16 12:48:54.339842 +0000 build-archlinux42: output: + tar --sort=name --mtime=@1642760675 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-vmm-xen-win-pvdrivers-xeniface/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar -cf qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar .
+2023-05-16 12:48:54.348608 +0000 build-archlinux42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-05-16 12:48:54.348669 +0000 build-archlinux42: output: + gzip -fn qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar
+2023-05-16 12:48:54.374741 +0000 build-archlinux42: output: ~
+2023-05-16 12:48:54.374799 +0000 build-archlinux42: output: + popd
+2023-05-16 12:48:54.401265 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-core-vchan-xen__qubes-core-vchan-xen-ab3de83c88bdf5ce.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:54.738860 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-core-agent-windows__qubes-core-agent-windows-b42d97a244e65058.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:55.061416 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-core-qubesdb__qubes-core-qubesdb-e94f2c908b04de45.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:55.303922 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-windows-utils__qubes-windows-utils-f50e3c72f384445c.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:55.763914 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-gui-common__qubes-gui-common-d39f0576ae18626e.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:56.054196 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-gui-agent-windows__qubes-gui-agent-windows-506be63e2b3dfcf7.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:56.508220 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-installer-qubes-os-windows-tools__qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:57.039508 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-vmm-xen-windows-pvdrivers__qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:48:57.427377 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1709 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-vmm-xen-win-pvdrivers-xeniface__qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-05-16 12:49:03.874509 +0000 build-archlinux42: > done
+2023-05-16 12:49:03.874560 +0000 > closing log
