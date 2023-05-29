@@ -1,0 +1,769 @@
+2023-05-29 17:12:51.899589 +0000 > starting log
+2023-05-29 17:12:51.899929 +0000 build-ubuntu42: > starting build with log
+2023-05-29 17:12:51.899944 +0000 build-ubuntu42: >> args:
+2023-05-29 17:12:51.899954 +0000 build-ubuntu42: >>   ()
+2023-05-29 17:12:51.899962 +0000 build-ubuntu42: >> component:
+2023-05-29 17:12:51.899970 +0000 build-ubuntu42: >>   vmm-xen-stubdom-linux
+2023-05-29 17:12:51.899978 +0000 build-ubuntu42: >> distributions:
+2023-05-29 17:12:51.899988 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-05-29 17:13:11.286762 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1351 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-29 17:13:12.241315 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1351 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-29 17:13:30.825472 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1351 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-29 17:13:31.203711 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp1351 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component vmm-xen-stubdom-linux --git-branch main --git-url https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only''.
+2023-05-29 17:13:31.475096 +0000 build-ubuntu42: output: + unset CLEAN
+2023-05-29 17:13:31.475143 +0000 build-ubuntu42: output: + CLEAN=0
+2023-05-29 17:13:31.475169 +0000 build-ubuntu42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-05-29 17:13:31.475207 +0000 build-ubuntu42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component vmm-xen-stubdom-linux --git-branch main --git-url https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only
+2023-05-29 17:13:31.491419 +0000 build-ubuntu42: output: + OPTS=' --component '\''vmm-xen-stubdom-linux'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-29 17:13:31.491475 +0000 build-ubuntu42: output: + eval set -- ' --component '\''vmm-xen-stubdom-linux'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-05-29 17:13:31.491499 +0000 build-ubuntu42: output: ++ set -- --component vmm-xen-stubdom-linux --git-branch main --git-url https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only --
+2023-05-29 17:13:31.491510 +0000 build-ubuntu42: output: + [[ 12 -gt 0 ]]
+2023-05-29 17:13:31.491519 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:13:31.491529 +0000 build-ubuntu42: output: + COMPONENT=vmm-xen-stubdom-linux
+2023-05-29 17:13:31.491537 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491544 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491552 +0000 build-ubuntu42: output: + [[ 10 -gt 0 ]]
+2023-05-29 17:13:31.491560 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:13:31.491567 +0000 build-ubuntu42: output: + BRANCH=main
+2023-05-29 17:13:31.491596 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491605 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491614 +0000 build-ubuntu42: output: + [[ 8 -gt 0 ]]
+2023-05-29 17:13:31.491621 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:13:31.491631 +0000 build-ubuntu42: output: + GIT_URL=https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git
+2023-05-29 17:13:31.491639 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491671 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491682 +0000 build-ubuntu42: output: + [[ 6 -gt 0 ]]
+2023-05-29 17:13:31.491690 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:13:31.491699 +0000 build-ubuntu42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-05-29 17:13:31.491706 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491713 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491721 +0000 build-ubuntu42: output: + [[ 4 -gt 0 ]]
+2023-05-29 17:13:31.491729 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:13:31.491737 +0000 build-ubuntu42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-05-29 17:13:31.491744 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491752 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491759 +0000 build-ubuntu42: output: + [[ 2 -gt 0 ]]
+2023-05-29 17:13:31.491767 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:13:31.491775 +0000 build-ubuntu42: output: + FETCH_VERSIONS_ONLY=1
+2023-05-29 17:13:31.491782 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491790 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:13:31.491797 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:13:31.491805 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:13:31.491812 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:13:31.491820 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-29 17:13:31.491827 +0000 build-ubuntu42: output: -]*$ ]]
+2023-05-29 17:13:31.491835 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-05-29 17:13:31.491842 +0000 build-ubuntu42: output: -]*$ ]]
+2023-05-29 17:13:31.491851 +0000 build-ubuntu42: output: + [[ -n vmm-xen-stubdom-linux ]]
+2023-05-29 17:13:31.491858 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:13:31.491867 +0000 build-ubuntu42: output: + REPO=vmm-xen-stubdom-linux
+2023-05-29 17:13:31.491875 +0000 build-ubuntu42: output: + '[' -z /builder/keyring ']'
+2023-05-29 17:13:31.491883 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:13:31.491891 +0000 build-ubuntu42: output: + GIT_SUFFIX=.git
+2023-05-29 17:13:31.491899 +0000 build-ubuntu42: output: + '[' -z main ']'
+2023-05-29 17:13:31.491906 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:13:31.491917 +0000 build-ubuntu42: output: + '[' -z https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git ']'
+2023-05-29 17:13:31.491925 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:13:31.491934 +0000 build-ubuntu42: output: + case ${IGNORE_MISSING=0} in
+2023-05-29 17:13:31.491941 +0000 build-ubuntu42: output: + :
+2023-05-29 17:13:31.491949 +0000 build-ubuntu42: output: + case ${GIT_CLONE_FAST=0} in
+2023-05-29 17:13:31.491957 +0000 build-ubuntu42: output: + :
+2023-05-29 17:13:31.491965 +0000 build-ubuntu42: output: + GIT_OPTIONS=()
+2023-05-29 17:13:31.491972 +0000 build-ubuntu42: output: + [[ 0 = \1 ]]
+2023-05-29 17:13:31.491981 +0000 build-ubuntu42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-05-29 17:13:31.491991 +0000 build-ubuntu42: output: + [[ main =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-05-29 17:13:31.492000 +0000 build-ubuntu42: output: + [[ vmm-xen-stubdom-linux =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-05-29 17:13:31.494395 +0000 build-ubuntu42: output: + trap exit_clean 0 1 2 3 6 15
+2023-05-29 17:13:31.494440 +0000 build-ubuntu42: output: + fresh_clone=false
+2023-05-29 17:13:31.494452 +0000 build-ubuntu42: output: + [[ '' = \1 ]]
+2023-05-29 17:13:31.494462 +0000 build-ubuntu42: output: + [[ -d vmm-xen-stubdom-linux ]]
+2023-05-29 17:13:31.494489 +0000 build-ubuntu42: output: + rm -f -- vmm-xen-stubdom-linux
+2023-05-29 17:13:31.495996 +0000 build-ubuntu42: output: + print_headers
+2023-05-29 17:13:31.496040 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:13:31.496053 +0000 build-ubuntu42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git main'
+2023-05-29 17:13:31.496065 +0000 build-ubuntu42: output: + echo '-> Updating sources for vmm-xen-stubdom-linux...'
+2023-05-29 17:13:31.496077 +0000 build-ubuntu42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git main...'
+2023-05-29 17:13:31.496089 +0000 build-ubuntu42: output: + git clone -n -q -b main https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git vmm-xen-stubdom-linux
+2023-05-29 17:13:31.496100 +0000 build-ubuntu42: output: -> Updating sources for vmm-xen-stubdom-linux...
+2023-05-29 17:13:31.496111 +0000 build-ubuntu42: output: --> Fetching from https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux.git main...
+2023-05-29 17:13:34.850052 +0000 build-ubuntu42: output: + '[' 1 == 1 ']'
+2023-05-29 17:13:34.850101 +0000 build-ubuntu42: output: ++ git -C vmm-xen-stubdom-linux describe '--match=v*' --abbrev=0 HEAD
+2023-05-29 17:13:34.850113 +0000 build-ubuntu42: output: + vtag=v4.2.6
+2023-05-29 17:13:34.850122 +0000 build-ubuntu42: output: + '[' -n v4.2.6 ']'
+2023-05-29 17:13:34.850131 +0000 build-ubuntu42: output: + VERIFY_REF='v4.2.6^{commit}'
+2023-05-29 17:13:34.850139 +0000 build-ubuntu42: output: + fresh_clone=:
+2023-05-29 17:13:34.850147 +0000 build-ubuntu42: output: + export CHECK=signed-tag
+2023-05-29 17:13:34.850155 +0000 build-ubuntu42: output: + CHECK=signed-tag
+2023-05-29 17:13:34.850163 +0000 build-ubuntu42: output: + verify=true
+2023-05-29 17:13:34.850170 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-29 17:13:34.850178 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-29 17:13:34.850188 +0000 build-ubuntu42: output: ++ git -C vmm-xen-stubdom-linux rev-parse -q --verify 'v4.2.6^{commit}'
+2023-05-29 17:13:34.858762 +0000 build-ubuntu42: output: + VERIFY_REF=6c9b44240420cd642928b48db30bc558b460fd1a
+2023-05-29 17:13:34.858808 +0000 build-ubuntu42: output: + '[' true = false ']'
+2023-05-29 17:13:34.858822 +0000 build-ubuntu42: output: + [[ signed-tag == \s\i\g\n\e\d\-\t\a\g\-\o\r\-\c\o\m\m\i\t ]]
+2023-05-29 17:13:34.858832 +0000 build-ubuntu42: output: + echo '--> Verifying tags...'
+2023-05-29 17:13:34.858840 +0000 build-ubuntu42: output: ++ readlink -m /builder/keyring
+2023-05-29 17:13:34.858848 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-05-29 17:13:34.867673 +0000 build-ubuntu42: output: + GNUPGHOME=/builder/keyring
+2023-05-29 17:13:34.867719 +0000 build-ubuntu42: output: + export GNUPGHOME
+2023-05-29 17:13:34.867731 +0000 build-ubuntu42: output: + '[' '!' -d /builder/keyring ']'
+2023-05-29 17:13:34.867741 +0000 build-ubuntu42: output: + mkdir -p /builder/keyring
+2023-05-29 17:13:34.867749 +0000 build-ubuntu42: output: + chmod 700 /builder/keyring
+2023-05-29 17:13:34.874431 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-05-29 17:13:34.907332 +0000 build-ubuntu42: output: gpg: keybox '/builder/keyring/pubring.kbx' created
+2023-05-29 17:13:34.916184 +0000 build-ubuntu42: output: gpg: /builder/keyring/trustdb.gpg: trustdb created
+2023-05-29 17:13:34.916234 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: public key "Qubes Master Signing Key" imported
+2023-05-29 17:13:34.933221 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: public key "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" imported
+2023-05-29 17:13:34.939755 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: public key "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" imported
+2023-05-29 17:13:34.939803 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-05-29 17:13:34.939815 +0000 build-ubuntu42: output: gpg:               imported: 3
+2023-05-29 17:13:34.939842 +0000 build-ubuntu42: output: gpg: no ultimately trusted keys found
+2023-05-29 17:13:34.946272 +0000 build-ubuntu42: output: + echo 427F11FD0FAA4B080123F01CDDFA1A3E36879494:6:
+2023-05-29 17:13:34.946318 +0000 build-ubuntu42: output: + gpg --import-ownertrust
+2023-05-29 17:13:34.952063 +0000 build-ubuntu42: output: gpg: inserting ownertrust of 6
+2023-05-29 17:13:34.959384 +0000 build-ubuntu42: output: + '[' /builder/plugins/fetch/keys/qubes-developers-keys.asc -nt /builder/keyring/pubring.gpg ']'
+2023-05-29 17:13:34.959431 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-05-29 17:13:34.963378 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: "Qubes Master Signing Key" not changed
+2023-05-29 17:13:34.963428 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" not changed
+2023-05-29 17:13:34.967751 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" not changed
+2023-05-29 17:13:34.967799 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-05-29 17:13:34.967811 +0000 build-ubuntu42: output: gpg:              unchanged: 3
+2023-05-29 17:13:34.967820 +0000 build-ubuntu42: output: + touch /builder/keyring/pubring.gpg
+2023-05-29 17:13:34.974367 +0000 build-ubuntu42: output: + gpgconf --kill gpg-agent
+2023-05-29 17:13:34.987065 +0000 build-ubuntu42: output: + pushd vmm-xen-stubdom-linux
+2023-05-29 17:13:34.987112 +0000 build-ubuntu42: output: + expected_hash=6c9b44240420cd642928b48db30bc558b460fd1a
+2023-05-29 17:13:34.987124 +0000 build-ubuntu42: output: + hash_len=40
+2023-05-29 17:13:34.987134 +0000 build-ubuntu42: output: + '[' 40 -ne 40 ']'
+2023-05-29 17:13:34.987145 +0000 build-ubuntu42: output: + [[ 6c9b44240420cd642928b48db30bc558b460fd1a =~ ^[a-f0-9]+$ ]]
+2023-05-29 17:13:34.987156 +0000 build-ubuntu42: output: + format='%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-05-29 17:13:34.993926 +0000 build-ubuntu42: output: ++ git tag --points-at=6c9b44240420cd642928b48db30bc558b460fd1a '--format=%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-05-29 17:13:34.993973 +0000 build-ubuntu42: output: ++ head -c 500
+2023-05-29 17:13:35.004632 +0000 build-ubuntu42: output: + tags=c0d56b2d91afc5b287efda9a80569d6cccf4e7de:6c9b44240420cd642928b48db30bc558b460fd1a:
+2023-05-29 17:13:35.004684 +0000 build-ubuntu42: output: + for tag in $tags
+2023-05-29 17:13:35.004718 +0000 build-ubuntu42: output: + (( 82 != hash_len * 2 + 2 ))
+2023-05-29 17:13:35.004734 +0000 build-ubuntu42: output: + [[ :6c9b44240420cd642928b48db30bc558b460fd1a: == \:\6\c\9\b\4\4\2\4\0\4\2\0\c\d\6\4\2\9\2\8\b\4\8\d\b\3\0\b\c\5\5\8\b\4\6\0\f\d\1\a\: ]]
+2023-05-29 17:13:35.004744 +0000 build-ubuntu42: output: + tag=c0d56b2d91afc5b287efda9a80569d6cccf4e7de
+2023-05-29 17:13:35.004754 +0000 build-ubuntu42: output: + verify_git_obj tag c0d56b2d91afc5b287efda9a80569d6cccf4e7de
+2023-05-29 17:13:35.004763 +0000 build-ubuntu42: output: + local content newsig_number
+2023-05-29 17:13:35.004774 +0000 build-ubuntu42: output: ++ git -c gpg.program=gpg -c gpg.minTrustLevel=fully verify-tag --raw -- c0d56b2d91afc5b287efda9a80569d6cccf4e7de
+2023-05-29 17:13:35.021026 +0000 build-ubuntu42: output: + content='[GNUPG:] NEWSIG
+2023-05-29 17:13:35.021073 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.021086 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID K0yfjNPMx8qUdDDd6PveBMtYRZY 2023-05-29 1685380355
+2023-05-29 17:13:35.021097 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.021111 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.021122 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.021149 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.021163 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-29 17:13:35.021178 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-05-29 1685380355 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-29 17:13:35.021189 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.021198 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-29 17:13:35.027615 +0000 build-ubuntu42: output: ++ printf '%s\n' '[GNUPG:] NEWSIG
+2023-05-29 17:13:35.027686 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.027700 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID K0yfjNPMx8qUdDDd6PveBMtYRZY 2023-05-29 1685380355
+2023-05-29 17:13:35.027711 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.027721 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.027731 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.027740 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.027752 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-29 17:13:35.027766 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-05-29 1685380355 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-29 17:13:35.027778 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.027786 +0000 build-ubuntu42: output: ++ grep -c '^\[GNUPG:] NEWSIG'
+2023-05-29 17:13:35.027794 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-29 17:13:35.037387 +0000 build-ubuntu42: output: + newsig_number=1
+2023-05-29 17:13:35.037435 +0000 build-ubuntu42: output: + '[' 1 = 1 ']'
+2023-05-29 17:13:35.037447 +0000 build-ubuntu42: output: + printf '%s\n' '[GNUPG:] NEWSIG
+2023-05-29 17:13:35.037458 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.037474 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID K0yfjNPMx8qUdDDd6PveBMtYRZY 2023-05-29 1685380355
+2023-05-29 17:13:35.037484 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.037494 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.037504 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.037514 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-05-29 17:13:35.037525 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-05-29 17:13:35.037539 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-05-29 1685380355 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-05-29 17:13:35.037551 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-05-29 17:13:35.037559 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-05-29 17:13:35.037568 +0000 build-ubuntu42: output: + grep '^\[GNUPG:] TRUST_\(FULLY\|ULTIMATE\) 0 pgp\>'
+2023-05-29 17:13:35.040665 +0000 build-ubuntu42: output: + echo '---> Good tag c0d56b2d91afc5b287efda9a80569d6cccf4e7de'
+2023-05-29 17:13:35.040746 +0000 build-ubuntu42: output: + '[' -z x ']'
+2023-05-29 17:13:35.040759 +0000 build-ubuntu42: output: + popd
+2023-05-29 17:13:35.040768 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-29 17:13:35.040777 +0000 build-ubuntu42: output: + pushd vmm-xen-stubdom-linux
+2023-05-29 17:13:35.040787 +0000 build-ubuntu42: output: ++ exec git rev-parse --abbrev-ref HEAD
+2023-05-29 17:13:35.040796 +0000 build-ubuntu42: output: ---> Good tag c0d56b2d91afc5b287efda9a80569d6cccf4e7de
+2023-05-29 17:13:35.047198 +0000 build-ubuntu42: output: + CURRENT_BRANCH=main
+2023-05-29 17:13:35.047244 +0000 build-ubuntu42: output: + '[' main '!=' main ']'
+2023-05-29 17:13:35.047255 +0000 build-ubuntu42: output: + :
+2023-05-29 17:13:35.047264 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:13:35.047273 +0000 build-ubuntu42: output: + red='.[1;31m'
+2023-05-29 17:13:35.047281 +0000 build-ubuntu42: output: + green='.[1;32m'
+2023-05-29 17:13:35.047289 +0000 build-ubuntu42: output: + normal='.[0;0m'
+2023-05-29 17:13:35.047297 +0000 build-ubuntu42: output: ++ git name-rev --name-only main
+2023-05-29 17:13:35.071916 +0000 build-ubuntu42: output: + '[' -n 'tags/v4.2.6^0' ']'
+2023-05-29 17:13:35.071964 +0000 build-ubuntu42: output: + echo '--> Switching branch from main branch to .[1;32mmain.[0;0m'
+2023-05-29 17:13:35.071974 +0000 build-ubuntu42: output: + :
+2023-05-29 17:13:35.071985 +0000 build-ubuntu42: output: + git checkout -B main 6c9b44240420cd642928b48db30bc558b460fd1a
+2023-05-29 17:13:35.071999 +0000 build-ubuntu42: output: --> Switching branch from main branch to .[1;32mmain.[0;0m
+2023-05-29 17:13:35.090076 +0000 build-ubuntu42: output: Reset branch 'main'
+2023-05-29 17:13:35.090136 +0000 build-ubuntu42: output: Your branch is up to date with 'origin/main'.
+2023-05-29 17:13:35.094696 +0000 build-ubuntu42: output: + :
+2023-05-29 17:13:35.094743 +0000 build-ubuntu42: output: + '[' -e .gitmodules ']'
+2023-05-29 17:13:35.094755 +0000 build-ubuntu42: output: + echo -e '--> Updating submodules'
+2023-05-29 17:13:35.094764 +0000 build-ubuntu42: output: + git submodule init
+2023-05-29 17:13:35.094773 +0000 build-ubuntu42: output: --> Updating submodules
+2023-05-29 17:13:35.167756 +0000 build-ubuntu42: output: Submodule 'pulseaudio/gui-agent' (https://github.com/QubesOS/qubes-gui-agent-linux) registered for path 'pulseaudio/gui-agent'
+2023-05-29 17:13:35.171901 +0000 build-ubuntu42: output: Submodule 'qemu/gui-agent' (https://github.com/QubesOS/qubes-gui-agent-xen-hvm-stubdom) registered for path 'qemu/gui-agent'
+2023-05-29 17:13:35.177815 +0000 build-ubuntu42: output: Submodule 'qrexec' (https://github.com/QubesOS/qubes-core-qrexec) registered for path 'qrexec'
+2023-05-29 17:13:35.179235 +0000 build-ubuntu42: output: Submodule 'usbproxy' (https://github.com/QubesOS/qubes-app-linux-usb-proxy) registered for path 'usbproxy'
+2023-05-29 17:13:35.181084 +0000 build-ubuntu42: output: + git submodule update --recursive
+2023-05-29 17:13:35.282581 +0000 build-ubuntu42: output: Cloning into '/builder/vmm-xen-stubdom-linux/pulseaudio/gui-agent'...
+2023-05-29 17:13:41.572763 +0000 build-ubuntu42: output: Cloning into '/builder/vmm-xen-stubdom-linux/qemu/gui-agent'...
+2023-05-29 17:13:43.840758 +0000 build-ubuntu42: output: Cloning into '/builder/vmm-xen-stubdom-linux/qrexec'...
+2023-05-29 17:13:46.138285 +0000 build-ubuntu42: output: Cloning into '/builder/vmm-xen-stubdom-linux/usbproxy'...
+2023-05-29 17:13:47.797965 +0000 build-ubuntu42: output: Submodule path 'pulseaudio/gui-agent': checked out 'bf3dfb28efab49d72e8ca161cc4dd7a24a2ffce5'
+2023-05-29 17:13:47.828018 +0000 build-ubuntu42: output: Submodule path 'qemu/gui-agent': checked out '2239c124636d3551dcdcf12e355ca2f0721b78ea'
+2023-05-29 17:13:47.894164 +0000 build-ubuntu42: output: Submodule path 'qrexec': checked out 'fdd306fe4fe811c31819d7c64663cd64edcce4d0'
+2023-05-29 17:13:47.917483 +0000 build-ubuntu42: output: Submodule path 'usbproxy': checked out '59eed8958e4a891cb1003b94957707ebbee62592'
+2023-05-29 17:13:47.929003 +0000 build-ubuntu42: output: + popd
+2023-05-29 17:13:47.929067 +0000 build-ubuntu42: output: + exit_clean
+2023-05-29 17:13:47.929088 +0000 build-ubuntu42: output: + local exit_code=0
+2023-05-29 17:13:47.929101 +0000 build-ubuntu42: output: + '[' 0 -gt 0 ']'
+2023-05-29 17:13:47.929111 +0000 build-ubuntu42: output: + exit 0
+2023-05-29 17:13:47.947619 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1351 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-05-29 17:14:31.221198 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9194 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-29 17:14:32.333532 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9194 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-29 17:14:32.644217 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9194 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-29 17:14:33.375741 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9194 bash -c 'rm -rf /builder/incoming/vmm-xen-stubdom-linux /builder/vmm-xen-stubdom-linux'
+2023-05-29 17:14:51.052304 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9194 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux
+2023-05-29 17:14:52.243267 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9194 bash -c 'mkdir -p /builder && mv /builder/incoming/vmm-xen-stubdom-linux /builder'
+2023-05-29 17:14:52.568215 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp9194 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-6.1.0.tar.xz --file-url https://download.qemu.org/qemu-6.1.0.tar.xz --signature-url https://download.qemu.org/qemu-6.1.0.tar.xz.sig''.
+2023-05-29 17:14:52.865307 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-29 17:14:52.866138 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-6.1.0.tar.xz --file-url https://download.qemu.org/qemu-6.1.0.tar.xz --signature-url https://download.qemu.org/qemu-6.1.0.tar.xz.sig
+2023-05-29 17:14:52.873268 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''qemu-6.1.0.tar.xz'\'' --file-url '\''https://download.qemu.org/qemu-6.1.0.tar.xz'\'' --signature-url '\''https://download.qemu.org/qemu-6.1.0.tar.xz.sig'\'' --'
+2023-05-29 17:14:52.873337 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''qemu-6.1.0.tar.xz'\'' --file-url '\''https://download.qemu.org/qemu-6.1.0.tar.xz'\'' --signature-url '\''https://download.qemu.org/qemu-6.1.0.tar.xz.sig'\'' --'
+2023-05-29 17:14:52.873367 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name qemu-6.1.0.tar.xz --file-url https://download.qemu.org/qemu-6.1.0.tar.xz --signature-url https://download.qemu.org/qemu-6.1.0.tar.xz.sig --
+2023-05-29 17:14:52.873384 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-29 17:14:52.873397 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:14:52.873411 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2023-05-29 17:14:52.873422 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873433 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873443 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:14:52.873452 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:14:52.873483 +0000 build-ubuntu42: output: + FILE_NAME=qemu-6.1.0.tar.xz
+2023-05-29 17:14:52.873494 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873502 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873511 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:14:52.873519 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:14:52.873530 +0000 build-ubuntu42: output: + FILE_URL=https://download.qemu.org/qemu-6.1.0.tar.xz
+2023-05-29 17:14:52.873538 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873546 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873554 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:14:52.873562 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:14:52.873572 +0000 build-ubuntu42: output: + SIGNATURE_URL=https://download.qemu.org/qemu-6.1.0.tar.xz.sig
+2023-05-29 17:14:52.873579 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873587 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873594 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:14:52.873602 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:14:52.873609 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:14:52.873617 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:14:52.873626 +0000 build-ubuntu42: output: + '[' -z https://download.qemu.org/qemu-6.1.0.tar.xz ']'
+2023-05-29 17:14:52.873637 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-29 17:14:52.873672 +0000 build-ubuntu42: output: + '[' -z qemu-6.1.0.tar.xz ']'
+2023-05-29 17:14:52.873685 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_qemu-6.1.0.tar.xz
+2023-05-29 17:14:52.873694 +0000 build-ubuntu42: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2023-05-29 17:14:52.873703 +0000 build-ubuntu42: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2023-05-29 17:14:52.873712 +0000 build-ubuntu42: output: + cd /builder/vmm-xen-stubdom-linux
+2023-05-29 17:14:52.874470 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qemu-6.1.0.tar.xz -- https://download.qemu.org/qemu-6.1.0.tar.xz
+2023-05-29 17:15:38.387994 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-29 17:15:38.388054 +0000 build-ubuntu42: output: + '[' -n https://download.qemu.org/qemu-6.1.0.tar.xz.sig ']'
+2023-05-29 17:15:38.388074 +0000 build-ubuntu42: output: ++ basename https://download.qemu.org/qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:38.392906 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:38.392962 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:38.392990 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_qemu-6.1.0.tar.xz.sig https://download.qemu.org/qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:39.257893 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9194 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_qemu-6.1.0.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp3bxtjtbw
+2023-05-29 17:15:43.338807 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9194 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_qemu-6.1.0.tar.xz.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp3bxtjtbw
+2023-05-29 17:15:47.441808 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp3bxtjtbw --untrusted-file /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'.
+2023-05-29 17:15:47.447302 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-29 17:15:47.447387 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp3bxtjtbw --untrusted-file /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc
+2023-05-29 17:15:47.447428 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp3bxtjtbw'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'\'' --'
+2023-05-29 17:15:47.447465 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp3bxtjtbw'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc'\'' --'
+2023-05-29 17:15:47.447495 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp3bxtjtbw --untrusted-file /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc --
+2023-05-29 17:15:47.447506 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-05-29 17:15:47.447516 +0000 build-ubuntu42: output: + [[ 11 -gt 0 ]]
+2023-05-29 17:15:47.447525 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:15:47.447536 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp3bxtjtbw
+2023-05-29 17:15:47.447545 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447553 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447561 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-29 17:15:47.447570 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:15:47.447581 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz
+2023-05-29 17:15:47.447589 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447596 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447604 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:15:47.447612 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:15:47.447623 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:47.447671 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447683 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447692 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:15:47.447700 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:15:47.447709 +0000 build-ubuntu42: output: + PUBKEY_FILE+=("$2")
+2023-05-29 17:15:47.447716 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447724 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447732 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:15:47.447740 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:15:47.447748 +0000 build-ubuntu42: output: + PUBKEY_FILE+=("$2")
+2023-05-29 17:15:47.447755 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447763 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447771 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:15:47.447779 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:15:47.447786 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:15:47.447794 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:15:47.447805 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz ']'
+2023-05-29 17:15:47.447814 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp3bxtjtbw ']'
+2023-05-29 17:15:47.447824 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp3bxtjtbw
+2023-05-29 17:15:47.451459 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz
+2023-05-29 17:15:47.451506 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_qemu-6.1.0.tar.xz
+2023-05-29 17:15:47.451519 +0000 build-ubuntu42: output: + FILE_NAME=qemu-6.1.0.tar.xz
+2023-05-29 17:15:47.451528 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:15:47.451539 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig ']'
+2023-05-29 17:15:47.451548 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:15:47.451559 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig ']'
+2023-05-29 17:15:47.455572 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2023-05-29 17:15:47.455620 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig ']'
+2023-05-29 17:15:47.455634 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig ']'
+2023-05-29 17:15:47.455666 +0000 build-ubuntu42: output: + '[' '!' -e /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2023-05-29 17:15:47.455677 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:15:47.455689 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig ']'
+2023-05-29 17:15:47.455700 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc ']'
+2023-05-29 17:15:47.455711 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:47.455721 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:47.455731 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:47.456591 +0000 build-ubuntu42: output: ++ mktemp -u
+2023-05-29 17:15:47.456623 +0000 build-ubuntu42: output: + keyring=/tmp/tmp.63MzIHykA2
+2023-05-29 17:15:47.456634 +0000 build-ubuntu42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-05-29 17:15:47.461443 +0000 build-ubuntu42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.63MzIHykA2 -q --import /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/mdroth.asc
+2023-05-29 17:15:47.466759 +0000 build-ubuntu42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-05-29 17:15:47.466812 +0000 build-ubuntu42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.63MzIHykA2 -q --import /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/qemu/pbonzini.asc
+2023-05-29 17:15:47.477546 +0000 build-ubuntu42: output: + gpgv --keyring /tmp/tmp.63MzIHykA2 /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz
+2023-05-29 17:15:48.029794 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz.sig /home/user/builder-r4.2/tmp/tmp3bxtjtbw/qemu-6.1.0.tar.xz.sig
+2023-05-29 17:15:48.029840 +0000 build-ubuntu42: output: + rm -rf /tmp/tmp.63MzIHykA2
+2023-05-29 17:15:48.034492 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp3bxtjtbw/untrusted_qemu-6.1.0.tar.xz /home/user/builder-r4.2/tmp/tmp3bxtjtbw/qemu-6.1.0.tar.xz
+2023-05-29 17:16:24.119131 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7218 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-29 17:16:25.068814 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7218 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-29 17:16:25.819306 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7218 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-29 17:16:26.412715 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7218 bash -c 'rm -rf /builder/incoming/vmm-xen-stubdom-linux /builder/vmm-xen-stubdom-linux'
+2023-05-29 17:16:27.164308 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7218 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux
+2023-05-29 17:16:29.197575 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7218 bash -c 'mkdir -p /builder && mv /builder/incoming/vmm-xen-stubdom-linux /builder'
+2023-05-29 17:16:29.745819 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp7218 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.105.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign --uncompress''.
+2023-05-29 17:16:30.210614 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-29 17:16:30.218046 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.105.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign --uncompress
+2023-05-29 17:16:30.260403 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''linux-5.10.105.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign'\'' --uncompress --'
+2023-05-29 17:16:30.260463 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''linux-5.10.105.tar.xz'\'' --file-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz'\'' --signature-url '\''https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign'\'' --uncompress --'
+2023-05-29 17:16:30.260504 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name linux-5.10.105.tar.xz --file-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz --signature-url https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign --uncompress --
+2023-05-29 17:16:30.260516 +0000 build-ubuntu42: output: + [[ 10 -gt 0 ]]
+2023-05-29 17:16:30.260526 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:16:30.260536 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2023-05-29 17:16:30.260545 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.260552 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.260560 +0000 build-ubuntu42: output: + [[ 8 -gt 0 ]]
+2023-05-29 17:16:30.260568 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:16:30.260577 +0000 build-ubuntu42: output: + FILE_NAME=linux-5.10.105.tar.xz
+2023-05-29 17:16:30.260584 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.260592 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.260600 +0000 build-ubuntu42: output: + [[ 6 -gt 0 ]]
+2023-05-29 17:16:30.260607 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:16:30.260618 +0000 build-ubuntu42: output: + FILE_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz
+2023-05-29 17:16:30.260626 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.260633 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.261826 +0000 build-ubuntu42: output: + [[ 4 -gt 0 ]]
+2023-05-29 17:16:30.261866 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:16:30.261880 +0000 build-ubuntu42: output: + SIGNATURE_URL=https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign
+2023-05-29 17:16:30.261890 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.261898 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.261906 +0000 build-ubuntu42: output: + [[ 2 -gt 0 ]]
+2023-05-29 17:16:30.261914 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:16:30.261921 +0000 build-ubuntu42: output: + UNCOMPRESS=1
+2023-05-29 17:16:30.261928 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.261935 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:16:30.261943 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:16:30.261953 +0000 build-ubuntu42: output: + '[' -z https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz ']'
+2023-05-29 17:16:30.261964 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-29 17:16:30.261973 +0000 build-ubuntu42: output: + '[' -z linux-5.10.105.tar.xz ']'
+2023-05-29 17:16:30.261983 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.105.tar.xz
+2023-05-29 17:16:30.261992 +0000 build-ubuntu42: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2023-05-29 17:16:30.262000 +0000 build-ubuntu42: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2023-05-29 17:16:30.262008 +0000 build-ubuntu42: output: + cd /builder/vmm-xen-stubdom-linux
+2023-05-29 17:16:30.262023 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-5.10.105.tar.xz -- https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.xz
+2023-05-29 17:19:23.647800 +0000 build-ubuntu42: output: + '[' 1 == 1 ']'
+2023-05-29 17:19:23.647871 +0000 build-ubuntu42: output: + '[' linux-5.10.105.tar.xz '!=' linux-5.10.105.tar.xz ']'
+2023-05-29 17:19:23.647892 +0000 build-ubuntu42: output: + '[' linux-5.10.105.tar '!=' linux-5.10.105.tar.xz ']'
+2023-05-29 17:19:23.647905 +0000 build-ubuntu42: output: + unxz untrusted_linux-5.10.105.tar.xz
+2023-05-29 17:19:44.702734 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.105.tar
+2023-05-29 17:19:44.707492 +0000 build-ubuntu42: output: + '[' -n https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign ']'
+2023-05-29 17:19:44.707547 +0000 build-ubuntu42: output: ++ basename https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign
+2023-05-29 17:19:44.737179 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=linux-5.10.105.tar.sign
+2023-05-29 17:19:44.737233 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-5.10.105.tar.sign
+2023-05-29 17:19:44.737256 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-5.10.105.tar.sign https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.105.tar.sign
+2023-05-29 17:19:45.926304 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7218 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_linux-5.10.105.tar /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpq7imj1ax
+2023-05-29 17:20:19.862168 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7218 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_linux-5.10.105.tar.sign /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpq7imj1ax
+2023-05-29 17:20:24.806810 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpq7imj1ax --untrusted-file /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'.
+2023-05-29 17:20:24.809319 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-29 17:20:24.810785 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpq7imj1ax --untrusted-file /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc
+2023-05-29 17:20:24.811087 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpq7imj1ax'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'\'' --'
+2023-05-29 17:20:24.811365 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpq7imj1ax'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc'\'' --'
+2023-05-29 17:20:24.811413 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpq7imj1ax --untrusted-file /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc --
+2023-05-29 17:20:24.811427 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-05-29 17:20:24.811622 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-29 17:20:24.811646 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:20:24.811699 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpq7imj1ax
+2023-05-29 17:20:24.811887 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.811910 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.811920 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:20:24.811929 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:20:24.812123 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar
+2023-05-29 17:20:24.812145 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.812155 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.812164 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:20:24.812349 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:20:24.812376 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign
+2023-05-29 17:20:24.812540 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.812561 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.812732 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:20:24.812753 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:20:24.812763 +0000 build-ubuntu42: output: + PUBKEY_FILE+=("$2")
+2023-05-29 17:20:24.812919 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.812939 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.812949 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:20:24.813108 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:20:24.813128 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:20:24.813137 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:20:24.813313 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar ']'
+2023-05-29 17:20:24.813336 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpq7imj1ax ']'
+2023-05-29 17:20:24.813498 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpq7imj1ax
+2023-05-29 17:20:24.816052 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar
+2023-05-29 17:20:24.817307 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-5.10.105.tar
+2023-05-29 17:20:24.817352 +0000 build-ubuntu42: output: + FILE_NAME=linux-5.10.105.tar
+2023-05-29 17:20:24.817368 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:20:24.817382 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign ']'
+2023-05-29 17:20:24.817394 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:20:24.817407 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign ']'
+2023-05-29 17:20:24.817419 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2023-05-29 17:20:24.817432 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign ']'
+2023-05-29 17:20:24.817443 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign ']'
+2023-05-29 17:20:24.817455 +0000 build-ubuntu42: output: + '[' '!' -e /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2023-05-29 17:20:24.817464 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:20:24.817475 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign ']'
+2023-05-29 17:20:24.817487 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc ']'
+2023-05-29 17:20:24.817498 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign
+2023-05-29 17:20:24.819459 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_linux-5.10.105.tar.sign
+2023-05-29 17:20:24.819535 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=linux-5.10.105.tar.sign
+2023-05-29 17:20:24.819555 +0000 build-ubuntu42: output: ++ mktemp -u
+2023-05-29 17:20:24.819951 +0000 build-ubuntu42: output: + keyring=/tmp/tmp.aT1TV7r8Q4
+2023-05-29 17:20:24.819989 +0000 build-ubuntu42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-05-29 17:20:24.820011 +0000 build-ubuntu42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.aT1TV7r8Q4 -q --import /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/linux/greg.asc
+2023-05-29 17:20:24.826374 +0000 build-ubuntu42: output: + gpgv --keyring /tmp/tmp.aT1TV7r8Q4 /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar
+2023-05-29 17:20:30.995607 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar.sign /home/user/builder-r4.2/tmp/tmpq7imj1ax/linux-5.10.105.tar.sign
+2023-05-29 17:20:30.998065 +0000 build-ubuntu42: output: + rm -rf /tmp/tmp.aT1TV7r8Q4
+2023-05-29 17:20:30.999307 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmpq7imj1ax/untrusted_linux-5.10.105.tar /home/user/builder-r4.2/tmp/tmpq7imj1ax/linux-5.10.105.tar
+2023-05-29 17:20:58.236848 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9459 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-29 17:20:58.839157 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9459 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-29 17:20:59.149108 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9459 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-29 17:20:59.438230 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9459 bash -c 'rm -rf /builder/incoming/vmm-xen-stubdom-linux /builder/vmm-xen-stubdom-linux'
+2023-05-29 17:20:59.627797 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9459 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux
+2023-05-29 17:21:00.945384 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9459 bash -c 'mkdir -p /builder && mv /builder/incoming/vmm-xen-stubdom-linux /builder'
+2023-05-29 17:21:01.132391 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp9459 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2 --signature-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig''.
+2023-05-29 17:21:01.352323 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-29 17:21:01.352620 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2 --signature-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:01.357537 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''busybox-1.31.1.tar.bz2'\'' --file-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2'\'' --signature-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig'\'' --'
+2023-05-29 17:21:01.357838 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''busybox-1.31.1.tar.bz2'\'' --file-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2'\'' --signature-url '\''https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig'\'' --'
+2023-05-29 17:21:01.357902 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name busybox-1.31.1.tar.bz2 --file-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2 --signature-url https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig --
+2023-05-29 17:21:01.357919 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-29 17:21:01.357930 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:01.357942 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:01.357951 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.357960 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358229 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:21:01.358254 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:01.358265 +0000 build-ubuntu42: output: + FILE_NAME=busybox-1.31.1.tar.bz2
+2023-05-29 17:21:01.358274 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358282 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358290 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:21:01.358298 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:01.358308 +0000 build-ubuntu42: output: + FILE_URL=https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2023-05-29 17:21:01.358563 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358584 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358594 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:21:01.358602 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:01.358613 +0000 build-ubuntu42: output: + SIGNATURE_URL=https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:01.358621 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358629 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358637 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:21:01.358662 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:01.358919 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:01.358943 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:21:01.358955 +0000 build-ubuntu42: output: + '[' -z https://busybox.net/downloads/busybox-1.31.1.tar.bz2 ']'
+2023-05-29 17:21:01.358967 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-29 17:21:01.358977 +0000 build-ubuntu42: output: + '[' -z busybox-1.31.1.tar.bz2 ']'
+2023-05-29 17:21:01.358987 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2
+2023-05-29 17:21:01.358996 +0000 build-ubuntu42: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2023-05-29 17:21:01.359005 +0000 build-ubuntu42: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:01.361341 +0000 build-ubuntu42: output: + cd /builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:01.361404 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_busybox-1.31.1.tar.bz2 -- https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+2023-05-29 17:21:04.299786 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-29 17:21:04.299842 +0000 build-ubuntu42: output: + '[' -n https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig ']'
+2023-05-29 17:21:04.299860 +0000 build-ubuntu42: output: ++ basename https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:04.302259 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:04.302311 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:04.302334 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_busybox-1.31.1.tar.bz2.sig https://busybox.net/downloads/busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:05.305582 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9459 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_busybox-1.31.1.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp1qyzwr10
+2023-05-29 17:21:05.500636 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9459 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_busybox-1.31.1.tar.bz2.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp1qyzwr10
+2023-05-29 17:21:09.070167 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp1qyzwr10 --untrusted-file /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2 --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc'.
+2023-05-29 17:21:09.073491 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-29 17:21:09.073972 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp1qyzwr10 --untrusted-file /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2 --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc
+2023-05-29 17:21:09.076212 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp1qyzwr10'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc'\'' --'
+2023-05-29 17:21:09.076285 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp1qyzwr10'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc'\'' --'
+2023-05-29 17:21:09.076319 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp1qyzwr10 --untrusted-file /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2 --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc --
+2023-05-29 17:21:09.076332 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-05-29 17:21:09.076342 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-29 17:21:09.076352 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:09.076363 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp1qyzwr10
+2023-05-29 17:21:09.076371 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076380 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076388 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:21:09.076396 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:09.076407 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2
+2023-05-29 17:21:09.076441 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076451 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076460 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:21:09.076467 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:09.076479 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:09.076489 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076496 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076504 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:21:09.076511 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:09.076519 +0000 build-ubuntu42: output: + PUBKEY_FILE+=("$2")
+2023-05-29 17:21:09.076527 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076534 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076542 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:21:09.076549 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:09.076557 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:09.076564 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:21:09.076574 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2 ']'
+2023-05-29 17:21:09.076584 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1qyzwr10 ']'
+2023-05-29 17:21:09.076593 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp1qyzwr10
+2023-05-29 17:21:09.078512 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2
+2023-05-29 17:21:09.082311 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2
+2023-05-29 17:21:09.082369 +0000 build-ubuntu42: output: + FILE_NAME=busybox-1.31.1.tar.bz2
+2023-05-29 17:21:09.082387 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:21:09.082402 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig ']'
+2023-05-29 17:21:09.082414 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:21:09.082426 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig ']'
+2023-05-29 17:21:09.082439 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc ']'
+2023-05-29 17:21:09.082450 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig ']'
+2023-05-29 17:21:09.082462 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig ']'
+2023-05-29 17:21:09.082475 +0000 build-ubuntu42: output: + '[' '!' -e /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc ']'
+2023-05-29 17:21:09.082484 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:21:09.082496 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig ']'
+2023-05-29 17:21:09.082507 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc ']'
+2023-05-29 17:21:09.082857 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:09.083549 +0000 build-ubuntu42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:09.083593 +0000 build-ubuntu42: output: + SIGNATURE_FILE_NAME=busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:09.083916 +0000 build-ubuntu42: output: ++ mktemp -u
+2023-05-29 17:21:09.084907 +0000 build-ubuntu42: output: + keyring=/tmp/tmp.QjWhCcFq9f
+2023-05-29 17:21:09.084954 +0000 build-ubuntu42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-05-29 17:21:09.084997 +0000 build-ubuntu42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.QjWhCcFq9f -q --import /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/keys/busybox/vda_pubkey.asc
+2023-05-29 17:21:09.102313 +0000 build-ubuntu42: output: + gpgv --keyring /tmp/tmp.QjWhCcFq9f /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2
+2023-05-29 17:21:09.115520 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2.sig /home/user/builder-r4.2/tmp/tmp1qyzwr10/busybox-1.31.1.tar.bz2.sig
+2023-05-29 17:21:09.117816 +0000 build-ubuntu42: output: + rm -rf /tmp/tmp.QjWhCcFq9f
+2023-05-29 17:21:09.118769 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp1qyzwr10/untrusted_busybox-1.31.1.tar.bz2 /home/user/builder-r4.2/tmp/tmp1qyzwr10/busybox-1.31.1.tar.bz2
+2023-05-29 17:21:25.386305 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp92 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-29 17:21:25.805129 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp92 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-29 17:21:26.171145 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp92 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-29 17:21:26.382877 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp92 bash -c 'rm -rf /builder/incoming/vmm-xen-stubdom-linux /builder/vmm-xen-stubdom-linux'
+2023-05-29 17:21:26.605757 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp92 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux
+2023-05-29 17:21:27.392923 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp92 bash -c 'mkdir -p /builder && mv /builder/incoming/vmm-xen-stubdom-linux /builder'
+2023-05-29 17:21:27.617385 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp92 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz''.
+2023-05-29 17:21:27.932462 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-29 17:21:27.932535 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2023-05-29 17:21:27.950742 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''pulseaudio-14.2.tar.xz'\'' --file-url '\''https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz'\'' --'
+2023-05-29 17:21:27.950808 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''pulseaudio-14.2.tar.xz'\'' --file-url '\''https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz'\'' --'
+2023-05-29 17:21:27.950835 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name pulseaudio-14.2.tar.xz --file-url https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz --
+2023-05-29 17:21:27.950849 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:21:27.950861 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:27.950872 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:27.950881 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:27.950910 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:27.950921 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:21:27.950937 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:27.950947 +0000 build-ubuntu42: output: + FILE_NAME=pulseaudio-14.2.tar.xz
+2023-05-29 17:21:27.950955 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:27.950962 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:27.950970 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:21:27.950978 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:27.950988 +0000 build-ubuntu42: output: + FILE_URL=https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2023-05-29 17:21:27.950996 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:27.951004 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:27.951011 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:21:27.951022 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:27.951030 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:27.951037 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:21:27.951048 +0000 build-ubuntu42: output: + '[' -z https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz ']'
+2023-05-29 17:21:27.951059 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-29 17:21:27.951068 +0000 build-ubuntu42: output: + '[' -z pulseaudio-14.2.tar.xz ']'
+2023-05-29 17:21:27.951077 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_pulseaudio-14.2.tar.xz
+2023-05-29 17:21:27.951086 +0000 build-ubuntu42: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2023-05-29 17:21:27.951095 +0000 build-ubuntu42: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:27.956349 +0000 build-ubuntu42: output: + cd /builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:27.956426 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_pulseaudio-14.2.tar.xz -- https://freedesktop.org/software/pulseaudio/releases/pulseaudio-14.2.tar.xz
+2023-05-29 17:21:33.224946 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-29 17:21:33.225006 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:21:33.231444 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp92 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_pulseaudio-14.2.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp69_9gsse
+2023-05-29 17:21:36.918507 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp69_9gsse --untrusted-file /home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'.
+2023-05-29 17:21:36.921898 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-29 17:21:36.922568 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp69_9gsse --untrusted-file /home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2023-05-29 17:21:36.924749 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp69_9gsse'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'\'' --'
+2023-05-29 17:21:36.924843 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp69_9gsse'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512'\'' --'
+2023-05-29 17:21:36.924878 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp69_9gsse --untrusted-file /home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 --
+2023-05-29 17:21:36.924894 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-05-29 17:21:36.924906 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-29 17:21:36.924916 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:36.924933 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp69_9gsse
+2023-05-29 17:21:36.924943 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.924952 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.924961 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:21:36.924970 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:36.924982 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz
+2023-05-29 17:21:36.924992 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.925000 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.925008 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:21:36.925016 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:36.925025 +0000 build-ubuntu42: output: + CHECKSUM_CMD=sha512sum
+2023-05-29 17:21:36.925032 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.925043 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.925051 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:21:36.925059 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:36.925071 +0000 build-ubuntu42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2023-05-29 17:21:36.925080 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.925087 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.925095 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:21:36.925102 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:36.925110 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:36.925117 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:21:36.925128 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz ']'
+2023-05-29 17:21:36.925138 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp69_9gsse ']'
+2023-05-29 17:21:36.925147 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp69_9gsse
+2023-05-29 17:21:36.926811 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz
+2023-05-29 17:21:36.928095 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_pulseaudio-14.2.tar.xz
+2023-05-29 17:21:36.928149 +0000 build-ubuntu42: output: + FILE_NAME=pulseaudio-14.2.tar.xz
+2023-05-29 17:21:36.928167 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2023-05-29 17:21:36.928184 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2023-05-29 17:21:36.928216 +0000 build-ubuntu42: output: + '[' -e /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2023-05-29 17:21:36.928229 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:21:36.928239 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:21:36.928248 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:21:36.928256 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:21:36.928268 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512 ']'
+2023-05-29 17:21:36.928277 +0000 build-ubuntu42: output: + '[' -z sha512sum ']'
+2023-05-29 17:21:36.928286 +0000 build-ubuntu42: output: + sha512sum --status -c /dev/fd/63
+2023-05-29 17:21:36.929285 +0000 build-ubuntu42: output: +++ cat /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/pulseaudio-14.2.tar.xz.sha512
+2023-05-29 17:21:36.930747 +0000 build-ubuntu42: output: ++ printf '%s  -\n' 196338cbb26c542301b6d0579070dfbcc42e76dc17405f3e216af70519bec2003089b80c573a32d5f96bdab078631ca09ce89998ab7a0a8ffa26955a9bcb3c4a
+2023-05-29 17:21:36.938905 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp69_9gsse/untrusted_pulseaudio-14.2.tar.xz /home/user/builder-r4.2/tmp/tmp69_9gsse/pulseaudio-14.2.tar.xz
+2023-05-29 17:21:54.368902 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1363 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-05-29 17:21:54.800775 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1363 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-05-29 17:21:55.482860 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1363 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-05-29 17:21:55.857204 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1363 bash -c 'rm -rf /builder/incoming/vmm-xen-stubdom-linux /builder/vmm-xen-stubdom-linux'
+2023-05-29 17:21:56.108028 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1363 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux
+2023-05-29 17:21:57.427775 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1363 bash -c 'mkdir -p /builder && mv /builder/incoming/vmm-xen-stubdom-linux /builder'
+2023-05-29 17:21:57.751458 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp1363 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2''.
+2023-05-29 17:21:58.097905 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-05-29 17:21:58.099448 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2023-05-29 17:21:58.107954 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''libusb-1.0.23.tar.bz2'\'' --file-url '\''https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2'\'' --'
+2023-05-29 17:21:58.108011 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/vmm-xen-stubdom-linux'\'' --file-name '\''libusb-1.0.23.tar.bz2'\'' --file-url '\''https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2'\'' --'
+2023-05-29 17:21:58.108030 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/vmm-xen-stubdom-linux --file-name libusb-1.0.23.tar.bz2 --file-url https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2 --
+2023-05-29 17:21:58.108058 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:21:58.108069 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:58.108079 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:58.108087 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:58.108094 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:58.108102 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:21:58.108109 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:58.108117 +0000 build-ubuntu42: output: + FILE_NAME=libusb-1.0.23.tar.bz2
+2023-05-29 17:21:58.108124 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:58.108132 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:58.108139 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:21:58.108146 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:58.108157 +0000 build-ubuntu42: output: + FILE_URL=https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2023-05-29 17:21:58.108165 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:58.108172 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:58.108179 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:21:58.108186 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:21:58.112378 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:21:58.112428 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:21:58.112443 +0000 build-ubuntu42: output: + '[' -z https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2 ']'
+2023-05-29 17:21:58.112457 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-05-29 17:21:58.112466 +0000 build-ubuntu42: output: + '[' -z libusb-1.0.23.tar.bz2 ']'
+2023-05-29 17:21:58.112475 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_libusb-1.0.23.tar.bz2
+2023-05-29 17:21:58.112484 +0000 build-ubuntu42: output: + '[' -n /builder/vmm-xen-stubdom-linux ']'
+2023-05-29 17:21:58.112493 +0000 build-ubuntu42: output: + mkdir -p /builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:58.113691 +0000 build-ubuntu42: output: + cd /builder/vmm-xen-stubdom-linux
+2023-05-29 17:21:58.114888 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libusb-1.0.23.tar.bz2 -- https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
+2023-05-29 17:22:00.139981 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-05-29 17:22:00.140027 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:22:00.145718 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1363 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__untrusted_libusb-1.0.23.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpizest983
+2023-05-29 17:22:11.278425 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpizest983 --untrusted-file /home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'.
+2023-05-29 17:22:11.286955 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-05-29 17:22:11.287046 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpizest983 --untrusted-file /home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2023-05-29 17:22:11.289326 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpizest983'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'\'' --'
+2023-05-29 17:22:11.289395 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpizest983'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512'\'' --'
+2023-05-29 17:22:11.289423 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpizest983 --untrusted-file /home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 --
+2023-05-29 17:22:11.289436 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-05-29 17:22:11.289447 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-05-29 17:22:11.289456 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:22:11.289467 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpizest983
+2023-05-29 17:22:11.289476 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289484 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289492 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-05-29 17:22:11.289500 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:22:11.289511 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2
+2023-05-29 17:22:11.289520 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289528 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289536 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-05-29 17:22:11.289544 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:22:11.289552 +0000 build-ubuntu42: output: + CHECKSUM_CMD=sha512sum
+2023-05-29 17:22:11.289559 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289567 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289575 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-05-29 17:22:11.289583 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:22:11.289594 +0000 build-ubuntu42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2023-05-29 17:22:11.289603 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289611 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289619 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-05-29 17:22:11.289627 +0000 build-ubuntu42: output: + case "$1" in
+2023-05-29 17:22:11.289634 +0000 build-ubuntu42: output: + shift
+2023-05-29 17:22:11.289641 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-05-29 17:22:11.289683 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2 ']'
+2023-05-29 17:22:11.289694 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpizest983 ']'
+2023-05-29 17:22:11.289703 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpizest983
+2023-05-29 17:22:11.295906 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2
+2023-05-29 17:22:11.295985 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_libusb-1.0.23.tar.bz2
+2023-05-29 17:22:11.296155 +0000 build-ubuntu42: output: + FILE_NAME=libusb-1.0.23.tar.bz2
+2023-05-29 17:22:11.296188 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2023-05-29 17:22:11.296331 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2023-05-29 17:22:11.296361 +0000 build-ubuntu42: output: + '[' -e /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2023-05-29 17:22:11.297998 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:22:11.298210 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-05-29 17:22:11.298244 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:22:11.298384 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-05-29 17:22:11.298533 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512 ']'
+2023-05-29 17:22:11.298559 +0000 build-ubuntu42: output: + '[' -z sha512sum ']'
+2023-05-29 17:22:11.298691 +0000 build-ubuntu42: output: + sha512sum --status -c /dev/fd/63
+2023-05-29 17:22:11.298723 +0000 build-ubuntu42: output: +++ cat /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux/checksums/libusb-1.0.23.tar.bz2.sha512
+2023-05-29 17:22:11.298947 +0000 build-ubuntu42: output: ++ printf '%s  -\n' 73430ad31dd405e76a9c6c55086961003989c44964e2735b5076f9ca849e3f6fe71d10a66b74b111f0c34a0d2cb744b9ca105863c552123fce4ec0bbdd2ec15b
+2023-05-29 17:22:11.304390 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmpizest983/untrusted_libusb-1.0.23.tar.bz2 /home/user/builder-r4.2/tmp/tmpizest983/libusb-1.0.23.tar.bz2
+2023-05-29 17:22:40.993467 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp6987 bash -c 'rm -rf /builder/incoming/vmm-xen-stubdom-linux /builder/vmm-xen-stubdom-linux'
+2023-05-29 17:22:41.410812 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp6987 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen-stubdom-linux
+2023-05-29 17:22:42.827210 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp6987 bash -c 'mkdir -p /builder && mv /builder/incoming/vmm-xen-stubdom-linux /builder'
+2023-05-29 17:22:43.251913 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp6987 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/vmm-xen-stubdom-linux/hash /builder/vmm-xen-stubdom-linux/vtags && cd /builder && git -C /builder/vmm-xen-stubdom-linux rev-parse '\''HEAD^{}'\'' >> /builder/vmm-xen-stubdom-linux/hash && git -C /builder/vmm-xen-stubdom-linux tag --points-at HEAD --list '\''v*'\'' >> /builder/vmm-xen-stubdom-linux/vtags''.
+2023-05-29 17:22:43.851947 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6987 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpypd642a1
+2023-05-29 17:22:44.257467 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6987 qubesbuilder.FileCopyOut+__builder__vmm-xen-stubdom-linux__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpypd642a1
+2023-05-29 17:22:48.748761 +0000 build-ubuntu42: > done
+2023-05-29 17:22:48.748810 +0000 > closing log
