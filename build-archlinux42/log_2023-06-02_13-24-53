@@ -1,0 +1,213 @@
+2023-06-02 13:24:53.500844 +0000 > starting log
+2023-06-02 13:24:53.501112 +0000 build-archlinux42: > starting build with log
+2023-06-02 13:24:53.501126 +0000 build-archlinux42: >> args:
+2023-06-02 13:24:53.501135 +0000 build-archlinux42: >>   ()
+2023-06-02 13:24:53.501143 +0000 build-archlinux42: >> component:
+2023-06-02 13:24:53.501151 +0000 build-archlinux42: >>   release-configs
+2023-06-02 13:24:53.501161 +0000 build-archlinux42: >>     commit-hash: 14b76c077c7cf9baebccba0ef155204577e94c37
+2023-06-02 13:24:53.501175 +0000 build-archlinux42: >>     source-hash: 85ba7951bc011c1d1ad543297e890767feefc036a29c0abf480ce08701ddf9fc7c6b53e78efefe829c8a3cf44cab85d3e7f03122c91d27d0c7dc8c97f4dea6c7
+2023-06-02 13:24:53.501188 +0000 build-archlinux42: >> distributions:
+2023-06-02 13:24:53.501199 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-06-02 13:24:53.501208 +0000 build-archlinux42: release-configs: source already fetched. Updating.
+2023-06-02 13:25:14.729989 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1589 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-06-02 13:25:15.048865 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1589 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-06-02 13:25:15.307406 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1589 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-06-02 13:25:15.558149 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1589 bash -c 'rm -rf /builder/incoming/release-configs /builder/release-configs'
+2023-06-02 13:25:15.814255 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1589 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/release-configs
+2023-06-02 13:25:16.255122 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1589 bash -c 'mkdir -p /builder && mv /builder/incoming/release-configs /builder'
+2023-06-02 13:25:16.510249 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp1589 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component release-configs --git-branch main --git-url https://github.com/QubesOS/qubes-release-configs.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys''.
+2023-06-02 13:25:16.760206 +0000 build-archlinux42: output: + unset CLEAN
+2023-06-02 13:25:16.760268 +0000 build-archlinux42: output: + CLEAN=0
+2023-06-02 13:25:16.760303 +0000 build-archlinux42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-06-02 13:25:16.761515 +0000 build-archlinux42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component release-configs --git-branch main --git-url https://github.com/QubesOS/qubes-release-configs.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys
+2023-06-02 13:25:16.768610 +0000 build-archlinux42: output: + OPTS=' --component '\''release-configs'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-release-configs.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --'
+2023-06-02 13:25:16.768678 +0000 build-archlinux42: output: + eval set -- ' --component '\''release-configs'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-release-configs.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --'
+2023-06-02 13:25:16.768753 +0000 build-archlinux42: output: ++ set -- --component release-configs --git-branch main --git-url https://github.com/QubesOS/qubes-release-configs.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --
+2023-06-02 13:25:16.768777 +0000 build-archlinux42: output: + [[ 11 -gt 0 ]]
+2023-06-02 13:25:16.768790 +0000 build-archlinux42: output: + case "$1" in
+2023-06-02 13:25:16.768800 +0000 build-archlinux42: output: + COMPONENT=release-configs
+2023-06-02 13:25:16.768809 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768817 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768825 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-06-02 13:25:16.768833 +0000 build-archlinux42: output: + case "$1" in
+2023-06-02 13:25:16.768841 +0000 build-archlinux42: output: + BRANCH=main
+2023-06-02 13:25:16.768848 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768857 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768864 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-06-02 13:25:16.768871 +0000 build-archlinux42: output: + case "$1" in
+2023-06-02 13:25:16.768881 +0000 build-archlinux42: output: + GIT_URL=https://github.com/QubesOS/qubes-release-configs.git
+2023-06-02 13:25:16.768888 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768895 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768902 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-06-02 13:25:16.768909 +0000 build-archlinux42: output: + case "$1" in
+2023-06-02 13:25:16.768917 +0000 build-archlinux42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-06-02 13:25:16.768924 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768932 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768939 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-06-02 13:25:16.768946 +0000 build-archlinux42: output: + case "$1" in
+2023-06-02 13:25:16.768954 +0000 build-archlinux42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-06-02 13:25:16.768961 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768968 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768975 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-06-02 13:25:16.768983 +0000 build-archlinux42: output: + case "$1" in
+2023-06-02 13:25:16.768989 +0000 build-archlinux42: output: + shift
+2023-06-02 13:25:16.768997 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-06-02 13:25:16.769004 +0000 build-archlinux42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-06-02 13:25:16.769011 +0000 build-archlinux42: output: -]*$ ]]
+2023-06-02 13:25:16.769019 +0000 build-archlinux42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-06-02 13:25:16.769026 +0000 build-archlinux42: output: -]*$ ]]
+2023-06-02 13:25:16.769034 +0000 build-archlinux42: output: + [[ -n release-configs ]]
+2023-06-02 13:25:16.769041 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-02 13:25:16.769049 +0000 build-archlinux42: output: + REPO=release-configs
+2023-06-02 13:25:16.769057 +0000 build-archlinux42: output: + '[' -z /builder/keyring ']'
+2023-06-02 13:25:16.769064 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-02 13:25:16.769071 +0000 build-archlinux42: output: + GIT_SUFFIX=.git
+2023-06-02 13:25:16.769079 +0000 build-archlinux42: output: + '[' -z main ']'
+2023-06-02 13:25:16.769087 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-02 13:25:16.769096 +0000 build-archlinux42: output: + '[' -z https://github.com/QubesOS/qubes-release-configs.git ']'
+2023-06-02 13:25:16.769104 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-02 13:25:16.769112 +0000 build-archlinux42: output: + case ${IGNORE_MISSING=0} in
+2023-06-02 13:25:16.769119 +0000 build-archlinux42: output: + :
+2023-06-02 13:25:16.769127 +0000 build-archlinux42: output: + case ${GIT_CLONE_FAST=0} in
+2023-06-02 13:25:16.769148 +0000 build-archlinux42: output: + :
+2023-06-02 13:25:16.769157 +0000 build-archlinux42: output: + GIT_OPTIONS=()
+2023-06-02 13:25:16.769165 +0000 build-archlinux42: output: + [[ 0 = \1 ]]
+2023-06-02 13:25:16.769173 +0000 build-archlinux42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-06-02 13:25:16.769182 +0000 build-archlinux42: output: + [[ main =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-06-02 13:25:16.769191 +0000 build-archlinux42: output: + [[ release-configs =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-06-02 13:25:16.769200 +0000 build-archlinux42: output: + trap exit_clean 0 1 2 3 6 15
+2023-06-02 13:25:16.769207 +0000 build-archlinux42: output: + fresh_clone=false
+2023-06-02 13:25:16.769215 +0000 build-archlinux42: output: + [[ '' = \1 ]]
+2023-06-02 13:25:16.769222 +0000 build-archlinux42: output: + [[ -d release-configs ]]
+2023-06-02 13:25:16.769229 +0000 build-archlinux42: output: + cd release-configs
+2023-06-02 13:25:16.771958 +0000 build-archlinux42: output: ++ git rev-parse --is-shallow-repository
+2023-06-02 13:25:16.797584 +0000 build-archlinux42: output: + is_shallow=false
+2023-06-02 13:25:16.797644 +0000 build-archlinux42: output: + [[ 0 -ne 1 ]]
+2023-06-02 13:25:16.797663 +0000 build-archlinux42: output: + [[ false = \t\r\u\e ]]
+2023-06-02 13:25:16.797676 +0000 build-archlinux42: output: + print_headers
+2023-06-02 13:25:16.797687 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-02 13:25:16.797700 +0000 build-archlinux42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-release-configs.git main'
+2023-06-02 13:25:16.797713 +0000 build-archlinux42: output: + echo '-> Updating sources for release-configs...'
+2023-06-02 13:25:16.797753 +0000 build-archlinux42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-release-configs.git main...'
+2023-06-02 13:25:16.797772 +0000 build-archlinux42: output: + git fetch -q --tags -- https://github.com/QubesOS/qubes-release-configs.git main
+2023-06-02 13:25:16.797782 +0000 build-archlinux42: output: -> Updating sources for release-configs...
+2023-06-02 13:25:16.797793 +0000 build-archlinux42: output: --> Fetching from https://github.com/QubesOS/qubes-release-configs.git main...
+2023-06-02 13:25:19.905297 +0000 build-archlinux42: output: ++ git rev-parse -q --verify 'FETCH_HEAD^{commit}'
+2023-06-02 13:25:19.905361 +0000 build-archlinux42: output: + rev=14b76c077c7cf9baebccba0ef155204577e94c37
+2023-06-02 13:25:19.905380 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-02 13:25:19.905395 +0000 build-archlinux42: output: + VERIFY_REF=14b76c077c7cf9baebccba0ef155204577e94c37
+2023-06-02 13:25:19.905411 +0000 build-archlinux42: output: + fresh_clone=false
+2023-06-02 13:25:19.905422 +0000 build-archlinux42: output: + cd -
+2023-06-02 13:25:19.905432 +0000 build-archlinux42: output: + export CHECK=signed-tag
+2023-06-02 13:25:19.905441 +0000 build-archlinux42: output: + CHECK=signed-tag
+2023-06-02 13:25:19.905449 +0000 build-archlinux42: output: + verify=true
+2023-06-02 13:25:19.905458 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-02 13:25:19.905466 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-02 13:25:19.905477 +0000 build-archlinux42: output: ++ git -C release-configs rev-parse -q --verify 14b76c077c7cf9baebccba0ef155204577e94c37
+2023-06-02 13:25:19.906590 +0000 build-archlinux42: output: + VERIFY_REF=14b76c077c7cf9baebccba0ef155204577e94c37
+2023-06-02 13:25:19.906640 +0000 build-archlinux42: output: + '[' true = false ']'
+2023-06-02 13:25:19.906658 +0000 build-archlinux42: output: + [[ signed-tag == \s\i\g\n\e\d\-\t\a\g\-\o\r\-\c\o\m\m\i\t ]]
+2023-06-02 13:25:19.906671 +0000 build-archlinux42: output: + echo '--> Verifying tags...'
+2023-06-02 13:25:19.906683 +0000 build-archlinux42: output: ++ readlink -m /builder/keyring
+2023-06-02 13:25:19.906693 +0000 build-archlinux42: output: --> Verifying tags...
+2023-06-02 13:25:19.909538 +0000 build-archlinux42: output: + GNUPGHOME=/builder/keyring
+2023-06-02 13:25:19.909591 +0000 build-archlinux42: output: + export GNUPGHOME
+2023-06-02 13:25:19.909634 +0000 build-archlinux42: output: + '[' '!' -d /builder/keyring ']'
+2023-06-02 13:25:19.909648 +0000 build-archlinux42: output: + mkdir -p /builder/keyring
+2023-06-02 13:25:19.912910 +0000 build-archlinux42: output: + chmod 700 /builder/keyring
+2023-06-02 13:25:19.913423 +0000 build-archlinux42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-06-02 13:25:19.973772 +0000 build-archlinux42: output: gpg: keybox '/builder/keyring/pubring.kbx' created
+2023-06-02 13:25:19.979183 +0000 build-archlinux42: output: gpg: /builder/keyring/trustdb.gpg: trustdb created
+2023-06-02 13:25:19.979237 +0000 build-archlinux42: output: gpg: key DDFA1A3E36879494: public key "Qubes Master Signing Key" imported
+2023-06-02 13:25:19.998917 +0000 build-archlinux42: output: gpg: key 063938BA42CFA724: public key "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" imported
+2023-06-02 13:25:20.001641 +0000 build-archlinux42: output: gpg: key DA0434BC706E1FCF: public key "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" imported
+2023-06-02 13:25:20.002007 +0000 build-archlinux42: output: gpg: Total number processed: 3
+2023-06-02 13:25:20.002032 +0000 build-archlinux42: output: gpg:               imported: 3
+2023-06-02 13:25:20.002043 +0000 build-archlinux42: output: gpg: no ultimately trusted keys found
+2023-06-02 13:25:20.005695 +0000 build-archlinux42: output: + echo 427F11FD0FAA4B080123F01CDDFA1A3E36879494:6:
+2023-06-02 13:25:20.005740 +0000 build-archlinux42: output: + gpg --import-ownertrust
+2023-06-02 13:25:20.009679 +0000 build-archlinux42: output: gpg: inserting ownertrust of 6
+2023-06-02 13:25:20.009748 +0000 build-archlinux42: output: + '[' /builder/plugins/fetch/keys/qubes-developers-keys.asc -nt /builder/keyring/pubring.gpg ']'
+2023-06-02 13:25:20.009763 +0000 build-archlinux42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-06-02 13:25:20.011598 +0000 build-archlinux42: output: gpg: key DDFA1A3E36879494: "Qubes Master Signing Key" not changed
+2023-06-02 13:25:20.014528 +0000 build-archlinux42: output: gpg: key 063938BA42CFA724: "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" not changed
+2023-06-02 13:25:20.014577 +0000 build-archlinux42: output: gpg: key DA0434BC706E1FCF: "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" not changed
+2023-06-02 13:25:20.014590 +0000 build-archlinux42: output: gpg: Total number processed: 3
+2023-06-02 13:25:20.014599 +0000 build-archlinux42: output: gpg:              unchanged: 3
+2023-06-02 13:25:20.015132 +0000 build-archlinux42: output: + touch /builder/keyring/pubring.gpg
+2023-06-02 13:25:20.018381 +0000 build-archlinux42: output: + gpgconf --kill gpg-agent
+2023-06-02 13:25:20.030894 +0000 build-archlinux42: output: + pushd release-configs
+2023-06-02 13:25:20.030940 +0000 build-archlinux42: output: + expected_hash=14b76c077c7cf9baebccba0ef155204577e94c37
+2023-06-02 13:25:20.030952 +0000 build-archlinux42: output: + hash_len=40
+2023-06-02 13:25:20.030961 +0000 build-archlinux42: output: + '[' 40 -ne 40 ']'
+2023-06-02 13:25:20.030971 +0000 build-archlinux42: output: + [[ 14b76c077c7cf9baebccba0ef155204577e94c37 =~ ^[a-f0-9]+$ ]]
+2023-06-02 13:25:20.031305 +0000 build-archlinux42: output: + format='%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-06-02 13:25:20.031334 +0000 build-archlinux42: output: ++ git tag --points-at=14b76c077c7cf9baebccba0ef155204577e94c37 '--format=%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-06-02 13:25:20.031345 +0000 build-archlinux42: output: ++ head -c 500
+2023-06-02 13:25:20.035210 +0000 build-archlinux42: output: + tags=1a46411addb84261a3701abe6829b11da0f7ce5f:14b76c077c7cf9baebccba0ef155204577e94c37:
+2023-06-02 13:25:20.035256 +0000 build-archlinux42: output: + for tag in $tags
+2023-06-02 13:25:20.035269 +0000 build-archlinux42: output: + (( 82 != hash_len * 2 + 2 ))
+2023-06-02 13:25:20.035303 +0000 build-archlinux42: output: + [[ :14b76c077c7cf9baebccba0ef155204577e94c37: == \:\1\4\b\7\6\c\0\7\7\c\7\c\f\9\b\a\e\b\c\c\b\a\0\e\f\1\5\5\2\0\4\5\7\7\e\9\4\c\3\7\: ]]
+2023-06-02 13:25:20.035316 +0000 build-archlinux42: output: + tag=1a46411addb84261a3701abe6829b11da0f7ce5f
+2023-06-02 13:25:20.035326 +0000 build-archlinux42: output: + verify_git_obj tag 1a46411addb84261a3701abe6829b11da0f7ce5f
+2023-06-02 13:25:20.035334 +0000 build-archlinux42: output: + local content newsig_number
+2023-06-02 13:25:20.039247 +0000 build-archlinux42: output: ++ git -c gpg.program=gpg -c gpg.minTrustLevel=fully verify-tag --raw -- 1a46411addb84261a3701abe6829b11da0f7ce5f
+2023-06-02 13:25:20.046403 +0000 build-archlinux42: output: + content='[GNUPG:] NEWSIG
+2023-06-02 13:25:20.046450 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-02 13:25:20.046464 +0000 build-archlinux42: output: [GNUPG:] SIG_ID I8U9oxX74P3ycLb9Pp19L0O0PqU 2023-06-02 1685712115
+2023-06-02 13:25:20.046476 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-02 13:25:20.046486 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.046496 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.046505 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.046517 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-02 13:25:20.046531 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-02 1685712115 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-02 13:25:20.046541 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-02 13:25:20.049764 +0000 build-archlinux42: output: ++ printf '%s\n' '[GNUPG:] NEWSIG
+2023-06-02 13:25:20.049834 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-02 13:25:20.049848 +0000 build-archlinux42: output: [GNUPG:] SIG_ID I8U9oxX74P3ycLb9Pp19L0O0PqU 2023-06-02 1685712115
+2023-06-02 13:25:20.049859 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-02 13:25:20.049869 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.049878 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.049888 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.049900 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-02 13:25:20.049913 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-02 1685712115 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-02 13:25:20.049923 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-02 13:25:20.049932 +0000 build-archlinux42: output: ++ grep -c '^\[GNUPG:] NEWSIG'
+2023-06-02 13:25:20.055461 +0000 build-archlinux42: output: + newsig_number=1
+2023-06-02 13:25:20.055506 +0000 build-archlinux42: output: + '[' 1 = 1 ']'
+2023-06-02 13:25:20.055520 +0000 build-archlinux42: output: + grep '^\[GNUPG:] TRUST_\(FULLY\|ULTIMATE\) 0 pgp\>'
+2023-06-02 13:25:20.055529 +0000 build-archlinux42: output: + printf '%s\n' '[GNUPG:] NEWSIG
+2023-06-02 13:25:20.055539 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-02 13:25:20.055550 +0000 build-archlinux42: output: [GNUPG:] SIG_ID I8U9oxX74P3ycLb9Pp19L0O0PqU 2023-06-02 1685712115
+2023-06-02 13:25:20.055577 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-02 13:25:20.055588 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.055598 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.055607 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-02 13:25:20.055619 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-02 13:25:20.055638 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-02 1685712115 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-02 13:25:20.055648 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-02 13:25:20.055658 +0000 build-archlinux42: output: + echo '---> Good tag 1a46411addb84261a3701abe6829b11da0f7ce5f'
+2023-06-02 13:25:20.055666 +0000 build-archlinux42: output: + '[' -z x ']'
+2023-06-02 13:25:20.055673 +0000 build-archlinux42: output: + popd
+2023-06-02 13:25:20.055681 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-02 13:25:20.055688 +0000 build-archlinux42: output: + pushd release-configs
+2023-06-02 13:25:20.055697 +0000 build-archlinux42: output: ++ exec git rev-parse --abbrev-ref HEAD
+2023-06-02 13:25:20.058023 +0000 build-archlinux42: output: ---> Good tag 1a46411addb84261a3701abe6829b11da0f7ce5f
+2023-06-02 13:25:20.059459 +0000 build-archlinux42: output: + CURRENT_BRANCH=main
+2023-06-02 13:25:20.059509 +0000 build-archlinux42: output: + '[' main '!=' main ']'
+2023-06-02 13:25:20.059520 +0000 build-archlinux42: output: + false
+2023-06-02 13:25:20.059528 +0000 build-archlinux42: output: + false
+2023-06-02 13:25:20.059536 +0000 build-archlinux42: output: + echo '--> Merging...'
+2023-06-02 13:25:20.059548 +0000 build-archlinux42: output: + git -c merge.verifySignatures=no merge --ff-only --commit -q 14b76c077c7cf9baebccba0ef155204577e94c37
+2023-06-02 13:25:20.059565 +0000 build-archlinux42: output: --> Merging...
+2023-06-02 13:25:20.065775 +0000 build-archlinux42: output: + tracking_branch=refs/remotes//main
+2023-06-02 13:25:20.065824 +0000 build-archlinux42: output: + '[' -f .git/refs/remotes//main ']'
+2023-06-02 13:25:20.065836 +0000 build-archlinux42: output: + '[' -e .gitmodules ']'
+2023-06-02 13:25:20.065844 +0000 build-archlinux42: output: + popd
+2023-06-02 13:25:20.065853 +0000 build-archlinux42: output: + exit_clean
+2023-06-02 13:25:20.065861 +0000 build-archlinux42: output: + local exit_code=0
+2023-06-02 13:25:20.065868 +0000 build-archlinux42: output: + '[' 0 -gt 0 ']'
+2023-06-02 13:25:20.065876 +0000 build-archlinux42: output: + exit 0
+2023-06-02 13:25:20.091353 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1589 qubesbuilder.FileCopyOut+__builder__release-configs /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-06-02 13:25:26.615643 +0000 build-archlinux42: > done
+2023-06-02 13:25:26.615697 +0000 > closing log
