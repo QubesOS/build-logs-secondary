@@ -1,0 +1,312 @@
+2023-06-23 02:28:49.049444 +0000 > starting log
+2023-06-23 02:28:49.050034 +0000 build-archlinux42: > starting build with log
+2023-06-23 02:28:49.050064 +0000 build-archlinux42: >> args:
+2023-06-23 02:28:49.050074 +0000 build-archlinux42: >>   ()
+2023-06-23 02:28:49.050082 +0000 build-archlinux42: >> component:
+2023-06-23 02:28:49.050090 +0000 build-archlinux42: >>   flashrom
+2023-06-23 02:28:49.050097 +0000 build-archlinux42: >> distributions:
+2023-06-23 02:28:49.050108 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-06-23 02:29:06.975681 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp3399 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-06-23 02:29:07.753121 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp3399 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-06-23 02:29:25.611373 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp3399 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-06-23 02:29:26.265573 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp3399 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component flashrom --git-branch main --git-url https://github.com/QubesOS/qubes-flashrom.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only''.
+2023-06-23 02:29:26.616981 +0000 build-archlinux42: output: + unset CLEAN
+2023-06-23 02:29:26.617034 +0000 build-archlinux42: output: + CLEAN=0
+2023-06-23 02:29:26.617059 +0000 build-archlinux42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-06-23 02:29:26.617096 +0000 build-archlinux42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component flashrom --git-branch main --git-url https://github.com/QubesOS/qubes-flashrom.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only
+2023-06-23 02:29:26.629881 +0000 build-archlinux42: output: + OPTS=' --component '\''flashrom'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-flashrom.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-06-23 02:29:26.629947 +0000 build-archlinux42: output: + eval set -- ' --component '\''flashrom'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-flashrom.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-06-23 02:29:26.629972 +0000 build-archlinux42: output: ++ set -- --component flashrom --git-branch main --git-url https://github.com/QubesOS/qubes-flashrom.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only --
+2023-06-23 02:29:26.629987 +0000 build-archlinux42: output: + [[ 12 -gt 0 ]]
+2023-06-23 02:29:26.629999 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:29:26.630009 +0000 build-archlinux42: output: + COMPONENT=flashrom
+2023-06-23 02:29:26.630024 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630034 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630043 +0000 build-archlinux42: output: + [[ 10 -gt 0 ]]
+2023-06-23 02:29:26.630051 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:29:26.630059 +0000 build-archlinux42: output: + BRANCH=main
+2023-06-23 02:29:26.630067 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630094 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630104 +0000 build-archlinux42: output: + [[ 8 -gt 0 ]]
+2023-06-23 02:29:26.630113 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:29:26.630123 +0000 build-archlinux42: output: + GIT_URL=https://github.com/QubesOS/qubes-flashrom.git
+2023-06-23 02:29:26.630131 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630138 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630146 +0000 build-archlinux42: output: + [[ 6 -gt 0 ]]
+2023-06-23 02:29:26.630154 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:29:26.630162 +0000 build-archlinux42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-06-23 02:29:26.630169 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630177 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630184 +0000 build-archlinux42: output: + [[ 4 -gt 0 ]]
+2023-06-23 02:29:26.630192 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:29:26.630200 +0000 build-archlinux42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-06-23 02:29:26.630207 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630214 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630222 +0000 build-archlinux42: output: + [[ 2 -gt 0 ]]
+2023-06-23 02:29:26.630229 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:29:26.630237 +0000 build-archlinux42: output: + FETCH_VERSIONS_ONLY=1
+2023-06-23 02:29:26.630244 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630251 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-06-23 02:29:26.630258 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:29:26.630266 +0000 build-archlinux42: output: + shift
+2023-06-23 02:29:26.630273 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-06-23 02:29:26.630281 +0000 build-archlinux42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-06-23 02:29:26.630288 +0000 build-archlinux42: output: -]*$ ]]
+2023-06-23 02:29:26.630295 +0000 build-archlinux42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-06-23 02:29:26.630303 +0000 build-archlinux42: output: -]*$ ]]
+2023-06-23 02:29:26.630310 +0000 build-archlinux42: output: + [[ -n flashrom ]]
+2023-06-23 02:29:26.630317 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-23 02:29:26.630325 +0000 build-archlinux42: output: + REPO=flashrom
+2023-06-23 02:29:26.630333 +0000 build-archlinux42: output: + '[' -z /builder/keyring ']'
+2023-06-23 02:29:26.630340 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-23 02:29:26.630348 +0000 build-archlinux42: output: + GIT_SUFFIX=.git
+2023-06-23 02:29:26.630356 +0000 build-archlinux42: output: + '[' -z main ']'
+2023-06-23 02:29:26.630363 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-23 02:29:26.630372 +0000 build-archlinux42: output: + '[' -z https://github.com/QubesOS/qubes-flashrom.git ']'
+2023-06-23 02:29:26.630380 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-23 02:29:26.630388 +0000 build-archlinux42: output: + case ${IGNORE_MISSING=0} in
+2023-06-23 02:29:26.630395 +0000 build-archlinux42: output: + :
+2023-06-23 02:29:26.630403 +0000 build-archlinux42: output: + case ${GIT_CLONE_FAST=0} in
+2023-06-23 02:29:26.630411 +0000 build-archlinux42: output: + :
+2023-06-23 02:29:26.630418 +0000 build-archlinux42: output: + GIT_OPTIONS=()
+2023-06-23 02:29:26.630425 +0000 build-archlinux42: output: + [[ 0 = \1 ]]
+2023-06-23 02:29:26.630433 +0000 build-archlinux42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-06-23 02:29:26.630442 +0000 build-archlinux42: output: + [[ main =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-06-23 02:29:26.630451 +0000 build-archlinux42: output: + [[ flashrom =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-06-23 02:29:26.630459 +0000 build-archlinux42: output: + trap exit_clean 0 1 2 3 6 15
+2023-06-23 02:29:26.630467 +0000 build-archlinux42: output: + fresh_clone=false
+2023-06-23 02:29:26.630474 +0000 build-archlinux42: output: + [[ '' = \1 ]]
+2023-06-23 02:29:26.630482 +0000 build-archlinux42: output: + [[ -d flashrom ]]
+2023-06-23 02:29:26.630498 +0000 build-archlinux42: output: + rm -f -- flashrom
+2023-06-23 02:29:26.630507 +0000 build-archlinux42: output: + print_headers
+2023-06-23 02:29:26.630515 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-23 02:29:26.630525 +0000 build-archlinux42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-flashrom.git main'
+2023-06-23 02:29:26.630534 +0000 build-archlinux42: output: + echo '-> Updating sources for flashrom...'
+2023-06-23 02:29:26.630566 +0000 build-archlinux42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-flashrom.git main...'
+2023-06-23 02:29:26.630581 +0000 build-archlinux42: output: + git clone -n -q -b main https://github.com/QubesOS/qubes-flashrom.git flashrom
+2023-06-23 02:29:26.630591 +0000 build-archlinux42: output: -> Updating sources for flashrom...
+2023-06-23 02:29:26.630601 +0000 build-archlinux42: output: --> Fetching from https://github.com/QubesOS/qubes-flashrom.git main...
+2023-06-23 02:29:29.272326 +0000 build-archlinux42: output: --> Verifying tags...
+2023-06-23 02:29:29.273589 +0000 build-archlinux42: output: + '[' 1 == 1 ']'
+2023-06-23 02:29:29.273949 +0000 build-archlinux42: output: ++ git -C flashrom describe '--match=v*' --abbrev=0 HEAD
+2023-06-23 02:29:29.273985 +0000 build-archlinux42: output: + vtag=v1.3.0-1
+2023-06-23 02:29:29.274000 +0000 build-archlinux42: output: + '[' -n v1.3.0-1 ']'
+2023-06-23 02:29:29.274013 +0000 build-archlinux42: output: + VERIFY_REF='v1.3.0-1^{commit}'
+2023-06-23 02:29:29.274023 +0000 build-archlinux42: output: + fresh_clone=:
+2023-06-23 02:29:29.274032 +0000 build-archlinux42: output: + export CHECK=signed-tag
+2023-06-23 02:29:29.274041 +0000 build-archlinux42: output: + CHECK=signed-tag
+2023-06-23 02:29:29.274301 +0000 build-archlinux42: output: + verify=true
+2023-06-23 02:29:29.274331 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-23 02:29:29.274342 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-23 02:29:29.274353 +0000 build-archlinux42: output: ++ git -C flashrom rev-parse -q --verify 'v1.3.0-1^{commit}'
+2023-06-23 02:29:29.274364 +0000 build-archlinux42: output: + VERIFY_REF=f2e351d0e9fb184c3fdd7795ad41d9845cb5c418
+2023-06-23 02:29:29.274373 +0000 build-archlinux42: output: + '[' true = false ']'
+2023-06-23 02:29:29.274383 +0000 build-archlinux42: output: + [[ signed-tag == \s\i\g\n\e\d\-\t\a\g\-\o\r\-\c\o\m\m\i\t ]]
+2023-06-23 02:29:29.274392 +0000 build-archlinux42: output: + echo '--> Verifying tags...'
+2023-06-23 02:29:29.277621 +0000 build-archlinux42: output: ++ readlink -m /builder/keyring
+2023-06-23 02:29:29.280256 +0000 build-archlinux42: output: + GNUPGHOME=/builder/keyring
+2023-06-23 02:29:29.280313 +0000 build-archlinux42: output: + export GNUPGHOME
+2023-06-23 02:29:29.280332 +0000 build-archlinux42: output: + '[' '!' -d /builder/keyring ']'
+2023-06-23 02:29:29.280344 +0000 build-archlinux42: output: + mkdir -p /builder/keyring
+2023-06-23 02:29:29.291524 +0000 build-archlinux42: output: + chmod 700 /builder/keyring
+2023-06-23 02:29:29.291610 +0000 build-archlinux42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-06-23 02:29:29.403043 +0000 build-archlinux42: output: gpg: keybox '/builder/keyring/pubring.kbx' created
+2023-06-23 02:29:29.430813 +0000 build-archlinux42: output: gpg: /builder/keyring/trustdb.gpg: trustdb created
+2023-06-23 02:29:29.433498 +0000 build-archlinux42: output: gpg: key DDFA1A3E36879494: public key "Qubes Master Signing Key" imported
+2023-06-23 02:29:29.534267 +0000 build-archlinux42: output: gpg: key 063938BA42CFA724: public key "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" imported
+2023-06-23 02:29:29.543819 +0000 build-archlinux42: output: gpg: key DA0434BC706E1FCF: public key "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" imported
+2023-06-23 02:29:29.546176 +0000 build-archlinux42: output: gpg: Total number processed: 3
+2023-06-23 02:29:29.546235 +0000 build-archlinux42: output: gpg:               imported: 3
+2023-06-23 02:29:29.546277 +0000 build-archlinux42: output: gpg: no ultimately trusted keys found
+2023-06-23 02:29:29.569099 +0000 build-archlinux42: output: + gpg --import-ownertrust
+2023-06-23 02:29:29.569151 +0000 build-archlinux42: output: + echo 427F11FD0FAA4B080123F01CDDFA1A3E36879494:6:
+2023-06-23 02:29:29.572912 +0000 build-archlinux42: output: gpg: inserting ownertrust of 6
+2023-06-23 02:29:29.572963 +0000 build-archlinux42: output: + '[' /builder/plugins/fetch/keys/qubes-developers-keys.asc -nt /builder/keyring/pubring.gpg ']'
+2023-06-23 02:29:29.572978 +0000 build-archlinux42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-06-23 02:29:29.572989 +0000 build-archlinux42: output: gpg: key DDFA1A3E36879494: "Qubes Master Signing Key" not changed
+2023-06-23 02:29:29.574224 +0000 build-archlinux42: output: gpg: key 063938BA42CFA724: "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" not changed
+2023-06-23 02:29:29.574269 +0000 build-archlinux42: output: gpg: key DA0434BC706E1FCF: "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" not changed
+2023-06-23 02:29:29.574282 +0000 build-archlinux42: output: gpg: Total number processed: 3
+2023-06-23 02:29:29.574291 +0000 build-archlinux42: output: gpg:              unchanged: 3
+2023-06-23 02:29:29.580412 +0000 build-archlinux42: output: + touch /builder/keyring/pubring.gpg
+2023-06-23 02:29:29.601158 +0000 build-archlinux42: output: + gpgconf --kill gpg-agent
+2023-06-23 02:29:29.630270 +0000 build-archlinux42: output: + pushd flashrom
+2023-06-23 02:29:29.630325 +0000 build-archlinux42: output: + expected_hash=f2e351d0e9fb184c3fdd7795ad41d9845cb5c418
+2023-06-23 02:29:29.630343 +0000 build-archlinux42: output: + hash_len=40
+2023-06-23 02:29:29.630355 +0000 build-archlinux42: output: + '[' 40 -ne 40 ']'
+2023-06-23 02:29:29.630367 +0000 build-archlinux42: output: + [[ f2e351d0e9fb184c3fdd7795ad41d9845cb5c418 =~ ^[a-f0-9]+$ ]]
+2023-06-23 02:29:29.630381 +0000 build-archlinux42: output: + format='%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-06-23 02:29:29.630391 +0000 build-archlinux42: output: ++ head -c 500
+2023-06-23 02:29:29.634712 +0000 build-archlinux42: output: ++ git tag --points-at=f2e351d0e9fb184c3fdd7795ad41d9845cb5c418 '--format=%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-06-23 02:29:29.641992 +0000 build-archlinux42: output: + tags=4a3eb823380d68db7a46dec59687c673ada6ca9f:f2e351d0e9fb184c3fdd7795ad41d9845cb5c418:
+2023-06-23 02:29:29.642051 +0000 build-archlinux42: output: + for tag in $tags
+2023-06-23 02:29:29.642073 +0000 build-archlinux42: output: + (( 82 != hash_len * 2 + 2 ))
+2023-06-23 02:29:29.642091 +0000 build-archlinux42: output: + [[ :f2e351d0e9fb184c3fdd7795ad41d9845cb5c418: == \:\f\2\e\3\5\1\d\0\e\9\f\b\1\8\4\c\3\f\d\d\7\7\9\5\a\d\4\1\d\9\8\4\5\c\b\5\c\4\1\8\: ]]
+2023-06-23 02:29:29.642104 +0000 build-archlinux42: output: + tag=4a3eb823380d68db7a46dec59687c673ada6ca9f
+2023-06-23 02:29:29.642115 +0000 build-archlinux42: output: + verify_git_obj tag 4a3eb823380d68db7a46dec59687c673ada6ca9f
+2023-06-23 02:29:29.642495 +0000 build-archlinux42: output: + local content newsig_number
+2023-06-23 02:29:29.642539 +0000 build-archlinux42: output: ++ git -c gpg.program=gpg -c gpg.minTrustLevel=fully verify-tag --raw -- 4a3eb823380d68db7a46dec59687c673ada6ca9f
+2023-06-23 02:29:29.650264 +0000 build-archlinux42: output: + content='[GNUPG:] NEWSIG
+2023-06-23 02:29:29.650350 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-23 02:29:29.650382 +0000 build-archlinux42: output: [GNUPG:] SIG_ID suXj/zqa8OzunSLiunjZKwo702w 2023-06-23 1687487316
+2023-06-23 02:29:29.650432 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-23 02:29:29.650449 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.650515 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.650716 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.650741 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-23 02:29:29.652433 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-23 1687487316 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-23 02:29:29.652483 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-23 02:29:29.652494 +0000 build-archlinux42: output: ++ grep -c '^\[GNUPG:] NEWSIG'
+2023-06-23 02:29:29.652504 +0000 build-archlinux42: output: ++ printf '%s\n' '[GNUPG:] NEWSIG
+2023-06-23 02:29:29.652514 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-23 02:29:29.652524 +0000 build-archlinux42: output: [GNUPG:] SIG_ID suXj/zqa8OzunSLiunjZKwo702w 2023-06-23 1687487316
+2023-06-23 02:29:29.652534 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-23 02:29:29.652543 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.652575 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.652586 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.652598 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-23 02:29:29.652611 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-23 1687487316 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-23 02:29:29.654810 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-23 02:29:29.654904 +0000 build-archlinux42: output: + newsig_number=1
+2023-06-23 02:29:29.654965 +0000 build-archlinux42: output: + '[' 1 = 1 ']'
+2023-06-23 02:29:29.654979 +0000 build-archlinux42: output: + printf '%s\n' '[GNUPG:] NEWSIG
+2023-06-23 02:29:29.655017 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-23 02:29:29.655046 +0000 build-archlinux42: output: [GNUPG:] SIG_ID suXj/zqa8OzunSLiunjZKwo702w 2023-06-23 1687487316
+2023-06-23 02:29:29.655059 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-23 02:29:29.655070 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.657708 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.657811 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-23 02:29:29.657831 +0000 build-archlinux42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-23 02:29:29.657847 +0000 build-archlinux42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-23 1687487316 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-23 02:29:29.657868 +0000 build-archlinux42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-23 02:29:29.657880 +0000 build-archlinux42: output: + grep '^\[GNUPG:] TRUST_\(FULLY\|ULTIMATE\) 0 pgp\>'
+2023-06-23 02:29:29.661721 +0000 build-archlinux42: output: + echo '---> Good tag 4a3eb823380d68db7a46dec59687c673ada6ca9f'
+2023-06-23 02:29:29.661801 +0000 build-archlinux42: output: + '[' -z x ']'
+2023-06-23 02:29:29.661814 +0000 build-archlinux42: output: + popd
+2023-06-23 02:29:29.661842 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-23 02:29:29.661852 +0000 build-archlinux42: output: + pushd flashrom
+2023-06-23 02:29:29.661868 +0000 build-archlinux42: output: ++ exec git rev-parse --abbrev-ref HEAD
+2023-06-23 02:29:29.661879 +0000 build-archlinux42: output: ---> Good tag 4a3eb823380d68db7a46dec59687c673ada6ca9f
+2023-06-23 02:29:29.664533 +0000 build-archlinux42: output: + CURRENT_BRANCH=main
+2023-06-23 02:29:29.664628 +0000 build-archlinux42: output: + '[' main '!=' main ']'
+2023-06-23 02:29:29.664683 +0000 build-archlinux42: output: + :
+2023-06-23 02:29:29.664697 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-23 02:29:29.664765 +0000 build-archlinux42: output: + red='.[1;31m'
+2023-06-23 02:29:29.664894 +0000 build-archlinux42: output: + green='.[1;32m'
+2023-06-23 02:29:29.664959 +0000 build-archlinux42: output: + normal='.[0;0m'
+2023-06-23 02:29:29.667272 +0000 build-archlinux42: output: ++ git name-rev --name-only main
+2023-06-23 02:29:29.673086 +0000 build-archlinux42: output: + '[' -n 'tags/v1.3.0-1^0' ']'
+2023-06-23 02:29:29.673136 +0000 build-archlinux42: output: + echo '--> Switching branch from main branch to .[1;32mmain.[0;0m'
+2023-06-23 02:29:29.673148 +0000 build-archlinux42: output: + :
+2023-06-23 02:29:29.673159 +0000 build-archlinux42: output: + git checkout -B main f2e351d0e9fb184c3fdd7795ad41d9845cb5c418
+2023-06-23 02:29:29.673169 +0000 build-archlinux42: output: --> Switching branch from main branch to .[1;32mmain.[0;0m
+2023-06-23 02:29:29.680579 +0000 build-archlinux42: output: Reset branch 'main'
+2023-06-23 02:29:29.680634 +0000 build-archlinux42: output: Your branch is up to date with 'origin/main'.
+2023-06-23 02:29:29.687300 +0000 build-archlinux42: output: + :
+2023-06-23 02:29:29.687346 +0000 build-archlinux42: output: + '[' -e .gitmodules ']'
+2023-06-23 02:29:29.687358 +0000 build-archlinux42: output: + popd
+2023-06-23 02:29:29.687367 +0000 build-archlinux42: output: + exit_clean
+2023-06-23 02:29:29.687376 +0000 build-archlinux42: output: + local exit_code=0
+2023-06-23 02:29:29.687384 +0000 build-archlinux42: output: + '[' 0 -gt 0 ']'
+2023-06-23 02:29:29.687391 +0000 build-archlinux42: output: + exit 0
+2023-06-23 02:29:29.699691 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3399 qubesbuilder.FileCopyOut+__builder__flashrom /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-06-23 02:29:55.554494 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5916 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-06-23 02:29:56.265814 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp5916 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-06-23 02:30:13.921119 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5916 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-06-23 02:30:14.293593 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5916 bash -c 'rm -rf /builder/incoming/flashrom /builder/flashrom'
+2023-06-23 02:30:14.752303 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp5916 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/flashrom
+2023-06-23 02:30:15.215672 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5916 bash -c 'mkdir -p /builder && mv /builder/incoming/flashrom /builder'
+2023-06-23 02:30:15.626423 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp5916 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2''.
+2023-06-23 02:30:15.890393 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-06-23 02:30:15.890712 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:15.897084 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/flashrom'\'' --file-name '\''flashrom-v1.3.0.tar.bz2'\'' --file-url '\''https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2'\'' --'
+2023-06-23 02:30:15.897151 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/flashrom'\'' --file-name '\''flashrom-v1.3.0.tar.bz2'\'' --file-url '\''https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2'\'' --'
+2023-06-23 02:30:15.897177 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/flashrom --file-name flashrom-v1.3.0.tar.bz2 --file-url https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2 --
+2023-06-23 02:30:15.897439 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-06-23 02:30:15.897678 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:15.897705 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/flashrom
+2023-06-23 02:30:15.897716 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:15.897725 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:15.897734 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-06-23 02:30:15.897934 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:15.897957 +0000 build-archlinux42: output: + FILE_NAME=flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:15.897967 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:15.897975 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:15.897983 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-06-23 02:30:15.897991 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:15.898602 +0000 build-archlinux42: output: + FILE_URL=https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:15.898663 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:15.898675 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:15.898687 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-06-23 02:30:15.898696 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:15.898704 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:15.898712 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-06-23 02:30:15.898724 +0000 build-archlinux42: output: + '[' -z https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2 ']'
+2023-06-23 02:30:15.898735 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-06-23 02:30:15.898745 +0000 build-archlinux42: output: + '[' -z flashrom-v1.3.0.tar.bz2 ']'
+2023-06-23 02:30:15.898755 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:15.898765 +0000 build-archlinux42: output: + '[' -n /builder/flashrom ']'
+2023-06-23 02:30:15.898774 +0000 build-archlinux42: output: + mkdir -p /builder/flashrom
+2023-06-23 02:30:15.899357 +0000 build-archlinux42: output: + cd /builder/flashrom
+2023-06-23 02:30:15.899405 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_flashrom-v1.3.0.tar.bz2 -- https://download.flashrom.org/releases/flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:18.182412 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-06-23 02:30:18.182468 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-23 02:30:18.194006 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5916 qubesbuilder.FileCopyOut+__builder__flashrom__untrusted_flashrom-v1.3.0.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpw8r7onfk
+2023-06-23 02:30:24.750197 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpw8r7onfk --untrusted-file /home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'.
+2023-06-23 02:30:24.757241 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-06-23 02:30:24.764997 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpw8r7onfk --untrusted-file /home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2023-06-23 02:30:24.776649 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpw8r7onfk'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'\'' --'
+2023-06-23 02:30:24.776717 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpw8r7onfk'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512'\'' --'
+2023-06-23 02:30:24.776746 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpw8r7onfk --untrusted-file /home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 --
+2023-06-23 02:30:24.776759 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-06-23 02:30:24.776769 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-06-23 02:30:24.776778 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:24.776789 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpw8r7onfk
+2023-06-23 02:30:24.776802 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776811 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776820 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-06-23 02:30:24.776828 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:24.776840 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:24.776849 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776856 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776864 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-06-23 02:30:24.776872 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:24.776880 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-06-23 02:30:24.776887 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776894 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776902 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-06-23 02:30:24.776909 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:24.776920 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2023-06-23 02:30:24.776927 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776953 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776963 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-06-23 02:30:24.776971 +0000 build-archlinux42: output: + case "$1" in
+2023-06-23 02:30:24.776978 +0000 build-archlinux42: output: + shift
+2023-06-23 02:30:24.776985 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-06-23 02:30:24.776996 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2 ']'
+2023-06-23 02:30:24.777005 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpw8r7onfk ']'
+2023-06-23 02:30:24.777015 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpw8r7onfk
+2023-06-23 02:30:24.789723 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:24.795100 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:24.795156 +0000 build-archlinux42: output: + FILE_NAME=flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:24.795176 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2023-06-23 02:30:24.795191 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2023-06-23 02:30:24.795205 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2023-06-23 02:30:24.795216 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-23 02:30:24.795226 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-06-23 02:30:24.795235 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-23 02:30:24.795243 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-06-23 02:30:24.795254 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512 ']'
+2023-06-23 02:30:24.795264 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-06-23 02:30:24.795273 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-06-23 02:30:24.806622 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/flashrom/flashrom-v1.3.0.tar.bz2.sha512
+2023-06-23 02:30:24.806687 +0000 build-archlinux42: output: ++ printf '%s  -\n' 73b6e00bd3bc66c98d4ad53966a65b19d3d92f07d7b210d69e041d6f5788605b9791a9bf7aec0a52e13d19fcb62c4bdaf4bab9f805fc31468393ca313129a77b
+2023-06-23 02:30:24.834197 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpw8r7onfk/untrusted_flashrom-v1.3.0.tar.bz2 /home/user/builder-r4.2/tmp/tmpw8r7onfk/flashrom-v1.3.0.tar.bz2
+2023-06-23 02:30:43.671893 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1757 bash -c 'rm -rf /builder/incoming/flashrom /builder/flashrom'
+2023-06-23 02:31:00.734222 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1757 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/flashrom
+2023-06-23 02:31:01.432597 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1757 bash -c 'mkdir -p /builder && mv /builder/incoming/flashrom /builder'
+2023-06-23 02:31:01.744201 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp1757 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/flashrom/hash /builder/flashrom/vtags && cd /builder && git -C /builder/flashrom rev-parse '\''HEAD^{}'\'' >> /builder/flashrom/hash && git -C /builder/flashrom tag --points-at HEAD --list '\''v*'\'' >> /builder/flashrom/vtags''.
+2023-06-23 02:31:02.183699 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1757 qubesbuilder.FileCopyOut+__builder__flashrom__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpz27dxnwd
+2023-06-23 02:31:02.616955 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1757 qubesbuilder.FileCopyOut+__builder__flashrom__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpz27dxnwd
+2023-06-23 02:31:08.399698 +0000 build-archlinux42: > done
+2023-06-23 02:31:08.399760 +0000 > closing log
