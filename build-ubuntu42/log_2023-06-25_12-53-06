@@ -1,0 +1,315 @@
+2023-06-25 12:53:06.119700 +0000 > starting log
+2023-06-25 12:53:06.119993 +0000 build-ubuntu42: > starting build with log
+2023-06-25 12:53:06.120008 +0000 build-ubuntu42: >> args:
+2023-06-25 12:53:06.120019 +0000 build-ubuntu42: >>   ()
+2023-06-25 12:53:06.120027 +0000 build-ubuntu42: >> component:
+2023-06-25 12:53:06.120034 +0000 build-ubuntu42: >>   salt
+2023-06-25 12:53:06.120042 +0000 build-ubuntu42: >> distributions:
+2023-06-25 12:53:06.120052 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-06-25 12:53:22.771720 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp363 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-06-25 12:53:23.981499 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp363 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-06-25 12:53:24.788603 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp363 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-06-25 12:53:25.918812 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp363 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component salt --git-branch main --git-url https://github.com/QubesOS/qubes-salt.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only''.
+2023-06-25 12:53:43.788963 +0000 build-ubuntu42: output: + unset CLEAN
+2023-06-25 12:53:43.789018 +0000 build-ubuntu42: output: + CLEAN=0
+2023-06-25 12:53:43.789048 +0000 build-ubuntu42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-06-25 12:53:43.789090 +0000 build-ubuntu42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component salt --git-branch main --git-url https://github.com/QubesOS/qubes-salt.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only
+2023-06-25 12:53:43.798984 +0000 build-ubuntu42: output: + OPTS=' --component '\''salt'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-salt.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-06-25 12:53:43.799052 +0000 build-ubuntu42: output: + eval set -- ' --component '\''salt'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-salt.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-06-25 12:53:43.799083 +0000 build-ubuntu42: output: ++ set -- --component salt --git-branch main --git-url https://github.com/QubesOS/qubes-salt.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only --
+2023-06-25 12:53:43.799097 +0000 build-ubuntu42: output: + [[ 12 -gt 0 ]]
+2023-06-25 12:53:43.799109 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:53:43.799118 +0000 build-ubuntu42: output: + COMPONENT=salt
+2023-06-25 12:53:43.799127 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799135 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799144 +0000 build-ubuntu42: output: + [[ 10 -gt 0 ]]
+2023-06-25 12:53:43.799152 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:53:43.799160 +0000 build-ubuntu42: output: + BRANCH=main
+2023-06-25 12:53:43.799167 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799175 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799183 +0000 build-ubuntu42: output: + [[ 8 -gt 0 ]]
+2023-06-25 12:53:43.799211 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:53:43.799224 +0000 build-ubuntu42: output: + GIT_URL=https://github.com/QubesOS/qubes-salt.git
+2023-06-25 12:53:43.799232 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799240 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799249 +0000 build-ubuntu42: output: + [[ 6 -gt 0 ]]
+2023-06-25 12:53:43.799257 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:53:43.799266 +0000 build-ubuntu42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-06-25 12:53:43.799273 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799281 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799289 +0000 build-ubuntu42: output: + [[ 4 -gt 0 ]]
+2023-06-25 12:53:43.799297 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:53:43.799305 +0000 build-ubuntu42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-06-25 12:53:43.799313 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799320 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799328 +0000 build-ubuntu42: output: + [[ 2 -gt 0 ]]
+2023-06-25 12:53:43.799335 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:53:43.799343 +0000 build-ubuntu42: output: + FETCH_VERSIONS_ONLY=1
+2023-06-25 12:53:43.799350 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799358 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-06-25 12:53:43.799366 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:53:43.799373 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:53:43.799381 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-06-25 12:53:43.799389 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-06-25 12:53:43.799396 +0000 build-ubuntu42: output: -]*$ ]]
+2023-06-25 12:53:43.799404 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-06-25 12:53:43.799412 +0000 build-ubuntu42: output: -]*$ ]]
+2023-06-25 12:53:43.799419 +0000 build-ubuntu42: output: + [[ -n salt ]]
+2023-06-25 12:53:43.799427 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-06-25 12:53:43.799434 +0000 build-ubuntu42: output: + REPO=salt
+2023-06-25 12:53:43.799443 +0000 build-ubuntu42: output: + '[' -z /builder/keyring ']'
+2023-06-25 12:53:43.799451 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-06-25 12:53:43.799459 +0000 build-ubuntu42: output: + GIT_SUFFIX=.git
+2023-06-25 12:53:43.799466 +0000 build-ubuntu42: output: + '[' -z main ']'
+2023-06-25 12:53:43.799474 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-06-25 12:53:43.799483 +0000 build-ubuntu42: output: + '[' -z https://github.com/QubesOS/qubes-salt.git ']'
+2023-06-25 12:53:43.799491 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-06-25 12:53:43.799500 +0000 build-ubuntu42: output: + case ${IGNORE_MISSING=0} in
+2023-06-25 12:53:43.799507 +0000 build-ubuntu42: output: + :
+2023-06-25 12:53:43.799516 +0000 build-ubuntu42: output: + case ${GIT_CLONE_FAST=0} in
+2023-06-25 12:53:43.799523 +0000 build-ubuntu42: output: + :
+2023-06-25 12:53:43.799531 +0000 build-ubuntu42: output: + GIT_OPTIONS=()
+2023-06-25 12:53:43.799539 +0000 build-ubuntu42: output: + [[ 0 = \1 ]]
+2023-06-25 12:53:43.799547 +0000 build-ubuntu42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-06-25 12:53:43.799556 +0000 build-ubuntu42: output: + [[ main =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-06-25 12:53:43.799565 +0000 build-ubuntu42: output: + [[ salt =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-06-25 12:53:43.805242 +0000 build-ubuntu42: output: + trap exit_clean 0 1 2 3 6 15
+2023-06-25 12:53:43.805300 +0000 build-ubuntu42: output: + fresh_clone=false
+2023-06-25 12:53:43.805317 +0000 build-ubuntu42: output: + [[ '' = \1 ]]
+2023-06-25 12:53:43.805329 +0000 build-ubuntu42: output: + [[ -d salt ]]
+2023-06-25 12:53:43.807618 +0000 build-ubuntu42: output: + rm -f -- salt
+2023-06-25 12:53:43.813000 +0000 build-ubuntu42: output: -> Updating sources for salt...
+2023-06-25 12:53:43.813053 +0000 build-ubuntu42: output: --> Fetching from https://github.com/QubesOS/qubes-salt.git main...
+2023-06-25 12:53:43.815834 +0000 build-ubuntu42: output: + print_headers
+2023-06-25 12:53:43.815927 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-06-25 12:53:43.815948 +0000 build-ubuntu42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-salt.git main'
+2023-06-25 12:53:43.815962 +0000 build-ubuntu42: output: + echo '-> Updating sources for salt...'
+2023-06-25 12:53:43.815979 +0000 build-ubuntu42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-salt.git main...'
+2023-06-25 12:53:43.815993 +0000 build-ubuntu42: output: + git clone -n -q -b main https://github.com/QubesOS/qubes-salt.git salt
+2023-06-25 12:53:46.936561 +0000 build-ubuntu42: output: + '[' 1 == 1 ']'
+2023-06-25 12:53:46.936623 +0000 build-ubuntu42: output: ++ git -C salt describe '--match=v*' --abbrev=0 HEAD
+2023-06-25 12:53:46.944646 +0000 build-ubuntu42: output: + vtag=v3006.1-1
+2023-06-25 12:53:46.944701 +0000 build-ubuntu42: output: + '[' -n v3006.1-1 ']'
+2023-06-25 12:53:46.944721 +0000 build-ubuntu42: output: + VERIFY_REF='v3006.1-1^{commit}'
+2023-06-25 12:53:46.944736 +0000 build-ubuntu42: output: + fresh_clone=:
+2023-06-25 12:53:46.944748 +0000 build-ubuntu42: output: + export CHECK=signed-tag
+2023-06-25 12:53:46.944758 +0000 build-ubuntu42: output: + CHECK=signed-tag
+2023-06-25 12:53:46.944768 +0000 build-ubuntu42: output: + verify=true
+2023-06-25 12:53:46.944777 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-06-25 12:53:46.944786 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-06-25 12:53:46.944797 +0000 build-ubuntu42: output: ++ git -C salt rev-parse -q --verify 'v3006.1-1^{commit}'
+2023-06-25 12:53:46.948842 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-06-25 12:53:46.952108 +0000 build-ubuntu42: output: + VERIFY_REF=54d75701a072616d0cc54f11a4efd03532b876fa
+2023-06-25 12:53:46.952166 +0000 build-ubuntu42: output: + '[' true = false ']'
+2023-06-25 12:53:46.952184 +0000 build-ubuntu42: output: + [[ signed-tag == \s\i\g\n\e\d\-\t\a\g\-\o\r\-\c\o\m\m\i\t ]]
+2023-06-25 12:53:46.952197 +0000 build-ubuntu42: output: + echo '--> Verifying tags...'
+2023-06-25 12:53:46.952207 +0000 build-ubuntu42: output: ++ readlink -m /builder/keyring
+2023-06-25 12:53:46.957354 +0000 build-ubuntu42: output: + GNUPGHOME=/builder/keyring
+2023-06-25 12:53:46.957407 +0000 build-ubuntu42: output: + export GNUPGHOME
+2023-06-25 12:53:46.957425 +0000 build-ubuntu42: output: + '[' '!' -d /builder/keyring ']'
+2023-06-25 12:53:46.957438 +0000 build-ubuntu42: output: + mkdir -p /builder/keyring
+2023-06-25 12:53:46.964802 +0000 build-ubuntu42: output: + chmod 700 /builder/keyring
+2023-06-25 12:53:46.970178 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-06-25 12:53:47.006455 +0000 build-ubuntu42: output: gpg: keybox '/builder/keyring/pubring.kbx' created
+2023-06-25 12:53:47.017042 +0000 build-ubuntu42: output: gpg: /builder/keyring/trustdb.gpg: trustdb created
+2023-06-25 12:53:47.017097 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: public key "Qubes Master Signing Key" imported
+2023-06-25 12:53:47.022472 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: public key "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" imported
+2023-06-25 12:53:47.028860 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: public key "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" imported
+2023-06-25 12:53:47.028942 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-06-25 12:53:47.028962 +0000 build-ubuntu42: output: gpg:               imported: 3
+2023-06-25 12:53:47.028976 +0000 build-ubuntu42: output: gpg: no ultimately trusted keys found
+2023-06-25 12:53:47.028989 +0000 build-ubuntu42: output: + echo 427F11FD0FAA4B080123F01CDDFA1A3E36879494:6:
+2023-06-25 12:53:47.029001 +0000 build-ubuntu42: output: + gpg --import-ownertrust
+2023-06-25 12:53:47.029011 +0000 build-ubuntu42: output: gpg: inserting ownertrust of 6
+2023-06-25 12:53:47.035319 +0000 build-ubuntu42: output: + '[' /builder/plugins/fetch/keys/qubes-developers-keys.asc -nt /builder/keyring/pubring.gpg ']'
+2023-06-25 12:53:47.035406 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-06-25 12:53:47.037515 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: "Qubes Master Signing Key" not changed
+2023-06-25 12:53:47.037571 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" not changed
+2023-06-25 12:53:47.037593 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" not changed
+2023-06-25 12:53:47.037608 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-06-25 12:53:47.037620 +0000 build-ubuntu42: output: gpg:              unchanged: 3
+2023-06-25 12:53:47.037631 +0000 build-ubuntu42: output: + touch /builder/keyring/pubring.gpg
+2023-06-25 12:53:47.046245 +0000 build-ubuntu42: output: + gpgconf --kill gpg-agent
+2023-06-25 12:53:47.059535 +0000 build-ubuntu42: output: + pushd salt
+2023-06-25 12:53:47.059592 +0000 build-ubuntu42: output: + expected_hash=54d75701a072616d0cc54f11a4efd03532b876fa
+2023-06-25 12:53:47.059613 +0000 build-ubuntu42: output: + hash_len=40
+2023-06-25 12:53:47.059626 +0000 build-ubuntu42: output: + '[' 40 -ne 40 ']'
+2023-06-25 12:53:47.059701 +0000 build-ubuntu42: output: + [[ 54d75701a072616d0cc54f11a4efd03532b876fa =~ ^[a-f0-9]+$ ]]
+2023-06-25 12:53:47.059725 +0000 build-ubuntu42: output: + format='%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-06-25 12:53:47.059823 +0000 build-ubuntu42: output: ++ head -c 500
+2023-06-25 12:53:47.060056 +0000 build-ubuntu42: output: ++ git tag --points-at=54d75701a072616d0cc54f11a4efd03532b876fa '--format=%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-06-25 12:53:47.065253 +0000 build-ubuntu42: output: + tags=cee0870d6e455939378396735e7ab9c1d7c7d693:54d75701a072616d0cc54f11a4efd03532b876fa:
+2023-06-25 12:53:47.065307 +0000 build-ubuntu42: output: + for tag in $tags
+2023-06-25 12:53:47.065325 +0000 build-ubuntu42: output: + (( 82 != hash_len * 2 + 2 ))
+2023-06-25 12:53:47.065342 +0000 build-ubuntu42: output: + [[ :54d75701a072616d0cc54f11a4efd03532b876fa: == \:\5\4\d\7\5\7\0\1\a\0\7\2\6\1\6\d\0\c\c\5\4\f\1\1\a\4\e\f\d\0\3\5\3\2\b\8\7\6\f\a\: ]]
+2023-06-25 12:53:47.065355 +0000 build-ubuntu42: output: + tag=cee0870d6e455939378396735e7ab9c1d7c7d693
+2023-06-25 12:53:47.065366 +0000 build-ubuntu42: output: + verify_git_obj tag cee0870d6e455939378396735e7ab9c1d7c7d693
+2023-06-25 12:53:47.065376 +0000 build-ubuntu42: output: + local content newsig_number
+2023-06-25 12:53:47.065389 +0000 build-ubuntu42: output: ++ git -c gpg.program=gpg -c gpg.minTrustLevel=fully verify-tag --raw -- cee0870d6e455939378396735e7ab9c1d7c7d693
+2023-06-25 12:53:47.079062 +0000 build-ubuntu42: output: + content='[GNUPG:] NEWSIG
+2023-06-25 12:53:47.079120 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.079139 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID N0Gbq6iKOx2T8gpBvurldsFnsf0 2023-06-25 1687697478
+2023-06-25 12:53:47.079154 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.079166 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.079178 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.079189 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.079202 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-25 12:53:47.079283 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-25 1687697478 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-25 12:53:47.079323 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.079335 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-25 12:53:47.079404 +0000 build-ubuntu42: output: ++ printf '%s\n' '[GNUPG:] NEWSIG
+2023-06-25 12:53:47.079703 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.079738 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID N0Gbq6iKOx2T8gpBvurldsFnsf0 2023-06-25 1687697478
+2023-06-25 12:53:47.079750 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.079803 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.079869 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.079966 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.080273 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-25 12:53:47.080301 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-25 1687697478 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-25 12:53:47.080326 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.080376 +0000 build-ubuntu42: output: ++ grep -c '^\[GNUPG:] NEWSIG'
+2023-06-25 12:53:47.080538 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-25 12:53:47.097058 +0000 build-ubuntu42: output: + newsig_number=1
+2023-06-25 12:53:47.097111 +0000 build-ubuntu42: output: + '[' 1 = 1 ']'
+2023-06-25 12:53:47.097129 +0000 build-ubuntu42: output: + printf '%s\n' '[GNUPG:] NEWSIG
+2023-06-25 12:53:47.097143 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.097156 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID N0Gbq6iKOx2T8gpBvurldsFnsf0 2023-06-25 1687697478
+2023-06-25 12:53:47.097167 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.097178 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.097188 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.097199 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-06-25 12:53:47.097211 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-06-25 12:53:47.097226 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-06-25 1687697478 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-06-25 12:53:47.097237 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-06-25 12:53:47.097248 +0000 build-ubuntu42: output: + grep '^\[GNUPG:] TRUST_\(FULLY\|ULTIMATE\) 0 pgp\>'
+2023-06-25 12:53:47.097323 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-06-25 12:53:47.097348 +0000 build-ubuntu42: output: + echo '---> Good tag cee0870d6e455939378396735e7ab9c1d7c7d693'
+2023-06-25 12:53:47.097357 +0000 build-ubuntu42: output: + '[' -z x ']'
+2023-06-25 12:53:47.097374 +0000 build-ubuntu42: output: + popd
+2023-06-25 12:53:47.097429 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-06-25 12:53:47.097610 +0000 build-ubuntu42: output: + pushd salt
+2023-06-25 12:53:47.097632 +0000 build-ubuntu42: output: ---> Good tag cee0870d6e455939378396735e7ab9c1d7c7d693
+2023-06-25 12:53:47.100105 +0000 build-ubuntu42: output: ++ exec git rev-parse --abbrev-ref HEAD
+2023-06-25 12:53:47.103068 +0000 build-ubuntu42: output: + CURRENT_BRANCH=main
+2023-06-25 12:53:47.103194 +0000 build-ubuntu42: output: + '[' main '!=' main ']'
+2023-06-25 12:53:47.103357 +0000 build-ubuntu42: output: + :
+2023-06-25 12:53:47.103501 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-06-25 12:53:47.103593 +0000 build-ubuntu42: output: + red='.[1;31m'
+2023-06-25 12:53:47.103784 +0000 build-ubuntu42: output: + green='.[1;32m'
+2023-06-25 12:53:47.103808 +0000 build-ubuntu42: output: + normal='.[0;0m'
+2023-06-25 12:53:47.104459 +0000 build-ubuntu42: output: ++ git name-rev --name-only main
+2023-06-25 12:53:47.107017 +0000 build-ubuntu42: output: --> Switching branch from main branch to .[1;32mmain.[0;0m
+2023-06-25 12:53:47.112628 +0000 build-ubuntu42: output: + '[' -n 'tags/v3006.1-1^0' ']'
+2023-06-25 12:53:47.112692 +0000 build-ubuntu42: output: + echo '--> Switching branch from main branch to .[1;32mmain.[0;0m'
+2023-06-25 12:53:47.112709 +0000 build-ubuntu42: output: + :
+2023-06-25 12:53:47.112722 +0000 build-ubuntu42: output: + git checkout -B main 54d75701a072616d0cc54f11a4efd03532b876fa
+2023-06-25 12:53:47.115980 +0000 build-ubuntu42: output: Your branch is up to date with 'origin/main'.
+2023-06-25 12:53:47.117394 +0000 build-ubuntu42: output: Reset branch 'main'
+2023-06-25 12:53:47.117453 +0000 build-ubuntu42: output: + :
+2023-06-25 12:53:47.125249 +0000 build-ubuntu42: output: + '[' -e .gitmodules ']'
+2023-06-25 12:53:47.125386 +0000 build-ubuntu42: output: + popd
+2023-06-25 12:53:47.125557 +0000 build-ubuntu42: output: + exit_clean
+2023-06-25 12:53:47.125653 +0000 build-ubuntu42: output: + local exit_code=0
+2023-06-25 12:53:47.125863 +0000 build-ubuntu42: output: + '[' 0 -gt 0 ']'
+2023-06-25 12:53:47.125887 +0000 build-ubuntu42: output: + exit 0
+2023-06-25 12:53:47.127047 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp363 qubesbuilder.FileCopyOut+__builder__salt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-06-25 12:54:11.780948 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7807 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-06-25 12:54:12.556111 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7807 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-06-25 12:54:31.180274 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7807 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-06-25 12:54:31.444663 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7807 bash -c 'rm -rf /builder/incoming/salt /builder/salt'
+2023-06-25 12:54:31.637523 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7807 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/salt
+2023-06-25 12:54:31.854251 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7807 bash -c 'mkdir -p /builder && mv /builder/incoming/salt /builder'
+2023-06-25 12:54:32.068226 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp7807 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/salt --file-name salt-3006.1.tar.gz --file-url https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz''.
+2023-06-25 12:54:32.277172 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-06-25 12:54:32.277244 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/salt --file-name salt-3006.1.tar.gz --file-url https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz
+2023-06-25 12:54:32.284725 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/salt'\'' --file-name '\''salt-3006.1.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz'\'' --'
+2023-06-25 12:54:32.284805 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/salt'\'' --file-name '\''salt-3006.1.tar.gz'\'' --file-url '\''https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz'\'' --'
+2023-06-25 12:54:32.284831 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/salt --file-name salt-3006.1.tar.gz --file-url https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz --
+2023-06-25 12:54:32.284844 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-06-25 12:54:32.284856 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:32.284867 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/salt
+2023-06-25 12:54:32.284901 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:32.284911 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:32.284920 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-06-25 12:54:32.284929 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:32.284937 +0000 build-ubuntu42: output: + FILE_NAME=salt-3006.1.tar.gz
+2023-06-25 12:54:32.284945 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:32.284953 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:32.284960 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-06-25 12:54:32.284968 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:32.284979 +0000 build-ubuntu42: output: + FILE_URL=https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz
+2023-06-25 12:54:32.284987 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:32.284994 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:32.285002 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-06-25 12:54:32.285009 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:32.285016 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:32.285024 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-06-25 12:54:32.285034 +0000 build-ubuntu42: output: + '[' -z https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz ']'
+2023-06-25 12:54:32.285045 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-06-25 12:54:32.285055 +0000 build-ubuntu42: output: + '[' -z salt-3006.1.tar.gz ']'
+2023-06-25 12:54:32.285064 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_salt-3006.1.tar.gz
+2023-06-25 12:54:32.285072 +0000 build-ubuntu42: output: + '[' -n /builder/salt ']'
+2023-06-25 12:54:32.285080 +0000 build-ubuntu42: output: + mkdir -p /builder/salt
+2023-06-25 12:54:32.286621 +0000 build-ubuntu42: output: + cd /builder/salt
+2023-06-25 12:54:32.286680 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_salt-3006.1.tar.gz -- https://files.pythonhosted.org/packages/source/s/salt/salt-3006.1.tar.gz
+2023-06-25 12:54:45.113783 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-06-25 12:54:45.113840 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-06-25 12:54:45.130190 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7807 qubesbuilder.FileCopyOut+__builder__salt__untrusted_salt-3006.1.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp2mvusqs8
+2023-06-25 12:54:52.578163 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp2mvusqs8 --untrusted-file /home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512'.
+2023-06-25 12:54:52.585743 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-06-25 12:54:52.585825 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp2mvusqs8 --untrusted-file /home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512
+2023-06-25 12:54:52.585912 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp2mvusqs8'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512'\'' --'
+2023-06-25 12:54:52.585945 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp2mvusqs8'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512'\'' --'
+2023-06-25 12:54:52.585972 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp2mvusqs8 --untrusted-file /home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512 --
+2023-06-25 12:54:52.585986 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-06-25 12:54:52.585997 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-06-25 12:54:52.586006 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:52.586021 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp2mvusqs8
+2023-06-25 12:54:52.586031 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.586040 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.586048 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-06-25 12:54:52.586163 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:52.586186 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz
+2023-06-25 12:54:52.586196 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.586214 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.586264 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-06-25 12:54:52.586411 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:52.586470 +0000 build-ubuntu42: output: + CHECKSUM_CMD=sha512sum
+2023-06-25 12:54:52.586527 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.591227 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.591334 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-06-25 12:54:52.591517 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:52.591543 +0000 build-ubuntu42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512
+2023-06-25 12:54:52.591609 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.591703 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.591795 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-06-25 12:54:52.592422 +0000 build-ubuntu42: output: + case "$1" in
+2023-06-25 12:54:52.592467 +0000 build-ubuntu42: output: + shift
+2023-06-25 12:54:52.592481 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-06-25 12:54:52.592495 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz ']'
+2023-06-25 12:54:52.592553 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp2mvusqs8 ']'
+2023-06-25 12:54:52.592567 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp2mvusqs8
+2023-06-25 12:54:52.592761 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz
+2023-06-25 12:54:52.592794 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_salt-3006.1.tar.gz
+2023-06-25 12:54:52.592849 +0000 build-ubuntu42: output: + FILE_NAME=salt-3006.1.tar.gz
+2023-06-25 12:54:52.592947 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512 ']'
+2023-06-25 12:54:52.592965 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512 ']'
+2023-06-25 12:54:52.594850 +0000 build-ubuntu42: output: + '[' -e /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512 ']'
+2023-06-25 12:54:52.594981 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-06-25 12:54:52.595049 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-06-25 12:54:52.595114 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-06-25 12:54:52.595361 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-06-25 12:54:52.595396 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512 ']'
+2023-06-25 12:54:52.595452 +0000 build-ubuntu42: output: + '[' -z sha512sum ']'
+2023-06-25 12:54:52.595511 +0000 build-ubuntu42: output: + sha512sum --status -c /dev/fd/63
+2023-06-25 12:54:52.597370 +0000 build-ubuntu42: output: +++ cat /home/user/builder-r4.2/sources/salt/salt-3006.1.tar.gz.sha512
+2023-06-25 12:54:52.597490 +0000 build-ubuntu42: output: ++ printf '%s  -\n' edfb60c93e2c5b03e4945870bd394b70bdc7598abe12056124bbf912dc29f23e08f6ef569352e3bcdd4d96f092bb6b8ab1765d13f582ea2d3512f85a92de5e95
+2023-06-25 12:54:52.673631 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp2mvusqs8/untrusted_salt-3006.1.tar.gz /home/user/builder-r4.2/tmp/tmp2mvusqs8/salt-3006.1.tar.gz
+2023-06-25 12:55:30.498516 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7379 bash -c 'rm -rf /builder/incoming/salt /builder/salt'
+2023-06-25 12:55:30.943968 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7379 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/salt
+2023-06-25 12:55:31.496783 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp7379 bash -c 'mkdir -p /builder && mv /builder/incoming/salt /builder'
+2023-06-25 12:55:34.293370 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp7379 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/salt/hash /builder/salt/vtags && cd /builder && git -C /builder/salt rev-parse '\''HEAD^{}'\'' >> /builder/salt/hash && git -C /builder/salt tag --points-at HEAD --list '\''v*'\'' >> /builder/salt/vtags''.
+2023-06-25 12:55:34.818785 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7379 qubesbuilder.FileCopyOut+__builder__salt__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmprjp8mq0y
+2023-06-25 12:55:35.197845 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7379 qubesbuilder.FileCopyOut+__builder__salt__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmprjp8mq0y
+2023-06-25 12:55:40.088409 +0000 build-ubuntu42: > done
+2023-06-25 12:55:40.088480 +0000 > closing log
