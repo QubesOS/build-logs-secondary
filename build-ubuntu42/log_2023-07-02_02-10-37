@@ -1,0 +1,223 @@
+2023-07-02 02:10:37.834037 +0000 > starting log
+2023-07-02 02:10:37.834378 +0000 build-ubuntu42: > starting build with log
+2023-07-02 02:10:37.834396 +0000 build-ubuntu42: >> args:
+2023-07-02 02:10:37.834406 +0000 build-ubuntu42: >>   ()
+2023-07-02 02:10:37.834415 +0000 build-ubuntu42: >> component:
+2023-07-02 02:10:37.834423 +0000 build-ubuntu42: >>   vmm-xen
+2023-07-02 02:10:37.834432 +0000 build-ubuntu42: >>     commit-hash: 8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:10:37.834447 +0000 build-ubuntu42: >>     source-hash: 493672af105a01377bda99e9fb8861eb0428080e9bf4dbccac5a202891eeebe08b9d2d0ac0af10f3ddd20389b5f9ed572de44a61f9a5a1273ebfbe5e23b6ff94
+2023-07-02 02:10:37.834461 +0000 build-ubuntu42: >> distributions:
+2023-07-02 02:10:37.834472 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-07-02 02:10:37.834482 +0000 build-ubuntu42: vmm-xen: source already fetched. Updating.
+2023-07-02 02:11:13.665522 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2029 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-07-02 02:11:15.285085 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2029 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-07-02 02:11:16.344832 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2029 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-07-02 02:11:16.635798 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2029 bash -c 'rm -rf /builder/incoming/vmm-xen /builder/vmm-xen'
+2023-07-02 02:11:16.999076 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2029 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen
+2023-07-02 02:11:17.913791 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2029 bash -c 'mkdir -p /builder && mv /builder/incoming/vmm-xen /builder'
+2023-07-02 02:11:18.578446 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp2029 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source --component vmm-xen --git-branch main --git-url https://github.com/QubesOS/qubes-vmm-xen.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only''.
+2023-07-02 02:11:19.239207 +0000 build-ubuntu42: output: + unset CLEAN
+2023-07-02 02:11:19.239259 +0000 build-ubuntu42: output: + CLEAN=0
+2023-07-02 02:11:19.239284 +0000 build-ubuntu42: output: + unset GETOPT_COMPATIBLE fresh_clone GIT_CLONE_FAST GIT_BASEURL GIT_PREFIX GIT_SUFFIX GIT_URL GIT_REMOTE BRANCH COMPONENT CLEAN FETCH_ONLY IGNORE_MISSING REPO KEYS_DIR KEYRING_DIR_GIT INSECURE_SKIP_CHECKING LESS_SECURE_SIGNED_COMMITS_SUFFICIENT FETCH_VERSIONS_ONLY MAINTAINERS
+2023-07-02 02:11:19.239320 +0000 build-ubuntu42: output: ++ getopt -o '' -l help,git-baseurl:,git-prefix:,git-suffix:,git-url:,git-remote:,git-branch:,component:,clean,fetch-only,ignore-missing,repo:,keys-dir:,keyring-dir-git:,insecure-skip-checking,less-secure-signed-commits-sufficient,fetch-versions-only,maintainer: -n /builder/plugins/fetch/scripts/get-and-verify-source -- --component vmm-xen --git-branch main --git-url https://github.com/QubesOS/qubes-vmm-xen.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only
+2023-07-02 02:11:19.257282 +0000 build-ubuntu42: output: + OPTS=' --component '\''vmm-xen'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-vmm-xen.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-07-02 02:11:19.257339 +0000 build-ubuntu42: output: + eval set -- ' --component '\''vmm-xen'\'' --git-branch '\''main'\'' --git-url '\''https://github.com/QubesOS/qubes-vmm-xen.git'\'' --keyring-dir-git '\''/builder/keyring'\'' --keys-dir '\''/builder/plugins/fetch/keys'\'' --fetch-versions-only --'
+2023-07-02 02:11:19.257363 +0000 build-ubuntu42: output: ++ set -- --component vmm-xen --git-branch main --git-url https://github.com/QubesOS/qubes-vmm-xen.git --keyring-dir-git /builder/keyring --keys-dir /builder/plugins/fetch/keys --fetch-versions-only --
+2023-07-02 02:11:19.257392 +0000 build-ubuntu42: output: + [[ 12 -gt 0 ]]
+2023-07-02 02:11:19.257403 +0000 build-ubuntu42: output: + case "$1" in
+2023-07-02 02:11:19.257412 +0000 build-ubuntu42: output: + COMPONENT=vmm-xen
+2023-07-02 02:11:19.257420 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257428 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257435 +0000 build-ubuntu42: output: + [[ 10 -gt 0 ]]
+2023-07-02 02:11:19.257443 +0000 build-ubuntu42: output: + case "$1" in
+2023-07-02 02:11:19.257450 +0000 build-ubuntu42: output: + BRANCH=main
+2023-07-02 02:11:19.257458 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257466 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257474 +0000 build-ubuntu42: output: + [[ 8 -gt 0 ]]
+2023-07-02 02:11:19.257482 +0000 build-ubuntu42: output: + case "$1" in
+2023-07-02 02:11:19.257491 +0000 build-ubuntu42: output: + GIT_URL=https://github.com/QubesOS/qubes-vmm-xen.git
+2023-07-02 02:11:19.257499 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257506 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257514 +0000 build-ubuntu42: output: + [[ 6 -gt 0 ]]
+2023-07-02 02:11:19.257521 +0000 build-ubuntu42: output: + case "$1" in
+2023-07-02 02:11:19.257530 +0000 build-ubuntu42: output: + KEYRING_DIR_GIT=/builder/keyring
+2023-07-02 02:11:19.257537 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257544 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.257552 +0000 build-ubuntu42: output: + [[ 4 -gt 0 ]]
+2023-07-02 02:11:19.257559 +0000 build-ubuntu42: output: + case "$1" in
+2023-07-02 02:11:19.257568 +0000 build-ubuntu42: output: + KEYS_DIR=/builder/plugins/fetch/keys
+2023-07-02 02:11:19.259333 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.259374 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.259385 +0000 build-ubuntu42: output: + [[ 2 -gt 0 ]]
+2023-07-02 02:11:19.259394 +0000 build-ubuntu42: output: + case "$1" in
+2023-07-02 02:11:19.259403 +0000 build-ubuntu42: output: + FETCH_VERSIONS_ONLY=1
+2023-07-02 02:11:19.259411 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.259418 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-07-02 02:11:19.259426 +0000 build-ubuntu42: output: + case "$1" in
+2023-07-02 02:11:19.259433 +0000 build-ubuntu42: output: + shift
+2023-07-02 02:11:19.259441 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-07-02 02:11:19.259449 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-07-02 02:11:19.259457 +0000 build-ubuntu42: output: -]*$ ]]
+2023-07-02 02:11:19.259465 +0000 build-ubuntu42: output: + [[ '' =~ ^[A-Za-z0-9
+2023-07-02 02:11:19.259472 +0000 build-ubuntu42: output: -]*$ ]]
+2023-07-02 02:11:19.259480 +0000 build-ubuntu42: output: + [[ -n vmm-xen ]]
+2023-07-02 02:11:19.259487 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-07-02 02:11:19.259496 +0000 build-ubuntu42: output: + REPO=vmm-xen
+2023-07-02 02:11:19.259505 +0000 build-ubuntu42: output: + '[' -z /builder/keyring ']'
+2023-07-02 02:11:19.259513 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-07-02 02:11:19.259521 +0000 build-ubuntu42: output: + GIT_SUFFIX=.git
+2023-07-02 02:11:19.259529 +0000 build-ubuntu42: output: + '[' -z main ']'
+2023-07-02 02:11:19.259536 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-07-02 02:11:19.259546 +0000 build-ubuntu42: output: + '[' -z https://github.com/QubesOS/qubes-vmm-xen.git ']'
+2023-07-02 02:11:19.259554 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-07-02 02:11:19.259562 +0000 build-ubuntu42: output: + case ${IGNORE_MISSING=0} in
+2023-07-02 02:11:19.259569 +0000 build-ubuntu42: output: + :
+2023-07-02 02:11:19.259578 +0000 build-ubuntu42: output: + case ${GIT_CLONE_FAST=0} in
+2023-07-02 02:11:19.259585 +0000 build-ubuntu42: output: + :
+2023-07-02 02:11:19.259593 +0000 build-ubuntu42: output: + GIT_OPTIONS=()
+2023-07-02 02:11:19.259617 +0000 build-ubuntu42: output: + [[ 0 = \1 ]]
+2023-07-02 02:11:19.261425 +0000 build-ubuntu42: output: + GIT_MERGE_OPTS=("--ff-only")
+2023-07-02 02:11:19.261469 +0000 build-ubuntu42: output: + [[ main =~ ^[A-Za-z][A-Za-z0-9._-]+$ ]]
+2023-07-02 02:11:19.261480 +0000 build-ubuntu42: output: + [[ vmm-xen =~ ^[A-Za-z][A-Za-z0-9-]*$ ]]
+2023-07-02 02:11:19.261489 +0000 build-ubuntu42: output: + trap exit_clean 0 1 2 3 6 15
+2023-07-02 02:11:19.261497 +0000 build-ubuntu42: output: + fresh_clone=false
+2023-07-02 02:11:19.261505 +0000 build-ubuntu42: output: + [[ '' = \1 ]]
+2023-07-02 02:11:19.261513 +0000 build-ubuntu42: output: + [[ -d vmm-xen ]]
+2023-07-02 02:11:19.261520 +0000 build-ubuntu42: output: + cd vmm-xen
+2023-07-02 02:11:19.261529 +0000 build-ubuntu42: output: ++ git rev-parse --is-shallow-repository
+2023-07-02 02:11:19.438735 +0000 build-ubuntu42: output: + is_shallow=false
+2023-07-02 02:11:19.438991 +0000 build-ubuntu42: output: + [[ 0 -ne 1 ]]
+2023-07-02 02:11:19.439050 +0000 build-ubuntu42: output: + [[ false = \t\r\u\e ]]
+2023-07-02 02:11:19.439066 +0000 build-ubuntu42: output: + print_headers
+2023-07-02 02:11:19.439076 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-07-02 02:11:19.439088 +0000 build-ubuntu42: output: + GIT_INFOS='https://github.com/QubesOS/qubes-vmm-xen.git main'
+2023-07-02 02:11:19.439099 +0000 build-ubuntu42: output: + echo '-> Updating sources for vmm-xen...'
+2023-07-02 02:11:19.439276 +0000 build-ubuntu42: output: + echo '--> Fetching from https://github.com/QubesOS/qubes-vmm-xen.git main...'
+2023-07-02 02:11:19.439306 +0000 build-ubuntu42: output: + git fetch -q --tags -- https://github.com/QubesOS/qubes-vmm-xen.git main
+2023-07-02 02:11:19.439318 +0000 build-ubuntu42: output: -> Updating sources for vmm-xen...
+2023-07-02 02:11:19.439329 +0000 build-ubuntu42: output: --> Fetching from https://github.com/QubesOS/qubes-vmm-xen.git main...
+2023-07-02 02:11:22.866883 +0000 build-ubuntu42: output: ++ git rev-parse -q --verify 'FETCH_HEAD^{commit}'
+2023-07-02 02:11:22.867163 +0000 build-ubuntu42: output: + rev=8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:11:22.867202 +0000 build-ubuntu42: output: + '[' 1 == 1 ']'
+2023-07-02 02:11:22.867218 +0000 build-ubuntu42: output: + grep -q '^v'
+2023-07-02 02:11:22.867232 +0000 build-ubuntu42: output: + git tag --points-at 8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:11:22.883456 +0000 build-ubuntu42: output: + VERIFY_REF=8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:11:22.883600 +0000 build-ubuntu42: output: + fresh_clone=false
+2023-07-02 02:11:22.883632 +0000 build-ubuntu42: output: + cd -
+2023-07-02 02:11:22.883646 +0000 build-ubuntu42: output: + export CHECK=signed-tag
+2023-07-02 02:11:22.883701 +0000 build-ubuntu42: output: + CHECK=signed-tag
+2023-07-02 02:11:22.883717 +0000 build-ubuntu42: output: + verify=true
+2023-07-02 02:11:22.883773 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-07-02 02:11:22.883847 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-07-02 02:11:22.883918 +0000 build-ubuntu42: output: ++ git -C vmm-xen rev-parse -q --verify 8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:11:22.883989 +0000 build-ubuntu42: output: + VERIFY_REF=8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:11:22.892464 +0000 build-ubuntu42: output: + '[' true = false ']'
+2023-07-02 02:11:22.892586 +0000 build-ubuntu42: output: + [[ signed-tag == \s\i\g\n\e\d\-\t\a\g\-\o\r\-\c\o\m\m\i\t ]]
+2023-07-02 02:11:22.892610 +0000 build-ubuntu42: output: + echo '--> Verifying tags...'
+2023-07-02 02:11:22.892622 +0000 build-ubuntu42: output: ++ readlink -m /builder/keyring
+2023-07-02 02:11:22.892643 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-07-02 02:11:22.897598 +0000 build-ubuntu42: output: + GNUPGHOME=/builder/keyring
+2023-07-02 02:11:22.897649 +0000 build-ubuntu42: output: + export GNUPGHOME
+2023-07-02 02:11:22.897664 +0000 build-ubuntu42: output: + '[' '!' -d /builder/keyring ']'
+2023-07-02 02:11:22.897675 +0000 build-ubuntu42: output: + mkdir -p /builder/keyring
+2023-07-02 02:11:22.901270 +0000 build-ubuntu42: output: + chmod 700 /builder/keyring
+2023-07-02 02:11:22.915227 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-07-02 02:11:22.940055 +0000 build-ubuntu42: output: gpg: keybox '/builder/keyring/pubring.kbx' created
+2023-07-02 02:11:22.952718 +0000 build-ubuntu42: output: gpg: /builder/keyring/trustdb.gpg: trustdb created
+2023-07-02 02:11:22.952791 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: public key "Qubes Master Signing Key" imported
+2023-07-02 02:11:22.959040 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: public key "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" imported
+2023-07-02 02:11:22.965208 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: public key "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" imported
+2023-07-02 02:11:22.965273 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-07-02 02:11:22.965355 +0000 build-ubuntu42: output: gpg:               imported: 3
+2023-07-02 02:11:22.968081 +0000 build-ubuntu42: output: gpg: no ultimately trusted keys found
+2023-07-02 02:11:22.968140 +0000 build-ubuntu42: output: + echo 427F11FD0FAA4B080123F01CDDFA1A3E36879494:6:
+2023-07-02 02:11:22.973131 +0000 build-ubuntu42: output: + gpg --import-ownertrust
+2023-07-02 02:11:22.979080 +0000 build-ubuntu42: output: gpg: inserting ownertrust of 6
+2023-07-02 02:11:22.982188 +0000 build-ubuntu42: output: + '[' /builder/plugins/fetch/keys/qubes-developers-keys.asc -nt /builder/keyring/pubring.gpg ']'
+2023-07-02 02:11:22.982254 +0000 build-ubuntu42: output: + gpg --import /builder/plugins/fetch/keys/qubes-developers-keys.asc
+2023-07-02 02:11:22.998713 +0000 build-ubuntu42: output: gpg: key DDFA1A3E36879494: "Qubes Master Signing Key" not changed
+2023-07-02 02:11:23.008154 +0000 build-ubuntu42: output: gpg: key 063938BA42CFA724: "Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>" not changed
+2023-07-02 02:11:23.008219 +0000 build-ubuntu42: output: gpg: key DA0434BC706E1FCF: "Simon Gaiser (Qubes OS signing key) <simon@invisiblethingslab.com>" not changed
+2023-07-02 02:11:23.008240 +0000 build-ubuntu42: output: gpg: Total number processed: 3
+2023-07-02 02:11:23.008254 +0000 build-ubuntu42: output: gpg:              unchanged: 3
+2023-07-02 02:11:23.015255 +0000 build-ubuntu42: output: + touch /builder/keyring/pubring.gpg
+2023-07-02 02:11:23.019875 +0000 build-ubuntu42: output: + gpgconf --kill gpg-agent
+2023-07-02 02:11:23.035578 +0000 build-ubuntu42: output: + pushd vmm-xen
+2023-07-02 02:11:23.035626 +0000 build-ubuntu42: output: + expected_hash=8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:11:23.035638 +0000 build-ubuntu42: output: + hash_len=40
+2023-07-02 02:11:23.035647 +0000 build-ubuntu42: output: + '[' 40 -ne 40 ']'
+2023-07-02 02:11:23.035658 +0000 build-ubuntu42: output: + [[ 8d8f66a3868ff8645ed044d35a398c37c49c6650 =~ ^[a-f0-9]+$ ]]
+2023-07-02 02:11:23.035669 +0000 build-ubuntu42: output: + format='%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-07-02 02:11:23.035683 +0000 build-ubuntu42: output: ++ git tag --points-at=8d8f66a3868ff8645ed044d35a398c37c49c6650 '--format=%(if:equals=tag)%(objecttype)%(then)%(objectname):%(object):%(end)'
+2023-07-02 02:11:23.035693 +0000 build-ubuntu42: output: ++ head -c 500
+2023-07-02 02:11:23.049859 +0000 build-ubuntu42: output: + tags=ae58eaf4c3b2125db34421be308f6ccf50f27467:8d8f66a3868ff8645ed044d35a398c37c49c6650:
+2023-07-02 02:11:23.049905 +0000 build-ubuntu42: output: + for tag in $tags
+2023-07-02 02:11:23.049918 +0000 build-ubuntu42: output: + (( 82 != hash_len * 2 + 2 ))
+2023-07-02 02:11:23.049933 +0000 build-ubuntu42: output: + [[ :8d8f66a3868ff8645ed044d35a398c37c49c6650: == \:\8\d\8\f\6\6\a\3\8\6\8\f\f\8\6\4\5\e\d\0\4\4\d\3\5\a\3\9\8\c\3\7\c\4\9\c\6\6\5\0\: ]]
+2023-07-02 02:11:23.049944 +0000 build-ubuntu42: output: + tag=ae58eaf4c3b2125db34421be308f6ccf50f27467
+2023-07-02 02:11:23.050003 +0000 build-ubuntu42: output: + verify_git_obj tag ae58eaf4c3b2125db34421be308f6ccf50f27467
+2023-07-02 02:11:23.050016 +0000 build-ubuntu42: output: + local content newsig_number
+2023-07-02 02:11:23.050028 +0000 build-ubuntu42: output: ++ git -c gpg.program=gpg -c gpg.minTrustLevel=fully verify-tag --raw -- ae58eaf4c3b2125db34421be308f6ccf50f27467
+2023-07-02 02:11:23.059313 +0000 build-ubuntu42: output: + content='[GNUPG:] NEWSIG
+2023-07-02 02:11:23.059361 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.059374 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID nBXlOf8LEqYj39pSqV+01NAQP44 2023-07-02 1688262354
+2023-07-02 02:11:23.059385 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.059395 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.059405 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.059414 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.059426 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-07-02 02:11:23.059440 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-07-02 1688262354 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-07-02 02:11:23.059451 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.059460 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-07-02 02:11:23.059468 +0000 build-ubuntu42: output: ++ printf '%s\n' '[GNUPG:] NEWSIG
+2023-07-02 02:11:23.059478 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.059487 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID nBXlOf8LEqYj39pSqV+01NAQP44 2023-07-02 1688262354
+2023-07-02 02:11:23.059497 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.059506 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.059516 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.059525 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.059537 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-07-02 02:11:23.059549 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-07-02 1688262354 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-07-02 02:11:23.059559 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.059567 +0000 build-ubuntu42: output: ++ grep -c '^\[GNUPG:] NEWSIG'
+2023-07-02 02:11:23.059575 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-07-02 02:11:23.062201 +0000 build-ubuntu42: output: + newsig_number=1
+2023-07-02 02:11:23.062253 +0000 build-ubuntu42: output: + '[' 1 = 1 ']'
+2023-07-02 02:11:23.062266 +0000 build-ubuntu42: output: + printf '%s\n' '[GNUPG:] NEWSIG
+2023-07-02 02:11:23.062277 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.062288 +0000 build-ubuntu42: output: [GNUPG:] SIG_ID nBXlOf8LEqYj39pSqV+01NAQP44 2023-07-02 1688262354
+2023-07-02 02:11:23.062302 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.062312 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.062340 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.062351 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 427F11FD0FAA4B080123F01CDDFA1A3E36879494 0
+2023-07-02 02:11:23.062363 +0000 build-ubuntu42: output: [GNUPG:] GOODSIG 063938BA42CFA724 Marek Marczykowski-G..recki (Qubes OS signing key) <marmarek@invisiblethingslab.com>
+2023-07-02 02:11:23.062378 +0000 build-ubuntu42: output: [GNUPG:] VALIDSIG 0064428F455451B3EBE78A7F063938BA42CFA724 2023-07-02 1688262354 0 4 0 1 8 00 0064428F455451B3EBE78A7F063938BA42CFA724
+2023-07-02 02:11:23.062389 +0000 build-ubuntu42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2023-07-02 02:11:23.062398 +0000 build-ubuntu42: output: + grep '^\[GNUPG:] TRUST_\(FULLY\|ULTIMATE\) 0 pgp\>'
+2023-07-02 02:11:23.063025 +0000 build-ubuntu42: output: [GNUPG:] TRUST_FULLY 0 pgp'
+2023-07-02 02:11:23.067105 +0000 build-ubuntu42: output: + echo '---> Good tag ae58eaf4c3b2125db34421be308f6ccf50f27467'
+2023-07-02 02:11:23.067151 +0000 build-ubuntu42: output: + '[' -z x ']'
+2023-07-02 02:11:23.067163 +0000 build-ubuntu42: output: + popd
+2023-07-02 02:11:23.067172 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-07-02 02:11:23.067181 +0000 build-ubuntu42: output: + pushd vmm-xen
+2023-07-02 02:11:23.067190 +0000 build-ubuntu42: output: ++ exec git rev-parse --abbrev-ref HEAD
+2023-07-02 02:11:23.068314 +0000 build-ubuntu42: output: ---> Good tag ae58eaf4c3b2125db34421be308f6ccf50f27467
+2023-07-02 02:11:23.068358 +0000 build-ubuntu42: output: --> Merging...
+2023-07-02 02:11:23.068369 +0000 build-ubuntu42: output: + CURRENT_BRANCH=main
+2023-07-02 02:11:23.068378 +0000 build-ubuntu42: output: + '[' main '!=' main ']'
+2023-07-02 02:11:23.068386 +0000 build-ubuntu42: output: + false
+2023-07-02 02:11:23.068393 +0000 build-ubuntu42: output: + false
+2023-07-02 02:11:23.068401 +0000 build-ubuntu42: output: + echo '--> Merging...'
+2023-07-02 02:11:23.068413 +0000 build-ubuntu42: output: + git -c merge.verifySignatures=no merge --ff-only --commit -q 8d8f66a3868ff8645ed044d35a398c37c49c6650
+2023-07-02 02:11:23.073995 +0000 build-ubuntu42: output: + tracking_branch=refs/remotes//main
+2023-07-02 02:11:23.074040 +0000 build-ubuntu42: output: + '[' -f .git/refs/remotes//main ']'
+2023-07-02 02:11:23.074051 +0000 build-ubuntu42: output: + '[' -e .gitmodules ']'
+2023-07-02 02:11:23.074060 +0000 build-ubuntu42: output: + popd
+2023-07-02 02:11:23.074069 +0000 build-ubuntu42: output: + exit_clean
+2023-07-02 02:11:23.074077 +0000 build-ubuntu42: output: + local exit_code=0
+2023-07-02 02:11:23.074085 +0000 build-ubuntu42: output: + '[' 0 -gt 0 ']'
+2023-07-02 02:11:23.074092 +0000 build-ubuntu42: output: + exit 0
+2023-07-02 02:11:23.111833 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2029 qubesbuilder.FileCopyOut+__builder__vmm-xen /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-07-02 02:11:28.258938 +0000 build-ubuntu42: vmm-xen: file xen-4.17.1.tar.gz already downloaded. Skipping.
+2023-07-02 02:11:28.267362 +0000 build-ubuntu42: > done
+2023-07-02 02:11:28.267425 +0000 > closing log
