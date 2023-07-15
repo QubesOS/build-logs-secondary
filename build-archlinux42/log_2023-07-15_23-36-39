@@ -1,0 +1,117 @@
+2023-07-15 23:36:39.702422 +0000 > starting log
+2023-07-15 23:36:39.702762 +0000 build-archlinux42: > starting build with log
+2023-07-15 23:36:39.702779 +0000 build-archlinux42: >> args:
+2023-07-15 23:36:39.702789 +0000 build-archlinux42: >>   ()
+2023-07-15 23:36:39.702798 +0000 build-archlinux42: >> component:
+2023-07-15 23:36:39.702806 +0000 build-archlinux42: >>   seabios
+2023-07-15 23:36:39.702814 +0000 build-archlinux42: >> distributions:
+2023-07-15 23:36:39.702825 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-07-15 23:37:02.375440 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8029 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-07-15 23:37:21.446577 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8029 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-07-15 23:37:22.318237 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8029 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-07-15 23:37:22.756436 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp8029 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-seabios.git /builder/seabios /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-07-15 23:37:26.276847 +0000 build-archlinux42: output: --> Verifying tags...
+2023-07-15 23:37:26.276893 +0000 build-archlinux42: output: ---> Good tag 40f3fbce9f21f57f0edd52b660287389eaf3855a.
+2023-07-15 23:37:26.276907 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-07-15 23:37:26.276918 +0000 build-archlinux42: output: --> Switching branch from main branch to main
+2023-07-15 23:37:26.296999 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8029 qubesbuilder.FileCopyOut+__builder__seabios /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-07-15 23:37:52.103277 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp2059 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-07-15 23:37:52.738760 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2059 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-07-15 23:37:53.211129 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp2059 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-07-15 23:37:53.971144 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp2059 bash -c 'rm -rf /builder/incoming/seabios /builder/seabios'
+2023-07-15 23:37:54.353898 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2059 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/seabios
+2023-07-15 23:37:55.386047 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp2059 bash -c 'mkdir -p /builder && mv /builder/incoming/seabios /builder'
+2023-07-15 23:38:12.260628 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp2059 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz''.
+2023-07-15 23:38:12.811473 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-07-15 23:38:12.811533 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2023-07-15 23:38:12.823040 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/seabios'\'' --file-name '\''seabios-1.16.2.tar.gz'\'' --file-url '\''https://www.seabios.org/downloads/seabios-1.16.2.tar.gz'\'' --'
+2023-07-15 23:38:12.823093 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/seabios'\'' --file-name '\''seabios-1.16.2.tar.gz'\'' --file-url '\''https://www.seabios.org/downloads/seabios-1.16.2.tar.gz'\'' --'
+2023-07-15 23:38:12.823111 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/seabios --file-name seabios-1.16.2.tar.gz --file-url https://www.seabios.org/downloads/seabios-1.16.2.tar.gz --
+2023-07-15 23:38:12.823122 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-07-15 23:38:12.823132 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:12.823142 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/seabios
+2023-07-15 23:38:12.823150 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:12.823159 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:12.823168 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-07-15 23:38:12.823175 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:12.823184 +0000 build-archlinux42: output: + FILE_NAME=seabios-1.16.2.tar.gz
+2023-07-15 23:38:12.823191 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:12.823199 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:12.823207 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-07-15 23:38:12.823214 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:12.823224 +0000 build-archlinux42: output: + FILE_URL=https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2023-07-15 23:38:12.823232 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:12.823246 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:12.823255 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-07-15 23:38:12.823262 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:12.823270 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:12.823277 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-07-15 23:38:12.823287 +0000 build-archlinux42: output: + '[' -z https://www.seabios.org/downloads/seabios-1.16.2.tar.gz ']'
+2023-07-15 23:38:12.823298 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-07-15 23:38:12.823307 +0000 build-archlinux42: output: + '[' -z seabios-1.16.2.tar.gz ']'
+2023-07-15 23:38:12.823316 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_seabios-1.16.2.tar.gz
+2023-07-15 23:38:12.823324 +0000 build-archlinux42: output: + '[' -n /builder/seabios ']'
+2023-07-15 23:38:12.823333 +0000 build-archlinux42: output: + mkdir -p /builder/seabios
+2023-07-15 23:38:12.823340 +0000 build-archlinux42: output: + cd /builder/seabios
+2023-07-15 23:38:12.823354 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_seabios-1.16.2.tar.gz -- https://www.seabios.org/downloads/seabios-1.16.2.tar.gz
+2023-07-15 23:38:14.716170 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-07-15 23:38:14.716228 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-15 23:38:14.722791 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2059 qubesbuilder.FileCopyOut+__builder__seabios__untrusted_seabios-1.16.2.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpiobtfhzk
+2023-07-15 23:38:20.230302 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpiobtfhzk --untrusted-file /home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512'.
+2023-07-15 23:38:20.239680 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-07-15 23:38:20.243541 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpiobtfhzk --untrusted-file /home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512
+2023-07-15 23:38:20.243600 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpiobtfhzk'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512'\'' --'
+2023-07-15 23:38:20.243626 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpiobtfhzk'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512'\'' --'
+2023-07-15 23:38:20.243651 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpiobtfhzk --untrusted-file /home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512 --
+2023-07-15 23:38:20.243663 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-07-15 23:38:20.243673 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-07-15 23:38:20.243681 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:20.247045 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpiobtfhzk
+2023-07-15 23:38:20.247092 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247103 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247112 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-07-15 23:38:20.247120 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:20.247131 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz
+2023-07-15 23:38:20.247140 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247148 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247155 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-07-15 23:38:20.247163 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:20.247171 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-07-15 23:38:20.247179 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247186 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247194 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-07-15 23:38:20.247201 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:20.247212 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512
+2023-07-15 23:38:20.247219 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247226 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.247234 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-07-15 23:38:20.247246 +0000 build-archlinux42: output: + case "$1" in
+2023-07-15 23:38:20.247254 +0000 build-archlinux42: output: + shift
+2023-07-15 23:38:20.252350 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-07-15 23:38:20.252418 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz ']'
+2023-07-15 23:38:20.252434 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpiobtfhzk ']'
+2023-07-15 23:38:20.252444 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpiobtfhzk
+2023-07-15 23:38:20.255862 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz
+2023-07-15 23:38:20.259003 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_seabios-1.16.2.tar.gz
+2023-07-15 23:38:20.259047 +0000 build-archlinux42: output: + FILE_NAME=seabios-1.16.2.tar.gz
+2023-07-15 23:38:20.259061 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2023-07-15 23:38:20.259073 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2023-07-15 23:38:20.259084 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2023-07-15 23:38:20.259092 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-15 23:38:20.259101 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-07-15 23:38:20.259109 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-15 23:38:20.259116 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-15 23:38:20.259127 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512 ']'
+2023-07-15 23:38:20.259135 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-07-15 23:38:20.259149 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-07-15 23:38:20.259161 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/seabios/seabios-1.16.2.tar.gz.sha512
+2023-07-15 23:38:20.269211 +0000 build-archlinux42: output: ++ printf '%s  -\n' 46786f0dd50cc533610adab268313bf66ebf0ad16cd6919c29f8a80e8f908e641206e2b1559e8722e2e780ec817917dcdb6781d6ecd402287228db4038003b7a
+2023-07-15 23:38:20.283530 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpiobtfhzk/untrusted_seabios-1.16.2.tar.gz /home/user/builder-r4.2/tmp/tmpiobtfhzk/seabios-1.16.2.tar.gz
+2023-07-15 23:38:41.792975 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1884 bash -c 'rm -rf /builder/incoming/seabios /builder/seabios'
+2023-07-15 23:38:42.578720 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1884 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/seabios
+2023-07-15 23:39:01.537572 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1884 bash -c 'mkdir -p /builder && mv /builder/incoming/seabios /builder'
+2023-07-15 23:39:02.187875 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp1884 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/seabios/hash /builder/seabios/vtags && cd /builder && git -C /builder/seabios rev-parse '\''HEAD^{}'\'' >> /builder/seabios/hash && git -C /builder/seabios tag --points-at HEAD --list '\''v*'\'' >> /builder/seabios/vtags''.
+2023-07-15 23:39:02.625549 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1884 qubesbuilder.FileCopyOut+__builder__seabios__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpcghelryy
+2023-07-15 23:39:03.003566 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1884 qubesbuilder.FileCopyOut+__builder__seabios__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpcghelryy
+2023-07-15 23:39:08.311782 +0000 build-archlinux42: > done
+2023-07-15 23:39:08.311831 +0000 > closing log
