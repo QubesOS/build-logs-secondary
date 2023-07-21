@@ -1,0 +1,117 @@
+2023-07-21 00:35:15.138981 +0000 > starting log
+2023-07-21 00:35:15.139327 +0000 build-archlinux42: > starting build with log
+2023-07-21 00:35:15.139345 +0000 build-archlinux42: >> args:
+2023-07-21 00:35:15.139356 +0000 build-archlinux42: >>   ()
+2023-07-21 00:35:15.139364 +0000 build-archlinux42: >> component:
+2023-07-21 00:35:15.139373 +0000 build-archlinux42: >>   linux-firmware
+2023-07-21 00:35:15.139382 +0000 build-archlinux42: >> distributions:
+2023-07-21 00:35:15.139393 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-07-21 00:35:36.407024 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8977 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-07-21 00:35:37.028317 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8977 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-07-21 00:35:52.967545 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8977 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-07-21 00:35:53.400608 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp8977 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-firmware.git /builder/linux-firmware /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-07-21 00:35:57.568085 +0000 build-archlinux42: output: --> Verifying tags...
+2023-07-21 00:35:57.568140 +0000 build-archlinux42: output: ---> Good tag 1d88bb43f934701a6a3857a42b6cad75c9e4842c.
+2023-07-21 00:35:57.568159 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-07-21 00:35:57.568172 +0000 build-archlinux42: output: --> Switching branch from main branch to main
+2023-07-21 00:35:57.586265 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8977 qubesbuilder.FileCopyOut+__builder__linux-firmware /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-07-21 00:36:21.749512 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp4903 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-07-21 00:36:37.225412 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp4903 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-07-21 00:36:37.819832 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp4903 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-07-21 00:36:38.407476 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp4903 bash -c 'rm -rf /builder/incoming/linux-firmware /builder/linux-firmware'
+2023-07-21 00:36:38.997872 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp4903 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-firmware
+2023-07-21 00:36:39.370255 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp4903 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-firmware /builder'
+2023-07-21 00:36:39.846153 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp4903 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-firmware --file-name linux-firmware-20230625.tar.xz --file-url https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz''.
+2023-07-21 00:36:40.306590 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-07-21 00:36:40.306663 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-firmware --file-name linux-firmware-20230625.tar.xz --file-url https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz
+2023-07-21 00:36:40.317810 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/linux-firmware'\'' --file-name '\''linux-firmware-20230625.tar.xz'\'' --file-url '\''https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz'\'' --'
+2023-07-21 00:36:40.317881 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/linux-firmware'\'' --file-name '\''linux-firmware-20230625.tar.xz'\'' --file-url '\''https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz'\'' --'
+2023-07-21 00:36:40.317909 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/linux-firmware --file-name linux-firmware-20230625.tar.xz --file-url https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz --
+2023-07-21 00:36:40.317924 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-07-21 00:36:40.317935 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:36:40.317946 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/linux-firmware
+2023-07-21 00:36:40.317955 +0000 build-archlinux42: output: + shift
+2023-07-21 00:36:40.319239 +0000 build-archlinux42: output: + shift
+2023-07-21 00:36:40.319295 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-07-21 00:36:40.319313 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:36:40.319327 +0000 build-archlinux42: output: + FILE_NAME=linux-firmware-20230625.tar.xz
+2023-07-21 00:36:40.319338 +0000 build-archlinux42: output: + shift
+2023-07-21 00:36:40.319348 +0000 build-archlinux42: output: + shift
+2023-07-21 00:36:40.319358 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-07-21 00:36:40.319367 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:36:40.319380 +0000 build-archlinux42: output: + FILE_URL=https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz
+2023-07-21 00:36:40.319390 +0000 build-archlinux42: output: + shift
+2023-07-21 00:36:40.319398 +0000 build-archlinux42: output: + shift
+2023-07-21 00:36:40.319407 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-07-21 00:36:40.319415 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:36:40.319423 +0000 build-archlinux42: output: + shift
+2023-07-21 00:36:40.319431 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-07-21 00:36:40.319442 +0000 build-archlinux42: output: + '[' -z https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz ']'
+2023-07-21 00:36:40.319454 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-07-21 00:36:40.319463 +0000 build-archlinux42: output: + '[' -z linux-firmware-20230625.tar.xz ']'
+2023-07-21 00:36:40.319473 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-firmware-20230625.tar.xz
+2023-07-21 00:36:40.319482 +0000 build-archlinux42: output: + '[' -n /builder/linux-firmware ']'
+2023-07-21 00:36:40.319490 +0000 build-archlinux42: output: + mkdir -p /builder/linux-firmware
+2023-07-21 00:36:40.323374 +0000 build-archlinux42: output: + cd /builder/linux-firmware
+2023-07-21 00:36:40.323439 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_linux-firmware-20230625.tar.xz -- https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20230625.tar.xz
+2023-07-21 00:38:40.116413 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-07-21 00:38:40.116534 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-21 00:38:40.127038 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4903 qubesbuilder.FileCopyOut+__builder__linux-firmware__untrusted_linux-firmware-20230625.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpnkuqsec_
+2023-07-21 00:38:46.920022 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpnkuqsec_ --untrusted-file /home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512'.
+2023-07-21 00:38:46.921394 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-07-21 00:38:46.923708 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpnkuqsec_ --untrusted-file /home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512
+2023-07-21 00:38:46.926682 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpnkuqsec_'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512'\'' --'
+2023-07-21 00:38:46.926748 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpnkuqsec_'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512'\'' --'
+2023-07-21 00:38:46.926778 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpnkuqsec_ --untrusted-file /home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512 --
+2023-07-21 00:38:46.926792 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-07-21 00:38:46.926803 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-07-21 00:38:46.926812 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:38:46.926823 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpnkuqsec_
+2023-07-21 00:38:46.926831 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.926839 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.926847 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-07-21 00:38:46.926854 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:38:46.926870 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz
+2023-07-21 00:38:46.926880 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.926888 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.926896 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-07-21 00:38:46.926903 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:38:46.926911 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-07-21 00:38:46.926919 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.926926 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.926933 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-07-21 00:38:46.926940 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:38:46.926951 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512
+2023-07-21 00:38:46.926990 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.927000 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.927008 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-07-21 00:38:46.927015 +0000 build-archlinux42: output: + case "$1" in
+2023-07-21 00:38:46.927022 +0000 build-archlinux42: output: + shift
+2023-07-21 00:38:46.927030 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-07-21 00:38:46.927041 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz ']'
+2023-07-21 00:38:46.927051 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpnkuqsec_ ']'
+2023-07-21 00:38:46.927060 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpnkuqsec_
+2023-07-21 00:38:46.928424 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz
+2023-07-21 00:38:46.933158 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_linux-firmware-20230625.tar.xz
+2023-07-21 00:38:46.933245 +0000 build-archlinux42: output: + FILE_NAME=linux-firmware-20230625.tar.xz
+2023-07-21 00:38:46.933270 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512 ']'
+2023-07-21 00:38:46.933288 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512 ']'
+2023-07-21 00:38:46.933303 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512 ']'
+2023-07-21 00:38:46.933313 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-21 00:38:46.933324 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-07-21 00:38:46.933332 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-21 00:38:46.933340 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-07-21 00:38:46.933352 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512 ']'
+2023-07-21 00:38:46.933361 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-07-21 00:38:46.933370 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-07-21 00:38:46.934274 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/linux-firmware/linux-firmware-20230625.tar.xz.sha512
+2023-07-21 00:38:46.936307 +0000 build-archlinux42: output: ++ printf '%s  -\n' 0e48aa7f63495485426d37491c7cb61843165625bd47f912c5d83628c6de871759f1a78be3af3d651f7c396bd87dff07e21ba7afc47896c1c143106d5f16d351
+2023-07-21 00:38:47.570840 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpnkuqsec_/untrusted_linux-firmware-20230625.tar.xz /home/user/builder-r4.2/tmp/tmpnkuqsec_/linux-firmware-20230625.tar.xz
+2023-07-21 00:39:09.615711 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp4610 bash -c 'rm -rf /builder/incoming/linux-firmware /builder/linux-firmware'
+2023-07-21 00:39:09.901040 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp4610 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-firmware
+2023-07-21 00:39:10.188266 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp4610 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-firmware /builder'
+2023-07-21 00:39:10.528290 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp4610 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/linux-firmware/hash /builder/linux-firmware/vtags && cd /builder && git -C /builder/linux-firmware rev-parse '\''HEAD^{}'\'' >> /builder/linux-firmware/hash && git -C /builder/linux-firmware tag --points-at HEAD --list '\''v*'\'' >> /builder/linux-firmware/vtags''.
+2023-07-21 00:39:10.855034 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4610 qubesbuilder.FileCopyOut+__builder__linux-firmware__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpod24jeau
+2023-07-21 00:39:11.097685 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4610 qubesbuilder.FileCopyOut+__builder__linux-firmware__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpod24jeau
+2023-07-21 00:39:15.349996 +0000 build-archlinux42: > done
+2023-07-21 00:39:15.350056 +0000 > closing log
