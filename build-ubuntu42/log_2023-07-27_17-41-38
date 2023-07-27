@@ -1,0 +1,263 @@
+2023-07-27 17:41:38.067206 +0000 > starting log
+2023-07-27 17:41:38.067481 +0000 build-ubuntu42: > starting build with log
+2023-07-27 17:41:38.067497 +0000 build-ubuntu42: >> args:
+2023-07-27 17:41:38.067506 +0000 build-ubuntu42: >>   ()
+2023-07-27 17:41:38.067514 +0000 build-ubuntu42: >> component:
+2023-07-27 17:41:38.067522 +0000 build-ubuntu42: >>   windows-tools-cross
+2023-07-27 17:41:38.067532 +0000 build-ubuntu42: >>     commit-hash: 94ddd1bc83dab63d6b6af57c7f43e0152b69c03b
+2023-07-27 17:41:38.948705 +0000 build-ubuntu42: >>     source-hash: 3d980a5ddcb0432f91bb1ab022552e6f6fa68a1c9a57a2f3f4bdb134a0e2ab5a950557d24eea121d4c0c6f3056dc6abbd347c3f7fe4590cbf0c83748cb4b8099
+2023-07-27 17:41:38.948798 +0000 build-ubuntu42: >> distributions:
+2023-07-27 17:41:38.948817 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-07-27 17:41:38.968798 +0000 build-ubuntu42: windows-tools-cross: source already fetched. Updating.
+2023-07-27 17:42:13.480657 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9163 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-07-27 17:42:13.829636 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9163 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-07-27 17:42:14.200714 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9163 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-07-27 17:42:14.550304 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9163 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-07-27 17:42:14.823143 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9163 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-07-27 17:42:17.798050 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9163 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-07-27 17:42:17.957986 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp9163 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-windows-tools-cross.git /builder/windows-tools-cross /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-07-27 17:42:21.528721 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-07-27 17:42:21.528805 +0000 build-ubuntu42: output: ---> Good tag 112d227a446e7356c516c14f90e3345bd4afda0a.
+2023-07-27 17:42:21.528824 +0000 build-ubuntu42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-07-27 17:42:21.528835 +0000 build-ubuntu42: output: --> Merging...
+2023-07-27 17:42:21.528846 +0000 build-ubuntu42: output: --> Updating submodules
+2023-07-27 17:42:21.827425 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9163 qubesbuilder.FileCopyOut+__builder__windows-tools-cross /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-07-27 17:42:28.180249 +0000 build-ubuntu42: windows-tools-cross: file wix311-binaries.zip already downloaded. Skipping.
+2023-07-27 17:42:28.180712 +0000 build-ubuntu42: windows-tools-cross: file dotNetFx40_Full_x86_x64.exe already downloaded. Skipping.
+2023-07-27 17:42:28.181099 +0000 build-ubuntu42: windows-tools-cross: file devcon.tar.gz already downloaded. Skipping.
+2023-07-27 17:43:01.546092 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2118 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-07-27 17:43:01.741410 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2118 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-07-27 17:43:03.038316 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2118 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-07-27 17:43:03.437892 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp2118 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/windows-tools-cross/hash /builder/windows-tools-cross/vtags && cd /builder && git -C /builder/windows-tools-cross rev-parse '\''HEAD^{}'\'' >> /builder/windows-tools-cross/hash && git -C /builder/windows-tools-cross tag --points-at HEAD --list '\''v*'\'' >> /builder/windows-tools-cross/vtags''.
+2023-07-27 17:43:03.942888 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2118 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpf4m6vj2z
+2023-07-27 17:43:06.078633 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2118 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpf4m6vj2z
+2023-07-27 17:43:44.034902 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8840 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-07-27 17:43:44.372520 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8840 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-07-27 17:43:45.303640 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8840 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-07-27 17:43:45.559504 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp8840 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/windows-tools-cross/modules && cd /builder && git -C /builder/windows-tools-cross/qubes-core-vchan-xen rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-core-agent-windows rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-core-qubesdb rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-windows-utils rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-gui-common rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-gui-agent-windows rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers rev-parse HEAD >> /builder/windows-tools-cross/modules && git -C /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface rev-parse HEAD >> /builder/windows-tools-cross/modules''.
+2023-07-27 17:43:48.573961 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8840 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__modules /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpf4m6vj2z
+2023-07-27 17:44:25.466169 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2483 bash -c 'rm -rf /builder/incoming/windows-tools-cross /builder/windows-tools-cross'
+2023-07-27 17:44:25.996093 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/windows-tools-cross
+2023-07-27 17:44:27.738129 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2483 bash -c 'mkdir -p /builder && mv /builder/incoming/windows-tools-cross /builder'
+2023-07-27 17:44:28.079061 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2483 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-07-27 17:44:28.429424 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-07-27 17:44:29.166228 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp2483 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-07-27 17:44:29.507276 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp2483 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-vchan-xen qubes-core-vchan-xen-ab3de83c88bdf5ce.tar.gz qubes-core-vchan-xen/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-agent-windows qubes-core-agent-windows-b42d97a244e65058.tar.gz qubes-core-agent-windows/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-core-qubesdb qubes-core-qubesdb-e94f2c908b04de45.tar.gz qubes-core-qubesdb/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-windows-utils qubes-windows-utils-f50e3c72f384445c.tar.gz qubes-windows-utils/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-gui-common qubes-gui-common-d39f0576ae18626e.tar.gz qubes-gui-common/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-gui-agent-windows qubes-gui-agent-windows-506be63e2b3dfcf7.tar.gz qubes-gui-agent-windows/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar.gz qubes-installer-qubes-os-windows-tools/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar.gz qubes-vmm-xen-windows-pvdrivers/ && /builder/plugins/fetch/scripts/create-archive /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar.gz qubes-vmm-xen-win-pvdrivers-xeniface/''.
+2023-07-27 17:44:29.784295 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:29.784341 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:29.787580 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:29.799439 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:29.799496 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-vchan-xen
+2023-07-27 17:44:29.803482 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-core-vchan-xen ~
+2023-07-27 17:44:29.808514 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-vchan-xen
+2023-07-27 17:44:29.808573 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:29.808593 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-core-vchan-xen-ab3de83c88bdf5ce.tar
+2023-07-27 17:44:29.808607 +0000 build-ubuntu42: output: + '[' xqubes-core-vchan-xen/ '!=' x ']'
+2023-07-27 17:44:29.808619 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-core-vchan-xen/
+2023-07-27 17:44:29.808630 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-core-vchan-xen
+2023-07-27 17:44:29.808640 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:29.843146 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1645474118
+2023-07-27 17:44:29.843200 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:29.843220 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:29.843234 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:29.853590 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:29.853660 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1645474118 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-vchan-xen/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-vchan-xen-ab3de83c88bdf5ce.tar -cf qubes-core-vchan-xen-ab3de83c88bdf5ce.tar .
+2023-07-27 17:44:29.857294 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:29.857425 +0000 build-ubuntu42: output: + gzip -fn qubes-core-vchan-xen-ab3de83c88bdf5ce.tar
+2023-07-27 17:44:29.876314 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:29.876425 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:29.876971 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:29.877080 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:29.880546 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:29.883221 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:29.888052 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-agent-windows
+2023-07-27 17:44:29.888139 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-agent-windows
+2023-07-27 17:44:29.888178 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:29.888209 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-core-agent-windows-b42d97a244e65058.tar
+2023-07-27 17:44:29.888239 +0000 build-ubuntu42: output: + '[' xqubes-core-agent-windows/ '!=' x ']'
+2023-07-27 17:44:29.888265 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-core-agent-windows/
+2023-07-27 17:44:29.888291 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-core-agent-windows
+2023-07-27 17:44:29.888315 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:29.888339 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-core-agent-windows ~
+2023-07-27 17:44:29.891865 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1684237621
+2023-07-27 17:44:29.891969 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:29.892125 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:29.892286 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:29.900954 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:29.901128 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1684237621 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-agent-windows/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-agent-windows-b42d97a244e65058.tar -cf qubes-core-agent-windows-b42d97a244e65058.tar .
+2023-07-27 17:44:29.915814 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:29.915923 +0000 build-ubuntu42: output: + gzip -fn qubes-core-agent-windows-b42d97a244e65058.tar
+2023-07-27 17:44:29.943412 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:29.943501 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:29.943979 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:29.945763 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:29.945873 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:29.947211 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:29.947363 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-core-qubesdb
+2023-07-27 17:44:29.948580 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-core-qubesdb
+2023-07-27 17:44:29.948675 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:29.948786 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-core-qubesdb-e94f2c908b04de45.tar
+2023-07-27 17:44:29.948809 +0000 build-ubuntu42: output: + '[' xqubes-core-qubesdb/ '!=' x ']'
+2023-07-27 17:44:29.948821 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-core-qubesdb/
+2023-07-27 17:44:29.948831 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-core-qubesdb
+2023-07-27 17:44:29.948841 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-core-qubesdb ~
+2023-07-27 17:44:29.951572 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:29.956790 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1649537558
+2023-07-27 17:44:29.957163 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:29.957285 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:29.958019 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:29.963409 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:29.963477 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1649537558 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-core-qubesdb/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-core-qubesdb-e94f2c908b04de45.tar -cf qubes-core-qubesdb-e94f2c908b04de45.tar .
+2023-07-27 17:44:29.969934 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:29.970067 +0000 build-ubuntu42: output: + gzip -fn qubes-core-qubesdb-e94f2c908b04de45.tar
+2023-07-27 17:44:29.976772 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:29.976824 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:29.980121 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:29.980271 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:29.980449 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:29.984301 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:29.984370 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-windows-utils
+2023-07-27 17:44:29.984390 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-windows-utils
+2023-07-27 17:44:29.984472 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:29.984540 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-windows-utils-f50e3c72f384445c.tar
+2023-07-27 17:44:29.986277 +0000 build-ubuntu42: output: + '[' xqubes-windows-utils/ '!=' x ']'
+2023-07-27 17:44:29.986335 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-windows-utils/
+2023-07-27 17:44:29.986355 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-windows-utils
+2023-07-27 17:44:29.986369 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-windows-utils ~
+2023-07-27 17:44:29.987992 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:29.992960 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1684236843
+2023-07-27 17:44:29.993830 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:29.993935 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:29.993961 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:29.999801 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:29.999864 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1684236843 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-windows-utils/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-windows-utils-f50e3c72f384445c.tar -cf qubes-windows-utils-f50e3c72f384445c.tar .
+2023-07-27 17:44:29.999883 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:29.999896 +0000 build-ubuntu42: output: + gzip -fn qubes-windows-utils-f50e3c72f384445c.tar
+2023-07-27 17:44:30.012153 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:30.012210 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:30.017795 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:30.017852 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:30.017933 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:30.027419 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:30.027475 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-gui-common
+2023-07-27 17:44:30.030241 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-gui-common
+2023-07-27 17:44:30.030388 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:30.030412 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-gui-common-d39f0576ae18626e.tar
+2023-07-27 17:44:30.030507 +0000 build-ubuntu42: output: + '[' xqubes-gui-common/ '!=' x ']'
+2023-07-27 17:44:30.030591 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-gui-common/
+2023-07-27 17:44:30.030759 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-gui-common
+2023-07-27 17:44:30.030781 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:30.031017 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-gui-common ~
+2023-07-27 17:44:30.036356 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1647880228
+2023-07-27 17:44:30.036410 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:30.036435 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:30.036449 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:30.042466 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:30.042615 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1647880228 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-gui-common/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-gui-common-d39f0576ae18626e.tar -cf qubes-gui-common-d39f0576ae18626e.tar .
+2023-07-27 17:44:30.042815 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:30.042868 +0000 build-ubuntu42: output: + gzip -fn qubes-gui-common-d39f0576ae18626e.tar
+2023-07-27 17:44:30.046507 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:30.046560 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:30.052783 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:30.054026 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:30.054079 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:30.059174 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:30.059236 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-gui-agent-windows
+2023-07-27 17:44:30.059468 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-gui-agent-windows
+2023-07-27 17:44:30.059564 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:30.059722 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-gui-agent-windows-506be63e2b3dfcf7.tar
+2023-07-27 17:44:30.059947 +0000 build-ubuntu42: output: + '[' xqubes-gui-agent-windows/ '!=' x ']'
+2023-07-27 17:44:30.059974 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-gui-agent-windows/
+2023-07-27 17:44:30.060055 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-gui-agent-windows
+2023-07-27 17:44:30.062006 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:30.062063 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-gui-agent-windows ~
+2023-07-27 17:44:30.062905 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1684236886
+2023-07-27 17:44:30.066097 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:30.066158 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:30.066176 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:30.066189 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:30.066559 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1684236886 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-gui-agent-windows/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-gui-agent-windows-506be63e2b3dfcf7.tar -cf qubes-gui-agent-windows-506be63e2b3dfcf7.tar .
+2023-07-27 17:44:30.076149 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:30.076282 +0000 build-ubuntu42: output: + gzip -fn qubes-gui-agent-windows-506be63e2b3dfcf7.tar
+2023-07-27 17:44:30.091276 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:30.091353 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:30.096746 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:30.096829 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:30.103110 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:30.112153 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:30.112201 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2023-07-27 17:44:30.116572 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2023-07-27 17:44:30.116618 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:30.116633 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar
+2023-07-27 17:44:30.116644 +0000 build-ubuntu42: output: + '[' xqubes-installer-qubes-os-windows-tools/ '!=' x ']'
+2023-07-27 17:44:30.116654 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-installer-qubes-os-windows-tools/
+2023-07-27 17:44:30.116664 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools
+2023-07-27 17:44:30.116672 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:30.116682 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-installer-qubes-os-windows-tools ~
+2023-07-27 17:44:30.119297 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1647879996
+2023-07-27 17:44:30.119341 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:30.119352 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:30.119361 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:30.121994 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:30.122056 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1647879996 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-installer-qubes-os-windows-tools/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar -cf qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar .
+2023-07-27 17:44:30.126963 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:30.127008 +0000 build-ubuntu42: output: + gzip -fn qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar
+2023-07-27 17:44:30.132183 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:30.132227 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:30.135473 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:30.135518 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:30.137325 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:30.140125 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:30.140174 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2023-07-27 17:44:30.142291 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2023-07-27 17:44:30.142335 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:30.142349 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar
+2023-07-27 17:44:30.142359 +0000 build-ubuntu42: output: + '[' xqubes-vmm-xen-windows-pvdrivers/ '!=' x ']'
+2023-07-27 17:44:30.142369 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-vmm-xen-windows-pvdrivers/
+2023-07-27 17:44:30.142379 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers
+2023-07-27 17:44:30.142387 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:30.142397 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-vmm-xen-windows-pvdrivers ~
+2023-07-27 17:44:30.145888 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1647655413
+2023-07-27 17:44:30.145932 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:30.145963 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:30.145974 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:30.148643 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:30.148706 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1647655413 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-vmm-xen-windows-pvdrivers/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar -cf qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar .
+2023-07-27 17:44:30.151780 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:30.151841 +0000 build-ubuntu42: output: + gzip -fn qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar
+2023-07-27 17:44:30.159990 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:30.160046 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:30.163571 +0000 build-ubuntu42: output: ++ tar --version
+2023-07-27 17:44:30.163625 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-07-27 17:44:30.166492 +0000 build-ubuntu42: output: ++ head -1
+2023-07-27 17:44:30.167721 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-07-27 17:44:30.167802 +0000 build-ubuntu42: output: ++ readlink -f /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2023-07-27 17:44:30.174001 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2023-07-27 17:44:30.174054 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-07-27 17:44:30.174075 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar
+2023-07-27 17:44:30.174094 +0000 build-ubuntu42: output: + '[' xqubes-vmm-xen-win-pvdrivers-xeniface/ '!=' x ']'
+2023-07-27 17:44:30.174107 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-vmm-xen-win-pvdrivers-xeniface/
+2023-07-27 17:44:30.174119 +0000 build-ubuntu42: output: + pushd /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface
+2023-07-27 17:44:30.175270 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-07-27 17:44:30.175321 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1642760675
+2023-07-27 17:44:30.175336 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-07-27 17:44:30.175348 +0000 build-ubuntu42: output: ++ head -n1
+2023-07-27 17:44:30.175358 +0000 build-ubuntu42: output: ++ sort -V
+2023-07-27 17:44:30.175369 +0000 build-ubuntu42: output: /builder/windows-tools-cross/qubes-vmm-xen-win-pvdrivers-xeniface ~
+2023-07-27 17:44:30.177644 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-07-27 17:44:30.177715 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1642760675 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-vmm-xen-win-pvdrivers-xeniface/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar -cf qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar .
+2023-07-27 17:44:30.180689 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-07-27 17:44:30.180767 +0000 build-ubuntu42: output: + gzip -fn qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar
+2023-07-27 17:44:30.200256 +0000 build-ubuntu42: output: + popd
+2023-07-27 17:44:30.200319 +0000 build-ubuntu42: output: ~
+2023-07-27 17:44:30.216841 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-core-vchan-xen__qubes-core-vchan-xen-ab3de83c88bdf5ce.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:30.528393 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-core-agent-windows__qubes-core-agent-windows-b42d97a244e65058.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:30.836637 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-core-qubesdb__qubes-core-qubesdb-e94f2c908b04de45.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:31.048720 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-windows-utils__qubes-windows-utils-f50e3c72f384445c.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:31.310068 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-gui-common__qubes-gui-common-d39f0576ae18626e.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:33.392835 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-gui-agent-windows__qubes-gui-agent-windows-506be63e2b3dfcf7.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:33.696026 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-installer-qubes-os-windows-tools__qubes-installer-qubes-os-windows-tools-d131b40eaa71af0f.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:34.115054 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-vmm-xen-windows-pvdrivers__qubes-vmm-xen-windows-pvdrivers-873e5e8598fefed7.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:34.482832 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2483 qubesbuilder.FileCopyOut+__builder__windows-tools-cross__qubes-vmm-xen-win-pvdrivers-xeniface__qubes-vmm-xen-win-pvdrivers-xeniface-92236b2f92acebb8.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/distfiles/windows-tools-cross
+2023-07-27 17:44:38.579165 +0000 build-ubuntu42: > done
+2023-07-27 17:44:38.579228 +0000 > closing log
