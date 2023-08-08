@@ -1,0 +1,117 @@
+2023-08-08 22:07:47.487587 +0000 > starting log
+2023-08-08 22:07:47.487947 +0000 build-ubuntu42: > starting build with log
+2023-08-08 22:07:47.487963 +0000 build-ubuntu42: >> args:
+2023-08-08 22:07:47.487972 +0000 build-ubuntu42: >>   ()
+2023-08-08 22:07:47.487980 +0000 build-ubuntu42: >> component:
+2023-08-08 22:07:47.487988 +0000 build-ubuntu42: >>   intel-microcode
+2023-08-08 22:07:47.487995 +0000 build-ubuntu42: >> distributions:
+2023-08-08 22:07:47.488005 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-08-08 22:08:10.737922 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8843 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-08-08 22:08:27.629587 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8843 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-08-08 22:08:28.825809 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8843 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-08-08 22:08:29.111682 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp8843 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-intel-microcode.git /builder/intel-microcode /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-08-08 22:08:32.740660 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-08-08 22:08:32.749756 +0000 build-ubuntu42: output: ---> Good tag 8f56c499e40e3eb6224c5d089b4c86e9c5d64db4.
+2023-08-08 22:08:32.749805 +0000 build-ubuntu42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-08-08 22:08:32.749817 +0000 build-ubuntu42: output: --> Switching branch from main branch to main
+2023-08-08 22:08:32.769941 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8843 qubesbuilder.FileCopyOut+__builder__intel-microcode /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-08-08 22:08:58.596896 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8906 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-08-08 22:08:59.284521 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8906 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-08-08 22:09:16.975446 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8906 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-08-08 22:09:17.520880 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8906 bash -c 'rm -rf /builder/incoming/intel-microcode /builder/intel-microcode'
+2023-08-08 22:09:17.789740 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8906 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/intel-microcode
+2023-08-08 22:09:18.122576 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8906 bash -c 'mkdir -p /builder && mv /builder/incoming/intel-microcode /builder'
+2023-08-08 22:09:18.482074 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp8906 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/intel-microcode --file-name microcode-20230808.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz''.
+2023-08-08 22:09:18.778712 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-08-08 22:09:18.781949 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/intel-microcode --file-name microcode-20230808.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz
+2023-08-08 22:09:18.792946 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/intel-microcode'\'' --file-name '\''microcode-20230808.tar.gz'\'' --file-url '\''https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz'\'' --'
+2023-08-08 22:09:18.795048 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/intel-microcode'\'' --file-name '\''microcode-20230808.tar.gz'\'' --file-url '\''https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz'\'' --'
+2023-08-08 22:09:18.795110 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/intel-microcode --file-name microcode-20230808.tar.gz --file-url https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz --
+2023-08-08 22:09:18.795127 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-08-08 22:09:18.795138 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:09:18.795150 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/intel-microcode
+2023-08-08 22:09:18.795159 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:09:18.795203 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:09:18.795212 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-08-08 22:09:18.795227 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:09:18.795237 +0000 build-ubuntu42: output: + FILE_NAME=microcode-20230808.tar.gz
+2023-08-08 22:09:18.795245 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:09:18.795253 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:09:18.795261 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-08-08 22:09:18.799584 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:09:18.799646 +0000 build-ubuntu42: output: + FILE_URL=https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz
+2023-08-08 22:09:18.799662 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:09:18.799673 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:09:18.799682 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-08-08 22:09:18.799691 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:09:18.799700 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:09:18.799708 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-08-08 22:09:18.799720 +0000 build-ubuntu42: output: + '[' -z https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz ']'
+2023-08-08 22:09:18.799732 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-08-08 22:09:18.799742 +0000 build-ubuntu42: output: + '[' -z microcode-20230808.tar.gz ']'
+2023-08-08 22:09:18.799752 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_microcode-20230808.tar.gz
+2023-08-08 22:09:18.799761 +0000 build-ubuntu42: output: + '[' -n /builder/intel-microcode ']'
+2023-08-08 22:09:18.799769 +0000 build-ubuntu42: output: + mkdir -p /builder/intel-microcode
+2023-08-08 22:09:18.800578 +0000 build-ubuntu42: output: + cd /builder/intel-microcode
+2023-08-08 22:09:18.800618 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_microcode-20230808.tar.gz -- https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20230808.tar.gz
+2023-08-08 22:10:28.545876 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-08-08 22:10:28.545926 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-08-08 22:10:28.552956 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8906 qubesbuilder.FileCopyOut+__builder__intel-microcode__untrusted_microcode-20230808.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpnwyo4i1j
+2023-08-08 22:10:32.813524 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpnwyo4i1j --untrusted-file /home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512'.
+2023-08-08 22:10:32.817287 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-08-08 22:10:32.818579 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpnwyo4i1j --untrusted-file /home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512
+2023-08-08 22:10:32.823945 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpnwyo4i1j'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512'\'' --'
+2023-08-08 22:10:32.824003 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpnwyo4i1j'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512'\'' --'
+2023-08-08 22:10:32.824028 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpnwyo4i1j --untrusted-file /home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512 --
+2023-08-08 22:10:32.824039 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-08-08 22:10:32.824048 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-08-08 22:10:32.824055 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:10:32.824065 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpnwyo4i1j
+2023-08-08 22:10:32.824072 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824079 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824087 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-08-08 22:10:32.824099 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:10:32.824110 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz
+2023-08-08 22:10:32.824119 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824126 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824133 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-08-08 22:10:32.824141 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:10:32.824149 +0000 build-ubuntu42: output: + CHECKSUM_CMD=sha512sum
+2023-08-08 22:10:32.824156 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824163 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824206 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-08-08 22:10:32.824211 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:10:32.824221 +0000 build-ubuntu42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512
+2023-08-08 22:10:32.824229 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824236 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824262 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-08-08 22:10:32.824272 +0000 build-ubuntu42: output: + case "$1" in
+2023-08-08 22:10:32.824279 +0000 build-ubuntu42: output: + shift
+2023-08-08 22:10:32.824287 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-08-08 22:10:32.824297 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz ']'
+2023-08-08 22:10:32.824307 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpnwyo4i1j ']'
+2023-08-08 22:10:32.824316 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpnwyo4i1j
+2023-08-08 22:10:32.828151 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz
+2023-08-08 22:10:32.830248 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_microcode-20230808.tar.gz
+2023-08-08 22:10:32.830290 +0000 build-ubuntu42: output: + FILE_NAME=microcode-20230808.tar.gz
+2023-08-08 22:10:32.830304 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512 ']'
+2023-08-08 22:10:32.830316 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512 ']'
+2023-08-08 22:10:32.830327 +0000 build-ubuntu42: output: + '[' -e /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512 ']'
+2023-08-08 22:10:32.830335 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-08-08 22:10:32.831415 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-08-08 22:10:32.831457 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-08-08 22:10:32.831468 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-08-08 22:10:32.831481 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512 ']'
+2023-08-08 22:10:32.831490 +0000 build-ubuntu42: output: + '[' -z sha512sum ']'
+2023-08-08 22:10:32.831499 +0000 build-ubuntu42: output: + sha512sum --status -c /dev/fd/63
+2023-08-08 22:10:32.831510 +0000 build-ubuntu42: output: +++ cat /home/user/builder-r4.2/sources/intel-microcode/microcode-20230808.tar.gz.sha512
+2023-08-08 22:10:32.831524 +0000 build-ubuntu42: output: ++ printf '%s  -\n' 8316eb9d35b315e630c6c9fab1ba601b91e72cc42926ef14e7c2b77e7025d276ae06c143060f44cd1a873d3879c067d11ad82e1886c796e6be6bf466243ad85b
+2023-08-08 22:10:32.884731 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmpnwyo4i1j/untrusted_microcode-20230808.tar.gz /home/user/builder-r4.2/tmp/tmpnwyo4i1j/microcode-20230808.tar.gz
+2023-08-08 22:11:07.597706 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1560 bash -c 'rm -rf /builder/incoming/intel-microcode /builder/intel-microcode'
+2023-08-08 22:11:07.932524 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1560 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/intel-microcode
+2023-08-08 22:11:08.589686 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1560 bash -c 'mkdir -p /builder && mv /builder/incoming/intel-microcode /builder'
+2023-08-08 22:11:09.003031 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp1560 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/intel-microcode/hash /builder/intel-microcode/vtags && cd /builder && git -C /builder/intel-microcode rev-parse '\''HEAD^{}'\'' >> /builder/intel-microcode/hash && git -C /builder/intel-microcode tag --points-at HEAD --list '\''v*'\'' >> /builder/intel-microcode/vtags''.
+2023-08-08 22:11:09.452207 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1560 qubesbuilder.FileCopyOut+__builder__intel-microcode__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpj_xmh8_k
+2023-08-08 22:11:09.850982 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1560 qubesbuilder.FileCopyOut+__builder__intel-microcode__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpj_xmh8_k
+2023-08-08 22:11:13.924479 +0000 build-ubuntu42: > done
+2023-08-08 22:11:13.924527 +0000 > closing log
