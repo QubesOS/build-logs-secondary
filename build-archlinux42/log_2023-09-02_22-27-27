@@ -1,0 +1,136 @@
+2023-09-02 22:27:27.233892 +0000 > starting log
+2023-09-02 22:27:27.234161 +0000 build-archlinux42: > starting build with log
+2023-09-02 22:27:27.234176 +0000 build-archlinux42: >> args:
+2023-09-02 22:27:27.234194 +0000 build-archlinux42: >>   ()
+2023-09-02 22:27:27.234203 +0000 build-archlinux42: >> component:
+2023-09-02 22:27:27.235346 +0000 build-archlinux42: >>   lvm2
+2023-09-02 22:27:27.235410 +0000 build-archlinux42: >> distributions:
+2023-09-02 22:27:27.235425 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-09-02 22:27:43.920824 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1518 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-09-02 22:27:44.570804 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1518 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-09-02 22:27:59.848740 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp1518 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-09-02 22:28:00.307467 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp1518 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-lvm2.git /builder/lvm2 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-09-02 22:28:03.254159 +0000 build-archlinux42: output: --> Verifying tags...
+2023-09-02 22:28:03.254207 +0000 build-archlinux42: output: ---> Good tag 79b61f588a6338ae30b43db7986599ac2dcf25cb.
+2023-09-02 22:28:03.254221 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-09-02 22:28:03.254231 +0000 build-archlinux42: output: --> Switching branch from main branch to main
+2023-09-02 22:28:03.266240 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1518 qubesbuilder.FileCopyOut+__builder__lvm2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-09-02 22:28:26.529913 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8765 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-09-02 22:28:27.485965 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8765 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-09-02 22:28:42.719678 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8765 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-09-02 22:28:43.134189 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8765 bash -c 'rm -rf /builder/incoming/lvm2 /builder/lvm2'
+2023-09-02 22:28:43.479391 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8765 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/lvm2
+2023-09-02 22:28:43.940551 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8765 bash -c 'mkdir -p /builder && mv /builder/incoming/lvm2 /builder'
+2023-09-02 22:28:44.279249 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp8765 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/lvm2 --file-name LVM2.2.03.09.tgz --file-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz --signature-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc''.
+2023-09-02 22:28:44.635336 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-09-02 22:28:44.635731 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/lvm2 --file-name LVM2.2.03.09.tgz --file-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz --signature-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:44.645921 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/lvm2'\'' --file-name '\''LVM2.2.03.09.tgz'\'' --file-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz'\'' --signature-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc'\'' --'
+2023-09-02 22:28:44.645977 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/lvm2'\'' --file-name '\''LVM2.2.03.09.tgz'\'' --file-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz'\'' --signature-url '\''https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc'\'' --'
+2023-09-02 22:28:44.645998 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/lvm2 --file-name LVM2.2.03.09.tgz --file-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz --signature-url https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc --
+2023-09-02 22:28:44.646008 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-09-02 22:28:44.646017 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:44.646026 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/lvm2
+2023-09-02 22:28:44.646034 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646042 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646051 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-09-02 22:28:44.646059 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:44.646067 +0000 build-archlinux42: output: + FILE_NAME=LVM2.2.03.09.tgz
+2023-09-02 22:28:44.646075 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646082 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646090 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-09-02 22:28:44.646097 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:44.646107 +0000 build-archlinux42: output: + FILE_URL=https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz
+2023-09-02 22:28:44.646115 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646122 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646130 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-09-02 22:28:44.646137 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:44.646147 +0000 build-archlinux42: output: + SIGNATURE_URL=https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:44.646155 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646163 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646170 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-09-02 22:28:44.646178 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:44.646185 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:44.646193 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-09-02 22:28:44.646203 +0000 build-archlinux42: output: + '[' -z https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz ']'
+2023-09-02 22:28:44.646214 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-09-02 22:28:44.646223 +0000 build-archlinux42: output: + '[' -z LVM2.2.03.09.tgz ']'
+2023-09-02 22:28:44.646232 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_LVM2.2.03.09.tgz
+2023-09-02 22:28:44.646240 +0000 build-archlinux42: output: + '[' -n /builder/lvm2 ']'
+2023-09-02 22:28:44.646248 +0000 build-archlinux42: output: + mkdir -p /builder/lvm2
+2023-09-02 22:28:44.646256 +0000 build-archlinux42: output: + cd /builder/lvm2
+2023-09-02 22:28:44.646270 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_LVM2.2.03.09.tgz -- https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz
+2023-09-02 22:28:49.041166 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-09-02 22:28:49.041239 +0000 build-archlinux42: output: + '[' -n https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc ']'
+2023-09-02 22:28:49.041256 +0000 build-archlinux42: output: ++ basename https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:49.044130 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:49.044176 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:49.044195 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_LVM2.2.03.09.tgz.asc https://sourceware.org/pub/lvm2/LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:49.898991 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8765 qubesbuilder.FileCopyOut+__builder__lvm2__untrusted_LVM2.2.03.09.tgz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpqwhkl690
+2023-09-02 22:28:50.322561 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8765 qubesbuilder.FileCopyOut+__builder__lvm2__untrusted_LVM2.2.03.09.tgz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpqwhkl690
+2023-09-02 22:28:54.206886 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpqwhkl690 --untrusted-file /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc --pubkey-file /home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc'.
+2023-09-02 22:28:54.210219 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-09-02 22:28:54.210800 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpqwhkl690 --untrusted-file /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc --pubkey-file /home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc
+2023-09-02 22:28:54.213096 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpqwhkl690'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc'\'' --'
+2023-09-02 22:28:54.213154 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpqwhkl690'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc'\'' --'
+2023-09-02 22:28:54.213180 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpqwhkl690 --untrusted-file /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc --pubkey-file /home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc --
+2023-09-02 22:28:54.213190 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-09-02 22:28:54.213199 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-09-02 22:28:54.213208 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:54.213218 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpqwhkl690
+2023-09-02 22:28:54.213225 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213251 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213261 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-09-02 22:28:54.213269 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:54.213279 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz
+2023-09-02 22:28:54.213287 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213295 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213310 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-09-02 22:28:54.213318 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:54.213330 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:54.213338 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213345 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213353 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-09-02 22:28:54.213361 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:54.213369 +0000 build-archlinux42: output: + PUBKEY_FILE+=("$2")
+2023-09-02 22:28:54.213376 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213383 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213391 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-09-02 22:28:54.213399 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 22:28:54.213406 +0000 build-archlinux42: output: + shift
+2023-09-02 22:28:54.213413 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-09-02 22:28:54.213424 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz ']'
+2023-09-02 22:28:54.213434 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpqwhkl690 ']'
+2023-09-02 22:28:54.213443 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpqwhkl690
+2023-09-02 22:28:54.216844 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz
+2023-09-02 22:28:54.217863 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_LVM2.2.03.09.tgz
+2023-09-02 22:28:54.217900 +0000 build-archlinux42: output: + FILE_NAME=LVM2.2.03.09.tgz
+2023-09-02 22:28:54.217912 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-09-02 22:28:54.217923 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc ']'
+2023-09-02 22:28:54.217932 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-09-02 22:28:54.217943 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc ']'
+2023-09-02 22:28:54.217953 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc ']'
+2023-09-02 22:28:54.217964 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc ']'
+2023-09-02 22:28:54.217975 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc ']'
+2023-09-02 22:28:54.217985 +0000 build-archlinux42: output: + '[' '!' -e /home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc ']'
+2023-09-02 22:28:54.217993 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-09-02 22:28:54.218004 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc ']'
+2023-09-02 22:28:54.218014 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc ']'
+2023-09-02 22:28:54.218025 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:54.218493 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:54.218544 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:54.218910 +0000 build-archlinux42: output: ++ mktemp -u
+2023-09-02 22:28:54.220818 +0000 build-archlinux42: output: + keyring=/tmp/tmp.PD5YoL1xwu
+2023-09-02 22:28:54.220859 +0000 build-archlinux42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-09-02 22:28:54.220875 +0000 build-archlinux42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.PD5YoL1xwu -q --import /home/user/builder-r4.2/sources/lvm2/mcsontos-key.asc
+2023-09-02 22:28:54.239787 +0000 build-archlinux42: output: + gpgv --keyring /tmp/tmp.PD5YoL1xwu /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz
+2023-09-02 22:28:54.252469 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz.asc /home/user/builder-r4.2/tmp/tmpqwhkl690/LVM2.2.03.09.tgz.asc
+2023-09-02 22:28:54.256500 +0000 build-archlinux42: output: + rm -rf /tmp/tmp.PD5YoL1xwu
+2023-09-02 22:28:54.259110 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpqwhkl690/untrusted_LVM2.2.03.09.tgz /home/user/builder-r4.2/tmp/tmpqwhkl690/LVM2.2.03.09.tgz
+2023-09-02 22:29:12.490688 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7650 bash -c 'rm -rf /builder/incoming/lvm2 /builder/lvm2'
+2023-09-02 22:29:13.074669 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp7650 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/lvm2
+2023-09-02 22:29:28.403266 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp7650 bash -c 'mkdir -p /builder && mv /builder/incoming/lvm2 /builder'
+2023-09-02 22:29:28.881335 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp7650 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/lvm2/hash /builder/lvm2/vtags && cd /builder && git -C /builder/lvm2 rev-parse '\''HEAD^{}'\'' >> /builder/lvm2/hash && git -C /builder/lvm2 tag --points-at HEAD --list '\''v*'\'' >> /builder/lvm2/vtags''.
+2023-09-02 22:29:29.244392 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7650 qubesbuilder.FileCopyOut+__builder__lvm2__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp03n2mh55
+2023-09-02 22:29:29.896118 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7650 qubesbuilder.FileCopyOut+__builder__lvm2__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp03n2mh55
+2023-09-02 22:29:35.103206 +0000 build-archlinux42: > done
+2023-09-02 22:29:35.103252 +0000 > closing log
