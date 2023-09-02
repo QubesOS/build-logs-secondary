@@ -1,0 +1,117 @@
+2023-09-02 23:47:12.561121 +0000 > starting log
+2023-09-02 23:47:12.561413 +0000 build-archlinux42: > starting build with log
+2023-09-02 23:47:12.561428 +0000 build-archlinux42: >> args:
+2023-09-02 23:47:12.561437 +0000 build-archlinux42: >>   ()
+2023-09-02 23:47:12.561445 +0000 build-archlinux42: >> component:
+2023-09-02 23:47:12.561453 +0000 build-archlinux42: >>   anaconda
+2023-09-02 23:47:12.561460 +0000 build-archlinux42: >> distributions:
+2023-09-02 23:47:12.561470 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-09-02 23:47:29.504768 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp502 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-09-02 23:47:29.988331 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp502 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-09-02 23:47:45.798816 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp502 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-09-02 23:47:46.438118 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp502 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-anaconda.git /builder/anaconda /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-09-02 23:47:52.648052 +0000 build-archlinux42: output: --> Verifying tags...
+2023-09-02 23:47:52.648099 +0000 build-archlinux42: output: ---> Good tag 286337d53ff8508a4bfd0c37921d7c90546cdfd2.
+2023-09-02 23:47:52.648114 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-09-02 23:47:52.648126 +0000 build-archlinux42: output: --> Switching branch from main branch to main
+2023-09-02 23:47:52.680590 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp502 qubesbuilder.FileCopyOut+__builder__anaconda /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-09-02 23:48:17.337682 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp6414 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-09-02 23:48:18.046046 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp6414 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-09-02 23:48:18.748071 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp6414 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-09-02 23:48:19.895173 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp6414 bash -c 'rm -rf /builder/incoming/anaconda /builder/anaconda'
+2023-09-02 23:48:33.986754 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp6414 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/anaconda
+2023-09-02 23:48:34.857090 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp6414 bash -c 'mkdir -p /builder && mv /builder/incoming/anaconda /builder'
+2023-09-02 23:48:35.385705 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp6414 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2''.
+2023-09-02 23:48:35.846388 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-09-02 23:48:35.848379 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:35.858857 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/anaconda'\'' --file-name '\''anaconda-37.12.6.tar.bz2'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2'\'' --'
+2023-09-02 23:48:35.858908 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/anaconda'\'' --file-name '\''anaconda-37.12.6.tar.bz2'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2'\'' --'
+2023-09-02 23:48:35.858926 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/anaconda --file-name anaconda-37.12.6.tar.bz2 --file-url https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2 --
+2023-09-02 23:48:35.858936 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-09-02 23:48:35.858945 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:35.860688 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/anaconda
+2023-09-02 23:48:35.860732 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:35.860743 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:35.860754 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-09-02 23:48:35.860762 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:35.860770 +0000 build-archlinux42: output: + FILE_NAME=anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:35.860777 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:35.860784 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:35.860792 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-09-02 23:48:35.860799 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:35.860808 +0000 build-archlinux42: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:35.860816 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:35.860823 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:35.860830 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-09-02 23:48:35.860838 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:35.860845 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:35.860852 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-09-02 23:48:35.860862 +0000 build-archlinux42: output: + '[' -z https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2 ']'
+2023-09-02 23:48:35.860872 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-09-02 23:48:35.860882 +0000 build-archlinux42: output: + '[' -z anaconda-37.12.6.tar.bz2 ']'
+2023-09-02 23:48:35.860891 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:35.860899 +0000 build-archlinux42: output: + '[' -n /builder/anaconda ']'
+2023-09-02 23:48:35.860907 +0000 build-archlinux42: output: + mkdir -p /builder/anaconda
+2023-09-02 23:48:35.861430 +0000 build-archlinux42: output: + cd /builder/anaconda
+2023-09-02 23:48:35.861466 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_anaconda-37.12.6.tar.bz2 -- https://ftp.qubes-os.org/distfiles/anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:38.545668 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-09-02 23:48:38.545713 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-09-02 23:48:38.557053 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6414 qubesbuilder.FileCopyOut+__builder__anaconda__untrusted_anaconda-37.12.6.tar.bz2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmprn1sfpbi
+2023-09-02 23:48:45.214134 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmprn1sfpbi --untrusted-file /home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'.
+2023-09-02 23:48:45.219350 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-09-02 23:48:45.220179 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmprn1sfpbi --untrusted-file /home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2023-09-02 23:48:45.222643 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmprn1sfpbi'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'\'' --'
+2023-09-02 23:48:45.222703 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmprn1sfpbi'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512'\'' --'
+2023-09-02 23:48:45.222726 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmprn1sfpbi --untrusted-file /home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2 --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 --
+2023-09-02 23:48:45.222737 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-09-02 23:48:45.222746 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-09-02 23:48:45.222754 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:45.222763 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmprn1sfpbi
+2023-09-02 23:48:45.222771 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.222778 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.222785 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-09-02 23:48:45.222793 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:45.222803 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:45.225272 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.225306 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.225316 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-09-02 23:48:45.225325 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:45.225333 +0000 build-archlinux42: output: + CHECKSUM_CMD=sha512sum
+2023-09-02 23:48:45.225341 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.225348 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.225355 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-09-02 23:48:45.225362 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:45.225373 +0000 build-archlinux42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2023-09-02 23:48:45.225382 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.225389 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.225396 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-09-02 23:48:45.225404 +0000 build-archlinux42: output: + case "$1" in
+2023-09-02 23:48:45.225410 +0000 build-archlinux42: output: + shift
+2023-09-02 23:48:45.225434 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-09-02 23:48:45.225447 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2 ']'
+2023-09-02 23:48:45.225461 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmprn1sfpbi ']'
+2023-09-02 23:48:45.225471 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmprn1sfpbi
+2023-09-02 23:48:45.230679 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:45.232434 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:45.232475 +0000 build-archlinux42: output: + FILE_NAME=anaconda-37.12.6.tar.bz2
+2023-09-02 23:48:45.232489 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2023-09-02 23:48:45.232502 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2023-09-02 23:48:45.232550 +0000 build-archlinux42: output: + '[' -e /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2023-09-02 23:48:45.232554 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-09-02 23:48:45.232561 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-09-02 23:48:45.232569 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-09-02 23:48:45.233763 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-09-02 23:48:45.233800 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512 ']'
+2023-09-02 23:48:45.233812 +0000 build-archlinux42: output: + '[' -z sha512sum ']'
+2023-09-02 23:48:45.233821 +0000 build-archlinux42: output: + sha512sum --status -c /dev/fd/63
+2023-09-02 23:48:45.235815 +0000 build-archlinux42: output: +++ cat /home/user/builder-r4.2/sources/anaconda/anaconda-37.12.6.tar.bz2.sha512
+2023-09-02 23:48:45.237879 +0000 build-archlinux42: output: ++ printf '%s  -\n' 6f4b3c13f7ecbd64501a1aff9ba1d8fde867b52df8a517821c1a70a4ab2af81ef6a22c8534afba8239a5c608f4c06fdd505e6d4c7a58a23fa8d852e54a79694a
+2023-09-02 23:48:45.633559 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmprn1sfpbi/untrusted_anaconda-37.12.6.tar.bz2 /home/user/builder-r4.2/tmp/tmprn1sfpbi/anaconda-37.12.6.tar.bz2
+2023-09-02 23:49:01.948081 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp9054 bash -c 'rm -rf /builder/incoming/anaconda /builder/anaconda'
+2023-09-02 23:49:02.897307 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9054 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/anaconda
+2023-09-02 23:49:17.840957 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp9054 bash -c 'mkdir -p /builder && mv /builder/incoming/anaconda /builder'
+2023-09-02 23:49:18.165901 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp9054 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/anaconda/hash /builder/anaconda/vtags && cd /builder && git -C /builder/anaconda rev-parse '\''HEAD^{}'\'' >> /builder/anaconda/hash && git -C /builder/anaconda tag --points-at HEAD --list '\''v*'\'' >> /builder/anaconda/vtags''.
+2023-09-02 23:49:18.567633 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9054 qubesbuilder.FileCopyOut+__builder__anaconda__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp2tsbb6un
+2023-09-02 23:49:18.876866 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9054 qubesbuilder.FileCopyOut+__builder__anaconda__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp2tsbb6un
+2023-09-02 23:49:24.561699 +0000 build-archlinux42: > done
+2023-09-02 23:49:24.561747 +0000 > closing log
