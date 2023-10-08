@@ -1,0 +1,1510 @@
+2023-10-08 00:23:02.777593 +0000 > starting log
+2023-10-08 00:23:02.778384 +0000 build-ubuntu42: > starting build with log
+2023-10-08 00:23:02.778400 +0000 build-ubuntu42: >> args:
+2023-10-08 00:23:02.778410 +0000 build-ubuntu42: >>   ()
+2023-10-08 00:23:02.778418 +0000 build-ubuntu42: >> component:
+2023-10-08 00:23:02.778426 +0000 build-ubuntu42: >>   rpm-oxide
+2023-10-08 00:23:02.778435 +0000 build-ubuntu42: >>     commit-hash: 14424c843fb434856d8739e9c5def74174204115
+2023-10-08 00:23:02.778450 +0000 build-ubuntu42: >>     source-hash: 1b0da0b28cf88870237514afb475fbcf6df864241af6f096795c30616dbf3a71c2853f4cb5d755c01f7693bc64dc2736119e63737847d3ffc9e5eb8eb14a64f8
+2023-10-08 00:23:02.778464 +0000 build-ubuntu42: >> distributions:
+2023-10-08 00:23:02.778474 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-10-08 00:23:20.164500 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'rm -rf /builder/incoming/rpm-oxide /builder/rpm-oxide'
+2023-10-08 00:23:20.678638 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1218 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/rpm-oxide
+2023-10-08 00:23:21.072522 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'mkdir -p /builder && mv /builder/incoming/rpm-oxide /builder'
+2023-10-08 00:23:21.699805 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'rm -rf /builder/incoming/source_deb /builder/plugins/source_deb'
+2023-10-08 00:23:37.776925 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1218 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source_deb
+2023-10-08 00:23:38.421964 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/source_deb /builder/plugins'
+2023-10-08 00:23:38.723766 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-08 00:23:39.034135 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1218 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-08 00:23:39.348250 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-08 00:23:39.712895 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'rm -rf /builder/incoming/source /builder/plugins/source'
+2023-10-08 00:23:40.018838 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1218 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source
+2023-10-08 00:23:40.484433 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1218 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/source /builder/plugins'
+2023-10-08 00:23:40.942375 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp1218 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' DIST='jammy' LC_ALL='C' DEBFULLNAME='Builder' DEBEMAIL='user@localhost' bash -c '/builder/plugins/source_deb/scripts/modify-changelog-for-build /builder/rpm-oxide debian jammy jammy  && /builder/plugins/source_deb/scripts/get-source-info /builder/rpm-oxide debian''.
+2023-10-08 00:23:41.194995 +0000 build-ubuntu42: output: + test 4 -lt 4
+2023-10-08 00:23:41.196939 +0000 build-ubuntu42: output: + SOURCE_DIR=/builder/rpm-oxide
+2023-10-08 00:23:41.196987 +0000 build-ubuntu42: output: + DEBIAN_DIRECTORY=debian
+2023-10-08 00:23:41.197000 +0000 build-ubuntu42: output: + DIST_NAME=jammy
+2023-10-08 00:23:41.197010 +0000 build-ubuntu42: output: + DIST_TAG=jammy
+2023-10-08 00:23:41.197018 +0000 build-ubuntu42: output: + DEVEL_VERSION=
+2023-10-08 00:23:41.197029 +0000 build-ubuntu42: output: ++ dirname /builder/plugins/source_deb/scripts/modify-changelog-for-build
+2023-10-08 00:23:41.201945 +0000 build-ubuntu42: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2023-10-08 00:23:41.202011 +0000 build-ubuntu42: output: + cd /builder/rpm-oxide
+2023-10-08 00:23:41.202024 +0000 build-ubuntu42: output: + '[' 0 -gt 0 ']'
+2023-10-08 00:23:41.202036 +0000 build-ubuntu42: output: + /builder/plugins/source_deb/scripts/debian-changelog --verify
+2023-10-08 00:23:42.306610 +0000 build-ubuntu42: output: + debchange -t -l+jammy 'Build for jammy'
+2023-10-08 00:23:42.850063 +0000 build-ubuntu42: output: + debchange -t --force-distribution -r -D jammy jammy
+2023-10-08 00:23:42.966484 +0000 build-ubuntu42: output: + /builder/plugins/source_deb/scripts/clamp-changelog-entry-date /builder/rpm-oxide/debian/changelog
+2023-10-08 00:23:42.988073 +0000 build-ubuntu42: output: + test 2 -ne 2
+2023-10-08 00:23:42.988145 +0000 build-ubuntu42: output: + SOURCE_DIR=/builder/rpm-oxide
+2023-10-08 00:23:42.988157 +0000 build-ubuntu42: output: + DEBIAN_DIRECTORY=debian
+2023-10-08 00:23:42.988166 +0000 build-ubuntu42: output: ++ basename debian
+2023-10-08 00:23:42.992285 +0000 build-ubuntu42: output: + DIRECTORY_BN=debian
+2023-10-08 00:23:42.992338 +0000 build-ubuntu42: output: + DIRECTORY_MANGLE_PATH=debian
+2023-10-08 00:23:42.992350 +0000 build-ubuntu42: output: + DIRECTORY_MANGLE_PATH=debian
+2023-10-08 00:23:42.992361 +0000 build-ubuntu42: output: ++ dirname /builder/plugins/source_deb/scripts/get-source-info
+2023-10-08 00:23:42.992370 +0000 build-ubuntu42: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2023-10-08 00:23:42.992382 +0000 build-ubuntu42: output: + /builder/plugins/source_deb/scripts/debian-parser changelog --package-release-name /builder/rpm-oxide/debian/changelog
+2023-10-08 00:23:43.271271 +0000 build-ubuntu42: output: + /builder/plugins/source_deb/scripts/debian-parser changelog --package-release-name-full /builder/rpm-oxide/debian/changelog
+2023-10-08 00:23:43.543251 +0000 build-ubuntu42: output: + grep -Po '(?<=^3.0 \()\w+'
+2023-10-08 00:23:43.558418 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1218 qubesbuilder.FileCopyOut+__builder__rpm-oxide__debian_package_release_name /usr/lib/qubes/qfile-unpacker 1000 /tmp/tmp60ldyqyi
+2023-10-08 00:24:06.852849 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'rm -rf /builder/incoming/rpm-oxide /builder/rpm-oxide'
+2023-10-08 00:24:07.826698 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/rpm-oxide
+2023-10-08 00:24:24.756493 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'mkdir -p /builder && mv /builder/incoming/rpm-oxide /builder'
+2023-10-08 00:24:25.285832 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'rm -rf /builder/incoming/rpm-oxide /builder/distfiles/rpm-oxide'
+2023-10-08 00:24:25.708836 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/distfiles/rpm-oxide
+2023-10-08 00:24:26.067223 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'mkdir -p /builder/distfiles && mv /builder/incoming/rpm-oxide /builder/distfiles'
+2023-10-08 00:24:26.607809 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'rm -rf /builder/incoming/source_deb /builder/plugins/source_deb'
+2023-10-08 00:24:26.981300 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source_deb
+2023-10-08 00:24:27.190093 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/source_deb /builder/plugins'
+2023-10-08 00:24:27.524906 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-08 00:24:27.970314 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-08 00:24:28.174707 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-08 00:24:28.359354 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'rm -rf /builder/incoming/source /builder/plugins/source'
+2023-10-08 00:24:28.607561 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/source
+2023-10-08 00:24:30.728272 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8432 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/source /builder/plugins'
+2023-10-08 00:24:31.025856 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp8432 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' DIST='jammy' LC_ALL='C' DEBFULLNAME='Builder' DEBEMAIL='user@localhost' bash -c '/builder/plugins/fetch/scripts/create-archive /builder/rpm-oxide qubes-rpm-oxide_0.2.7.orig.tar.gz && mv /builder/rpm-oxide/qubes-rpm-oxide_0.2.7.orig.tar.gz /builder && /builder/plugins/source_deb/scripts/modify-changelog-for-build /builder/rpm-oxide debian jammy jammy  && mkdir -p /builder/build && cd /builder/build && cp -a /builder/rpm-oxide/debian . && chmod -R -- u+rwX,g+rX-w,o+rX-w . && chmod +x debian/rules && dpkg-source -b . && /builder/plugins/source_deb/scripts/debian-get-packages-list /builder/qubes-rpm-oxide_0.2.7-1+jammy1.dsc >/builder/debian_packages.list''.
+2023-10-08 00:24:31.520935 +0000 build-ubuntu42: output: ++ tar --version
+2023-10-08 00:24:31.520981 +0000 build-ubuntu42: output: ++ awk '{print $4}'
+2023-10-08 00:24:31.520992 +0000 build-ubuntu42: output: ++ head -1
+2023-10-08 00:24:31.717943 +0000 build-ubuntu42: output: + TAR_VERSION=1.34
+2023-10-08 00:24:31.717993 +0000 build-ubuntu42: output: ++ readlink -f /builder/rpm-oxide
+2023-10-08 00:24:31.719976 +0000 build-ubuntu42: output: + GIT_ARCHIVE_SRC=/builder/rpm-oxide
+2023-10-08 00:24:31.720493 +0000 build-ubuntu42: output: /builder/rpm-oxide ~
+2023-10-08 00:24:31.723621 +0000 build-ubuntu42: output: + GIT_ARCHIVE_TYPE=gz
+2023-10-08 00:24:31.723667 +0000 build-ubuntu42: output: + GIT_TARBALL_NAME=qubes-rpm-oxide_0.2.7.orig.tar
+2023-10-08 00:24:31.723679 +0000 build-ubuntu42: output: + '[' x '!=' x ']'
+2023-10-08 00:24:31.723689 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-rpm-oxide_0.2.7.orig.tar
+2023-10-08 00:24:31.723698 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-rpm-oxide_0.2.7.orig
+2023-10-08 00:24:31.723707 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-rpm-oxide_0.2.7
+2023-10-08 00:24:31.723716 +0000 build-ubuntu42: output: + GIT_ARCHIVE_PREFIX=qubes-rpm-oxide_0.2.7/
+2023-10-08 00:24:31.723724 +0000 build-ubuntu42: output: + pushd /builder/rpm-oxide
+2023-10-08 00:24:31.723732 +0000 build-ubuntu42: output: ++ git log -1 --format=%ct
+2023-10-08 00:24:31.878617 +0000 build-ubuntu42: output: + SOURCE_DATE_EPOCH=1696724433
+2023-10-08 00:24:31.878664 +0000 build-ubuntu42: output: ++ head -n1
+2023-10-08 00:24:31.878675 +0000 build-ubuntu42: output: ++ sort -V
+2023-10-08 00:24:31.878704 +0000 build-ubuntu42: output: ++ printf '%s\n' 1.34 1.28
+2023-10-08 00:24:31.914336 +0000 build-ubuntu42: output: + '[' 1.28 == 1.28 ']'
+2023-10-08 00:24:31.914398 +0000 build-ubuntu42: output: + tar --sort=name --mtime=@1696724433 --owner=0 --group=0 --numeric-owner --mode=go=rX '--xform=s%^\./%qubes-rpm-oxide_0.2.7/%' --exclude-vcs-ignores --exclude-ignore=.tarignore --exclude pkgs --exclude '.git/*' --exclude qubes-rpm-oxide_0.2.7.orig.tar -cf qubes-rpm-oxide_0.2.7.orig.tar .
+2023-10-08 00:24:31.917832 +0000 build-ubuntu42: output: + case "$GIT_ARCHIVE_TYPE" in
+2023-10-08 00:24:31.917878 +0000 build-ubuntu42: output: + gzip -fn qubes-rpm-oxide_0.2.7.orig.tar
+2023-10-08 00:24:31.943204 +0000 build-ubuntu42: output: ~
+2023-10-08 00:24:31.947080 +0000 build-ubuntu42: output: + popd
+2023-10-08 00:24:31.953954 +0000 build-ubuntu42: output: + test 4 -lt 4
+2023-10-08 00:24:31.954001 +0000 build-ubuntu42: output: + SOURCE_DIR=/builder/rpm-oxide
+2023-10-08 00:24:31.954013 +0000 build-ubuntu42: output: + DEBIAN_DIRECTORY=debian
+2023-10-08 00:24:31.954027 +0000 build-ubuntu42: output: + DIST_NAME=jammy
+2023-10-08 00:24:31.954036 +0000 build-ubuntu42: output: + DIST_TAG=jammy
+2023-10-08 00:24:31.954044 +0000 build-ubuntu42: output: + DEVEL_VERSION=
+2023-10-08 00:24:31.954055 +0000 build-ubuntu42: output: ++ dirname /builder/plugins/source_deb/scripts/modify-changelog-for-build
+2023-10-08 00:24:31.960137 +0000 build-ubuntu42: output: + SCRIPTS_DIR=/builder/plugins/source_deb/scripts
+2023-10-08 00:24:31.960183 +0000 build-ubuntu42: output: + cd /builder/rpm-oxide
+2023-10-08 00:24:31.960195 +0000 build-ubuntu42: output: + '[' 0 -gt 0 ']'
+2023-10-08 00:24:31.960206 +0000 build-ubuntu42: output: + /builder/plugins/source_deb/scripts/debian-changelog --verify
+2023-10-08 00:24:32.927196 +0000 build-ubuntu42: output: + debchange -t -l+jammy 'Build for jammy'
+2023-10-08 00:24:33.149335 +0000 build-ubuntu42: output: + debchange -t --force-distribution -r -D jammy jammy
+2023-10-08 00:24:33.234353 +0000 build-ubuntu42: output: + /builder/plugins/source_deb/scripts/clamp-changelog-entry-date /builder/rpm-oxide/debian/changelog
+2023-10-08 00:24:33.437818 +0000 build-ubuntu42: output: dpkg-source: info: using options from build/debian/source/options: --tar-ignore=.git
+2023-10-08 00:24:33.437868 +0000 build-ubuntu42: output: dpkg-source: info: using source format '3.0 (quilt)'
+2023-10-08 00:24:33.437884 +0000 build-ubuntu42: output: dpkg-source: info: building qubes-rpm-oxide using existing ./qubes-rpm-oxide_0.2.7.orig.tar.gz
+2023-10-08 00:24:33.455985 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file Makefile.builder, use --include-removal to override
+2023-10-08 00:24:33.456979 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-oxide.spec.in, use --include-removal to override
+2023-10-08 00:24:33.457026 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file Cargo.toml, use --include-removal to override
+2023-10-08 00:24:33.457041 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file version, use --include-removal to override
+2023-10-08 00:24:33.457054 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file genarch.awk, use --include-removal to override
+2023-10-08 00:24:33.458181 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file .gitlab-ci.yml, use --include-removal to override
+2023-10-08 00:24:33.458225 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file .qubesbuilder, use --include-removal to override
+2023-10-08 00:24:33.458239 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-parser
+2023-10-08 00:24:33.458253 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/Cargo.toml, use --include-removal to override
+2023-10-08 00:24:33.458264 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-parser/src
+2023-10-08 00:24:33.458276 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/package.rs, use --include-removal to override
+2023-10-08 00:24:33.458288 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/lead.rs, use --include-removal to override
+2023-10-08 00:24:33.459660 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/lib.rs, use --include-removal to override
+2023-10-08 00:24:33.459703 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/tables.rs, use --include-removal to override
+2023-10-08 00:24:33.459718 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/ffi.rs, use --include-removal to override
+2023-10-08 00:24:33.459746 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/tagdata.rs, use --include-removal to override
+2023-10-08 00:24:33.459759 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-parser/src/verify
+2023-10-08 00:24:33.459772 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/verify/mod.rs, use --include-removal to override
+2023-10-08 00:24:33.459785 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/verify/validator.rs, use --include-removal to override
+2023-10-08 00:24:33.459797 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-parser/src/header
+2023-10-08 00:24:33.459810 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/header/common.rs, use --include-removal to override
+2023-10-08 00:24:33.459822 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/header/signature.rs, use --include-removal to override
+2023-10-08 00:24:33.462069 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/header/mod.rs, use --include-removal to override
+2023-10-08 00:24:33.462140 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/src/header/immutable.rs, use --include-removal to override
+2023-10-08 00:24:33.462155 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-parser/bin
+2023-10-08 00:24:33.462169 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/bin/rpmgetsigheadersize.rs, use --include-removal to override
+2023-10-08 00:24:33.462182 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-parser/bin/rpmcheck.rs, use --include-removal to override
+2023-10-08 00:24:33.462192 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-crypto
+2023-10-08 00:24:33.462204 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/build.rs, use --include-removal to override
+2023-10-08 00:24:33.462215 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/ffi.c, use --include-removal to override
+2023-10-08 00:24:33.462227 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/Cargo.toml, use --include-removal to override
+2023-10-08 00:24:33.462237 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-crypto/src
+2023-10-08 00:24:33.462249 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/src/signatures.rs, use --include-removal to override
+2023-10-08 00:24:33.462262 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/src/digests.rs, use --include-removal to override
+2023-10-08 00:24:33.462274 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/src/crypto.rs, use --include-removal to override
+2023-10-08 00:24:33.462285 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/src/lib.rs, use --include-removal to override
+2023-10-08 00:24:33.462298 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-crypto/src/transaction.rs, use --include-removal to override
+2023-10-08 00:24:33.462307 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-writer
+2023-10-08 00:24:33.462319 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-writer/Cargo.toml, use --include-removal to override
+2023-10-08 00:24:33.462329 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-writer/src
+2023-10-08 00:24:33.462341 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-writer/src/lib.rs, use --include-removal to override
+2023-10-08 00:24:33.462367 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-writer/tests
+2023-10-08 00:24:33.462381 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-writer/tests/gen_bad_i18ntable.rs, use --include-removal to override
+2023-10-08 00:24:33.462392 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory rpm-writer/bin
+2023-10-08 00:24:33.464322 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file rpm-writer/bin/rpmcanon.rs, use --include-removal to override
+2023-10-08 00:24:33.464367 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory openpgp-parser
+2023-10-08 00:24:33.464383 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file openpgp-parser/Cargo.toml, use --include-removal to override
+2023-10-08 00:24:33.464396 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file openpgp-parser/README.md, use --include-removal to override
+2023-10-08 00:24:33.464406 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory openpgp-parser/src
+2023-10-08 00:24:33.464419 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file openpgp-parser/src/signature.rs, use --include-removal to override
+2023-10-08 00:24:33.464432 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file openpgp-parser/src/packet.rs, use --include-removal to override
+2023-10-08 00:24:33.464444 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file openpgp-parser/src/buffer.rs, use --include-removal to override
+2023-10-08 00:24:33.464455 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file openpgp-parser/src/lib.rs, use --include-removal to override
+2023-10-08 00:24:33.464465 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory openpgp-parser/bin
+2023-10-08 00:24:33.464477 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file openpgp-parser/bin/sigparse.rs, use --include-removal to override
+2023-10-08 00:24:33.464486 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of directory data
+2023-10-08 00:24:33.464498 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file data/duplicate_header.bin, use --include-removal to override
+2023-10-08 00:24:33.464510 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file data/lua-5.4.2-1.fc33.x86_64.rpm, use --include-removal to override
+2023-10-08 00:24:33.464521 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file data/eddsa.asc, use --include-removal to override
+2023-10-08 00:24:33.464533 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file data/trailing-junk.asc, use --include-removal to override
+2023-10-08 00:24:33.464544 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file data/sorted_header.bin, use --include-removal to override
+2023-10-08 00:24:33.464556 +0000 build-ubuntu42: output: dpkg-source: warning: ignoring deletion of file data/non_sorted_header.bin, use --include-removal to override
+2023-10-08 00:24:33.466979 +0000 build-ubuntu42: output: dpkg-source: info: building qubes-rpm-oxide in qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz
+2023-10-08 00:24:33.487886 +0000 build-ubuntu42: output: dpkg-source: info: building qubes-rpm-oxide in qubes-rpm-oxide_0.2.7-1+jammy1.dsc
+2023-10-08 00:24:33.668846 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyOut+__builder__qubes-rpm-oxide_0.2.7-1+jammy1.dsc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/prep
+2023-10-08 00:24:33.868803 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyOut+__builder__qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/prep
+2023-10-08 00:24:34.005513 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyOut+__builder__debian_packages.list /usr/lib/qubes/qfile-unpacker 1000 /tmp/tmp60ldyqyi
+2023-10-08 00:24:34.112661 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8432 qubesbuilder.FileCopyOut+__builder__qubes-rpm-oxide_0.2.7.orig.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/prep
+2023-10-08 00:25:10.563517 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/pbuilder /builder/pbuilder'
+2023-10-08 00:25:11.058330 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb/pbuilder
+2023-10-08 00:25:11.492261 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder && mv /builder/incoming/pbuilder /builder'
+2023-10-08 00:25:11.875006 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/vm-jammy /builder/repository/vm-jammy'
+2023-10-08 00:25:12.174829 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/repository/vm-jammy
+2023-10-08 00:25:16.827829 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/repository && mv /builder/incoming/vm-jammy /builder/repository'
+2023-10-08 00:25:20.296083 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/build_deb /builder/plugins/build_deb'
+2023-10-08 00:25:20.777762 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_deb
+2023-10-08 00:25:21.349971 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/build_deb /builder/plugins'
+2023-10-08 00:25:22.411170 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/chroot_deb /builder/plugins/chroot_deb'
+2023-10-08 00:25:22.550232 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_deb
+2023-10-08 00:25:22.716024 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/chroot_deb /builder/plugins'
+2023-10-08 00:25:22.835641 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/build /builder/plugins/build'
+2023-10-08 00:25:22.945044 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2023-10-08 00:25:23.055262 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/build /builder/plugins'
+2023-10-08 00:25:23.169956 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/qubes-rpm-oxide_0.2.7-1+jammy1.dsc /builder/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc'
+2023-10-08 00:25:23.280900 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/prep/qubes-rpm-oxide_0.2.7-1+jammy1.dsc
+2023-10-08 00:25:23.391249 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/build && mv /builder/incoming/qubes-rpm-oxide_0.2.7-1+jammy1.dsc /builder/build'
+2023-10-08 00:25:23.501562 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz /builder/build/qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz'
+2023-10-08 00:25:23.608735 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/prep/qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz
+2023-10-08 00:25:23.730768 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/build && mv /builder/incoming/qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz /builder/build'
+2023-10-08 00:25:23.867624 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/qubes-rpm-oxide_0.2.7.orig.tar.gz /builder/build/qubes-rpm-oxide_0.2.7.orig.tar.gz'
+2023-10-08 00:25:24.040252 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/prep/qubes-rpm-oxide_0.2.7.orig.tar.gz
+2023-10-08 00:25:24.158233 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/build && mv /builder/incoming/qubes-rpm-oxide_0.2.7.orig.tar.gz /builder/build'
+2023-10-08 00:25:24.273854 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'rm -rf /builder/incoming/base.tgz /builder/pbuilder/base.tgz'
+2023-10-08 00:25:24.382817 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/cache/chroot/jammy/pbuilder/base.tgz
+2023-10-08 00:25:26.478848 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp9299 bash -c 'mkdir -p /builder/pbuilder && mv /builder/incoming/base.tgz /builder/pbuilder'
+2023-10-08 00:25:26.750667 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp9299 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'mkdir -p /builder/cache/aptcache && /builder/plugins/build_deb/scripts/create-local-repo /builder/repository ubuntu jammy && sudo -E pbuilder update --distribution jammy --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb jammy main" && sudo -E pbuilder build --override-config --distribution jammy --configfile /builder/pbuilder/pbuilderrc --othermirror "deb [trusted=yes] file:///tmp/qubes-deb jammy main" /builder/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc && /builder/plugins/build_deb/scripts/patch-changes /builder/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc /builder/pbuilder/results/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo /builder/pbuilder/results/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes''.
+2023-10-08 00:25:26.872211 +0000 build-ubuntu42: output: + '[' 3 -lt 2 ']'
+2023-10-08 00:25:26.874312 +0000 build-ubuntu42: output: + REPO_DIR=/builder/repository
+2023-10-08 00:25:26.874359 +0000 build-ubuntu42: output: + DISTRIBUTION=ubuntu
+2023-10-08 00:25:26.874375 +0000 build-ubuntu42: output: + SUITE=jammy
+2023-10-08 00:25:26.874385 +0000 build-ubuntu42: output: + mkdir -p /builder/repository/conf
+2023-10-08 00:25:26.876230 +0000 build-ubuntu42: output: + mkdir -p /builder/repository/conf
+2023-10-08 00:25:26.876686 +0000 build-ubuntu42: output: + cd /builder/repository
+2023-10-08 00:25:26.876720 +0000 build-ubuntu42: output: + cat
+2023-10-08 00:25:26.879035 +0000 build-ubuntu42: output: + mkdir -p dists/jammy/main/binary-amd64
+2023-10-08 00:25:26.879963 +0000 build-ubuntu42: output: + dpkg-scanpackages --multiversion .
+2023-10-08 00:25:28.699857 +0000 build-ubuntu42: output: dpkg-scanpackages: info: Wrote 84 entries to output Packages file.
+2023-10-08 00:25:28.703011 +0000 build-ubuntu42: output: + gzip -9c dists/jammy/main/binary-amd64/Packages
+2023-10-08 00:25:28.709082 +0000 build-ubuntu42: output: ++ LC_ALL=C
+2023-10-08 00:25:28.709147 +0000 build-ubuntu42: output: ++ date -u '+%a, %d %b %Y %H:%M:%S %Z'
+2023-10-08 00:25:28.712564 +0000 build-ubuntu42: output: + DATE='Sun, 08 Oct 2023 00:25:29 UTC'
+2023-10-08 00:25:28.712609 +0000 build-ubuntu42: output: + cat
+2023-10-08 00:25:28.714365 +0000 build-ubuntu42: output: + calc_sha1 main/binary-amd64/Packages
+2023-10-08 00:25:28.714417 +0000 build-ubuntu42: output: + f=dists/jammy/main/binary-amd64/Packages
+2023-10-08 00:25:28.714428 +0000 build-ubuntu42: output: + echo -n ' '
+2023-10-08 00:25:28.715708 +0000 build-ubuntu42: output: ++ cut '-d ' -f 1
+2023-10-08 00:25:28.715752 +0000 build-ubuntu42: output: ++ sha256sum dists/jammy/main/binary-amd64/Packages
+2023-10-08 00:25:28.720961 +0000 build-ubuntu42: output: + echo -n 305df13df5932ba4fafe13d90d03d802a33e93820b88fdcc02dab72bca64edaa ''
+2023-10-08 00:25:28.721011 +0000 build-ubuntu42: output: ++ stat -c %s dists/jammy/main/binary-amd64/Packages
+2023-10-08 00:25:28.727334 +0000 build-ubuntu42: output: + echo -n 64770 ''
+2023-10-08 00:25:28.727386 +0000 build-ubuntu42: output: + echo main/binary-amd64/Packages
+2023-10-08 00:25:28.727400 +0000 build-ubuntu42: output: + calc_sha1 main/binary-amd64/Packages.gz
+2023-10-08 00:25:28.727410 +0000 build-ubuntu42: output: + f=dists/jammy/main/binary-amd64/Packages.gz
+2023-10-08 00:25:28.727417 +0000 build-ubuntu42: output: + echo -n ' '
+2023-10-08 00:25:28.727427 +0000 build-ubuntu42: output: ++ sha256sum dists/jammy/main/binary-amd64/Packages.gz
+2023-10-08 00:25:28.727435 +0000 build-ubuntu42: output: ++ cut '-d ' -f 1
+2023-10-08 00:25:28.729218 +0000 build-ubuntu42: output: + echo -n d50c43b177612fd1a0566bee017bf77569fe60bd7d88bd74bcdfc53a35ec11dd ''
+2023-10-08 00:25:28.729261 +0000 build-ubuntu42: output: ++ stat -c %s dists/jammy/main/binary-amd64/Packages.gz
+2023-10-08 00:25:28.732054 +0000 build-ubuntu42: output: + echo -n 18539 ''
+2023-10-08 00:25:28.732127 +0000 build-ubuntu42: output: + echo main/binary-amd64/Packages.gz
+2023-10-08 00:25:28.732140 +0000 build-ubuntu42: output: + mapfile -d '' changes_files
+2023-10-08 00:25:28.732153 +0000 build-ubuntu42: output: ++ find /builder/repository -name '*.changes' -not -path /builder/repository/dists -not -path /builder/repository/pool -print0
+2023-10-08 00:25:28.742853 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:28.742908 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-shutdown-idle_1.0.10/qubes-app-shutdown-idle_1.0.10-1+jammy1_amd64.changes
+2023-10-08 00:25:28.871345 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:28.906245 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:28.909650 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:28.909704 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-linux-pdf-converter_2.1.18/qubes-pdf-converter_2.1.18-1+jammy1_amd64.changes
+2023-10-08 00:25:28.933006 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:28.957339 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:28.958625 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:28.958678 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/fwupd_1.8.14/fwupd-qubes_1.8.14-3+jammy1_amd64.changes
+2023-10-08 00:25:29.031001 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.052354 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.057005 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.057062 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/mgmt-salt-base-topd_4.2.1/qubes-mgmt-salt-base-topd_4.2.1-1+jammy1_amd64.changes
+2023-10-08 00:25:29.074438 +0000 build-ubuntu42: output: 'qubes-mgmt-salt-base-topd_4.2.1-1+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:29.074488 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:29.079829 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.106451 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.110665 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.110721 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/desktop-linux-menu_1.1.4/qubes-desktop-linux-menu_1.1.4-1+jammy1_amd64.changes
+2023-10-08 00:25:29.143550 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.146770 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.179771 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.184347 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.184405 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/desktop-linux-common_4.2.2/qubes-desktop-linux-common_4.2.2-1+jammy1_amd64.changes
+2023-10-08 00:25:29.231295 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.265398 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.266495 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.266711 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/meta-packages_4.2.9/qubes-meta-packages_4.2.9-1+jammy1_amd64.changes
+2023-10-08 00:25:29.292025 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.295363 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.298977 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.302288 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.344385 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.346020 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.346075 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/mgmt-salt-base_4.1.5/qubes-mgmt-salt-base_4.1.5-1+jammy1_amd64.changes
+2023-10-08 00:25:29.366374 +0000 build-ubuntu42: output: 'qubes-mgmt-salt-base_4.1.5-1+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:29.366588 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:29.372046 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.404097 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.405565 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.405781 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-linux-split-gpg_2.0.69/qubes-gpg-split_2.0.69-1+jammy1_amd64.changes
+2023-10-08 00:25:29.427480 +0000 build-ubuntu42: output: Unknown file type: '994064740f8be370b0e12101f28393b5 48184 debug optional qubes-gpg-split-dbgsym_2.0.69-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.427698 +0000 build-ubuntu42: output: Warning: File 'qubes-gpg-split-dbgsym_2.0.69-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gpg-split_'!
+2023-10-08 00:25:29.435136 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.438364 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.472305 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:29.472354 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:29.472371 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.476522 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.476800 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/linux-utils_4.2.14/qubes-utils_4.2.14+jammy1_amd64.changes
+2023-10-08 00:25:29.494567 +0000 build-ubuntu42: output: Unknown file type: 'c3387ca22bfe5f0da981f00e72aa9f31 22704 debug optional libqubes-pure0-dbgsym_4.2.14+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.494619 +0000 build-ubuntu42: output: Warning: File 'libqubes-pure0-dbgsym_4.2.14+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-utils_'!
+2023-10-08 00:25:29.494808 +0000 build-ubuntu42: output: Unknown file type: '18aef88dacf13ac4b4b2085a8a04ebaf 60488 debug optional libqubes-rpc-filecopy2-dbgsym_4.2.14+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.494837 +0000 build-ubuntu42: output: Warning: File 'libqubes-rpc-filecopy2-dbgsym_4.2.14+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-utils_'!
+2023-10-08 00:25:29.494854 +0000 build-ubuntu42: output: Unknown file type: '321b6f468ccd98de3316c620cd5e1524 72890 debug optional qubes-utils-dbgsym_4.2.14+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.494868 +0000 build-ubuntu42: output: Warning: File 'qubes-utils-dbgsym_4.2.14+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-utils_'!
+2023-10-08 00:25:29.509453 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.513055 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.516235 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.519736 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.522837 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.526230 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.597780 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:29.597829 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:29.598013 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.601437 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.601651 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-linux-input-proxy_1.0.33/qubes-input-proxy_1.0.33-1+jammy1_amd64.changes
+2023-10-08 00:25:29.620261 +0000 build-ubuntu42: output: Unknown file type: '64c1c35530aad2c778535514bfae3e51 15796 debug optional qubes-input-proxy-receiver-dbgsym_1.0.33-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.620313 +0000 build-ubuntu42: output: Warning: File 'qubes-input-proxy-receiver-dbgsym_1.0.33-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-input-proxy_'!
+2023-10-08 00:25:29.620496 +0000 build-ubuntu42: output: Unknown file type: '78b845310584d466736829ed2e330555 8200 debug optional qubes-input-proxy-sender-dbgsym_1.0.33-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.620522 +0000 build-ubuntu42: output: Warning: File 'qubes-input-proxy-sender-dbgsym_1.0.33-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-input-proxy_'!
+2023-10-08 00:25:29.628246 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.631716 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.662382 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:29.662430 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:29.662442 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.666017 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.666072 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-linux-snapd-helper_1.0.4/qubes-snapd-helper_1.0.4-1+jammy1_amd64.changes
+2023-10-08 00:25:29.689305 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.713255 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.717280 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.717334 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-linux-img-converter_1.2.15/qubes-img-converter_1.2.15-1+jammy1_amd64.changes
+2023-10-08 00:25:29.739566 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.766223 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.767803 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.767859 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/core-qrexec_4.2.12/qubes-core-qrexec_4.2.12-1+jammy1_amd64.changes
+2023-10-08 00:25:29.787864 +0000 build-ubuntu42: output: Unknown file type: 'a7301464301a7f579ea17d65496e3301 45394 debug optional libqrexec-utils2-dbgsym_4.2.12-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.787967 +0000 build-ubuntu42: output: Warning: File 'libqrexec-utils2-dbgsym_4.2.12-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-core-qrexec_'!
+2023-10-08 00:25:29.788007 +0000 build-ubuntu42: output: Unknown file type: 'a86700d07830e00c5652d8138cff24a9 54170 debug optional qubes-core-qrexec-dbgsym_4.2.12-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.788026 +0000 build-ubuntu42: output: Warning: File 'qubes-core-qrexec-dbgsym_4.2.12-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-core-qrexec_'!
+2023-10-08 00:25:29.803647 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.807045 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.810379 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.857003 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.857093 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-thunderbird_2.0.8/thunderbird-qubes_2.0.8-1+jammy1_amd64.changes
+2023-10-08 00:25:29.857205 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:29.857223 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:29.857237 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.883031 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.886282 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:29.920771 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:29.921790 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:29.921860 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/desktop-linux-xfce4-xfwm4_4.16.1/xfwm4_4.16.1-3+jammy1_amd64.changes
+2023-10-08 00:25:29.947004 +0000 build-ubuntu42: output: Unknown file type: '740a54dfce60cf4441ae7785bb6604d0 596692 debug optional xfwm4-dbgsym_4.16.1-3+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:29.947057 +0000 build-ubuntu42: output: Warning: File 'xfwm4-dbgsym_4.16.1-3+jammy1_amd64.ddeb' looks like source but does not start with 'xfwm4_'!
+2023-10-08 00:25:29.978489 +0000 build-ubuntu42: output: zstd: error 70 : Write error : cannot write block : Broken pipe
+2023-10-08 00:25:30.016806 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:30.016853 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:30.016865 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:30.020623 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:30.020678 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/core-vchan-xen_4.2.1/libvchan-xen_4.2.1-1+jammy1_amd64.changes
+2023-10-08 00:25:30.038312 +0000 build-ubuntu42: output: Unknown file type: 'a3626c427035c32de028a324080b0d0c 14906 debug optional libvchan-xen1-dbgsym_4.2.1-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:30.038378 +0000 build-ubuntu42: output: Warning: File 'libvchan-xen1-dbgsym_4.2.1-1+jammy1_amd64.ddeb' looks like source but does not start with 'libvchan-xen_'!
+2023-10-08 00:25:30.043868 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:30.047194 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:30.080495 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:30.080541 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:30.080554 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:30.084157 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:30.084210 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/gui-common_4.2.4/qubes-gui-common_4.2.4+jammy1_amd64.changes
+2023-10-08 00:25:30.105805 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:30.141515 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:30.145020 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:30.145077 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-linux-split-gpg2_1.0.0/split-gpg2_1.0.0+jammy1_amd64.changes
+2023-10-08 00:25:30.168175 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:30.171651 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:30.175084 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:30.218278 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:30.221974 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:30.222031 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/desktop-linux-xfce4_4.2.2/xfce4-settings-qubes_4.2.2-1+jammy1_amd64.changes
+2023-10-08 00:25:30.285313 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:30.285372 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/artwork_4.2.1/qubes-artwork_4.2.1-1+jammy1_amd64.changes
+2023-10-08 00:25:30.285401 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:32.016718 +0000 build-ubuntu42: output: zstd: error 70 : Write error : cannot write block : Broken pipe
+2023-10-08 00:25:32.253860 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:32.253916 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/gui-agent-linux_4.2.9/qubes-gui-agent_4.2.9-1+jammy1_amd64.changes
+2023-10-08 00:25:32.253930 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:32.281030 +0000 build-ubuntu42: output: Unknown file type: '01ea5f355984aa3c1907cef294533d2b 62992 debug optional pipewire-qubes-dbgsym_4.2.9-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.281081 +0000 build-ubuntu42: output: Warning: File 'pipewire-qubes-dbgsym_4.2.9-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-agent_'!
+2023-10-08 00:25:32.281130 +0000 build-ubuntu42: output: Unknown file type: '6bf325201b260c7938b803e1c3cc0562 31918 debug optional pulseaudio-qubes-dbgsym_4.2.9-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.281147 +0000 build-ubuntu42: output: Warning: File 'pulseaudio-qubes-dbgsym_4.2.9-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-agent_'!
+2023-10-08 00:25:32.281168 +0000 build-ubuntu42: output: Unknown file type: '4c542cbb4f416d02e39c06fcc888a34d 81028 debug optional qubes-gui-agent-dbgsym_4.2.9-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.281180 +0000 build-ubuntu42: output: Warning: File 'qubes-gui-agent-dbgsym_4.2.9-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-agent_'!
+2023-10-08 00:25:32.281194 +0000 build-ubuntu42: output: Unknown file type: 'bfcff554d5092020a18293ee7bf738a4 32092 debug optional xserver-xorg-input-qubes-dbgsym_4.2.9-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.281207 +0000 build-ubuntu42: output: Warning: File 'xserver-xorg-input-qubes-dbgsym_4.2.9-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-agent_'!
+2023-10-08 00:25:32.281221 +0000 build-ubuntu42: output: Unknown file type: '6803c99df1213d4d3d751005fce92290 11656 debug optional xserver-xorg-qubes-common-dbgsym_4.2.9-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.281959 +0000 build-ubuntu42: output: Warning: File 'xserver-xorg-qubes-common-dbgsym_4.2.9-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-agent_'!
+2023-10-08 00:25:32.281991 +0000 build-ubuntu42: output: Unknown file type: 'd1977d78cf0b82c597915de8475a8449 73074 debug optional xserver-xorg-video-dummyqbs-dbgsym_4.2.9-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.282006 +0000 build-ubuntu42: output: Warning: File 'xserver-xorg-video-dummyqbs-dbgsym_4.2.9-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-agent_'!
+2023-10-08 00:25:32.321395 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.325177 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.329138 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.333240 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.340230 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.346828 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.451457 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:32.451512 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-linux-usb-proxy_1.1.5/qubes-usb-proxy_1.1.5+jammy1_amd64.changes
+2023-10-08 00:25:32.451543 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:32.451556 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:32.451565 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:32.475520 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.523471 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:32.523527 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/repo-templates_4.2.2/qubes-repo-templates_4.2.2-1+jammy1_amd64.changes
+2023-10-08 00:25:32.523540 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:32.551552 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.637712 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:32.637767 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/gui-daemon_4.2.3/qubes-gui-daemon_4.2.3-1+jammy1_amd64.changes
+2023-10-08 00:25:32.637780 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:32.663340 +0000 build-ubuntu42: output: Unknown file type: 'c9ff348bcc1e9b801be15ed0e6c952a7 31242 debug optional qubes-audio-daemon-dbgsym_4.2.3-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.663396 +0000 build-ubuntu42: output: Warning: File 'qubes-audio-daemon-dbgsym_4.2.3-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-daemon_'!
+2023-10-08 00:25:32.663415 +0000 build-ubuntu42: output: Unknown file type: '91e6c57b583a57d818dceceeda6b7e6c 141588 debug optional qubes-gui-daemon-dbgsym_4.2.3-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:32.663429 +0000 build-ubuntu42: output: Warning: File 'qubes-gui-daemon-dbgsym_4.2.3-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-gui-daemon_'!
+2023-10-08 00:25:32.676836 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.681012 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.875636 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:32.875691 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/mgmt-salt-base-config_4.1.2/qubes-mgmt-salt-base-config_4.1.2-1+jammy1_amd64.changes
+2023-10-08 00:25:32.875706 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:32.875716 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:32.875725 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:32.897370 +0000 build-ubuntu42: output: 'qubes-mgmt-salt-base-config_4.1.2-1+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:32.897421 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:32.904586 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:32.954613 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:32.954667 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/app-u2f_2.0.4/qubes-ctap_2.0.4+jammy1_amd64.changes
+2023-10-08 00:25:32.954680 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:32.985849 +0000 build-ubuntu42: output: 'qubes-ctap_2.0.4+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:32.985915 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:33.005572 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.051929 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.055529 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.055584 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/python-fido2_1.1.2/python-fido2_1.1.2-2+jammy1_amd64.changes
+2023-10-08 00:25:33.079701 +0000 build-ubuntu42: output: 'python-fido2_1.1.2-2+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:33.079749 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:33.089549 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.180716 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.181346 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.181389 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/mgmt-salt_4.1.16/qubes-mgmt-salt_4.1.16-1+jammy1_amd64.changes
+2023-10-08 00:25:33.202701 +0000 build-ubuntu42: output: 'qubes-mgmt-salt_4.1.16-1+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:33.202749 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:33.209141 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.212614 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.216154 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.220132 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.223691 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.283574 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.286592 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.286647 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/core-admin-client_4.2.6/qubes-core-admin-client_4.2.6-1+jammy1_amd64.changes
+2023-10-08 00:25:33.317229 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.387501 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.391640 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.391697 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/video-companion_1.0.3/qubes-video-companion_1.0.3-1+jammy1_amd64.changes
+2023-10-08 00:25:33.410913 +0000 build-ubuntu42: output: 'qubes-video-companion_1.0.3-1+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:33.410962 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:33.419730 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.457268 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.462041 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.462096 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/desktop-linux-manager_4.2.13/qubes-desktop-linux-manager_4.2.13-1+jammy1_amd64.changes
+2023-10-08 00:25:33.562391 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.567090 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.567174 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/vmm-xen-guest_1.1.1/xen-guest_1.1.1-1+jammy1_amd64.changes
+2023-10-08 00:25:33.640228 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.644255 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.644309 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/python-qasync_0.23.0/python-qasync_0.23.0-2+jammy1_amd64.changes
+2023-10-08 00:25:33.663312 +0000 build-ubuntu42: output: 'python-qasync_0.23.0-2+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:25:33.663361 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:25:33.668798 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.703666 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.703714 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.703734 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/core-qubesdb_4.2.4/qubesdb_4.2.4-1+jammy1_amd64.changes
+2023-10-08 00:25:33.724409 +0000 build-ubuntu42: output: Unknown file type: 'b1ca80327607933a9b4870bcf3898156 13008 debug optional libqubesdb-dbgsym_4.2.4-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:33.724462 +0000 build-ubuntu42: output: Warning: File 'libqubesdb-dbgsym_4.2.4-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubesdb_'!
+2023-10-08 00:25:33.724480 +0000 build-ubuntu42: output: Unknown file type: 'beb4c88d37a3e7518f14793186f9838d 14444 debug optional python3-qubesdb-dbgsym_4.2.4-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:33.724495 +0000 build-ubuntu42: output: Warning: File 'python3-qubesdb-dbgsym_4.2.4-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubesdb_'!
+2023-10-08 00:25:33.724508 +0000 build-ubuntu42: output: Unknown file type: '3f75e763429fafa1c4106bd3e334ce41 44244 debug optional qubesdb-dbgsym_4.2.4-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:33.724521 +0000 build-ubuntu42: output: Warning: File 'qubesdb-dbgsym_4.2.4-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubesdb_'!
+2023-10-08 00:25:33.733904 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.737377 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.740684 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.745578 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.749066 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.796703 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:33.796749 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:33.796761 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.797196 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.797225 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/manager_4.2.4/qubes-manager_4.2.4-1+jammy1_amd64.changes
+2023-10-08 00:25:33.880835 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:33.881623 +0000 build-ubuntu42: output: + for changes in "${changes_files[@]}"
+2023-10-08 00:25:33.881664 +0000 build-ubuntu42: output: + reprepro -b /builder/repository --ignore=surprisingbinary --ignore=surprisingarch include jammy /builder/repository/vm-jammy/core-agent-linux_4.2.22/qubes-core-agent_4.2.22-1+jammy1_amd64.changes
+2023-10-08 00:25:33.905801 +0000 build-ubuntu42: output: Unknown file type: 'f55e3559cf22866e169584ad3ef946fe 42336 debug optional qubes-core-agent-dbgsym_4.2.22-1+jammy1_amd64.ddeb', assuming source format...
+2023-10-08 00:25:33.905860 +0000 build-ubuntu42: output: Warning: File 'qubes-core-agent-dbgsym_4.2.22-1+jammy1_amd64.ddeb' looks like source but does not start with 'qubes-core-agent_'!
+2023-10-08 00:25:33.921222 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.929913 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.933248 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.936884 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:33.940243 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:25:34.011636 +0000 build-ubuntu42: output: Deleting files just added to the pool but not used.
+2023-10-08 00:25:34.011685 +0000 build-ubuntu42: output: (to avoid use --keepunusednewfiles next time)
+2023-10-08 00:25:34.011697 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:25:34.055374 +0000 build-ubuntu42: output: W: /home/user/.pbuilderrc does not exist
+2023-10-08 00:25:34.168338 +0000 build-ubuntu42: output: I: Current time: Sat Oct  7 20:25:34 EDT 2023
+2023-10-08 00:25:34.170235 +0000 build-ubuntu42: output: I: pbuilder-time-stamp: 1696724734
+2023-10-08 00:25:34.194340 +0000 build-ubuntu42: output: I: Building the build Environment
+2023-10-08 00:25:34.197298 +0000 build-ubuntu42: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2023-10-08 00:25:39.649998 +0000 build-ubuntu42: output: I: copying local configuration
+2023-10-08 00:25:39.701239 +0000 build-ubuntu42: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/2805/etc/hostname to be correct
+2023-10-08 00:25:39.736519 +0000 build-ubuntu42: output: W: --override-config is not set; not updating apt.conf Read the manpage for details.
+2023-10-08 00:25:39.738210 +0000 build-ubuntu42: output: I: mounting /proc filesystem
+2023-10-08 00:25:39.754533 +0000 build-ubuntu42: output: I: mounting /sys filesystem
+2023-10-08 00:25:39.761990 +0000 build-ubuntu42: output: I: creating /{dev,run}/shm
+2023-10-08 00:25:39.813295 +0000 build-ubuntu42: output: I: mounting /dev/pts filesystem
+2023-10-08 00:25:39.836278 +0000 build-ubuntu42: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2023-10-08 00:25:39.845171 +0000 build-ubuntu42: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2023-10-08 00:25:39.850460 +0000 build-ubuntu42: output: I: policy-rc.d already exists
+2023-10-08 00:25:39.941213 +0000 build-ubuntu42: output: I: using eatmydata during job
+2023-10-08 00:25:39.990902 +0000 build-ubuntu42: output: I: Refreshing the base.tgz
+2023-10-08 00:25:39.990948 +0000 build-ubuntu42: output: I: upgrading packages
+2023-10-08 00:25:42.760148 +0000 build-ubuntu42: output: Hit:1 https://fr.archive.ubuntu.com/ubuntu jammy InRelease
+2023-10-08 00:25:43.590194 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:25:43.687094 +0000 build-ubuntu42: output: I: Obtaining the cached apt archive contents
+2023-10-08 00:25:43.771159 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:25:43.922334 +0000 build-ubuntu42: output: Building dependency tree...
+2023-10-08 00:25:43.923724 +0000 build-ubuntu42: output: Reading state information...
+2023-10-08 00:25:44.037519 +0000 build-ubuntu42: output: Calculating upgrade...
+2023-10-08 00:25:44.230439 +0000 build-ubuntu42: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2023-10-08 00:25:44.282800 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:25:44.433209 +0000 build-ubuntu42: output: Building dependency tree...
+2023-10-08 00:25:44.433255 +0000 build-ubuntu42: output: Reading state information...
+2023-10-08 00:25:44.654352 +0000 build-ubuntu42: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2023-10-08 00:25:44.720064 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:25:44.871312 +0000 build-ubuntu42: output: Building dependency tree...
+2023-10-08 00:25:44.871521 +0000 build-ubuntu42: output: Reading state information...
+2023-10-08 00:25:45.116786 +0000 build-ubuntu42: output: build-essential is already the newest version (12.9ubuntu3).
+2023-10-08 00:25:45.116835 +0000 build-ubuntu42: output: dpkg-dev is already the newest version (1.21.1ubuntu2).
+2023-10-08 00:25:45.116848 +0000 build-ubuntu42: output: eatmydata is already the newest version (130-2build1).
+2023-10-08 00:25:45.116859 +0000 build-ubuntu42: output: aptitude is already the newest version (0.8.13-3ubuntu1).
+2023-10-08 00:25:45.116868 +0000 build-ubuntu42: output: 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2023-10-08 00:25:45.121343 +0000 build-ubuntu42: output: I: Copying back the cached apt archive contents
+2023-10-08 00:25:45.123044 +0000 build-ubuntu42: output: I: user script /builder/pbuilder/build/2805/tmp/hooks/E30origin starting
+2023-10-08 00:25:45.161576 +0000 build-ubuntu42: output: I: user script /builder/pbuilder/build/2805/tmp/hooks/E30origin finished
+2023-10-08 00:25:45.161704 +0000 build-ubuntu42: output: I: unmounting /tmp/qubes-deb filesystem
+2023-10-08 00:25:45.188035 +0000 build-ubuntu42: output: I: unmounting dev/ptmx filesystem
+2023-10-08 00:25:45.195583 +0000 build-ubuntu42: output: I: unmounting dev/pts filesystem
+2023-10-08 00:25:45.197038 +0000 build-ubuntu42: output: I: unmounting dev/shm filesystem
+2023-10-08 00:25:45.205134 +0000 build-ubuntu42: output: I: unmounting proc filesystem
+2023-10-08 00:25:45.210760 +0000 build-ubuntu42: output: I: unmounting sys filesystem
+2023-10-08 00:25:45.270037 +0000 build-ubuntu42: output: I: creating base tarball [/builder/pbuilder/base.tgz]
+2023-10-08 00:26:06.519503 +0000 build-ubuntu42: output: I: cleaning the build env
+2023-10-08 00:26:06.519557 +0000 build-ubuntu42: output: I: removing directory /builder/pbuilder/build/2805 and its subdirectories
+2023-10-08 00:26:06.930142 +0000 build-ubuntu42: output: W: /home/user/.pbuilderrc does not exist
+2023-10-08 00:26:07.109735 +0000 build-ubuntu42: output: I: pbuilder: network access will be disabled during build
+2023-10-08 00:26:07.112211 +0000 build-ubuntu42: output: I: Current time: Sat Oct  7 20:26:07 EDT 2023
+2023-10-08 00:26:07.115501 +0000 build-ubuntu42: output: I: pbuilder-time-stamp: 1696724767
+2023-10-08 00:26:07.135451 +0000 build-ubuntu42: output: I: Building the build Environment
+2023-10-08 00:26:07.138471 +0000 build-ubuntu42: output: I: extracting base tarball [/builder/pbuilder/base.tgz]
+2023-10-08 00:26:15.272852 +0000 build-ubuntu42: output: I: copying local configuration
+2023-10-08 00:26:15.285605 +0000 build-ubuntu42: output: W: No local /etc/hostname to copy, relying on /builder/pbuilder/build/3019/etc/hostname to be correct
+2023-10-08 00:26:15.305269 +0000 build-ubuntu42: output: I: Installing apt-lines
+2023-10-08 00:26:15.575890 +0000 build-ubuntu42: output: I: mounting /proc filesystem
+2023-10-08 00:26:15.595762 +0000 build-ubuntu42: output: I: mounting /sys filesystem
+2023-10-08 00:26:15.600060 +0000 build-ubuntu42: output: I: creating /{dev,run}/shm
+2023-10-08 00:26:15.612507 +0000 build-ubuntu42: output: I: mounting /dev/pts filesystem
+2023-10-08 00:26:15.619830 +0000 build-ubuntu42: output: I: redirecting /dev/ptmx to /dev/pts/ptmx
+2023-10-08 00:26:15.630360 +0000 build-ubuntu42: output: I: Mounting /builder/repository to /tmp/qubes-deb
+2023-10-08 00:26:15.634459 +0000 build-ubuntu42: output: I: policy-rc.d already exists
+2023-10-08 00:26:15.733536 +0000 build-ubuntu42: output: I: using eatmydata during job
+2023-10-08 00:26:15.828506 +0000 build-ubuntu42: output: I: created buildresult dir: /builder/pbuilder/results
+2023-10-08 00:26:15.828555 +0000 build-ubuntu42: output: I: Obtaining the cached apt archive contents
+2023-10-08 00:26:15.841317 +0000 build-ubuntu42: output: I: Copying source file
+2023-10-08 00:26:15.864025 +0000 build-ubuntu42: output: I: copying [/builder/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc]
+2023-10-08 00:26:15.872838 +0000 build-ubuntu42: output: I: copying [/builder/build/qubes-rpm-oxide_0.2.7.orig.tar.gz]
+2023-10-08 00:26:15.881553 +0000 build-ubuntu42: output: I: copying [/builder/build/qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz]
+2023-10-08 00:26:15.927873 +0000 build-ubuntu42: output: I: Extracting source
+2023-10-08 00:26:16.113753 +0000 build-ubuntu42: output: dpkg-source: warning: extracting unsigned source package (qubes-rpm-oxide_0.2.7-1+jammy1.dsc)
+2023-10-08 00:26:16.120827 +0000 build-ubuntu42: output: dpkg-source: info: extracting qubes-rpm-oxide in qubes-rpm-oxide-0.2.7
+2023-10-08 00:26:16.120877 +0000 build-ubuntu42: output: dpkg-source: info: unpacking qubes-rpm-oxide_0.2.7.orig.tar.gz
+2023-10-08 00:26:16.133604 +0000 build-ubuntu42: output: dpkg-source: info: unpacking qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz
+2023-10-08 00:26:16.184709 +0000 build-ubuntu42: output: I: using fakeroot in build.
+2023-10-08 00:26:16.185556 +0000 build-ubuntu42: output: I: Installing the build-deps
+2023-10-08 00:26:16.185603 +0000 build-ubuntu42: output: I: user script /builder/pbuilder/build/3019/tmp/hooks/D30update starting
+2023-10-08 00:26:16.258503 +0000 build-ubuntu42: output: Get:1 file:/tmp/qubes-deb jammy InRelease
+2023-10-08 00:26:16.258550 +0000 build-ubuntu42: output: Ign:1 file:/tmp/qubes-deb jammy InRelease
+2023-10-08 00:26:16.260419 +0000 build-ubuntu42: output: Get:2 file:/tmp/qubes-deb jammy Release [1623 B]
+2023-10-08 00:26:16.268682 +0000 build-ubuntu42: output: Get:2 file:/tmp/qubes-deb jammy Release [1623 B]
+2023-10-08 00:26:16.269952 +0000 build-ubuntu42: output: Get:3 file:/tmp/qubes-deb jammy Release.gpg
+2023-10-08 00:26:16.269998 +0000 build-ubuntu42: output: Ign:3 file:/tmp/qubes-deb jammy Release.gpg
+2023-10-08 00:26:16.271008 +0000 build-ubuntu42: output: Get:4 file:/tmp/qubes-deb jammy/main amd64 Packages [18.4 kB]
+2023-10-08 00:26:18.031797 +0000 build-ubuntu42: output: Hit:5 https://fr.archive.ubuntu.com/ubuntu jammy InRelease
+2023-10-08 00:26:18.834715 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:26:18.876852 +0000 build-ubuntu42: output: I: user script /builder/pbuilder/build/3019/tmp/hooks/D30update finished
+2023-10-08 00:26:19.106753 +0000 build-ubuntu42: output:  -> Attempting to satisfy build-dependencies
+2023-10-08 00:26:19.254601 +0000 build-ubuntu42: output:  -> Creating pbuilder-satisfydepends-dummy package
+2023-10-08 00:26:19.366298 +0000 build-ubuntu42: output: Package: pbuilder-satisfydepends-dummy
+2023-10-08 00:26:19.366345 +0000 build-ubuntu42: output: Version: 0.invalid.0
+2023-10-08 00:26:19.366358 +0000 build-ubuntu42: output: Architecture: amd64
+2023-10-08 00:26:19.366370 +0000 build-ubuntu42: output: Maintainer: Debian Pbuilder Team <pbuilder-maint@lists.alioth.debian.org>
+2023-10-08 00:26:19.366382 +0000 build-ubuntu42: output: Description: Dummy package to satisfy dependencies with aptitude - created by pbuilder
+2023-10-08 00:26:19.366393 +0000 build-ubuntu42: output:  This package was created automatically by pbuilder to satisfy the
+2023-10-08 00:26:19.366402 +0000 build-ubuntu42: output:  build-dependencies of the package being currently built.
+2023-10-08 00:26:19.366414 +0000 build-ubuntu42: output: Depends: rustc, cargo, rpm, librpm-dev, debhelper, debhelper-compat (= 12), librust-cc-dev, librust-libc-dev
+2023-10-08 00:26:19.399313 +0000 build-ubuntu42: output: dpkg-deb: building package 'pbuilder-satisfydepends-dummy' in '/tmp/satisfydepends-aptitude/pbuilder-satisfydepends-dummy.deb'.
+2023-10-08 00:26:19.699853 +0000 build-ubuntu42: output: Selecting previously unselected package pbuilder-satisfydepends-dummy.
+2023-10-08 00:26:19.721755 +0000 build-ubuntu42: output: (Reading database ... 10751 files and directories currently installed.)
+2023-10-08 00:26:19.724096 +0000 build-ubuntu42: output: Preparing to unpack .../pbuilder-satisfydepends-dummy.deb ...
+2023-10-08 00:26:19.729268 +0000 build-ubuntu42: output: Unpacking pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2023-10-08 00:26:19.762352 +0000 build-ubuntu42: output: dpkg: pbuilder-satisfydepends-dummy: dependency problems, but configuring anyway as you requested:
+2023-10-08 00:26:19.762400 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on rustc; however:
+2023-10-08 00:26:19.762413 +0000 build-ubuntu42: output:   Package rustc is not installed.
+2023-10-08 00:26:19.762423 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on cargo; however:
+2023-10-08 00:26:19.762432 +0000 build-ubuntu42: output:   Package cargo is not installed.
+2023-10-08 00:26:19.762442 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on rpm; however:
+2023-10-08 00:26:19.762450 +0000 build-ubuntu42: output:   Package rpm is not installed.
+2023-10-08 00:26:19.762459 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on librpm-dev; however:
+2023-10-08 00:26:19.762468 +0000 build-ubuntu42: output:   Package librpm-dev is not installed.
+2023-10-08 00:26:19.762477 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on debhelper; however:
+2023-10-08 00:26:19.762485 +0000 build-ubuntu42: output:   Package debhelper is not installed.
+2023-10-08 00:26:19.762495 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on debhelper-compat (= 12); however:
+2023-10-08 00:26:19.762505 +0000 build-ubuntu42: output:   Package debhelper-compat is not installed.
+2023-10-08 00:26:19.762514 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on librust-cc-dev; however:
+2023-10-08 00:26:19.762523 +0000 build-ubuntu42: output:   Package librust-cc-dev is not installed.
+2023-10-08 00:26:19.762533 +0000 build-ubuntu42: output:  pbuilder-satisfydepends-dummy depends on librust-libc-dev; however:
+2023-10-08 00:26:19.762542 +0000 build-ubuntu42: output:   Package librust-libc-dev is not installed.
+2023-10-08 00:26:19.762549 +0000 build-ubuntu42: output: 
+2023-10-08 00:26:19.762559 +0000 build-ubuntu42: output: Setting up pbuilder-satisfydepends-dummy (0.invalid.0) ...
+2023-10-08 00:26:20.026204 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:26:20.234702 +0000 build-ubuntu42: output: Building dependency tree...
+2023-10-08 00:26:20.234749 +0000 build-ubuntu42: output: Reading state information...
+2023-10-08 00:26:20.289878 +0000 build-ubuntu42: output: Initializing package states...
+2023-10-08 00:26:20.543423 +0000 build-ubuntu42: output: Writing extended state information...
+2023-10-08 00:26:20.668774 +0000 build-ubuntu42: output: Building tag database...
+2023-10-08 00:26:21.700012 +0000 build-ubuntu42: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2023-10-08 00:26:21.700127 +0000 build-ubuntu42: output: pbuilder-satisfydepends-dummy is already installed at the requested version (0.invalid.0)
+2023-10-08 00:26:21.700153 +0000 build-ubuntu42: output: The following NEW packages will be installed:
+2023-10-08 00:26:21.700395 +0000 build-ubuntu42: output:   autoconf{a} automake{a} autopoint{a} autotools-dev{a} bsdextrautils{a} cargo{a} debhelper{a} debugedit{a} dh-autoreconf{a} dh-strip-nondeterminism{a} dwz{a} file{a} gettext{a} gettext-base{a} groff-base{a} icu-devtools{a} intltool-debian{a} libarchive-zip-perl{a} libarchive13{a} libaudit-dev{a} libbrotli1{a} libbsd0{a} libbz2-dev{a} libcap-ng-dev{a} libcurl3-gnutls{a} libdbus-1-3{a} libdebhelper-perl{a} libdw1{a} libedit2{a} libelf1{a} libfile-stripnondeterminism-perl{a} libfsverity-dev{a} libfsverity0{a} libgcrypt20-dev{a} libgpg-error-dev{a} libicu-dev{a} libicu70{a} libldap-2.5-0{a} libllvm13{a} liblua5.3-0{a} libmagic-mgc{a} libmagic1{a} libmd0{a} libncurses-dev{a} libnghttp2-14{a} libpcre2-16-0{a} libpcre2-32-0{a} libpcre2-dev{a} libpcre2-posix3{a} libpipeline1{a} libpopt-dev{a} libpopt0{a} libpsl5{a} libreadline-dev{a} libreadline8{a} librpm-dev{a} librpm9{a} librpmbuild9{a} librpmio9{a} librpmsign9{a} librtmp1{a} librust-cc-dev{a} librust-libc-dev{a} libsasl2-2{a} libsasl2-modules-db{a} libselinux1-dev{a} libsepol-dev{a} libsigsegv2{a} libsqlite3-dev{a} libssh-4{a} libssh2-1{a} libstd-rust-1.58{a} libstd-rust-dev{a} libsub-override-perl{a} libtool{a} libuchardet0{a} libxml2{a} libxml2-dev{a} libzstd-dev{a} m4{a} man-db{a} po-debconf{a} readline-common{a} rpm{a} rpm-common{a} rpm2cpio{a} rustc{a} zlib1g-dev{a}
+2023-10-08 00:26:21.700439 +0000 build-ubuntu42: output: The following packages are RECOMMENDED but will NOT be installed:
+2023-10-08 00:26:21.700583 +0000 build-ubuntu42: output:   bzip2-doc curl dbus libarchive-cpio-perl libldap-common libltdl-dev libmail-sendmail-perl libsasl2-modules llvm-13 lynx publicsuffix wget
+2023-10-08 00:26:21.701966 +0000 build-ubuntu42: output: 0 packages upgraded, 88 newly installed, 0 to remove and 0 not upgraded.
+2023-10-08 00:26:21.702011 +0000 build-ubuntu42: output: Need to get 125 MB of archives. After unpacking 516 MB will be used.
+2023-10-08 00:26:21.702022 +0000 build-ubuntu42: output: Writing extended state information...
+2023-10-08 00:26:23.504174 +0000 build-ubuntu42: output: Get: 1 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libmd0 amd64 1.0.4-1build1 [23.0 kB]
+2023-10-08 00:26:24.001444 +0000 build-ubuntu42: output: Get: 2 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libbsd0 amd64 0.11.5-1 [44.8 kB]
+2023-10-08 00:26:24.210926 +0000 build-ubuntu42: output: Get: 3 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libdbus-1-3 amd64 1.12.20-2ubuntu4 [188 kB]
+2023-10-08 00:26:24.616923 +0000 build-ubuntu42: output: Get: 4 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libelf1 amd64 0.186-1build1 [51.0 kB]
+2023-10-08 00:26:24.703308 +0000 build-ubuntu42: output: Get: 5 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libicu70 amd64 70.1-2 [10.6 MB]
+2023-10-08 00:26:46.208787 +0000 build-ubuntu42: output: Get: 6 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpopt0 amd64 1.18-3build1 [28.2 kB]
+2023-10-08 00:26:46.228857 +0000 build-ubuntu42: output: Get: 7 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 readline-common all 8.1.2-1 [53.5 kB]
+2023-10-08 00:26:46.303679 +0000 build-ubuntu42: output: Get: 8 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libreadline8 amd64 8.1.2-1 [153 kB]
+2023-10-08 00:26:46.705041 +0000 build-ubuntu42: output: Get: 9 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libxml2 amd64 2.9.13+dfsg-1build1 [762 kB]
+2023-10-08 00:26:46.997015 +0000 build-ubuntu42: output: Ign https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libxml2 amd64 2.9.13+dfsg-1build1
+2023-10-08 00:26:49.084652 +0000 build-ubuntu42: output: Get: 10 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 bsdextrautils amd64 2.37.2-4ubuntu3 [71.1 kB]
+2023-10-08 00:26:49.185825 +0000 build-ubuntu42: output: Get: 11 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libmagic-mgc amd64 1:5.41-3 [257 kB]
+2023-10-08 00:26:50.026659 +0000 build-ubuntu42: output: Get: 12 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libmagic1 amd64 1:5.41-3 [87.2 kB]
+2023-10-08 00:26:50.250790 +0000 build-ubuntu42: output: Get: 13 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 file amd64 1:5.41-3 [21.5 kB]
+2023-10-08 00:26:50.267654 +0000 build-ubuntu42: output: Get: 14 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 gettext-base amd64 0.21-4ubuntu4 [37.8 kB]
+2023-10-08 00:26:50.508916 +0000 build-ubuntu42: output: Get: 15 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libuchardet0 amd64 0.0.7-1build2 [76.9 kB]
+2023-10-08 00:26:50.585710 +0000 build-ubuntu42: output: Get: 16 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 groff-base amd64 1.22.4-8build1 [955 kB]
+2023-10-08 00:26:52.692670 +0000 build-ubuntu42: output: Get: 17 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libedit2 amd64 3.1-20210910-1build1 [96.8 kB]
+2023-10-08 00:26:53.139382 +0000 build-ubuntu42: output: Get: 18 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3 kB]
+2023-10-08 00:26:53.249935 +0000 build-ubuntu42: output: Get: 19 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpipeline1 amd64 1.5.5-1 [23.5 kB]
+2023-10-08 00:26:53.265579 +0000 build-ubuntu42: output: Get: 20 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+2023-10-08 00:26:53.437818 +0000 build-ubuntu42: output: Get: 21 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 man-db amd64 2.10.2-1 [1187 kB]
+2023-10-08 00:26:57.102780 +0000 build-ubuntu42: output: Get: 22 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libsigsegv2 amd64 2.13-1ubuntu3 [14.6 kB]
+2023-10-08 00:26:57.151347 +0000 build-ubuntu42: output: Get: 23 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 m4 amd64 1.4.18-5ubuntu2 [199 kB]
+2023-10-08 00:26:57.571997 +0000 build-ubuntu42: output: Get: 24 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 autoconf all 2.71-2 [338 kB]
+2023-10-08 00:26:58.550566 +0000 build-ubuntu42: output: Ign https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 autoconf all 2.71-2
+2023-10-08 00:27:00.083895 +0000 build-ubuntu42: output: Get: 25 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 autotools-dev all 20220109.1 [44.9 kB]
+2023-10-08 00:27:00.207612 +0000 build-ubuntu42: output: Get: 26 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 automake all 1:1.16.5-1.3 [558 kB]
+2023-10-08 00:27:02.151953 +0000 build-ubuntu42: output: Get: 27 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 autopoint all 0.21-4ubuntu4 [422 kB]
+2023-10-08 00:27:03.351928 +0000 build-ubuntu42: output: Get: 28 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libdebhelper-perl all 13.6ubuntu1 [67.2 kB]
+2023-10-08 00:27:03.466732 +0000 build-ubuntu42: output: Get: 29 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libtool all 2.4.6-15build2 [164 kB]
+2023-10-08 00:27:03.822087 +0000 build-ubuntu42: output: Get: 30 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 dh-autoreconf all 20 [16.1 kB]
+2023-10-08 00:27:03.842145 +0000 build-ubuntu42: output: Get: 31 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libarchive-zip-perl all 1.68-1 [90.2 kB]
+2023-10-08 00:27:04.093518 +0000 build-ubuntu42: output: Get: 32 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libsub-override-perl all 0.09-2 [9532 B]
+2023-10-08 00:27:04.095386 +0000 build-ubuntu42: output: Get: 33 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libfile-stripnondeterminism-perl all 1.13.0-1 [18.1 kB]
+2023-10-08 00:27:04.137774 +0000 build-ubuntu42: output: Get: 34 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 dh-strip-nondeterminism all 1.13.0-1 [5344 B]
+2023-10-08 00:27:04.170460 +0000 build-ubuntu42: output: Get: 35 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libdw1 amd64 0.186-1build1 [250 kB]
+2023-10-08 00:27:04.911622 +0000 build-ubuntu42: output: Get: 36 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 debugedit amd64 1:5.0-4build1 [47.2 kB]
+2023-10-08 00:27:05.167011 +0000 build-ubuntu42: output: Get: 37 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 dwz amd64 0.14-1build2 [105 kB]
+2023-10-08 00:27:05.325676 +0000 build-ubuntu42: output: Get: 38 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 gettext amd64 0.21-4ubuntu4 [868 kB]
+2023-10-08 00:27:08.148700 +0000 build-ubuntu42: output: Get: 39 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 intltool-debian all 0.35.0+20060710.5 [24.9 kB]
+2023-10-08 00:27:08.191049 +0000 build-ubuntu42: output: Get: 40 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 po-debconf all 1.0.21+nmu1 [233 kB]
+2023-10-08 00:27:08.887767 +0000 build-ubuntu42: output: Get: 41 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 debhelper all 13.6ubuntu1 [923 kB]
+2023-10-08 00:27:12.340898 +0000 build-ubuntu42: output: Get: 42 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 icu-devtools amd64 70.1-2 [197 kB]
+2023-10-08 00:27:12.944830 +0000 build-ubuntu42: output: Get: 43 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libarchive13 amd64 3.6.0-1ubuntu1 [368 kB]
+2023-10-08 00:27:13.442006 +0000 build-ubuntu42: output: Ign https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libarchive13 amd64 3.6.0-1ubuntu1
+2023-10-08 00:27:15.095645 +0000 build-ubuntu42: output: Get: 44 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+2023-10-08 00:27:15.748628 +0000 build-ubuntu42: output: Get: 45 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libbz2-dev amd64 1.0.8-5build1 [32.5 kB]
+2023-10-08 00:27:15.832067 +0000 build-ubuntu42: output: Get: 46 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libcap-ng-dev amd64 0.7.9-2.2build3 [22.9 kB]
+2023-10-08 00:27:15.887344 +0000 build-ubuntu42: output: Get: 47 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1 [20.8 kB]
+2023-10-08 00:27:15.954229 +0000 build-ubuntu42: output: Get: 48 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1 [53.9 kB]
+2023-10-08 00:27:16.110368 +0000 build-ubuntu42: output: Get: 49 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libldap-2.5-0 amd64 2.5.11+dfsg-1~exp1ubuntu3 [184 kB]
+2023-10-08 00:27:16.445143 +0000 build-ubuntu42: output: Get: 50 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+2023-10-08 00:27:16.543299 +0000 build-ubuntu42: output: Get: 51 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libssh-4 amd64 0.9.6-2build1 [184 kB]
+2023-10-08 00:27:17.051427 +0000 build-ubuntu42: output: Get: 52 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libcurl3-gnutls amd64 7.81.0-1 [282 kB]
+2023-10-08 00:27:17.674973 +0000 build-ubuntu42: output: Get: 53 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 libfsverity0 amd64 1.4-1~exp1build1 [10.4 kB]
+2023-10-08 00:27:17.698452 +0000 build-ubuntu42: output: Get: 54 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 libfsverity-dev amd64 1.4-1~exp1build1 [13.0 kB]
+2023-10-08 00:27:17.699840 +0000 build-ubuntu42: output: Get: 55 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libgpg-error-dev amd64 1.43-3 [129 kB]
+2023-10-08 00:27:17.997300 +0000 build-ubuntu42: output: Get: 56 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libgcrypt20-dev amd64 1.9.4-3ubuntu3 [572 kB]
+2023-10-08 00:27:19.702370 +0000 build-ubuntu42: output: Get: 57 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libicu-dev amd64 70.1-2 [11.6 MB]
+2023-10-08 00:27:43.462827 +0000 build-ubuntu42: output: Get: 58 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libllvm13 amd64 1:13.0.1-2ubuntu2 [22.1 MB]
+2023-10-08 00:28:35.004496 +0000 build-ubuntu42: output: Get: 59 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 liblua5.3-0 amd64 5.3.6-1build1 [140 kB]
+2023-10-08 00:28:35.361578 +0000 build-ubuntu42: output: Get: 60 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libncurses-dev amd64 6.3-2 [380 kB]
+2023-10-08 00:28:36.303260 +0000 build-ubuntu42: output: Get: 61 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpcre2-16-0 amd64 10.39-3build1 [203 kB]
+2023-10-08 00:28:36.648202 +0000 build-ubuntu42: output: Get: 62 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpcre2-32-0 amd64 10.39-3build1 [193 kB]
+2023-10-08 00:28:37.010681 +0000 build-ubuntu42: output: Get: 63 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpcre2-posix3 amd64 10.39-3build1 [6136 B]
+2023-10-08 00:28:37.017007 +0000 build-ubuntu42: output: Get: 64 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpcre2-dev amd64 10.39-3build1 [727 kB]
+2023-10-08 00:28:39.006052 +0000 build-ubuntu42: output: Get: 65 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libpopt-dev amd64 1.18-3build1 [47.3 kB]
+2023-10-08 00:28:39.113902 +0000 build-ubuntu42: output: Get: 66 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libreadline-dev amd64 8.1.2-1 [166 kB]
+2023-10-08 00:28:39.481241 +0000 build-ubuntu42: output: Get: 67 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 librpmio9 amd64 4.17.0+dfsg1-4build1 [93.2 kB]
+2023-10-08 00:28:39.649530 +0000 build-ubuntu42: output: Get: 68 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 librpm9 amd64 4.17.0+dfsg1-4build1 [189 kB]
+2023-10-08 00:28:40.019198 +0000 build-ubuntu42: output: Get: 69 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 librpmbuild9 amd64 4.17.0+dfsg1-4build1 [80.3 kB]
+2023-10-08 00:28:40.189486 +0000 build-ubuntu42: output: Get: 70 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 librpmsign9 amd64 4.17.0+dfsg1-4build1 [11.7 kB]
+2023-10-08 00:28:40.191830 +0000 build-ubuntu42: output: Get: 71 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 librust-cc-dev amd64 1.0.71-2 [53.1 kB]
+2023-10-08 00:28:40.310633 +0000 build-ubuntu42: output: Get: 72 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 librust-libc-dev amd64 0.2.103-1 [245 kB]
+2023-10-08 00:28:40.885912 +0000 build-ubuntu42: output: Get: 73 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libsepol-dev amd64 3.3-1build1 [378 kB]
+2023-10-08 00:28:41.522700 +0000 build-ubuntu42: output: Get: 74 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libselinux1-dev amd64 3.3-1build2 [158 kB]
+2023-10-08 00:28:41.883691 +0000 build-ubuntu42: output: Get: 75 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libsqlite3-dev amd64 3.37.2-2 [847 kB]
+2023-10-08 00:28:43.167922 +0000 build-ubuntu42: output: Get: 76 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 libssh2-1 amd64 1.10.0-3 [109 kB]
+2023-10-08 00:28:43.388393 +0000 build-ubuntu42: output: Get: 77 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libstd-rust-1.58 amd64 1.58.1+dfsg1~ubuntu1-0ubuntu2 [19.6 MB]
+2023-10-08 00:29:30.097333 +0000 build-ubuntu42: output: Get: 78 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libxml2-dev amd64 2.9.13+dfsg-1build1 [805 kB]
+2023-10-08 00:29:32.265336 +0000 build-ubuntu42: output: Get: 79 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libzstd-dev amd64 1.4.8+dfsg-3build1 [401 kB]
+2023-10-08 00:29:33.377193 +0000 build-ubuntu42: output: Get: 80 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 rpm-common amd64 4.17.0+dfsg1-4build1 [33.7 kB]
+2023-10-08 00:29:33.574648 +0000 build-ubuntu42: output: Get: 81 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 rpm2cpio amd64 4.17.0+dfsg1-4build1 [9882 B]
+2023-10-08 00:29:33.589350 +0000 build-ubuntu42: output: Get: 82 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 rpm amd64 4.17.0+dfsg1-4build1 [151 kB]
+2023-10-08 00:29:34.152194 +0000 build-ubuntu42: output: Get: 83 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu9 [164 kB]
+2023-10-08 00:29:34.855170 +0000 build-ubuntu42: output: Get: 84 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libstd-rust-dev amd64 1.58.1+dfsg1~ubuntu1-0ubuntu2 [37.1 MB]
+2023-10-08 00:31:47.150158 +0000 build-ubuntu42: output: Get: 85 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 rustc amd64 1.58.1+dfsg1~ubuntu1-0ubuntu2 [3643 kB]
+2023-10-08 00:31:58.041750 +0000 build-ubuntu42: output: Get: 86 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 cargo amd64 0.58.0-0ubuntu1 [3907 kB]
+2023-10-08 00:32:07.991453 +0000 build-ubuntu42: output: Get: 87 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libaudit-dev amd64 1:3.0.7-1build1 [78.6 kB]
+2023-10-08 00:32:08.207258 +0000 build-ubuntu42: output: Get: 88 https://fr.archive.ubuntu.com/ubuntu jammy/universe amd64 librpm-dev amd64 4.17.0+dfsg1-4build1 [60.4 kB]
+2023-10-08 00:32:08.355057 +0000 build-ubuntu42: output: Get: 89 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libxml2 amd64 2.9.13+dfsg-1build1 [762 kB]
+2023-10-08 00:32:09.962812 +0000 build-ubuntu42: output: Get: 90 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 autoconf all 2.71-2 [338 kB]
+2023-10-08 00:32:10.237761 +0000 build-ubuntu42: output: Get: 91 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libarchive13 amd64 3.6.0-1ubuntu1 [368 kB]
+2023-10-08 00:32:10.533976 +0000 build-ubuntu42: output: Fetched 125 MB in 5min 49s (358 kB/s)
+2023-10-08 00:32:10.701380 +0000 build-ubuntu42: output: debconf: delaying package configuration, since apt-utils is not installed
+2023-10-08 00:32:10.751736 +0000 build-ubuntu42: output: Selecting previously unselected package libmd0:amd64..
+2023-10-08 00:32:10.759510 +0000 build-ubuntu42: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 10751 files and directories currently installed.).
+2023-10-08 00:32:10.759561 +0000 build-ubuntu42: output: Preparing to unpack .../00-libmd0_1.0.4-1build1_amd64.deb ....
+2023-10-08 00:32:10.759582 +0000 build-ubuntu42: output: Unpacking libmd0:amd64 (1.0.4-1build1) ....
+2023-10-08 00:32:10.774523 +0000 build-ubuntu42: output: Selecting previously unselected package libbsd0:amd64..
+2023-10-08 00:32:10.774573 +0000 build-ubuntu42: output: Preparing to unpack .../01-libbsd0_0.11.5-1_amd64.deb ....
+2023-10-08 00:32:10.774586 +0000 build-ubuntu42: output: Unpacking libbsd0:amd64 (0.11.5-1) ....
+2023-10-08 00:32:10.785316 +0000 build-ubuntu42: output: Selecting previously unselected package libdbus-1-3:amd64..
+2023-10-08 00:32:10.786622 +0000 build-ubuntu42: output: Preparing to unpack .../02-libdbus-1-3_1.12.20-2ubuntu4_amd64.deb ....
+2023-10-08 00:32:10.787066 +0000 build-ubuntu42: output: Unpacking libdbus-1-3:amd64 (1.12.20-2ubuntu4) ....
+2023-10-08 00:32:10.801217 +0000 build-ubuntu42: output: Selecting previously unselected package libelf1:amd64..
+2023-10-08 00:32:10.802510 +0000 build-ubuntu42: output: Preparing to unpack .../03-libelf1_0.186-1build1_amd64.deb ....
+2023-10-08 00:32:10.802563 +0000 build-ubuntu42: output: Unpacking libelf1:amd64 (0.186-1build1) ....
+2023-10-08 00:32:10.815672 +0000 build-ubuntu42: output: Selecting previously unselected package libicu70:amd64..
+2023-10-08 00:32:10.815720 +0000 build-ubuntu42: output: Preparing to unpack .../04-libicu70_70.1-2_amd64.deb ....
+2023-10-08 00:32:10.815732 +0000 build-ubuntu42: output: Unpacking libicu70:amd64 (70.1-2) ....
+2023-10-08 00:32:11.002534 +0000 build-ubuntu42: output: Selecting previously unselected package libpopt0:amd64..
+2023-10-08 00:32:11.003689 +0000 build-ubuntu42: output: Preparing to unpack .../05-libpopt0_1.18-3build1_amd64.deb ....
+2023-10-08 00:32:11.005507 +0000 build-ubuntu42: output: Unpacking libpopt0:amd64 (1.18-3build1) ....
+2023-10-08 00:32:11.016152 +0000 build-ubuntu42: output: Selecting previously unselected package readline-common..
+2023-10-08 00:32:11.017573 +0000 build-ubuntu42: output: Preparing to unpack .../06-readline-common_8.1.2-1_all.deb ....
+2023-10-08 00:32:11.018044 +0000 build-ubuntu42: output: Unpacking readline-common (8.1.2-1) ....
+2023-10-08 00:32:11.031599 +0000 build-ubuntu42: output: Selecting previously unselected package libreadline8:amd64..
+2023-10-08 00:32:11.031647 +0000 build-ubuntu42: output: Preparing to unpack .../07-libreadline8_8.1.2-1_amd64.deb ....
+2023-10-08 00:32:11.031667 +0000 build-ubuntu42: output: Unpacking libreadline8:amd64 (8.1.2-1) ....
+2023-10-08 00:32:11.046294 +0000 build-ubuntu42: output: Selecting previously unselected package libxml2:amd64..
+2023-10-08 00:32:11.046386 +0000 build-ubuntu42: output: Preparing to unpack .../08-libxml2_2.9.13+dfsg-1build1_amd64.deb ....
+2023-10-08 00:32:11.046409 +0000 build-ubuntu42: output: Unpacking libxml2:amd64 (2.9.13+dfsg-1build1) ....
+2023-10-08 00:32:11.067048 +0000 build-ubuntu42: output: Selecting previously unselected package bsdextrautils..
+2023-10-08 00:32:11.067164 +0000 build-ubuntu42: output: Preparing to unpack .../09-bsdextrautils_2.37.2-4ubuntu3_amd64.deb ....
+2023-10-08 00:32:11.067189 +0000 build-ubuntu42: output: Unpacking bsdextrautils (2.37.2-4ubuntu3) ....
+2023-10-08 00:32:11.083148 +0000 build-ubuntu42: output: Selecting previously unselected package libmagic-mgc..
+2023-10-08 00:32:11.084378 +0000 build-ubuntu42: output: Preparing to unpack .../10-libmagic-mgc_1%3a5.41-3_amd64.deb ....
+2023-10-08 00:32:11.084425 +0000 build-ubuntu42: output: Unpacking libmagic-mgc (1:5.41-3) ....
+2023-10-08 00:32:11.119756 +0000 build-ubuntu42: output: Selecting previously unselected package libmagic1:amd64..
+2023-10-08 00:32:11.120951 +0000 build-ubuntu42: output: Preparing to unpack .../11-libmagic1_1%3a5.41-3_amd64.deb ....
+2023-10-08 00:32:11.121016 +0000 build-ubuntu42: output: Unpacking libmagic1:amd64 (1:5.41-3) ....
+2023-10-08 00:32:11.135448 +0000 build-ubuntu42: output: Selecting previously unselected package file..
+2023-10-08 00:32:11.135541 +0000 build-ubuntu42: output: Preparing to unpack .../12-file_1%3a5.41-3_amd64.deb ....
+2023-10-08 00:32:11.137340 +0000 build-ubuntu42: output: Unpacking file (1:5.41-3) ....
+2023-10-08 00:32:11.149510 +0000 build-ubuntu42: output: Selecting previously unselected package gettext-base..
+2023-10-08 00:32:11.149560 +0000 build-ubuntu42: output: Preparing to unpack .../13-gettext-base_0.21-4ubuntu4_amd64.deb ....
+2023-10-08 00:32:11.149574 +0000 build-ubuntu42: output: Unpacking gettext-base (0.21-4ubuntu4) ....
+2023-10-08 00:32:11.166205 +0000 build-ubuntu42: output: Selecting previously unselected package libuchardet0:amd64..
+2023-10-08 00:32:11.166254 +0000 build-ubuntu42: output: Preparing to unpack .../14-libuchardet0_0.0.7-1build2_amd64.deb ....
+2023-10-08 00:32:11.166275 +0000 build-ubuntu42: output: Unpacking libuchardet0:amd64 (0.0.7-1build2) ....
+2023-10-08 00:32:11.180580 +0000 build-ubuntu42: output: Selecting previously unselected package groff-base..
+2023-10-08 00:32:11.180629 +0000 build-ubuntu42: output: Preparing to unpack .../15-groff-base_1.22.4-8build1_amd64.deb ....
+2023-10-08 00:32:11.180649 +0000 build-ubuntu42: output: Unpacking groff-base (1.22.4-8build1) ....
+2023-10-08 00:32:11.225278 +0000 build-ubuntu42: output: Selecting previously unselected package libedit2:amd64..
+2023-10-08 00:32:11.226672 +0000 build-ubuntu42: output: Preparing to unpack .../16-libedit2_3.1-20210910-1build1_amd64.deb ....
+2023-10-08 00:32:11.228630 +0000 build-ubuntu42: output: Unpacking libedit2:amd64 (3.1-20210910-1build1) ....
+2023-10-08 00:32:11.243578 +0000 build-ubuntu42: output: Selecting previously unselected package libnghttp2-14:amd64..
+2023-10-08 00:32:11.244904 +0000 build-ubuntu42: output: Preparing to unpack .../17-libnghttp2-14_1.43.0-1build3_amd64.deb ....
+2023-10-08 00:32:11.245325 +0000 build-ubuntu42: output: Unpacking libnghttp2-14:amd64 (1.43.0-1build3) ....
+2023-10-08 00:32:11.260282 +0000 build-ubuntu42: output: Selecting previously unselected package libpipeline1:amd64..
+2023-10-08 00:32:11.260331 +0000 build-ubuntu42: output: Preparing to unpack .../18-libpipeline1_1.5.5-1_amd64.deb ....
+2023-10-08 00:32:11.260360 +0000 build-ubuntu42: output: Unpacking libpipeline1:amd64 (1.5.5-1) ....
+2023-10-08 00:32:11.273627 +0000 build-ubuntu42: output: Selecting previously unselected package libpsl5:amd64..
+2023-10-08 00:32:11.273677 +0000 build-ubuntu42: output: Preparing to unpack .../19-libpsl5_0.21.0-1.2build2_amd64.deb ....
+2023-10-08 00:32:11.273689 +0000 build-ubuntu42: output: Unpacking libpsl5:amd64 (0.21.0-1.2build2) ....
+2023-10-08 00:32:11.287447 +0000 build-ubuntu42: output: Selecting previously unselected package man-db..
+2023-10-08 00:32:11.289016 +0000 build-ubuntu42: output: Preparing to unpack .../20-man-db_2.10.2-1_amd64.deb ....
+2023-10-08 00:32:11.289134 +0000 build-ubuntu42: output: Unpacking man-db (2.10.2-1) ....
+2023-10-08 00:32:11.341938 +0000 build-ubuntu42: output: Selecting previously unselected package libsigsegv2:amd64..
+2023-10-08 00:32:11.344546 +0000 build-ubuntu42: output: Preparing to unpack .../21-libsigsegv2_2.13-1ubuntu3_amd64.deb ....
+2023-10-08 00:32:11.344601 +0000 build-ubuntu42: output: Unpacking libsigsegv2:amd64 (2.13-1ubuntu3) ....
+2023-10-08 00:32:11.356906 +0000 build-ubuntu42: output: Selecting previously unselected package m4..
+2023-10-08 00:32:11.356994 +0000 build-ubuntu42: output: Preparing to unpack .../22-m4_1.4.18-5ubuntu2_amd64.deb ....
+2023-10-08 00:32:11.357015 +0000 build-ubuntu42: output: Unpacking m4 (1.4.18-5ubuntu2) ....
+2023-10-08 00:32:11.376639 +0000 build-ubuntu42: output: Selecting previously unselected package autoconf..
+2023-10-08 00:32:11.378246 +0000 build-ubuntu42: output: Preparing to unpack .../23-autoconf_2.71-2_all.deb ....
+2023-10-08 00:32:11.380265 +0000 build-ubuntu42: output: Unpacking autoconf (2.71-2) ....
+2023-10-08 00:32:11.405440 +0000 build-ubuntu42: output: Selecting previously unselected package autotools-dev..
+2023-10-08 00:32:11.405530 +0000 build-ubuntu42: output: Preparing to unpack .../24-autotools-dev_20220109.1_all.deb ....
+2023-10-08 00:32:11.405551 +0000 build-ubuntu42: output: Unpacking autotools-dev (20220109.1) ....
+2023-10-08 00:32:11.418217 +0000 build-ubuntu42: output: Selecting previously unselected package automake..
+2023-10-08 00:32:11.419700 +0000 build-ubuntu42: output: Preparing to unpack .../25-automake_1%3a1.16.5-1.3_all.deb ....
+2023-10-08 00:32:11.421672 +0000 build-ubuntu42: output: Unpacking automake (1:1.16.5-1.3) ....
+2023-10-08 00:32:11.452745 +0000 build-ubuntu42: output: Selecting previously unselected package autopoint..
+2023-10-08 00:32:11.452794 +0000 build-ubuntu42: output: Preparing to unpack .../26-autopoint_0.21-4ubuntu4_all.deb ....
+2023-10-08 00:32:11.452910 +0000 build-ubuntu42: output: Unpacking autopoint (0.21-4ubuntu4) ....
+2023-10-08 00:32:11.466962 +0000 build-ubuntu42: output: Selecting previously unselected package libdebhelper-perl..
+2023-10-08 00:32:11.467049 +0000 build-ubuntu42: output: Preparing to unpack .../27-libdebhelper-perl_13.6ubuntu1_all.deb ....
+2023-10-08 00:32:11.467070 +0000 build-ubuntu42: output: Unpacking libdebhelper-perl (13.6ubuntu1) ....
+2023-10-08 00:32:11.486259 +0000 build-ubuntu42: output: Selecting previously unselected package libtool..
+2023-10-08 00:32:11.487792 +0000 build-ubuntu42: output: Preparing to unpack .../28-libtool_2.4.6-15build2_all.deb ....
+2023-10-08 00:32:11.488207 +0000 build-ubuntu42: output: Unpacking libtool (2.4.6-15build2) ....
+2023-10-08 00:32:11.503681 +0000 build-ubuntu42: output: Selecting previously unselected package dh-autoreconf..
+2023-10-08 00:32:11.505064 +0000 build-ubuntu42: output: Preparing to unpack .../29-dh-autoreconf_20_all.deb ....
+2023-10-08 00:32:11.505542 +0000 build-ubuntu42: output: Unpacking dh-autoreconf (20) ....
+2023-10-08 00:32:11.517567 +0000 build-ubuntu42: output: Selecting previously unselected package libarchive-zip-perl..
+2023-10-08 00:32:11.519068 +0000 build-ubuntu42: output: Preparing to unpack .../30-libarchive-zip-perl_1.68-1_all.deb ....
+2023-10-08 00:32:11.519142 +0000 build-ubuntu42: output: Unpacking libarchive-zip-perl (1.68-1) ....
+2023-10-08 00:32:11.536945 +0000 build-ubuntu42: output: Selecting previously unselected package libsub-override-perl..
+2023-10-08 00:32:11.537403 +0000 build-ubuntu42: output: Preparing to unpack .../31-libsub-override-perl_0.09-2_all.deb ....
+2023-10-08 00:32:11.538147 +0000 build-ubuntu42: output: Unpacking libsub-override-perl (0.09-2) ....
+2023-10-08 00:32:11.549838 +0000 build-ubuntu42: output: Selecting previously unselected package libfile-stripnondeterminism-perl..
+2023-10-08 00:32:11.549887 +0000 build-ubuntu42: output: Preparing to unpack .../32-libfile-stripnondeterminism-perl_1.13.0-1_all.deb ....
+2023-10-08 00:32:11.550261 +0000 build-ubuntu42: output: Unpacking libfile-stripnondeterminism-perl (1.13.0-1) ....
+2023-10-08 00:32:11.564864 +0000 build-ubuntu42: output: Selecting previously unselected package dh-strip-nondeterminism..
+2023-10-08 00:32:11.564912 +0000 build-ubuntu42: output: Preparing to unpack .../33-dh-strip-nondeterminism_1.13.0-1_all.deb ....
+2023-10-08 00:32:11.564925 +0000 build-ubuntu42: output: Unpacking dh-strip-nondeterminism (1.13.0-1) ....
+2023-10-08 00:32:11.575665 +0000 build-ubuntu42: output: Selecting previously unselected package libdw1:amd64..
+2023-10-08 00:32:11.575756 +0000 build-ubuntu42: output: Preparing to unpack .../34-libdw1_0.186-1build1_amd64.deb ....
+2023-10-08 00:32:11.576534 +0000 build-ubuntu42: output: Unpacking libdw1:amd64 (0.186-1build1) ....
+2023-10-08 00:32:11.590652 +0000 build-ubuntu42: output: Selecting previously unselected package debugedit..
+2023-10-08 00:32:11.590743 +0000 build-ubuntu42: output: Preparing to unpack .../35-debugedit_1%3a5.0-4build1_amd64.deb ....
+2023-10-08 00:32:11.591437 +0000 build-ubuntu42: output: Unpacking debugedit (1:5.0-4build1) ....
+2023-10-08 00:32:11.603594 +0000 build-ubuntu42: output: Selecting previously unselected package dwz..
+2023-10-08 00:32:11.605037 +0000 build-ubuntu42: output: Preparing to unpack .../36-dwz_0.14-1build2_amd64.deb ....
+2023-10-08 00:32:11.607080 +0000 build-ubuntu42: output: Unpacking dwz (0.14-1build2) ....
+2023-10-08 00:32:11.622669 +0000 build-ubuntu42: output: Selecting previously unselected package gettext..
+2023-10-08 00:32:11.622720 +0000 build-ubuntu42: output: Preparing to unpack .../37-gettext_0.21-4ubuntu4_amd64.deb ....
+2023-10-08 00:32:11.622732 +0000 build-ubuntu42: output: Unpacking gettext (0.21-4ubuntu4) ....
+2023-10-08 00:32:11.654167 +0000 build-ubuntu42: output: Selecting previously unselected package intltool-debian..
+2023-10-08 00:32:11.654216 +0000 build-ubuntu42: output: Preparing to unpack .../38-intltool-debian_0.35.0+20060710.5_all.deb ....
+2023-10-08 00:32:11.657540 +0000 build-ubuntu42: output: Unpacking intltool-debian (0.35.0+20060710.5) ....
+2023-10-08 00:32:11.666947 +0000 build-ubuntu42: output: Selecting previously unselected package po-debconf..
+2023-10-08 00:32:11.668140 +0000 build-ubuntu42: output: Preparing to unpack .../39-po-debconf_1.0.21+nmu1_all.deb ....
+2023-10-08 00:32:11.668187 +0000 build-ubuntu42: output: Unpacking po-debconf (1.0.21+nmu1) ....
+2023-10-08 00:32:11.698876 +0000 build-ubuntu42: output: Selecting previously unselected package debhelper..
+2023-10-08 00:32:11.698924 +0000 build-ubuntu42: output: Preparing to unpack .../40-debhelper_13.6ubuntu1_all.deb ....
+2023-10-08 00:32:11.698937 +0000 build-ubuntu42: output: Unpacking debhelper (13.6ubuntu1) ....
+2023-10-08 00:32:11.761291 +0000 build-ubuntu42: output: Selecting previously unselected package icu-devtools..
+2023-10-08 00:32:11.762407 +0000 build-ubuntu42: output: Preparing to unpack .../41-icu-devtools_70.1-2_amd64.deb ....
+2023-10-08 00:32:11.762495 +0000 build-ubuntu42: output: Unpacking icu-devtools (70.1-2) ....
+2023-10-08 00:32:11.780235 +0000 build-ubuntu42: output: Selecting previously unselected package libarchive13:amd64..
+2023-10-08 00:32:11.780284 +0000 build-ubuntu42: output: Preparing to unpack .../42-libarchive13_3.6.0-1ubuntu1_amd64.deb ....
+2023-10-08 00:32:11.780842 +0000 build-ubuntu42: output: Unpacking libarchive13:amd64 (3.6.0-1ubuntu1) ....
+2023-10-08 00:32:11.795442 +0000 build-ubuntu42: output: Selecting previously unselected package libbrotli1:amd64..
+2023-10-08 00:32:11.796834 +0000 build-ubuntu42: output: Preparing to unpack .../43-libbrotli1_1.0.9-2build6_amd64.deb ....
+2023-10-08 00:32:11.797348 +0000 build-ubuntu42: output: Unpacking libbrotli1:amd64 (1.0.9-2build6) ....
+2023-10-08 00:32:11.813502 +0000 build-ubuntu42: output: Selecting previously unselected package libbz2-dev:amd64..
+2023-10-08 00:32:11.813588 +0000 build-ubuntu42: output: Preparing to unpack .../44-libbz2-dev_1.0.8-5build1_amd64.deb ....
+2023-10-08 00:32:11.813609 +0000 build-ubuntu42: output: Unpacking libbz2-dev:amd64 (1.0.8-5build1) ....
+2023-10-08 00:32:11.826192 +0000 build-ubuntu42: output: Selecting previously unselected package libcap-ng-dev..
+2023-10-08 00:32:11.826241 +0000 build-ubuntu42: output: Preparing to unpack .../45-libcap-ng-dev_0.7.9-2.2build3_amd64.deb ....
+2023-10-08 00:32:11.826254 +0000 build-ubuntu42: output: Unpacking libcap-ng-dev (0.7.9-2.2build3) ....
+2023-10-08 00:32:11.839762 +0000 build-ubuntu42: output: Selecting previously unselected package libsasl2-modules-db:amd64..
+2023-10-08 00:32:11.841334 +0000 build-ubuntu42: output: Preparing to unpack .../46-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1_amd64.deb ....
+2023-10-08 00:32:11.841794 +0000 build-ubuntu42: output: Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1) ....
+2023-10-08 00:32:11.854430 +0000 build-ubuntu42: output: Selecting previously unselected package libsasl2-2:amd64..
+2023-10-08 00:32:11.854480 +0000 build-ubuntu42: output: Preparing to unpack .../47-libsasl2-2_2.1.27+dfsg2-3ubuntu1_amd64.deb ....
+2023-10-08 00:32:11.854500 +0000 build-ubuntu42: output: Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1) ....
+2023-10-08 00:32:11.865495 +0000 build-ubuntu42: output: Selecting previously unselected package libldap-2.5-0:amd64..
+2023-10-08 00:32:11.867447 +0000 build-ubuntu42: output: Preparing to unpack .../48-libldap-2.5-0_2.5.11+dfsg-1~exp1ubuntu3_amd64.deb ....
+2023-10-08 00:32:11.867904 +0000 build-ubuntu42: output: Unpacking libldap-2.5-0:amd64 (2.5.11+dfsg-1~exp1ubuntu3) ....
+2023-10-08 00:32:11.882788 +0000 build-ubuntu42: output: Selecting previously unselected package librtmp1:amd64..
+2023-10-08 00:32:11.883839 +0000 build-ubuntu42: output: Preparing to unpack .../49-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ....
+2023-10-08 00:32:11.883933 +0000 build-ubuntu42: output: Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ....
+2023-10-08 00:32:11.896785 +0000 build-ubuntu42: output: Selecting previously unselected package libssh-4:amd64..
+2023-10-08 00:32:11.896834 +0000 build-ubuntu42: output: Preparing to unpack .../50-libssh-4_0.9.6-2build1_amd64.deb ....
+2023-10-08 00:32:11.896854 +0000 build-ubuntu42: output: Unpacking libssh-4:amd64 (0.9.6-2build1) ....
+2023-10-08 00:32:11.910645 +0000 build-ubuntu42: output: Selecting previously unselected package libcurl3-gnutls:amd64..
+2023-10-08 00:32:11.912381 +0000 build-ubuntu42: output: Preparing to unpack .../51-libcurl3-gnutls_7.81.0-1_amd64.deb ....
+2023-10-08 00:32:11.913584 +0000 build-ubuntu42: output: Unpacking libcurl3-gnutls:amd64 (7.81.0-1) ....
+2023-10-08 00:32:11.930081 +0000 build-ubuntu42: output: Selecting previously unselected package libfsverity0:amd64..
+2023-10-08 00:32:11.930187 +0000 build-ubuntu42: output: Preparing to unpack .../52-libfsverity0_1.4-1~exp1build1_amd64.deb ....
+2023-10-08 00:32:11.930209 +0000 build-ubuntu42: output: Unpacking libfsverity0:amd64 (1.4-1~exp1build1) ....
+2023-10-08 00:32:11.945682 +0000 build-ubuntu42: output: Selecting previously unselected package libfsverity-dev:amd64..
+2023-10-08 00:32:11.945733 +0000 build-ubuntu42: output: Preparing to unpack .../53-libfsverity-dev_1.4-1~exp1build1_amd64.deb ....
+2023-10-08 00:32:11.945747 +0000 build-ubuntu42: output: Unpacking libfsverity-dev:amd64 (1.4-1~exp1build1) ....
+2023-10-08 00:32:11.959435 +0000 build-ubuntu42: output: Selecting previously unselected package libgpg-error-dev..
+2023-10-08 00:32:11.962729 +0000 build-ubuntu42: output: Preparing to unpack .../54-libgpg-error-dev_1.43-3_amd64.deb ....
+2023-10-08 00:32:11.962785 +0000 build-ubuntu42: output: Unpacking libgpg-error-dev (1.43-3) ....
+2023-10-08 00:32:11.983124 +0000 build-ubuntu42: output: Selecting previously unselected package libgcrypt20-dev..
+2023-10-08 00:32:11.984700 +0000 build-ubuntu42: output: Preparing to unpack .../55-libgcrypt20-dev_1.9.4-3ubuntu3_amd64.deb ....
+2023-10-08 00:32:11.989167 +0000 build-ubuntu42: output: Unpacking libgcrypt20-dev (1.9.4-3ubuntu3) ....
+2023-10-08 00:32:12.017268 +0000 build-ubuntu42: output: Selecting previously unselected package libicu-dev:amd64..
+2023-10-08 00:32:12.019157 +0000 build-ubuntu42: output: Preparing to unpack .../56-libicu-dev_70.1-2_amd64.deb ....
+2023-10-08 00:32:12.019839 +0000 build-ubuntu42: output: Unpacking libicu-dev:amd64 (70.1-2) ....
+2023-10-08 00:32:12.319524 +0000 build-ubuntu42: output: Selecting previously unselected package libllvm13:amd64..
+2023-10-08 00:32:12.322978 +0000 build-ubuntu42: output: Preparing to unpack .../57-libllvm13_1%3a13.0.1-2ubuntu2_amd64.deb ....
+2023-10-08 00:32:12.323027 +0000 build-ubuntu42: output: Unpacking libllvm13:amd64 (1:13.0.1-2ubuntu2) ....
+2023-10-08 00:32:12.960201 +0000 build-ubuntu42: output: Selecting previously unselected package liblua5.3-0:amd64..
+2023-10-08 00:32:12.961946 +0000 build-ubuntu42: output: Preparing to unpack .../58-liblua5.3-0_5.3.6-1build1_amd64.deb ....
+2023-10-08 00:32:12.962905 +0000 build-ubuntu42: output: Unpacking liblua5.3-0:amd64 (5.3.6-1build1) ....
+2023-10-08 00:32:12.979192 +0000 build-ubuntu42: output: Selecting previously unselected package libncurses-dev:amd64..
+2023-10-08 00:32:12.980751 +0000 build-ubuntu42: output: Preparing to unpack .../59-libncurses-dev_6.3-2_amd64.deb ....
+2023-10-08 00:32:12.981558 +0000 build-ubuntu42: output: Unpacking libncurses-dev:amd64 (6.3-2) ....
+2023-10-08 00:32:13.010646 +0000 build-ubuntu42: output: Selecting previously unselected package libpcre2-16-0:amd64..
+2023-10-08 00:32:13.012148 +0000 build-ubuntu42: output: Preparing to unpack .../60-libpcre2-16-0_10.39-3build1_amd64.deb ....
+2023-10-08 00:32:13.187484 +0000 build-ubuntu42: output: Unpacking libpcre2-16-0:amd64 (10.39-3build1) ....
+2023-10-08 00:32:13.187534 +0000 build-ubuntu42: output: Selecting previously unselected package libpcre2-32-0:amd64..
+2023-10-08 00:32:13.187548 +0000 build-ubuntu42: output: Preparing to unpack .../61-libpcre2-32-0_10.39-3build1_amd64.deb ....
+2023-10-08 00:32:13.187560 +0000 build-ubuntu42: output: Unpacking libpcre2-32-0:amd64 (10.39-3build1) ....
+2023-10-08 00:32:13.187570 +0000 build-ubuntu42: output: Selecting previously unselected package libpcre2-posix3:amd64..
+2023-10-08 00:32:13.187581 +0000 build-ubuntu42: output: Preparing to unpack .../62-libpcre2-posix3_10.39-3build1_amd64.deb ....
+2023-10-08 00:32:13.187591 +0000 build-ubuntu42: output: Unpacking libpcre2-posix3:amd64 (10.39-3build1) ....
+2023-10-08 00:32:13.187600 +0000 build-ubuntu42: output: Selecting previously unselected package libpcre2-dev:amd64..
+2023-10-08 00:32:13.187610 +0000 build-ubuntu42: output: Preparing to unpack .../63-libpcre2-dev_10.39-3build1_amd64.deb ....
+2023-10-08 00:32:13.187626 +0000 build-ubuntu42: output: Unpacking libpcre2-dev:amd64 (10.39-3build1) ....
+2023-10-08 00:32:13.187638 +0000 build-ubuntu42: output: Selecting previously unselected package libpopt-dev:amd64..
+2023-10-08 00:32:13.187648 +0000 build-ubuntu42: output: Preparing to unpack .../64-libpopt-dev_1.18-3build1_amd64.deb ....
+2023-10-08 00:32:13.187658 +0000 build-ubuntu42: output: Unpacking libpopt-dev:amd64 (1.18-3build1) ....
+2023-10-08 00:32:13.189087 +0000 build-ubuntu42: output: Selecting previously unselected package libreadline-dev:amd64..
+2023-10-08 00:32:13.189153 +0000 build-ubuntu42: output: Preparing to unpack .../65-libreadline-dev_8.1.2-1_amd64.deb ....
+2023-10-08 00:32:13.189166 +0000 build-ubuntu42: output: Unpacking libreadline-dev:amd64 (8.1.2-1) ....
+2023-10-08 00:32:13.189194 +0000 build-ubuntu42: output: Selecting previously unselected package librpmio9..
+2023-10-08 00:32:13.189207 +0000 build-ubuntu42: output: Preparing to unpack .../66-librpmio9_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:13.189218 +0000 build-ubuntu42: output: Unpacking librpmio9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:13.189227 +0000 build-ubuntu42: output: Selecting previously unselected package librpm9..
+2023-10-08 00:32:13.189236 +0000 build-ubuntu42: output: Preparing to unpack .../67-librpm9_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:13.189246 +0000 build-ubuntu42: output: Unpacking librpm9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:13.189255 +0000 build-ubuntu42: output: Selecting previously unselected package librpmbuild9..
+2023-10-08 00:32:13.189265 +0000 build-ubuntu42: output: Preparing to unpack .../68-librpmbuild9_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:13.189274 +0000 build-ubuntu42: output: Unpacking librpmbuild9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:13.189283 +0000 build-ubuntu42: output: Selecting previously unselected package librpmsign9..
+2023-10-08 00:32:13.189293 +0000 build-ubuntu42: output: Preparing to unpack .../69-librpmsign9_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:13.189302 +0000 build-ubuntu42: output: Unpacking librpmsign9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:13.195244 +0000 build-ubuntu42: output: Selecting previously unselected package librust-cc-dev:amd64..
+2023-10-08 00:32:13.195292 +0000 build-ubuntu42: output: Preparing to unpack .../70-librust-cc-dev_1.0.71-2_amd64.deb ....
+2023-10-08 00:32:13.195305 +0000 build-ubuntu42: output: Unpacking librust-cc-dev:amd64 (1.0.71-2) ....
+2023-10-08 00:32:13.214150 +0000 build-ubuntu42: output: Selecting previously unselected package librust-libc-dev:amd64..
+2023-10-08 00:32:13.214198 +0000 build-ubuntu42: output: Preparing to unpack .../71-librust-libc-dev_0.2.103-1_amd64.deb ....
+2023-10-08 00:32:13.214212 +0000 build-ubuntu42: output: Unpacking librust-libc-dev:amd64 (0.2.103-1) ....
+2023-10-08 00:32:13.305834 +0000 build-ubuntu42: output: Selecting previously unselected package libsepol-dev:amd64..
+2023-10-08 00:32:13.305883 +0000 build-ubuntu42: output: Preparing to unpack .../72-libsepol-dev_3.3-1build1_amd64.deb ....
+2023-10-08 00:32:13.305896 +0000 build-ubuntu42: output: Unpacking libsepol-dev:amd64 (3.3-1build1) ....
+2023-10-08 00:32:13.338961 +0000 build-ubuntu42: output: Selecting previously unselected package libselinux1-dev:amd64..
+2023-10-08 00:32:13.339009 +0000 build-ubuntu42: output: Preparing to unpack .../73-libselinux1-dev_3.3-1build2_amd64.deb ....
+2023-10-08 00:32:13.339024 +0000 build-ubuntu42: output: Unpacking libselinux1-dev:amd64 (3.3-1build2) ....
+2023-10-08 00:32:13.405093 +0000 build-ubuntu42: output: Selecting previously unselected package libsqlite3-dev:amd64..
+2023-10-08 00:32:13.407067 +0000 build-ubuntu42: output: Preparing to unpack .../74-libsqlite3-dev_3.37.2-2_amd64.deb ....
+2023-10-08 00:32:13.408331 +0000 build-ubuntu42: output: Unpacking libsqlite3-dev:amd64 (3.37.2-2) ....
+2023-10-08 00:32:13.434083 +0000 build-ubuntu42: output: Selecting previously unselected package libssh2-1:amd64..
+2023-10-08 00:32:13.436955 +0000 build-ubuntu42: output: Preparing to unpack .../75-libssh2-1_1.10.0-3_amd64.deb ....
+2023-10-08 00:32:13.437003 +0000 build-ubuntu42: output: Unpacking libssh2-1:amd64 (1.10.0-3) ....
+2023-10-08 00:32:13.462006 +0000 build-ubuntu42: output: Selecting previously unselected package libstd-rust-1.58:amd64..
+2023-10-08 00:32:13.462056 +0000 build-ubuntu42: output: Preparing to unpack .../76-libstd-rust-1.58_1.58.1+dfsg1~ubuntu1-0ubuntu2_amd64.deb ....
+2023-10-08 00:32:13.462071 +0000 build-ubuntu42: output: Unpacking libstd-rust-1.58:amd64 (1.58.1+dfsg1~ubuntu1-0ubuntu2) ....
+2023-10-08 00:32:14.081704 +0000 build-ubuntu42: output: Selecting previously unselected package libxml2-dev:amd64..
+2023-10-08 00:32:14.083177 +0000 build-ubuntu42: output: Preparing to unpack .../77-libxml2-dev_2.9.13+dfsg-1build1_amd64.deb ....
+2023-10-08 00:32:14.083907 +0000 build-ubuntu42: output: Unpacking libxml2-dev:amd64 (2.9.13+dfsg-1build1) ....
+2023-10-08 00:32:14.127313 +0000 build-ubuntu42: output: Selecting previously unselected package libzstd-dev:amd64..
+2023-10-08 00:32:14.127363 +0000 build-ubuntu42: output: Preparing to unpack .../78-libzstd-dev_1.4.8+dfsg-3build1_amd64.deb ....
+2023-10-08 00:32:14.127383 +0000 build-ubuntu42: output: Unpacking libzstd-dev:amd64 (1.4.8+dfsg-3build1) ....
+2023-10-08 00:32:14.162338 +0000 build-ubuntu42: output: Selecting previously unselected package rpm-common..
+2023-10-08 00:32:14.165627 +0000 build-ubuntu42: output: Preparing to unpack .../79-rpm-common_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:14.165674 +0000 build-ubuntu42: output: Unpacking rpm-common (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:14.207222 +0000 build-ubuntu42: output: Selecting previously unselected package rpm2cpio..
+2023-10-08 00:32:14.207273 +0000 build-ubuntu42: output: Preparing to unpack .../80-rpm2cpio_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:14.207287 +0000 build-ubuntu42: output: Unpacking rpm2cpio (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:14.221727 +0000 build-ubuntu42: output: Selecting previously unselected package rpm..
+2023-10-08 00:32:14.221776 +0000 build-ubuntu42: output: Preparing to unpack .../81-rpm_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:14.221789 +0000 build-ubuntu42: output: Unpacking rpm (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:14.246947 +0000 build-ubuntu42: output: Selecting previously unselected package zlib1g-dev:amd64..
+2023-10-08 00:32:14.246995 +0000 build-ubuntu42: output: Preparing to unpack .../82-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu9_amd64.deb ....
+2023-10-08 00:32:14.247009 +0000 build-ubuntu42: output: Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu9) ....
+2023-10-08 00:32:14.265873 +0000 build-ubuntu42: output: Selecting previously unselected package libstd-rust-dev:amd64..
+2023-10-08 00:32:14.265922 +0000 build-ubuntu42: output: Preparing to unpack .../83-libstd-rust-dev_1.58.1+dfsg1~ubuntu1-0ubuntu2_amd64.deb ....
+2023-10-08 00:32:14.288787 +0000 build-ubuntu42: output: Unpacking libstd-rust-dev:amd64 (1.58.1+dfsg1~ubuntu1-0ubuntu2) ....
+2023-10-08 00:32:16.222004 +0000 build-ubuntu42: output: Selecting previously unselected package rustc..
+2023-10-08 00:32:16.223732 +0000 build-ubuntu42: output: Preparing to unpack .../84-rustc_1.58.1+dfsg1~ubuntu1-0ubuntu2_amd64.deb ....
+2023-10-08 00:32:16.224481 +0000 build-ubuntu42: output: Unpacking rustc (1.58.1+dfsg1~ubuntu1-0ubuntu2) ....
+2023-10-08 00:32:16.365689 +0000 build-ubuntu42: output: Selecting previously unselected package cargo..
+2023-10-08 00:32:16.367252 +0000 build-ubuntu42: output: Preparing to unpack .../85-cargo_0.58.0-0ubuntu1_amd64.deb ....
+2023-10-08 00:32:16.367300 +0000 build-ubuntu42: output: Unpacking cargo (0.58.0-0ubuntu1) ....
+2023-10-08 00:32:16.666332 +0000 build-ubuntu42: output: Selecting previously unselected package libaudit-dev:amd64..
+2023-10-08 00:32:16.668146 +0000 build-ubuntu42: output: Preparing to unpack .../86-libaudit-dev_1%3a3.0.7-1build1_amd64.deb ....
+2023-10-08 00:32:16.670016 +0000 build-ubuntu42: output: Unpacking libaudit-dev:amd64 (1:3.0.7-1build1) ....
+2023-10-08 00:32:16.691678 +0000 build-ubuntu42: output: Selecting previously unselected package librpm-dev..
+2023-10-08 00:32:16.691726 +0000 build-ubuntu42: output: Preparing to unpack .../87-librpm-dev_4.17.0+dfsg1-4build1_amd64.deb ....
+2023-10-08 00:32:16.691740 +0000 build-ubuntu42: output: Unpacking librpm-dev (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:16.733187 +0000 build-ubuntu42: output: Setting up libpipeline1:amd64 (1.5.5-1) ....
+2023-10-08 00:32:16.736033 +0000 build-ubuntu42: output: Setting up librust-libc-dev:amd64 (0.2.103-1) ....
+2023-10-08 00:32:16.736079 +0000 build-ubuntu42: output: Setting up libncurses-dev:amd64 (6.3-2) ....
+2023-10-08 00:32:16.736092 +0000 build-ubuntu42: output: Setting up libpsl5:amd64 (0.21.0-1.2build2) ....
+2023-10-08 00:32:16.738724 +0000 build-ubuntu42: output: Setting up libzstd-dev:amd64 (1.4.8+dfsg-3build1) ....
+2023-10-08 00:32:16.738769 +0000 build-ubuntu42: output: Setting up bsdextrautils (2.37.2-4ubuntu3) ....
+2023-10-08 00:32:16.743093 +0000 build-ubuntu42: output: update-alternatives: using /usr/bin/write.ul to provide /usr/bin/write (write) in auto mode.
+2023-10-08 00:32:16.745916 +0000 build-ubuntu42: output: Setting up libmagic-mgc (1:5.41-3) ....
+2023-10-08 00:32:16.745960 +0000 build-ubuntu42: output: Setting up libarchive-zip-perl (1.68-1) ....
+2023-10-08 00:32:16.745972 +0000 build-ubuntu42: output: Setting up libdebhelper-perl (13.6ubuntu1) ....
+2023-10-08 00:32:16.745982 +0000 build-ubuntu42: output: Setting up libbrotli1:amd64 (1.0.9-2build6) ....
+2023-10-08 00:32:16.747266 +0000 build-ubuntu42: output: Setting up libnghttp2-14:amd64 (1.43.0-1build3) ....
+2023-10-08 00:32:16.748504 +0000 build-ubuntu42: output: Setting up libmagic1:amd64 (1:5.41-3) ....
+2023-10-08 00:32:16.751978 +0000 build-ubuntu42: output: Setting up gettext-base (0.21-4ubuntu4) ....
+2023-10-08 00:32:16.752022 +0000 build-ubuntu42: output: Setting up file (1:5.41-3) ....
+2023-10-08 00:32:16.752033 +0000 build-ubuntu42: output: Setting up libpcre2-16-0:amd64 (10.39-3build1) ....
+2023-10-08 00:32:16.752043 +0000 build-ubuntu42: output: Setting up libfsverity0:amd64 (1.4-1~exp1build1) ....
+2023-10-08 00:32:16.756070 +0000 build-ubuntu42: output: Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1) ....
+2023-10-08 00:32:16.756141 +0000 build-ubuntu42: output: Setting up autotools-dev (20220109.1) ....
+2023-10-08 00:32:16.756156 +0000 build-ubuntu42: output: Setting up libpcre2-32-0:amd64 (10.39-3build1) ....
+2023-10-08 00:32:16.756167 +0000 build-ubuntu42: output: Setting up libsqlite3-dev:amd64 (3.37.2-2) ....
+2023-10-08 00:32:16.756176 +0000 build-ubuntu42: output: Setting up libgpg-error-dev (1.43-3) ....
+2023-10-08 00:32:16.756186 +0000 build-ubuntu42: output: Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ....
+2023-10-08 00:32:16.758343 +0000 build-ubuntu42: output: Setting up libdbus-1-3:amd64 (1.12.20-2ubuntu4) ....
+2023-10-08 00:32:16.759601 +0000 build-ubuntu42: output: Setting up libsigsegv2:amd64 (2.13-1ubuntu3) ....
+2023-10-08 00:32:16.762369 +0000 build-ubuntu42: output: Setting up librust-cc-dev:amd64 (1.0.71-2) ....
+2023-10-08 00:32:16.762412 +0000 build-ubuntu42: output: Setting up autopoint (0.21-4ubuntu4) ....
+2023-10-08 00:32:16.762424 +0000 build-ubuntu42: output: Setting up libsepol-dev:amd64 (3.3-1build1) ....
+2023-10-08 00:32:16.762434 +0000 build-ubuntu42: output: Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1) ....
+2023-10-08 00:32:16.763731 +0000 build-ubuntu42: output: Setting up libssh-4:amd64 (0.9.6-2build1) ....
+2023-10-08 00:32:16.765849 +0000 build-ubuntu42: output: Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu9) ....
+2023-10-08 00:32:16.765891 +0000 build-ubuntu42: output: Setting up libpcre2-posix3:amd64 (10.39-3build1) ....
+2023-10-08 00:32:16.765902 +0000 build-ubuntu42: output: Setting up libmd0:amd64 (1.0.4-1build1) ....
+2023-10-08 00:32:16.767224 +0000 build-ubuntu42: output: Setting up libuchardet0:amd64 (0.0.7-1build2) ....
+2023-10-08 00:32:16.770558 +0000 build-ubuntu42: output: Setting up liblua5.3-0:amd64 (5.3.6-1build1) ....
+2023-10-08 00:32:16.770602 +0000 build-ubuntu42: output: Setting up libcap-ng-dev (0.7.9-2.2build3) ....
+2023-10-08 00:32:16.770614 +0000 build-ubuntu42: output: Setting up libsub-override-perl (0.09-2) ....
+2023-10-08 00:32:16.770623 +0000 build-ubuntu42: output: Setting up libssh2-1:amd64 (1.10.0-3) ....
+2023-10-08 00:32:16.770633 +0000 build-ubuntu42: output: Setting up libfsverity-dev:amd64 (1.4-1~exp1build1) ....
+2023-10-08 00:32:16.770642 +0000 build-ubuntu42: output: Setting up libbsd0:amd64 (0.11.5-1) ....
+2023-10-08 00:32:16.771839 +0000 build-ubuntu42: output: Setting up libelf1:amd64 (0.186-1build1) ....
+2023-10-08 00:32:16.773580 +0000 build-ubuntu42: output: Setting up readline-common (8.1.2-1) ....
+2023-10-08 00:32:16.780924 +0000 build-ubuntu42: output: Setting up libpopt0:amd64 (1.18-3build1) ....
+2023-10-08 00:32:16.782477 +0000 build-ubuntu42: output: Setting up libicu70:amd64 (70.1-2) ....
+2023-10-08 00:32:16.784713 +0000 build-ubuntu42: output: Setting up libbz2-dev:amd64 (1.0.8-5build1) ....
+2023-10-08 00:32:16.784760 +0000 build-ubuntu42: output: Setting up libfile-stripnondeterminism-perl (1.13.0-1) ....
+2023-10-08 00:32:16.784771 +0000 build-ubuntu42: output: Setting up libdw1:amd64 (0.186-1build1) ....
+2023-10-08 00:32:16.786595 +0000 build-ubuntu42: output: Setting up libpcre2-dev:amd64 (10.39-3build1) ....
+2023-10-08 00:32:16.786636 +0000 build-ubuntu42: output: Setting up libtool (2.4.6-15build2) ....
+2023-10-08 00:32:16.787899 +0000 build-ubuntu42: output: Setting up libselinux1-dev:amd64 (3.3-1build2) ....
+2023-10-08 00:32:16.787939 +0000 build-ubuntu42: output: Setting up libaudit-dev:amd64 (1:3.0.7-1build1) ....
+2023-10-08 00:32:16.787951 +0000 build-ubuntu42: output: Setting up libedit2:amd64 (3.1-20210910-1build1) ....
+2023-10-08 00:32:16.789231 +0000 build-ubuntu42: output: Setting up libreadline8:amd64 (8.1.2-1) ....
+2023-10-08 00:32:16.791085 +0000 build-ubuntu42: output: Setting up m4 (1.4.18-5ubuntu2) ....
+2023-10-08 00:32:16.791150 +0000 build-ubuntu42: output: Setting up libreadline-dev:amd64 (8.1.2-1) ....
+2023-10-08 00:32:16.791162 +0000 build-ubuntu42: output: Setting up libldap-2.5-0:amd64 (2.5.11+dfsg-1~exp1ubuntu3) ....
+2023-10-08 00:32:16.793506 +0000 build-ubuntu42: output: Setting up libpopt-dev:amd64 (1.18-3build1) ....
+2023-10-08 00:32:16.793549 +0000 build-ubuntu42: output: Setting up libgcrypt20-dev (1.9.4-3ubuntu3) ....
+2023-10-08 00:32:16.793559 +0000 build-ubuntu42: output: Setting up icu-devtools (70.1-2) ....
+2023-10-08 00:32:16.793568 +0000 build-ubuntu42: output: Setting up autoconf (2.71-2) ....
+2023-10-08 00:32:16.795597 +0000 build-ubuntu42: output: Setting up dh-strip-nondeterminism (1.13.0-1) ....
+2023-10-08 00:32:16.795640 +0000 build-ubuntu42: output: Setting up dwz (0.14-1build2) ....
+2023-10-08 00:32:16.795651 +0000 build-ubuntu42: output: Setting up groff-base (1.22.4-8build1) ....
+2023-10-08 00:32:16.797972 +0000 build-ubuntu42: output: Setting up debugedit (1:5.0-4build1) ....
+2023-10-08 00:32:16.798014 +0000 build-ubuntu42: output: Setting up libicu-dev:amd64 (70.1-2) ....
+2023-10-08 00:32:16.798025 +0000 build-ubuntu42: output: Setting up libxml2:amd64 (2.9.13+dfsg-1build1) ....
+2023-10-08 00:32:16.800146 +0000 build-ubuntu42: output: Setting up librpmio9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:16.800190 +0000 build-ubuntu42: output: Setting up automake (1:1.16.5-1.3) ....
+2023-10-08 00:32:16.804037 +0000 build-ubuntu42: output: update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode.
+2023-10-08 00:32:16.804083 +0000 build-ubuntu42: output: Setting up librpm9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:16.804094 +0000 build-ubuntu42: output: Setting up gettext (0.21-4ubuntu4) ....
+2023-10-08 00:32:16.805118 +0000 build-ubuntu42: output: Setting up libarchive13:amd64 (3.6.0-1ubuntu1) ....
+2023-10-08 00:32:16.806217 +0000 build-ubuntu42: output: Setting up libcurl3-gnutls:amd64 (7.81.0-1) ....
+2023-10-08 00:32:16.807926 +0000 build-ubuntu42: output: Setting up rpm-common (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:16.807967 +0000 build-ubuntu42: output: Setting up man-db (2.10.2-1) ....
+2023-10-08 00:32:16.926781 +0000 build-ubuntu42: output: Not building database; man-db/auto-update is not 'true'..
+2023-10-08 00:32:17.087455 +0000 build-ubuntu42: output: Setting up intltool-debian (0.35.0+20060710.5) ....
+2023-10-08 00:32:17.087503 +0000 build-ubuntu42: output: Setting up dh-autoreconf (20) ....
+2023-10-08 00:32:17.087521 +0000 build-ubuntu42: output: Setting up libxml2-dev:amd64 (2.9.13+dfsg-1build1) ....
+2023-10-08 00:32:17.087532 +0000 build-ubuntu42: output: Setting up librpmbuild9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:17.087558 +0000 build-ubuntu42: output: Setting up libllvm13:amd64 (1:13.0.1-2ubuntu2) ....
+2023-10-08 00:32:17.089570 +0000 build-ubuntu42: output: Setting up librpmsign9 (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:17.089615 +0000 build-ubuntu42: output: Setting up rpm2cpio (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:17.099032 +0000 build-ubuntu42: output: Setting up po-debconf (1.0.21+nmu1) ....
+2023-10-08 00:32:17.099079 +0000 build-ubuntu42: output: Setting up rpm (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:17.099092 +0000 build-ubuntu42: output: Setting up debhelper (13.6ubuntu1) ....
+2023-10-08 00:32:17.099128 +0000 build-ubuntu42: output: Setting up librpm-dev (4.17.0+dfsg1-4build1) ....
+2023-10-08 00:32:17.099142 +0000 build-ubuntu42: output: Setting up libstd-rust-1.58:amd64 (1.58.1+dfsg1~ubuntu1-0ubuntu2) ....
+2023-10-08 00:32:17.099154 +0000 build-ubuntu42: output: Setting up libstd-rust-dev:amd64 (1.58.1+dfsg1~ubuntu1-0ubuntu2) ....
+2023-10-08 00:32:17.099164 +0000 build-ubuntu42: output: Setting up rustc (1.58.1+dfsg1~ubuntu1-0ubuntu2) ....
+2023-10-08 00:32:17.099173 +0000 build-ubuntu42: output: Setting up cargo (0.58.0-0ubuntu1) ....
+2023-10-08 00:32:17.099182 +0000 build-ubuntu42: output: Processing triggers for libc-bin (2.35-0ubuntu3) ....
+2023-10-08 00:32:17.494561 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:32:17.735270 +0000 build-ubuntu42: output: Building dependency tree...
+2023-10-08 00:32:17.737260 +0000 build-ubuntu42: output: Reading state information...
+2023-10-08 00:32:17.932147 +0000 build-ubuntu42: output: Reading extended state information...
+2023-10-08 00:32:17.944365 +0000 build-ubuntu42: output: Initializing package states...
+2023-10-08 00:32:18.118458 +0000 build-ubuntu42: output: Writing extended state information...
+2023-10-08 00:32:18.645287 +0000 build-ubuntu42: output: Building tag database...
+2023-10-08 00:32:18.728769 +0000 build-ubuntu42: output:  -> Finished parsing the build-deps
+2023-10-08 00:32:19.142700 +0000 build-ubuntu42: output: Reading package lists...
+2023-10-08 00:32:19.289674 +0000 build-ubuntu42: output: Building dependency tree...
+2023-10-08 00:32:19.294573 +0000 build-ubuntu42: output: Reading state information...
+2023-10-08 00:32:19.478709 +0000 build-ubuntu42: output: The following additional packages will be installed:
+2023-10-08 00:32:19.479677 +0000 build-ubuntu42: output:   libfakeroot
+2023-10-08 00:32:19.524737 +0000 build-ubuntu42: output: The following NEW packages will be installed:
+2023-10-08 00:32:19.525969 +0000 build-ubuntu42: output:   fakeroot libfakeroot
+2023-10-08 00:32:21.066354 +0000 build-ubuntu42: output: 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+2023-10-08 00:32:21.066401 +0000 build-ubuntu42: output: Need to get 91.9 kB of archives.
+2023-10-08 00:32:21.066416 +0000 build-ubuntu42: output: After this operation, 401 kB of additional disk space will be used.
+2023-10-08 00:32:21.066430 +0000 build-ubuntu42: output: Get:1 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 libfakeroot amd64 1.28-1ubuntu1 [31.5 kB]
+2023-10-08 00:32:21.767292 +0000 build-ubuntu42: output: Get:2 https://fr.archive.ubuntu.com/ubuntu jammy/main amd64 fakeroot amd64 1.28-1ubuntu1 [60.4 kB]
+2023-10-08 00:32:22.176153 +0000 build-ubuntu42: output: debconf: delaying package configuration, since apt-utils is not installed
+2023-10-08 00:32:22.199197 +0000 build-ubuntu42: output: Fetched 91.9 kB in 2s (37.3 kB/s)
+2023-10-08 00:32:22.221184 +0000 build-ubuntu42: output: Selecting previously unselected package libfakeroot:amd64..
+2023-10-08 00:32:22.296004 +0000 build-ubuntu42: output: (Reading database ... .(Reading database ... 5%.(Reading database ... 10%.(Reading database ... 15%.(Reading database ... 20%.(Reading database ... 25%.(Reading database ... 30%.(Reading database ... 35%.(Reading database ... 40%.(Reading database ... 45%.(Reading database ... 50%.(Reading database ... 55%.(Reading database ... 60%.(Reading database ... 65%.(Reading database ... 70%.(Reading database ... 75%.(Reading database ... 80%.(Reading database ... 85%.(Reading database ... 90%.(Reading database ... 95%.(Reading database ... 100%.(Reading database ... 14386 files and directories currently installed.).
+2023-10-08 00:32:22.296067 +0000 build-ubuntu42: output: Preparing to unpack .../libfakeroot_1.28-1ubuntu1_amd64.deb ....
+2023-10-08 00:32:22.299800 +0000 build-ubuntu42: output: Unpacking libfakeroot:amd64 (1.28-1ubuntu1) ....
+2023-10-08 00:32:22.320014 +0000 build-ubuntu42: output: Selecting previously unselected package fakeroot..
+2023-10-08 00:32:22.320063 +0000 build-ubuntu42: output: Preparing to unpack .../fakeroot_1.28-1ubuntu1_amd64.deb ....
+2023-10-08 00:32:22.320075 +0000 build-ubuntu42: output: Unpacking fakeroot (1.28-1ubuntu1) ....
+2023-10-08 00:32:22.340667 +0000 build-ubuntu42: output: Setting up libfakeroot:amd64 (1.28-1ubuntu1) ....
+2023-10-08 00:32:22.340713 +0000 build-ubuntu42: output: Setting up fakeroot (1.28-1ubuntu1) ....
+2023-10-08 00:32:22.878912 +0000 build-ubuntu42: output: update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode.
+2023-10-08 00:32:22.882538 +0000 build-ubuntu42: output: Processing triggers for man-db (2.10.2-1) ....
+2023-10-08 00:32:22.885518 +0000 build-ubuntu42: output: Not building database; man-db/auto-update is not 'true'..
+2023-10-08 00:32:22.885563 +0000 build-ubuntu42: output: Processing triggers for libc-bin (2.35-0ubuntu3) ....
+2023-10-08 00:32:23.143751 +0000 build-ubuntu42: output: I: Copying back the cached apt archive contents
+2023-10-08 00:32:23.161593 +0000 build-ubuntu42: output: I: new cache content 'libssh-4_0.9.6-2build1_amd64.deb' added
+2023-10-08 00:32:23.169521 +0000 build-ubuntu42: output: I: new cache content 'libxml2_2.9.13+dfsg-1build1_amd64.deb' added
+2023-10-08 00:32:23.175150 +0000 build-ubuntu42: output: I: new cache content 'libpcre2-posix3_10.39-3build1_amd64.deb' added
+2023-10-08 00:32:23.183471 +0000 build-ubuntu42: output: I: new cache content 'readline-common_8.1.2-1_all.deb' added
+2023-10-08 00:32:23.190293 +0000 build-ubuntu42: output: I: new cache content 'libreadline8_8.1.2-1_amd64.deb' added
+2023-10-08 00:32:23.196821 +0000 build-ubuntu42: output: I: new cache content 'libssh2-1_1.10.0-3_amd64.deb' added
+2023-10-08 00:32:23.202678 +0000 build-ubuntu42: output: I: new cache content 'icu-devtools_70.1-2_amd64.deb' added
+2023-10-08 00:32:23.210191 +0000 build-ubuntu42: output: I: new cache content 'dh-autoreconf_20_all.deb' added
+2023-10-08 00:32:23.216620 +0000 build-ubuntu42: output: I: new cache content 'libbz2-dev_1.0.8-5build1_amd64.deb' added
+2023-10-08 00:32:23.224446 +0000 build-ubuntu42: output: I: new cache content 'libstd-rust-1.58_1.58.1+dfsg1~ubuntu1-0ubuntu2_amd64.deb' added
+2023-10-08 00:32:23.230258 +0000 build-ubuntu42: output: I: new cache content 'libpipeline1_1.5.5-1_amd64.deb' added
+2023-10-08 00:32:23.238950 +0000 build-ubuntu42: output: I: new cache content 'intltool-debian_0.35.0+20060710.5_all.deb' added
+2023-10-08 00:32:23.249218 +0000 build-ubuntu42: output: I: new cache content 'libaudit-dev_1%3a3.0.7-1build1_amd64.deb' added
+2023-10-08 00:32:23.257883 +0000 build-ubuntu42: output: I: new cache content 'libcurl3-gnutls_7.81.0-1_amd64.deb' added
+2023-10-08 00:32:23.265229 +0000 build-ubuntu42: output: I: new cache content 'librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb' added
+2023-10-08 00:32:23.274150 +0000 build-ubuntu42: output: I: new cache content 'libarchive-zip-perl_1.68-1_all.deb' added
+2023-10-08 00:32:23.280258 +0000 build-ubuntu42: output: I: new cache content 'libldap-2.5-0_2.5.11+dfsg-1~exp1ubuntu3_amd64.deb' added
+2023-10-08 00:32:23.287177 +0000 build-ubuntu42: output: I: new cache content 'po-debconf_1.0.21+nmu1_all.deb' added
+2023-10-08 00:32:23.294573 +0000 build-ubuntu42: output: I: new cache content 'dwz_0.14-1build2_amd64.deb' added
+2023-10-08 00:32:23.301842 +0000 build-ubuntu42: output: I: new cache content 'libzstd-dev_1.4.8+dfsg-3build1_amd64.deb' added
+2023-10-08 00:32:23.310186 +0000 build-ubuntu42: output: I: new cache content 'libedit2_3.1-20210910-1build1_amd64.deb' added
+2023-10-08 00:32:23.318341 +0000 build-ubuntu42: output: I: new cache content 'bsdextrautils_2.37.2-4ubuntu3_amd64.deb' added
+2023-10-08 00:32:23.324788 +0000 build-ubuntu42: output: I: new cache content 'rpm2cpio_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.329500 +0000 build-ubuntu42: output: I: new cache content 'libcap-ng-dev_0.7.9-2.2build3_amd64.deb' added
+2023-10-08 00:32:23.334215 +0000 build-ubuntu42: output: I: new cache content 'gettext_0.21-4ubuntu4_amd64.deb' added
+2023-10-08 00:32:23.341593 +0000 build-ubuntu42: output: I: new cache content 'libpopt0_1.18-3build1_amd64.deb' added
+2023-10-08 00:32:23.349952 +0000 build-ubuntu42: output: I: new cache content 'libpcre2-16-0_10.39-3build1_amd64.deb' added
+2023-10-08 00:32:23.358797 +0000 build-ubuntu42: output: I: new cache content 'groff-base_1.22.4-8build1_amd64.deb' added
+2023-10-08 00:32:23.363584 +0000 build-ubuntu42: output: I: new cache content 'libgcrypt20-dev_1.9.4-3ubuntu3_amd64.deb' added
+2023-10-08 00:32:23.370953 +0000 build-ubuntu42: output: I: new cache content 'libselinux1-dev_3.3-1build2_amd64.deb' added
+2023-10-08 00:32:23.380053 +0000 build-ubuntu42: output: I: new cache content 'libuchardet0_0.0.7-1build2_amd64.deb' added
+2023-10-08 00:32:23.389350 +0000 build-ubuntu42: output: I: new cache content 'libpcre2-32-0_10.39-3build1_amd64.deb' added
+2023-10-08 00:32:23.394687 +0000 build-ubuntu42: output: I: new cache content 'libfsverity-dev_1.4-1~exp1build1_amd64.deb' added
+2023-10-08 00:32:23.401781 +0000 build-ubuntu42: output: I: new cache content 'librpmio9_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.409205 +0000 build-ubuntu42: output: I: new cache content 'libdbus-1-3_1.12.20-2ubuntu4_amd64.deb' added
+2023-10-08 00:32:23.414597 +0000 build-ubuntu42: output: I: new cache content 'libfile-stripnondeterminism-perl_1.13.0-1_all.deb' added
+2023-10-08 00:32:23.418693 +0000 build-ubuntu42: output: I: new cache content 'libllvm13_1%3a13.0.1-2ubuntu2_amd64.deb' added
+2023-10-08 00:32:23.423016 +0000 build-ubuntu42: output: I: new cache content 'libpcre2-dev_10.39-3build1_amd64.deb' added
+2023-10-08 00:32:23.426183 +0000 build-ubuntu42: output: I: new cache content 'libfsverity0_1.4-1~exp1build1_amd64.deb' added
+2023-10-08 00:32:23.430357 +0000 build-ubuntu42: output: I: new cache content 'autopoint_0.21-4ubuntu4_all.deb' added
+2023-10-08 00:32:23.434651 +0000 build-ubuntu42: output: I: new cache content 'libreadline-dev_8.1.2-1_amd64.deb' added
+2023-10-08 00:32:23.439034 +0000 build-ubuntu42: output: I: new cache content 'libmagic-mgc_1%3a5.41-3_amd64.deb' added
+2023-10-08 00:32:23.443288 +0000 build-ubuntu42: output: I: new cache content 'rpm_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.447778 +0000 build-ubuntu42: output: I: new cache content 'librust-libc-dev_0.2.103-1_amd64.deb' added
+2023-10-08 00:32:23.452321 +0000 build-ubuntu42: output: I: new cache content 'libdw1_0.186-1build1_amd64.deb' added
+2023-10-08 00:32:23.456890 +0000 build-ubuntu42: output: I: new cache content 'debhelper_13.6ubuntu1_all.deb' added
+2023-10-08 00:32:23.461487 +0000 build-ubuntu42: output: I: new cache content 'librpm-dev_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.488712 +0000 build-ubuntu42: output: I: new cache content 'liblua5.3-0_5.3.6-1build1_amd64.deb' added
+2023-10-08 00:32:23.500330 +0000 build-ubuntu42: output: I: new cache content 'libelf1_0.186-1build1_amd64.deb' added
+2023-10-08 00:32:23.512584 +0000 build-ubuntu42: output: I: new cache content 'libsepol-dev_3.3-1build1_amd64.deb' added
+2023-10-08 00:32:23.524867 +0000 build-ubuntu42: output: I: new cache content 'autotools-dev_20220109.1_all.deb' added
+2023-10-08 00:32:23.537262 +0000 build-ubuntu42: output: I: new cache content 'libdebhelper-perl_13.6ubuntu1_all.deb' added
+2023-10-08 00:32:23.543244 +0000 build-ubuntu42: output: I: new cache content 'libmd0_1.0.4-1build1_amd64.deb' added
+2023-10-08 00:32:23.547298 +0000 build-ubuntu42: output: I: new cache content 'libbrotli1_1.0.9-2build6_amd64.deb' added
+2023-10-08 00:32:23.550493 +0000 build-ubuntu42: output: I: new cache content 'libsqlite3-dev_3.37.2-2_amd64.deb' added
+2023-10-08 00:32:23.554710 +0000 build-ubuntu42: output: I: new cache content 'libfakeroot_1.28-1ubuntu1_amd64.deb' added
+2023-10-08 00:32:23.559277 +0000 build-ubuntu42: output: I: new cache content 'zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu9_amd64.deb' added
+2023-10-08 00:32:23.563362 +0000 build-ubuntu42: output: I: new cache content 'libsasl2-2_2.1.27+dfsg2-3ubuntu1_amd64.deb' added
+2023-10-08 00:32:23.567191 +0000 build-ubuntu42: output: I: new cache content 'autoconf_2.71-2_all.deb' added
+2023-10-08 00:32:23.572541 +0000 build-ubuntu42: output: I: new cache content 'libmagic1_1%3a5.41-3_amd64.deb' added
+2023-10-08 00:32:23.577450 +0000 build-ubuntu42: output: I: new cache content 'libstd-rust-dev_1.58.1+dfsg1~ubuntu1-0ubuntu2_amd64.deb' added
+2023-10-08 00:32:23.605238 +0000 build-ubuntu42: output: I: new cache content 'libsub-override-perl_0.09-2_all.deb' added
+2023-10-08 00:32:23.609592 +0000 build-ubuntu42: output: I: new cache content 'rustc_1.58.1+dfsg1~ubuntu1-0ubuntu2_amd64.deb' added
+2023-10-08 00:32:23.613239 +0000 build-ubuntu42: output: I: new cache content 'libicu70_70.1-2_amd64.deb' added
+2023-10-08 00:32:23.617675 +0000 build-ubuntu42: output: I: new cache content 'debugedit_1%3a5.0-4build1_amd64.deb' added
+2023-10-08 00:32:23.621256 +0000 build-ubuntu42: output: I: new cache content 'libbsd0_0.11.5-1_amd64.deb' added
+2023-10-08 00:32:23.626970 +0000 build-ubuntu42: output: I: new cache content 'libpsl5_0.21.0-1.2build2_amd64.deb' added
+2023-10-08 00:32:23.630897 +0000 build-ubuntu42: output: I: new cache content 'man-db_2.10.2-1_amd64.deb' added
+2023-10-08 00:32:23.635842 +0000 build-ubuntu42: output: I: new cache content 'libarchive13_3.6.0-1ubuntu1_amd64.deb' added
+2023-10-08 00:32:23.640231 +0000 build-ubuntu42: output: I: new cache content 'libpopt-dev_1.18-3build1_amd64.deb' added
+2023-10-08 00:32:23.644735 +0000 build-ubuntu42: output: I: new cache content 'm4_1.4.18-5ubuntu2_amd64.deb' added
+2023-10-08 00:32:23.653238 +0000 build-ubuntu42: output: I: new cache content 'dh-strip-nondeterminism_1.13.0-1_all.deb' added
+2023-10-08 00:32:23.653286 +0000 build-ubuntu42: output: I: new cache content 'libnghttp2-14_1.43.0-1build3_amd64.deb' added
+2023-10-08 00:32:23.656343 +0000 build-ubuntu42: output: I: new cache content 'fakeroot_1.28-1ubuntu1_amd64.deb' added
+2023-10-08 00:32:23.660320 +0000 build-ubuntu42: output: I: new cache content 'libxml2-dev_2.9.13+dfsg-1build1_amd64.deb' added
+2023-10-08 00:32:23.664322 +0000 build-ubuntu42: output: I: new cache content 'libsigsegv2_2.13-1ubuntu3_amd64.deb' added
+2023-10-08 00:32:23.667981 +0000 build-ubuntu42: output: I: new cache content 'librpmbuild9_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.671728 +0000 build-ubuntu42: output: I: new cache content 'gettext-base_0.21-4ubuntu4_amd64.deb' added
+2023-10-08 00:32:23.675292 +0000 build-ubuntu42: output: I: new cache content 'file_1%3a5.41-3_amd64.deb' added
+2023-10-08 00:32:23.678846 +0000 build-ubuntu42: output: I: new cache content 'libncurses-dev_6.3-2_amd64.deb' added
+2023-10-08 00:32:23.682637 +0000 build-ubuntu42: output: I: new cache content 'librpmsign9_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.686529 +0000 build-ubuntu42: output: I: new cache content 'libgpg-error-dev_1.43-3_amd64.deb' added
+2023-10-08 00:32:23.690254 +0000 build-ubuntu42: output: I: new cache content 'rpm-common_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.693833 +0000 build-ubuntu42: output: I: new cache content 'libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1_amd64.deb' added
+2023-10-08 00:32:23.697676 +0000 build-ubuntu42: output: I: new cache content 'libicu-dev_70.1-2_amd64.deb' added
+2023-10-08 00:32:23.702529 +0000 build-ubuntu42: output: I: new cache content 'librust-cc-dev_1.0.71-2_amd64.deb' added
+2023-10-08 00:32:23.706499 +0000 build-ubuntu42: output: I: new cache content 'libtool_2.4.6-15build2_all.deb' added
+2023-10-08 00:32:23.710617 +0000 build-ubuntu42: output: I: new cache content 'cargo_0.58.0-0ubuntu1_amd64.deb' added
+2023-10-08 00:32:23.714677 +0000 build-ubuntu42: output: I: new cache content 'automake_1%3a1.16.5-1.3_all.deb' added
+2023-10-08 00:32:23.721638 +0000 build-ubuntu42: output: I: new cache content 'librpm9_4.17.0+dfsg1-4build1_amd64.deb' added
+2023-10-08 00:32:23.729909 +0000 build-ubuntu42: output: I: Building the package
+2023-10-08 00:32:23.742780 +0000 build-ubuntu42: output: I: Running cd /build/qubes-rpm-oxide-0.2.7/ && env PATH="/usr/sbin:/usr/bin:/sbin:/bin" HOME="/nonexistent" dpkg-buildpackage -us -uc -sa
+2023-10-08 00:32:23.904542 +0000 build-ubuntu42: output: dpkg-buildpackage: info: source package qubes-rpm-oxide
+2023-10-08 00:32:23.904591 +0000 build-ubuntu42: output: dpkg-buildpackage: info: source version 0.2.7-1+jammy1
+2023-10-08 00:32:23.904604 +0000 build-ubuntu42: output: dpkg-buildpackage: info: source distribution jammy
+2023-10-08 00:32:23.904616 +0000 build-ubuntu42: output: dpkg-buildpackage: info: source changed by Builder <user@localhost>
+2023-10-08 00:32:23.933979 +0000 build-ubuntu42: output:  dpkg-source --before-build .
+2023-10-08 00:32:23.934026 +0000 build-ubuntu42: output: dpkg-buildpackage: info: host architecture amd64
+2023-10-08 00:32:24.061222 +0000 build-ubuntu42: output: dpkg-source: info: using options from qubes-rpm-oxide-0.2.7/debian/source/options: --tar-ignore=.git
+2023-10-08 00:32:24.126824 +0000 build-ubuntu42: output:  debian/rules clean
+2023-10-08 00:32:24.134418 +0000 build-ubuntu42: output: dh clean
+2023-10-08 00:32:24.227233 +0000 build-ubuntu42: output:    debian/rules override_dh_auto_clean
+2023-10-08 00:32:24.228778 +0000 build-ubuntu42: output: make[1]: Entering directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:32:24.228822 +0000 build-ubuntu42: output: cargo clean
+2023-10-08 00:32:24.791668 +0000 build-ubuntu42: output: make[1]: Leaving directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:32:24.794258 +0000 build-ubuntu42: output:    dh_clean
+2023-10-08 00:32:24.833517 +0000 build-ubuntu42: output:  dpkg-source -b .
+2023-10-08 00:32:24.960211 +0000 build-ubuntu42: output: dpkg-source: info: using options from qubes-rpm-oxide-0.2.7/debian/source/options: --tar-ignore=.git
+2023-10-08 00:32:24.960248 +0000 build-ubuntu42: output: dpkg-source: info: using source format '3.0 (quilt)'
+2023-10-08 00:32:24.960264 +0000 build-ubuntu42: output: dpkg-source: info: building qubes-rpm-oxide using existing ./qubes-rpm-oxide_0.2.7.orig.tar.gz
+2023-10-08 00:32:25.009237 +0000 build-ubuntu42: output: dpkg-source: info: building qubes-rpm-oxide in qubes-rpm-oxide_0.2.7-1+jammy1.debian.tar.xz
+2023-10-08 00:32:25.026240 +0000 build-ubuntu42: output: dpkg-source: info: building qubes-rpm-oxide in qubes-rpm-oxide_0.2.7-1+jammy1.dsc
+2023-10-08 00:32:25.031060 +0000 build-ubuntu42: output:  debian/rules build
+2023-10-08 00:32:25.032603 +0000 build-ubuntu42: output: dh build
+2023-10-08 00:32:25.109356 +0000 build-ubuntu42: output:    dh_update_autotools_config
+2023-10-08 00:32:25.141313 +0000 build-ubuntu42: output:    dh_autoreconf
+2023-10-08 00:32:25.188611 +0000 build-ubuntu42: output:    debian/rules override_dh_auto_build
+2023-10-08 00:32:25.191340 +0000 build-ubuntu42: output: make[1]: Entering directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:32:25.191390 +0000 build-ubuntu42: output: cargo -Zunstable-options \
+2023-10-08 00:32:25.191404 +0000 build-ubuntu42: output: .'--config=source.system.directory="/usr/share/cargo/registry"' \
+2023-10-08 00:32:25.191430 +0000 build-ubuntu42: output: .'--config=source.crates-io.replace-with="system"' \
+2023-10-08 00:32:25.191441 +0000 build-ubuntu42: output: .--offline \
+2023-10-08 00:32:25.191450 +0000 build-ubuntu42: output: .build --all-features --release
+2023-10-08 00:32:25.493232 +0000 build-ubuntu42: output:    Compiling cc v1.0.71
+2023-10-08 00:32:25.496073 +0000 build-ubuntu42: output:    Compiling openpgp-parser v0.2.2 (/build/qubes-rpm-oxide-0.2.7/openpgp-parser)
+2023-10-08 00:32:27.860222 +0000 build-ubuntu42: output:    Compiling libc v0.2.103
+2023-10-08 00:32:30.064332 +0000 build-ubuntu42: output:    Compiling rpm-crypto v0.2.2 (/build/qubes-rpm-oxide-0.2.7/rpm-crypto)
+2023-10-08 00:32:31.583169 +0000 build-ubuntu42: output:    Compiling rpm-parser v0.2.2 (/build/qubes-rpm-oxide-0.2.7/rpm-parser)
+2023-10-08 00:32:32.029992 +0000 build-ubuntu42: output:    Compiling rpm-writer v0.2.2 (/build/qubes-rpm-oxide-0.2.7/rpm-writer)
+2023-10-08 00:32:37.214939 +0000 build-ubuntu42: output: make[1]: Leaving directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:32:37.231870 +0000 build-ubuntu42: output:    debian/rules override_dh_auto_test
+2023-10-08 00:32:37.233844 +0000 build-ubuntu42: output:     Finished release [optimized] target(s) in 12.00s
+2023-10-08 00:32:37.233896 +0000 build-ubuntu42: output: make[1]: Entering directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:32:37.233948 +0000 build-ubuntu42: output: cargo -Zunstable-options \
+2023-10-08 00:32:37.234556 +0000 build-ubuntu42: output: .'--config=source.system.directory="/usr/share/cargo/registry"' \
+2023-10-08 00:32:37.234598 +0000 build-ubuntu42: output: .'--config=source.crates-io.replace-with="system"' \
+2023-10-08 00:32:37.234608 +0000 build-ubuntu42: output: .--offline \
+2023-10-08 00:32:37.234616 +0000 build-ubuntu42: output: .test --all-features --release
+2023-10-08 00:32:37.343973 +0000 build-ubuntu42: output:    Compiling openpgp-parser v0.2.2 (/build/qubes-rpm-oxide-0.2.7/openpgp-parser)
+2023-10-08 00:32:40.030892 +0000 build-ubuntu42: output:    Compiling rpm-crypto v0.2.2 (/build/qubes-rpm-oxide-0.2.7/rpm-crypto)
+2023-10-08 00:32:40.034587 +0000 build-ubuntu42: output:    Compiling rpm-parser v0.2.2 (/build/qubes-rpm-oxide-0.2.7/rpm-parser)
+2023-10-08 00:32:42.318832 +0000 build-ubuntu42: output:    Compiling rpm-writer v0.2.2 (/build/qubes-rpm-oxide-0.2.7/rpm-writer)
+2023-10-08 00:32:48.507340 +0000 build-ubuntu42: output:     Finished release [optimized] target(s) in 11.26s
+2023-10-08 00:32:48.519697 +0000 build-ubuntu42: output:      Running unittests (target/release/deps/openpgp_parser-862b23661e6a8303)
+2023-10-08 00:32:48.519785 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:48.519800 +0000 build-ubuntu42: output: running 13 tests
+2023-10-08 00:32:48.519811 +0000 build-ubuntu42: output: test buffer::tests::read_one_byte ... ok
+2023-10-08 00:32:48.519827 +0000 build-ubuntu42: output: test buffer::tests::read ... ok
+2023-10-08 00:32:48.519899 +0000 build-ubuntu42: output: test packet::tests::check_packet_serialization_short ... ok
+2023-10-08 00:32:49.353866 +0000 build-ubuntu42: output: test packet::tests::old_format_parsing ... ok
+2023-10-08 00:32:49.358029 +0000 build-ubuntu42: output: test signature::tests::bad_sig_alg ... ok
+2023-10-08 00:32:49.358073 +0000 build-ubuntu42: output: test signature::tests::md5_rejected ... ok
+2023-10-08 00:32:49.358085 +0000 build-ubuntu42: output: test signature::tests::mpi_invalid ... ok
+2023-10-08 00:32:49.358094 +0000 build-ubuntu42: output: test signature::tests::mpi_too_short ... ok
+2023-10-08 00:32:49.358135 +0000 build-ubuntu42: output: test signature::tests::parses_real_world_sig ... ok
+2023-10-08 00:32:49.358146 +0000 build-ubuntu42: output: test signature::tests::sha1_rejected ... ok
+2023-10-08 00:32:49.358156 +0000 build-ubuntu42: output: test signature::tests::signature_not_valid_yet ... ok
+2023-10-08 00:32:49.358165 +0000 build-ubuntu42: output: test signature::tests::wrong_signature_version ... ok
+2023-10-08 00:32:57.963897 +0000 build-ubuntu42: output: test packet::tests::check_packet_serialization ... ok
+2023-10-08 00:32:57.963944 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.963959 +0000 build-ubuntu42: output: test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.45s
+2023-10-08 00:32:57.963969 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.965566 +0000 build-ubuntu42: output:      Running unittests (target/release/deps/sigparse-974035a4fb12b755)
+2023-10-08 00:32:57.974534 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.974580 +0000 build-ubuntu42: output: running 0 tests
+2023-10-08 00:32:57.974590 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.974602 +0000 build-ubuntu42: output: test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2023-10-08 00:32:57.974611 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.975807 +0000 build-ubuntu42: output:      Running unittests (target/release/deps/rpm_crypto-55cd089038cfd8f4)
+2023-10-08 00:32:57.984245 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.984292 +0000 build-ubuntu42: output: running 3 tests
+2023-10-08 00:32:57.985575 +0000 build-ubuntu42: output: test digests::tests::check_rpm_supports_hashes ... ok
+2023-10-08 00:32:57.985615 +0000 build-ubuntu42: output: test digests::tests::rpm_hash_len ... ignored
+2023-10-08 00:32:57.995433 +0000 build-ubuntu42: output: test digests::tests::check_rpm_crypto ... ok
+2023-10-08 00:32:57.995478 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.995493 +0000 build-ubuntu42: output: test result: ok. 2 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.01s
+2023-10-08 00:32:57.995502 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:57.998220 +0000 build-ubuntu42: output:      Running unittests (target/release/deps/rpm_parser-d08ac2ceb178d182)
+2023-10-08 00:32:58.002791 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.002837 +0000 build-ubuntu42: output: running 20 tests
+2023-10-08 00:32:58.002850 +0000 build-ubuntu42: output: test header::common::tests::does_not_parse_unsorted_header ... ok
+2023-10-08 00:32:58.004228 +0000 build-ubuntu42: output: test ffi::tests::check_rpm_return ... ok
+2023-10-08 00:32:58.004276 +0000 build-ubuntu42: output: test header::common::tests::parses_header_magic ... ok
+2023-10-08 00:32:58.004288 +0000 build-ubuntu42: output: test lead::tests::rejects_bad_magic - should panic ... ok
+2023-10-08 00:32:58.007293 +0000 build-ubuntu42: output: test header::tests::parses_lua_rpm ... ok
+2023-10-08 00:32:58.007339 +0000 build-ubuntu42: output: test lead::tests::rejects_bad_padding - should panic ... ok
+2023-10-08 00:32:58.007353 +0000 build-ubuntu42: output: test lead::tests::rejects_bad_version - should panic ... ok
+2023-10-08 00:32:58.007363 +0000 build-ubuntu42: output: test lead::tests::rejects_invalid_char_name - should panic ... ok
+2023-10-08 00:32:58.007374 +0000 build-ubuntu42: output: test lead::tests::rejects_non_utf8_name - should panic ... ok
+2023-10-08 00:32:58.007384 +0000 build-ubuntu42: output: test lead::tests::rejects_non_zeroed_reserved - should panic ... ok
+2023-10-08 00:32:58.007394 +0000 build-ubuntu42: output: test lead::tests::rejects_wrong_signature_version - should panic ... ok
+2023-10-08 00:32:58.008593 +0000 build-ubuntu42: output: test package::tests::parses_lua_rpm ... ok
+2023-10-08 00:32:58.046210 +0000 build-ubuntu42: output: test verify::tests::bad_trusted_digest ... ok
+2023-10-08 00:32:58.050436 +0000 build-ubuntu42: output: test verify::tests::bad_untrusted_digest ... ok
+2023-10-08 00:32:58.052803 +0000 build-ubuntu42: output: test verify::tests::empty_validator_bad ... ok
+2023-10-08 00:32:58.056393 +0000 build-ubuntu42: output: test verify::tests::mixed_digests ... ok
+2023-10-08 00:32:58.059871 +0000 build-ubuntu42: output: test verify::tests::mixed_digests_update ... ok
+2023-10-08 00:32:58.062967 +0000 build-ubuntu42: output: test verify::tests::short_writes ... ok
+2023-10-08 00:32:58.067020 +0000 build-ubuntu42: output: test verify::tests::trusted_digest_sufficient ... ok
+2023-10-08 00:32:58.070932 +0000 build-ubuntu42: output: test verify::tests::untrusted_digest_not_sufficient ... ok
+2023-10-08 00:32:58.070976 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.070991 +0000 build-ubuntu42: output: test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+2023-10-08 00:32:58.071001 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.073496 +0000 build-ubuntu42: output:      Running unittests (target/release/deps/rpmgetsigheadersize-4bcd1c66647181e2)
+2023-10-08 00:32:58.074820 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.074864 +0000 build-ubuntu42: output: running 0 tests
+2023-10-08 00:32:58.074875 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.074887 +0000 build-ubuntu42: output: test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2023-10-08 00:32:58.074896 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.076330 +0000 build-ubuntu42: output:      Running unittests (target/release/deps/rpm_writer-6afead3593661245)
+2023-10-08 00:32:58.077842 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.077885 +0000 build-ubuntu42: output: running 1 test
+2023-10-08 00:32:58.079610 +0000 build-ubuntu42: output: test tests::it_works ... ok
+2023-10-08 00:32:58.079653 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.079668 +0000 build-ubuntu42: output: test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2023-10-08 00:32:58.079678 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.081929 +0000 build-ubuntu42: output:      Running unittests (target/release/deps/rpmcanon-5fe014782d9ba320)
+2023-10-08 00:32:58.083281 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.083326 +0000 build-ubuntu42: output: running 0 tests
+2023-10-08 00:32:58.083337 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.083350 +0000 build-ubuntu42: output: test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2023-10-08 00:32:58.083359 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.084908 +0000 build-ubuntu42: output:      Running tests/gen_bad_i18ntable.rs (target/release/deps/gen_bad_i18ntable-08a4d36a121bc35a)
+2023-10-08 00:32:58.087714 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.087760 +0000 build-ubuntu42: output: running 2 tests
+2023-10-08 00:32:58.089792 +0000 build-ubuntu42: output: test no_i18ntable_in_signature_header ... ok
+2023-10-08 00:32:58.089834 +0000 build-ubuntu42: output: test bad_i18ntable_rejected ... ok
+2023-10-08 00:32:58.089845 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.089858 +0000 build-ubuntu42: output: test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2023-10-08 00:32:58.089867 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.091882 +0000 build-ubuntu42: output:    Doc-tests openpgp-parser
+2023-10-08 00:32:58.197420 +0000 build-ubuntu42: output: 
+2023-10-08 00:32:58.197467 +0000 build-ubuntu42: output: running 20 tests
+2023-10-08 00:32:58.648420 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::be_u16 (line 213) ... ok
+2023-10-08 00:32:58.890129 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::as_untrusted_slice (line 166) ... ok
+2023-10-08 00:32:59.070313 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::be_u16_offset (line 283) ... ok
+2023-10-08 00:32:59.278652 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::be_u32 (line 213) ... ok
+2023-10-08 00:32:59.433598 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::be_u32_offset (line 283) ... ok
+2023-10-08 00:32:59.670763 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::be_u64 (line 213) ... ok
+2023-10-08 00:32:59.902164 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::be_u64_offset (line 283) ... ok
+2023-10-08 00:33:00.036533 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::byte (line 153) ... ok
+2023-10-08 00:33:00.323443 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::empty (line 121) ... ok
+2023-10-08 00:33:00.475922 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::get_bytes (line 319) ... ok
+2023-10-08 00:33:00.731380 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::get_read (line 386) ... ok
+2023-10-08 00:33:00.813410 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::is_empty (line 109) ... ok
+2023-10-08 00:33:01.282474 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::le_u16_offset (line 248) ... ok
+2023-10-08 00:33:01.336576 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::le_u16 (line 178) ... ok
+2023-10-08 00:33:01.761507 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::le_u32 (line 178) ... ok
+2023-10-08 00:33:01.870376 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::le_u32_offset (line 248) ... ok
+2023-10-08 00:33:02.309062 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::le_u64 (line 178) ... ok
+2023-10-08 00:33:02.413022 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::le_u64_offset (line 248) ... ok
+2023-10-08 00:33:02.684149 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::maybe_byte (line 135) ... ok
+2023-10-08 00:33:02.779176 +0000 build-ubuntu42: output: test src/buffer.rs - buffer::Reader::read (line 361) ... ok
+2023-10-08 00:33:02.779221 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:02.779237 +0000 build-ubuntu42: output: test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.58s
+2023-10-08 00:33:02.779246 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:02.784210 +0000 build-ubuntu42: output:    Doc-tests rpm-crypto
+2023-10-08 00:33:02.830094 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:02.830162 +0000 build-ubuntu42: output: running 0 tests
+2023-10-08 00:33:02.830173 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:02.830185 +0000 build-ubuntu42: output: test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2023-10-08 00:33:02.830194 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:02.835107 +0000 build-ubuntu42: output:    Doc-tests rpm-parser
+2023-10-08 00:33:03.002377 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:03.002424 +0000 build-ubuntu42: output: running 1 test
+2023-10-08 00:33:03.103051 +0000 build-ubuntu42: output: test src/tagdata.rs - tagdata::TagData::as_bytes_mut (line 43) - compile fail ... ok
+2023-10-08 00:33:03.103126 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:03.103145 +0000 build-ubuntu42: output: test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+2023-10-08 00:33:03.103154 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:03.107657 +0000 build-ubuntu42: output:    Doc-tests rpm-writer
+2023-10-08 00:33:03.164125 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:03.164173 +0000 build-ubuntu42: output: running 0 tests
+2023-10-08 00:33:03.164184 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:03.164196 +0000 build-ubuntu42: output: test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2023-10-08 00:33:03.164205 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:03.170601 +0000 build-ubuntu42: output: make[1]: Leaving directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:33:03.171208 +0000 build-ubuntu42: output:    create-stamp debian/debhelper-build-stamp
+2023-10-08 00:33:03.175319 +0000 build-ubuntu42: output:  debian/rules binary
+2023-10-08 00:33:03.184651 +0000 build-ubuntu42: output: dh binary
+2023-10-08 00:33:03.283026 +0000 build-ubuntu42: output:    dh_testroot
+2023-10-08 00:33:03.311723 +0000 build-ubuntu42: output:    dh_prep
+2023-10-08 00:33:03.343302 +0000 build-ubuntu42: output:    debian/rules override_dh_auto_install
+2023-10-08 00:33:03.344807 +0000 build-ubuntu42: output: make[1]: Entering directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:33:03.344873 +0000 build-ubuntu42: output: dh_auto_install
+2023-10-08 00:33:03.399803 +0000 build-ubuntu42: output: install -D -m 0755 -- target/release/rpmcanon \
+2023-10-08 00:33:03.399849 +0000 build-ubuntu42: output: .debian/qubes-rpm-oxide/usr/bin/rpmcanon
+2023-10-08 00:33:03.447971 +0000 build-ubuntu42: output: install -D -m 0755 -- target/release/sigparse \
+2023-10-08 00:33:03.448018 +0000 build-ubuntu42: output: .debian/qubes-rpm-oxide/usr/bin/sigparse
+2023-10-08 00:33:03.487965 +0000 build-ubuntu42: output: make[1]: Leaving directory '/build/qubes-rpm-oxide-0.2.7'
+2023-10-08 00:33:03.490668 +0000 build-ubuntu42: output:    dh_installdocs
+2023-10-08 00:33:03.533639 +0000 build-ubuntu42: output:    dh_installchangelogs
+2023-10-08 00:33:03.647528 +0000 build-ubuntu42: output:    dh_perl
+2023-10-08 00:33:03.691136 +0000 build-ubuntu42: output:    dh_link
+2023-10-08 00:33:03.728162 +0000 build-ubuntu42: output:    dh_strip_nondeterminism
+2023-10-08 00:33:03.817253 +0000 build-ubuntu42: output:    dh_compress
+2023-10-08 00:33:03.863583 +0000 build-ubuntu42: output:    dh_fixperms
+2023-10-08 00:33:03.921935 +0000 build-ubuntu42: output:    dh_missing
+2023-10-08 00:33:03.949309 +0000 build-ubuntu42: output:    dh_installdeb
+2023-10-08 00:33:03.984978 +0000 build-ubuntu42: output:    dh_gencontrol
+2023-10-08 00:33:04.094828 +0000 build-ubuntu42: output: dpkg-gencontrol: warning: Depends field of package qubes-rpm-oxide: substitution variable ${shlibs:Depends} used, but is not defined
+2023-10-08 00:33:04.102051 +0000 build-ubuntu42: output:    dh_md5sums
+2023-10-08 00:33:04.185364 +0000 build-ubuntu42: output:    dh_builddeb
+2023-10-08 00:33:04.213405 +0000 build-ubuntu42: output: dpkg-deb: building package 'qubes-rpm-oxide' in '../qubes-rpm-oxide_0.2.7-1+jammy1_all.deb'.
+2023-10-08 00:33:12.457491 +0000 build-ubuntu42: output:  dpkg-genbuildinfo -O../qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo
+2023-10-08 00:33:12.794740 +0000 build-ubuntu42: output:  dpkg-genchanges -sa -O../qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes
+2023-10-08 00:33:12.939238 +0000 build-ubuntu42: output: dpkg-genchanges: info: including full source code in upload
+2023-10-08 00:33:12.940181 +0000 build-ubuntu42: output:  dpkg-source --after-build .
+2023-10-08 00:33:13.058032 +0000 build-ubuntu42: output: dpkg-source: info: using options from qubes-rpm-oxide-0.2.7/debian/source/options: --tar-ignore=.git
+2023-10-08 00:33:13.061717 +0000 build-ubuntu42: output: dpkg-buildpackage: info: full upload (original source is included)
+2023-10-08 00:33:13.068170 +0000 build-ubuntu42: output: I: copying local configuration
+2023-10-08 00:33:13.109465 +0000 build-ubuntu42: output: I: Copying back the cached apt archive contents
+2023-10-08 00:33:13.332547 +0000 build-ubuntu42: output: I: unmounting /tmp/qubes-deb filesystem
+2023-10-08 00:33:13.349385 +0000 build-ubuntu42: output: I: unmounting dev/ptmx filesystem
+2023-10-08 00:33:13.355061 +0000 build-ubuntu42: output: I: unmounting dev/pts filesystem
+2023-10-08 00:33:13.362279 +0000 build-ubuntu42: output: I: unmounting dev/shm filesystem
+2023-10-08 00:33:13.364165 +0000 build-ubuntu42: output: I: unmounting proc filesystem
+2023-10-08 00:33:13.369878 +0000 build-ubuntu42: output: I: unmounting sys filesystem
+2023-10-08 00:33:13.416585 +0000 build-ubuntu42: output: I: cleaning the build env
+2023-10-08 00:33:13.418391 +0000 build-ubuntu42: output: I: removing directory /builder/pbuilder/build/3019 and its subdirectories
+2023-10-08 00:33:14.847341 +0000 build-ubuntu42: output: I: Current time: Sat Oct  7 20:33:15 EDT 2023
+2023-10-08 00:33:14.849464 +0000 build-ubuntu42: output: I: pbuilder-time-stamp: 1696725195
+2023-10-08 00:33:15.773686 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyOut+__builder__pbuilder__results__qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build
+2023-10-08 00:33:16.375763 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyOut+__builder__pbuilder__results__qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build
+2023-10-08 00:33:16.478831 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyOut+__builder__pbuilder__results__qubes-rpm-oxide_0.2.7-1+jammy1_all.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build
+2023-10-08 00:33:16.633735 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyOut+__builder__pbuilder__results__qubes-rpm-oxide-dbgsym_0.2.7-1+jammy1_all.deb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build
+2023-10-08 00:33:16.726989 +0000 build-ubuntu42: File not found inside container: /builder/pbuilder/results/qubes-rpm-oxide-dbgsym_0.2.7-1+jammy1_all.deb.
+2023-10-08 00:33:16.727048 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9299 qubesbuilder.FileCopyOut+__builder__pbuilder__results__qubes-rpm-oxide-dbgsym_0.2.7-1+jammy1_all.ddeb /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build
+2023-10-08 00:33:16.828385 +0000 build-ubuntu42: File not found inside container: /builder/pbuilder/results/qubes-rpm-oxide-dbgsym_0.2.7-1+jammy1_all.ddeb.
+2023-10-08 00:33:31.768425 +0000 build-ubuntu42: rpm-oxide:vm-ubuntu-22.04.amd64:debian: Provisioning local repository '/home/user/builder-r4.2/repository/vm-jammy'.
+2023-10-08 00:33:31.782454 +0000 build-ubuntu42: Executing 'bash -c qubes-gpg-client-wrapper --armor --export 649CC812AA81D2791A7C8BD51158BF74FD1D13E2 > /tmp/tmptl3uzdqa/649CC812AA81D2791A7C8BD51158BF74FD1D13E2.asc&&gpg2 --homedir /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/sign/keyring --import /tmp/tmptl3uzdqa/649CC812AA81D2791A7C8BD51158BF74FD1D13E2.asc'.
+2023-10-08 00:33:31.942692 +0000 build-ubuntu42: output: gpg: keybox '/home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/sign/keyring/pubring.kbx' created
+2023-10-08 00:33:31.944031 +0000 build-ubuntu42: output: gpg: /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/sign/keyring/trustdb.gpg: trustdb created
+2023-10-08 00:33:31.944088 +0000 build-ubuntu42: output: gpg: key 1158BF74FD1D13E2: public key "Qubes OS 4.2 Ubuntu Packages Signing Key" imported
+2023-10-08 00:33:31.950467 +0000 build-ubuntu42: output: gpg: Total number processed: 1
+2023-10-08 00:33:31.950515 +0000 build-ubuntu42: output: gpg:               imported: 1
+2023-10-08 00:33:31.962042 +0000 build-ubuntu42: rpm-oxide:vm-ubuntu-22.04.amd64:debian: Signing from 'qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes' info.
+2023-10-08 00:33:31.962098 +0000 build-ubuntu42: Executing 'bash -c debsign -k649CC812AA81D2791A7C8BD51158BF74FD1D13E2 -pqubes-gpg-client-wrapper --no-re-sign /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes'.
+2023-10-08 00:33:31.991140 +0000 build-ubuntu42: output:  signfile dsc /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc 649CC812AA81D2791A7C8BD51158BF74FD1D13E2
+2023-10-08 00:33:32.218320 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:32.233849 +0000 build-ubuntu42: output:  fixup_buildinfo /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo
+2023-10-08 00:33:32.236261 +0000 build-ubuntu42: output:  signfile buildinfo /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo 649CC812AA81D2791A7C8BD51158BF74FD1D13E2
+2023-10-08 00:33:32.436612 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:32.453159 +0000 build-ubuntu42: output:  fixup_changes dsc /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes
+2023-10-08 00:33:32.465961 +0000 build-ubuntu42: output:  fixup_changes buildinfo /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes
+2023-10-08 00:33:32.468443 +0000 build-ubuntu42: output:  signfile changes /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes 649CC812AA81D2791A7C8BD51158BF74FD1D13E2
+2023-10-08 00:33:32.677512 +0000 build-ubuntu42: output: 
+2023-10-08 00:33:32.680080 +0000 build-ubuntu42: output: Successfully signed dsc, buildinfo, changes files
+2023-10-08 00:33:32.692046 +0000 build-ubuntu42: rpm-oxide:vm-ubuntu-22.04.amd64:debian: Provisioning local repository '/home/user/builder-r4.2/repository/vm-jammy'.
+2023-10-08 00:33:32.697709 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/publish_deb/scripts/create-skeleton r4.2 ubuntu /home/user/builder-r4.2/repository-publish/deb'.
+2023-10-08 00:33:32.739922 +0000 build-ubuntu42: rpm-oxide:vm-ubuntu-22.04.amd64:debian: Publishing packages.
+2023-10-08 00:33:32.740544 +0000 build-ubuntu42: rpm-oxide:vm-ubuntu-22.04.amd64:debian: Verifying signatures.
+2023-10-08 00:33:32.740611 +0000 build-ubuntu42: Executing 'bash -c gpg2 -q --homedir /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/sign/keyring --verify /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1.dsc&&gpg2 -q --homedir /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/sign/keyring --verify /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes&&gpg2 -q --homedir /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/sign/keyring --verify /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo'.
+2023-10-08 00:33:32.744988 +0000 build-ubuntu42: output: gpg: Signature made Sat 07 Oct 2023 08:33:32 PM EDT
+2023-10-08 00:33:32.747215 +0000 build-ubuntu42: output: gpg:                using EDDSA key 649CC812AA81D2791A7C8BD51158BF74FD1D13E2
+2023-10-08 00:33:32.747265 +0000 build-ubuntu42: output: gpg: Good signature from "Qubes OS 4.2 Ubuntu Packages Signing Key" [unknown]
+2023-10-08 00:33:32.747279 +0000 build-ubuntu42: output: gpg: WARNING: This key is not certified with a trusted signature!
+2023-10-08 00:33:32.747291 +0000 build-ubuntu42: output: gpg:          There is no indication that the signature belongs to the owner.
+2023-10-08 00:33:32.747301 +0000 build-ubuntu42: output: Primary key fingerprint: 649C C812 AA81 D279 1A7C  8BD5 1158 BF74 FD1D 13E2
+2023-10-08 00:33:32.751152 +0000 build-ubuntu42: output: gpg: Signature made Sat 07 Oct 2023 08:33:32 PM EDT
+2023-10-08 00:33:32.753125 +0000 build-ubuntu42: output: gpg:                using EDDSA key 649CC812AA81D2791A7C8BD51158BF74FD1D13E2
+2023-10-08 00:33:32.753191 +0000 build-ubuntu42: output: gpg: Good signature from "Qubes OS 4.2 Ubuntu Packages Signing Key" [unknown]
+2023-10-08 00:33:32.753204 +0000 build-ubuntu42: output: gpg: WARNING: This key is not certified with a trusted signature!
+2023-10-08 00:33:32.753216 +0000 build-ubuntu42: output: gpg:          There is no indication that the signature belongs to the owner.
+2023-10-08 00:33:32.753227 +0000 build-ubuntu42: output: Primary key fingerprint: 649C C812 AA81 D279 1A7C  8BD5 1158 BF74 FD1D 13E2
+2023-10-08 00:33:32.757223 +0000 build-ubuntu42: output: gpg: Signature made Sat 07 Oct 2023 08:33:32 PM EDT
+2023-10-08 00:33:32.757276 +0000 build-ubuntu42: output: gpg:                using EDDSA key 649CC812AA81D2791A7C8BD51158BF74FD1D13E2
+2023-10-08 00:33:32.758509 +0000 build-ubuntu42: output: gpg: Good signature from "Qubes OS 4.2 Ubuntu Packages Signing Key" [unknown]
+2023-10-08 00:33:32.758549 +0000 build-ubuntu42: output: gpg: WARNING: This key is not certified with a trusted signature!
+2023-10-08 00:33:32.758563 +0000 build-ubuntu42: output: gpg:          There is no indication that the signature belongs to the owner.
+2023-10-08 00:33:32.758574 +0000 build-ubuntu42: output: Primary key fingerprint: 649C C812 AA81 D279 1A7C  8BD5 1158 BF74 FD1D 13E2
+2023-10-08 00:33:32.767193 +0000 build-ubuntu42: Executing 'bash -c reprepro --ignore=surprisingbinary --ignore=surprisingarch --keepunreferencedfiles -b /home/user/builder-r4.2/repository-publish/deb/r4.2/vm include jammy-testing /home/user/builder-r4.2/components/rpm-oxide/0.2.7-1/vm-jammy/build/qubes-rpm-oxide_0.2.7-1+jammy1_amd64.changes'.
+2023-10-08 00:33:32.787840 +0000 build-ubuntu42: output: 'qubes-rpm-oxide_0.2.7-1+jammy1_amd64.buildinfo' looks like architecture 'amd64', but this is not listed in the Architecture-Header!
+2023-10-08 00:33:32.787888 +0000 build-ubuntu42: output: Ignoring as --ignore=surprisingarch given.
+2023-10-08 00:33:32.836318 +0000 build-ubuntu42: output: zstd: /*stdout*\: Broken pipe
+2023-10-08 00:33:32.864302 +0000 build-ubuntu42: output: Exporting indices...
+2023-10-08 00:33:32.872668 +0000 build-ubuntu42: rpm-oxide:vm-ubuntu-22.04.amd64: Signing metadata (Release.gpg).
+2023-10-08 00:33:32.872727 +0000 build-ubuntu42: Executing 'bash -c qubes-gpg-client-wrapper --detach-sign --armor --local-user 649CC812AA81D2791A7C8BD51158BF74FD1D13E2 --batch --no-tty --output /home/user/builder-r4.2/repository-publish/deb/r4.2/vm/dists/jammy-testing/Release.gpg /home/user/builder-r4.2/repository-publish/deb/r4.2/vm/dists/jammy-testing/Release'.
+2023-10-08 00:33:32.991072 +0000 build-ubuntu42: rpm-oxide:vm-ubuntu-22.04.amd64: Signing metadata (InRelease).
+2023-10-08 00:33:32.991162 +0000 build-ubuntu42: Executing 'bash -c qubes-gpg-client-wrapper --clearsign --armor --local-user 649CC812AA81D2791A7C8BD51158BF74FD1D13E2 --batch --no-tty --output /home/user/builder-r4.2/repository-publish/deb/r4.2/vm/dists/jammy-testing/InRelease /home/user/builder-r4.2/repository-publish/deb/r4.2/vm/dists/jammy-testing/Release'.
+2023-10-08 00:33:33.099421 +0000 build-ubuntu42: > done
+2023-10-08 00:33:33.099470 +0000 > closing log
