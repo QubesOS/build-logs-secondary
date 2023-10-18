@@ -1,0 +1,117 @@
+2023-10-18 16:49:39.765301 +0000 > starting log
+2023-10-18 16:49:39.765915 +0000 build-ubuntu42: > starting build with log
+2023-10-18 16:49:39.765931 +0000 build-ubuntu42: >> args:
+2023-10-18 16:49:39.765941 +0000 build-ubuntu42: >>   ()
+2023-10-18 16:49:39.765949 +0000 build-ubuntu42: >> component:
+2023-10-18 16:49:39.765956 +0000 build-ubuntu42: >>   lorax
+2023-10-18 16:49:39.765964 +0000 build-ubuntu42: >> distributions:
+2023-10-18 16:49:39.765974 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-10-18 16:49:57.051177 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8598 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 16:49:57.314899 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8598 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 16:49:57.768083 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8598 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 16:49:58.007520 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp8598 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-lorax.git /builder/lorax /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-10-18 16:50:31.459445 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-10-18 16:50:31.459499 +0000 build-ubuntu42: output: ---> Good tag 5eafba420b3999552a3f172ffdb7574dc701bc1e.
+2023-10-18 16:50:31.459536 +0000 build-ubuntu42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-10-18 16:50:31.459550 +0000 build-ubuntu42: output: --> Switching branch from main branch to main
+2023-10-18 16:50:31.505803 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8598 qubesbuilder.FileCopyOut+__builder__lorax /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-10-18 16:51:04.947525 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp5064 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 16:51:05.635494 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp5064 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 16:51:06.959288 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp5064 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 16:51:07.479768 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp5064 bash -c 'rm -rf /builder/incoming/lorax /builder/lorax'
+2023-10-18 16:51:07.917010 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp5064 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/lorax
+2023-10-18 16:51:08.620683 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp5064 bash -c 'mkdir -p /builder && mv /builder/incoming/lorax /builder'
+2023-10-18 16:51:09.425324 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp5064 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/lorax --file-name lorax-37.8.tar.gz --file-url https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz''.
+2023-10-18 16:51:09.702061 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-10-18 16:51:09.702119 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/lorax --file-name lorax-37.8.tar.gz --file-url https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz
+2023-10-18 16:51:09.749221 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/lorax'\'' --file-name '\''lorax-37.8.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz'\'' --'
+2023-10-18 16:51:09.749291 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/lorax'\'' --file-name '\''lorax-37.8.tar.gz'\'' --file-url '\''https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz'\'' --'
+2023-10-18 16:51:09.749309 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/lorax --file-name lorax-37.8.tar.gz --file-url https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz --
+2023-10-18 16:51:09.749319 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-10-18 16:51:09.749327 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:09.749336 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/lorax
+2023-10-18 16:51:09.749343 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:09.749350 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:09.749359 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-10-18 16:51:09.749366 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:09.749374 +0000 build-ubuntu42: output: + FILE_NAME=lorax-37.8.tar.gz
+2023-10-18 16:51:09.749381 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:09.749388 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:09.749395 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-10-18 16:51:09.749402 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:09.749412 +0000 build-ubuntu42: output: + FILE_URL=https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz
+2023-10-18 16:51:09.749419 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:09.749425 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:09.749433 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-10-18 16:51:09.749440 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:09.749447 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:09.749454 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-10-18 16:51:09.749492 +0000 build-ubuntu42: output: + '[' -z https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz ']'
+2023-10-18 16:51:09.749506 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-10-18 16:51:09.749515 +0000 build-ubuntu42: output: + '[' -z lorax-37.8.tar.gz ']'
+2023-10-18 16:51:09.749524 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_lorax-37.8.tar.gz
+2023-10-18 16:51:09.749532 +0000 build-ubuntu42: output: + '[' -n /builder/lorax ']'
+2023-10-18 16:51:09.749539 +0000 build-ubuntu42: output: + mkdir -p /builder/lorax
+2023-10-18 16:51:09.750639 +0000 build-ubuntu42: output: + cd /builder/lorax
+2023-10-18 16:51:09.750694 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_lorax-37.8.tar.gz -- https://ftp.qubes-os.org/distfiles/lorax-37.8.tar.gz
+2023-10-18 16:51:19.120344 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-10-18 16:51:19.120389 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:51:19.161264 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5064 qubesbuilder.FileCopyOut+__builder__lorax__untrusted_lorax-37.8.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp4cdn9zs8
+2023-10-18 16:51:30.307407 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp4cdn9zs8 --untrusted-file /home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512'.
+2023-10-18 16:51:30.309748 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-10-18 16:51:30.310286 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp4cdn9zs8 --untrusted-file /home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512
+2023-10-18 16:51:30.314004 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp4cdn9zs8'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512'\'' --'
+2023-10-18 16:51:30.314062 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp4cdn9zs8'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512'\'' --'
+2023-10-18 16:51:30.314085 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp4cdn9zs8 --untrusted-file /home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512 --
+2023-10-18 16:51:30.314096 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-10-18 16:51:30.314104 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-10-18 16:51:30.314112 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:30.314121 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp4cdn9zs8
+2023-10-18 16:51:30.314129 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314136 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314143 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-10-18 16:51:30.314150 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:30.314165 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz
+2023-10-18 16:51:30.314174 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314182 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314189 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-10-18 16:51:30.314196 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:30.314204 +0000 build-ubuntu42: output: + CHECKSUM_CMD=sha512sum
+2023-10-18 16:51:30.314211 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314218 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314225 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-10-18 16:51:30.314232 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:30.314242 +0000 build-ubuntu42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512
+2023-10-18 16:51:30.314249 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314256 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314264 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-10-18 16:51:30.314271 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:51:30.314277 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:51:30.314285 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-10-18 16:51:30.314294 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz ']'
+2023-10-18 16:51:30.314303 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp4cdn9zs8 ']'
+2023-10-18 16:51:30.314312 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp4cdn9zs8
+2023-10-18 16:51:30.314819 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz
+2023-10-18 16:51:30.318976 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_lorax-37.8.tar.gz
+2023-10-18 16:51:30.319024 +0000 build-ubuntu42: output: + FILE_NAME=lorax-37.8.tar.gz
+2023-10-18 16:51:30.319054 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2023-10-18 16:51:30.319066 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2023-10-18 16:51:30.319077 +0000 build-ubuntu42: output: + '[' -e /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2023-10-18 16:51:30.319084 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:51:30.319092 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-10-18 16:51:30.319099 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:51:30.319106 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:51:30.319116 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512 ']'
+2023-10-18 16:51:30.319123 +0000 build-ubuntu42: output: + '[' -z sha512sum ']'
+2023-10-18 16:51:30.319131 +0000 build-ubuntu42: output: + sha512sum --status -c /dev/fd/63
+2023-10-18 16:51:30.319141 +0000 build-ubuntu42: output: +++ cat /home/user/builder-r4.2/sources/lorax/lorax-37.8.tar.gz.sha512
+2023-10-18 16:51:30.319155 +0000 build-ubuntu42: output: ++ printf '%s  -\n' 8669ea6b873f4376cf5cace5d2eaab969bfe49f5f594f3bb0968319049c99d052379bfb7c6e5233bae7aa6a525c61c5220a3a0b3e58c7bbbecf1d72498ded25f
+2023-10-18 16:51:30.326391 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmp4cdn9zs8/untrusted_lorax-37.8.tar.gz /home/user/builder-r4.2/tmp/tmp4cdn9zs8/lorax-37.8.tar.gz
+2023-10-18 16:51:46.792956 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp6842 bash -c 'rm -rf /builder/incoming/lorax /builder/lorax'
+2023-10-18 16:51:47.132271 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp6842 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/lorax
+2023-10-18 16:51:48.043082 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp6842 bash -c 'mkdir -p /builder && mv /builder/incoming/lorax /builder'
+2023-10-18 16:51:48.275154 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp6842 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/lorax/hash /builder/lorax/vtags && cd /builder && git -C /builder/lorax rev-parse '\''HEAD^{}'\'' >> /builder/lorax/hash && git -C /builder/lorax tag --points-at HEAD --list '\''v*'\'' >> /builder/lorax/vtags''.
+2023-10-18 16:51:48.615161 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6842 qubesbuilder.FileCopyOut+__builder__lorax__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp5lujcxm3
+2023-10-18 16:51:49.010048 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6842 qubesbuilder.FileCopyOut+__builder__lorax__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp5lujcxm3
+2023-10-18 16:51:53.394801 +0000 build-ubuntu42: > done
+2023-10-18 16:51:53.394849 +0000 > closing log
