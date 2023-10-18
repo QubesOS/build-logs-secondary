@@ -1,0 +1,261 @@
+2023-10-18 15:05:25.823722 +0000 > starting log
+2023-10-18 15:05:25.825073 +0000 build-archlinux42: > starting build with log
+2023-10-18 15:05:25.825090 +0000 build-archlinux42: >> args:
+2023-10-18 15:05:25.825099 +0000 build-archlinux42: >>   ()
+2023-10-18 15:05:25.825107 +0000 build-archlinux42: >> component:
+2023-10-18 15:05:25.825115 +0000 build-archlinux42: >>   core-libvirt
+2023-10-18 15:05:25.825123 +0000 build-archlinux42: >> distributions:
+2023-10-18 15:05:25.825133 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-10-18 15:05:46.465970 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp446 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 15:05:46.947726 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp446 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 15:05:47.258274 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp446 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 15:05:47.665930 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp446 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-core-libvirt.git /builder/core-libvirt /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-10-18 15:05:52.982539 +0000 build-archlinux42: output: --> Verifying tags...
+2023-10-18 15:05:52.982587 +0000 build-archlinux42: output: ---> Good tag 4c721a13fa756cf014ec6e3cabd35d97ef5e2013.
+2023-10-18 15:05:52.982601 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-10-18 15:05:52.982611 +0000 build-archlinux42: output: --> Switching branch from main branch to main
+2023-10-18 15:05:53.040596 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp446 qubesbuilder.FileCopyOut+__builder__core-libvirt /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-10-18 15:06:18.196542 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp83 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 15:06:32.588998 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp83 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 15:06:33.485803 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp83 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 15:06:34.082384 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp83 bash -c 'rm -rf /builder/incoming/core-libvirt /builder/core-libvirt'
+2023-10-18 15:06:34.393010 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp83 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/core-libvirt
+2023-10-18 15:06:34.850045 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp83 bash -c 'mkdir -p /builder && mv /builder/incoming/core-libvirt /builder'
+2023-10-18 15:06:35.317886 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp83 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/core-libvirt --file-name libvirt-8.9.0.tar.xz --file-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz --signature-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc''.
+2023-10-18 15:06:35.628356 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-10-18 15:06:35.630304 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/core-libvirt --file-name libvirt-8.9.0.tar.xz --file-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz --signature-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:35.638987 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-8.9.0.tar.xz'\'' --file-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz'\'' --signature-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc'\'' --'
+2023-10-18 15:06:35.639041 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-8.9.0.tar.xz'\'' --file-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz'\'' --signature-url '\''https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc'\'' --'
+2023-10-18 15:06:35.639061 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/core-libvirt --file-name libvirt-8.9.0.tar.xz --file-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz --signature-url https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc --
+2023-10-18 15:06:35.639071 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-10-18 15:06:35.639079 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:35.639088 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/core-libvirt
+2023-10-18 15:06:35.639095 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639108 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639117 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-10-18 15:06:35.639124 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:35.639132 +0000 build-archlinux42: output: + FILE_NAME=libvirt-8.9.0.tar.xz
+2023-10-18 15:06:35.639139 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639146 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639153 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-10-18 15:06:35.639161 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:35.639170 +0000 build-archlinux42: output: + FILE_URL=https://libvirt.org/sources/libvirt-8.9.0.tar.xz
+2023-10-18 15:06:35.639177 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639184 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639191 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-10-18 15:06:35.639198 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:35.639208 +0000 build-archlinux42: output: + SIGNATURE_URL=https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:35.639215 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639222 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639395 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-10-18 15:06:35.639415 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:35.639423 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:35.639431 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-10-18 15:06:35.639440 +0000 build-archlinux42: output: + '[' -z https://libvirt.org/sources/libvirt-8.9.0.tar.xz ']'
+2023-10-18 15:06:35.639451 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-10-18 15:06:35.639460 +0000 build-archlinux42: output: + '[' -z libvirt-8.9.0.tar.xz ']'
+2023-10-18 15:06:35.639501 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz
+2023-10-18 15:06:35.639510 +0000 build-archlinux42: output: + '[' -n /builder/core-libvirt ']'
+2023-10-18 15:06:35.639518 +0000 build-archlinux42: output: + mkdir -p /builder/core-libvirt
+2023-10-18 15:06:35.646387 +0000 build-archlinux42: output: + cd /builder/core-libvirt
+2023-10-18 15:06:35.646438 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-8.9.0.tar.xz -- https://libvirt.org/sources/libvirt-8.9.0.tar.xz
+2023-10-18 15:06:45.242199 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-10-18 15:06:45.242243 +0000 build-archlinux42: output: + '[' -n https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc ']'
+2023-10-18 15:06:45.243488 +0000 build-archlinux42: output: ++ basename https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:45.246442 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:45.246507 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:45.246525 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-8.9.0.tar.xz.asc https://libvirt.org/sources/libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:47.690584 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp83 qubesbuilder.FileCopyOut+__builder__core-libvirt__untrusted_libvirt-8.9.0.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpxp340emw
+2023-10-18 15:06:48.454262 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp83 qubesbuilder.FileCopyOut+__builder__core-libvirt__untrusted_libvirt-8.9.0.tar.xz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpxp340emw
+2023-10-18 15:06:59.024491 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpxp340emw --untrusted-file /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc'.
+2023-10-18 15:06:59.032215 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-10-18 15:06:59.032288 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpxp340emw --untrusted-file /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc
+2023-10-18 15:06:59.032322 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpxp340emw'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2023-10-18 15:06:59.032354 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpxp340emw'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2023-10-18 15:06:59.032381 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpxp340emw --untrusted-file /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc --
+2023-10-18 15:06:59.032404 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-10-18 15:06:59.032414 +0000 build-archlinux42: output: + [[ 11 -gt 0 ]]
+2023-10-18 15:06:59.032422 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:59.032432 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpxp340emw
+2023-10-18 15:06:59.032440 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032447 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032455 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-10-18 15:06:59.032482 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:59.032496 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz
+2023-10-18 15:06:59.032504 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032512 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032525 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-10-18 15:06:59.032532 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:59.032543 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:59.032551 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032559 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032566 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-10-18 15:06:59.032573 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:59.032581 +0000 build-archlinux42: output: + PUBKEY_FILE+=("$2")
+2023-10-18 15:06:59.032588 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032595 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032603 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-10-18 15:06:59.032610 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:59.032618 +0000 build-archlinux42: output: + PUBKEY_FILE+=("$2")
+2023-10-18 15:06:59.032625 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032632 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032639 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-10-18 15:06:59.032646 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:06:59.032653 +0000 build-archlinux42: output: + shift
+2023-10-18 15:06:59.032661 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-10-18 15:06:59.032671 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz ']'
+2023-10-18 15:06:59.032680 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpxp340emw ']'
+2023-10-18 15:06:59.032689 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpxp340emw
+2023-10-18 15:06:59.036754 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz
+2023-10-18 15:06:59.036798 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz
+2023-10-18 15:06:59.036810 +0000 build-archlinux42: output: + FILE_NAME=libvirt-8.9.0.tar.xz
+2023-10-18 15:06:59.036819 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-10-18 15:06:59.036835 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2023-10-18 15:06:59.036844 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-10-18 15:06:59.036855 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2023-10-18 15:06:59.036866 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2023-10-18 15:06:59.036893 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2023-10-18 15:06:59.036905 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2023-10-18 15:06:59.036916 +0000 build-archlinux42: output: + '[' '!' -e /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2023-10-18 15:06:59.036924 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-10-18 15:06:59.036935 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc ']'
+2023-10-18 15:06:59.036945 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2023-10-18 15:06:59.036956 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:59.039329 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:59.039371 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:59.039382 +0000 build-archlinux42: output: ++ mktemp -u
+2023-10-18 15:06:59.041918 +0000 build-archlinux42: output: + keyring=/tmp/tmp.IR56iWkUHs
+2023-10-18 15:06:59.044665 +0000 build-archlinux42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-10-18 15:06:59.044712 +0000 build-archlinux42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.IR56iWkUHs -q --import /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc
+2023-10-18 15:06:59.066982 +0000 build-archlinux42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-10-18 15:06:59.067032 +0000 build-archlinux42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.IR56iWkUHs -q --import /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc
+2023-10-18 15:06:59.083894 +0000 build-archlinux42: output: + gpgv --keyring /tmp/tmp.IR56iWkUHs /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz
+2023-10-18 15:06:59.134598 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz.asc /home/user/builder-r4.2/tmp/tmpxp340emw/libvirt-8.9.0.tar.xz.asc
+2023-10-18 15:06:59.145451 +0000 build-archlinux42: output: + rm -rf /tmp/tmp.IR56iWkUHs
+2023-10-18 15:06:59.145520 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmpxp340emw/untrusted_libvirt-8.9.0.tar.xz /home/user/builder-r4.2/tmp/tmpxp340emw/libvirt-8.9.0.tar.xz
+2023-10-18 15:07:29.034384 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp3994 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 15:07:29.444930 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp3994 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 15:07:29.802833 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp3994 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 15:07:30.246119 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp3994 bash -c 'rm -rf /builder/incoming/core-libvirt /builder/core-libvirt'
+2023-10-18 15:07:30.802506 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp3994 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/core-libvirt
+2023-10-18 15:07:31.392751 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp3994 bash -c 'mkdir -p /builder && mv /builder/incoming/core-libvirt /builder'
+2023-10-18 15:07:32.067871 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp3994 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/core-libvirt --file-name libvirt-python-8.9.0.tar.gz --file-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz --signature-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc''.
+2023-10-18 15:07:32.643938 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-10-18 15:07:32.644000 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/core-libvirt --file-name libvirt-python-8.9.0.tar.gz --file-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz --signature-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:07:32.653882 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-python-8.9.0.tar.gz'\'' --file-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz'\'' --signature-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc'\'' --'
+2023-10-18 15:07:32.653939 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/core-libvirt'\'' --file-name '\''libvirt-python-8.9.0.tar.gz'\'' --file-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz'\'' --signature-url '\''https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc'\'' --'
+2023-10-18 15:07:32.653960 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/core-libvirt --file-name libvirt-python-8.9.0.tar.gz --file-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz --signature-url https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc --
+2023-10-18 15:07:32.653969 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-10-18 15:07:32.653978 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:07:32.653986 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/core-libvirt
+2023-10-18 15:07:32.653994 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654001 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654008 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-10-18 15:07:32.654016 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:07:32.654024 +0000 build-archlinux42: output: + FILE_NAME=libvirt-python-8.9.0.tar.gz
+2023-10-18 15:07:32.654031 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654038 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654046 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-10-18 15:07:32.654053 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:07:32.654063 +0000 build-archlinux42: output: + FILE_URL=https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz
+2023-10-18 15:07:32.654070 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654325 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654348 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-10-18 15:07:32.654491 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:07:32.654513 +0000 build-archlinux42: output: + SIGNATURE_URL=https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:07:32.654523 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654531 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654774 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-10-18 15:07:32.654794 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:07:32.654803 +0000 build-archlinux42: output: + shift
+2023-10-18 15:07:32.654811 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-10-18 15:07:32.654821 +0000 build-archlinux42: output: + '[' -z https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz ']'
+2023-10-18 15:07:32.654832 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-10-18 15:07:32.654861 +0000 build-archlinux42: output: + '[' -z libvirt-python-8.9.0.tar.gz ']'
+2023-10-18 15:07:32.655159 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz
+2023-10-18 15:07:32.655186 +0000 build-archlinux42: output: + '[' -n /builder/core-libvirt ']'
+2023-10-18 15:07:32.655196 +0000 build-archlinux42: output: + mkdir -p /builder/core-libvirt
+2023-10-18 15:07:32.659107 +0000 build-archlinux42: output: + cd /builder/core-libvirt
+2023-10-18 15:07:32.659159 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-python-8.9.0.tar.gz -- https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz
+2023-10-18 15:07:39.625439 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-10-18 15:07:39.625519 +0000 build-archlinux42: output: + '[' -n https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc ']'
+2023-10-18 15:07:39.628559 +0000 build-archlinux42: output: ++ basename https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:07:39.628604 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:07:39.628617 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:07:39.628633 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_libvirt-python-8.9.0.tar.gz.asc https://libvirt.org/sources/python/libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:07:43.346918 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3994 qubesbuilder.FileCopyOut+__builder__core-libvirt__untrusted_libvirt-python-8.9.0.tar.gz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp1_5vh4ri
+2023-10-18 15:07:54.477608 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3994 qubesbuilder.FileCopyOut+__builder__core-libvirt__untrusted_libvirt-python-8.9.0.tar.gz.asc /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp1_5vh4ri
+2023-10-18 15:08:00.974856 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp1_5vh4ri --untrusted-file /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc'.
+2023-10-18 15:08:00.982578 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-10-18 15:08:00.982651 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp1_5vh4ri --untrusted-file /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc
+2023-10-18 15:08:00.982686 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp1_5vh4ri'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2023-10-18 15:08:00.982733 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp1_5vh4ri'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc'\'' --'
+2023-10-18 15:08:00.982764 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp1_5vh4ri --untrusted-file /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc --pubkey-file /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc --
+2023-10-18 15:08:00.982773 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-10-18 15:08:00.982781 +0000 build-archlinux42: output: + [[ 11 -gt 0 ]]
+2023-10-18 15:08:00.982789 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:08:00.982798 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp1_5vh4ri
+2023-10-18 15:08:00.982806 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.982813 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.982820 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-10-18 15:08:00.982827 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:08:00.985422 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz
+2023-10-18 15:08:00.985486 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985498 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985507 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-10-18 15:08:00.985515 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:08:00.985527 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:08:00.985535 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985542 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985549 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-10-18 15:08:00.985557 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:08:00.985564 +0000 build-archlinux42: output: + PUBKEY_FILE+=("$2")
+2023-10-18 15:08:00.985572 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985579 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985586 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-10-18 15:08:00.985593 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:08:00.985601 +0000 build-archlinux42: output: + PUBKEY_FILE+=("$2")
+2023-10-18 15:08:00.985608 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985615 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985622 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-10-18 15:08:00.985629 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 15:08:00.985636 +0000 build-archlinux42: output: + shift
+2023-10-18 15:08:00.985643 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-10-18 15:08:00.985653 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz ']'
+2023-10-18 15:08:00.985679 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1_5vh4ri ']'
+2023-10-18 15:08:00.985690 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp1_5vh4ri
+2023-10-18 15:08:00.987356 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz
+2023-10-18 15:08:00.989766 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz
+2023-10-18 15:08:00.989810 +0000 build-archlinux42: output: + FILE_NAME=libvirt-python-8.9.0.tar.gz
+2023-10-18 15:08:00.989820 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-10-18 15:08:00.989832 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2023-10-18 15:08:00.989841 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-10-18 15:08:00.993888 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2023-10-18 15:08:00.993935 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2023-10-18 15:08:00.993949 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2023-10-18 15:08:00.993961 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2023-10-18 15:08:00.993972 +0000 build-archlinux42: output: + '[' '!' -e /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2023-10-18 15:08:00.993980 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-10-18 15:08:00.993991 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc ']'
+2023-10-18 15:08:00.994001 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc ']'
+2023-10-18 15:08:00.994012 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:08:00.994021 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:08:00.999121 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:08:00.999170 +0000 build-archlinux42: output: ++ mktemp -u
+2023-10-18 15:08:00.999183 +0000 build-archlinux42: output: + keyring=/tmp/tmp.aOuSNTUvkB
+2023-10-18 15:08:00.999193 +0000 build-archlinux42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-10-18 15:08:00.999207 +0000 build-archlinux42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.aOuSNTUvkB -q --import /home/user/builder-r4.2/sources/core-libvirt/redhat-jiri-denemark-key.asc
+2023-10-18 15:08:01.015593 +0000 build-archlinux42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-10-18 15:08:01.027705 +0000 build-archlinux42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.aOuSNTUvkB -q --import /home/user/builder-r4.2/sources/core-libvirt/redhat-veillard-key.asc
+2023-10-18 15:08:01.036844 +0000 build-archlinux42: output: + gpgv --keyring /tmp/tmp.aOuSNTUvkB /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz
+2023-10-18 15:08:01.059726 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz.asc /home/user/builder-r4.2/tmp/tmp1_5vh4ri/libvirt-python-8.9.0.tar.gz.asc
+2023-10-18 15:08:01.064578 +0000 build-archlinux42: output: + rm -rf /tmp/tmp.aOuSNTUvkB
+2023-10-18 15:08:01.064634 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmp1_5vh4ri/untrusted_libvirt-python-8.9.0.tar.gz /home/user/builder-r4.2/tmp/tmp1_5vh4ri/libvirt-python-8.9.0.tar.gz
+2023-10-18 15:08:21.803508 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp2538 bash -c 'rm -rf /builder/incoming/core-libvirt /builder/core-libvirt'
+2023-10-18 15:08:22.154644 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp2538 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/core-libvirt
+2023-10-18 15:08:22.552873 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp2538 bash -c 'mkdir -p /builder && mv /builder/incoming/core-libvirt /builder'
+2023-10-18 15:08:22.855324 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp2538 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/core-libvirt/hash /builder/core-libvirt/vtags && cd /builder && git -C /builder/core-libvirt rev-parse '\''HEAD^{}'\'' >> /builder/core-libvirt/hash && git -C /builder/core-libvirt tag --points-at HEAD --list '\''v*'\'' >> /builder/core-libvirt/vtags''.
+2023-10-18 15:08:23.166460 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2538 qubesbuilder.FileCopyOut+__builder__core-libvirt__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmplbtmj_is
+2023-10-18 15:08:23.387491 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp2538 qubesbuilder.FileCopyOut+__builder__core-libvirt__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmplbtmj_is
+2023-10-18 15:08:27.463584 +0000 build-archlinux42: > done
+2023-10-18 15:08:27.463634 +0000 > closing log
