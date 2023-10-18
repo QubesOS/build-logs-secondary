@@ -1,0 +1,136 @@
+2023-10-18 16:52:51.405446 +0000 > starting log
+2023-10-18 16:52:51.405779 +0000 build-archlinux42: > starting build with log
+2023-10-18 16:52:51.405795 +0000 build-archlinux42: >> args:
+2023-10-18 16:52:51.405804 +0000 build-archlinux42: >>   ()
+2023-10-18 16:52:51.405812 +0000 build-archlinux42: >> component:
+2023-10-18 16:52:51.405820 +0000 build-archlinux42: >>   linux-pvgrub2
+2023-10-18 16:52:51.405827 +0000 build-archlinux42: >> distributions:
+2023-10-18 16:52:51.405837 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2023-10-18 16:53:11.178131 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp9932 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 16:53:12.304634 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp9932 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 16:53:14.613062 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp9932 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 16:53:15.385806 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp9932 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-linux-pvgrub2.git /builder/linux-pvgrub2 /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-10-18 16:53:21.238082 +0000 build-archlinux42: output: --> Verifying tags...
+2023-10-18 16:53:21.238127 +0000 build-archlinux42: output: ---> Good tag b32645a3a8928e2155c4e90db04fe1a134356d69.
+2023-10-18 16:53:21.238140 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-10-18 16:53:21.238151 +0000 build-archlinux42: output: --> Switching branch from main branch to main
+2023-10-18 16:53:21.252430 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9932 qubesbuilder.FileCopyOut+__builder__linux-pvgrub2 /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-10-18 16:53:54.813530 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8973 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 16:53:55.277401 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8973 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 16:53:55.498496 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8973 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 16:53:55.779741 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8973 bash -c 'rm -rf /builder/incoming/linux-pvgrub2 /builder/linux-pvgrub2'
+2023-10-18 16:53:56.213905 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8973 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-pvgrub2
+2023-10-18 16:53:56.427251 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp8973 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-pvgrub2 /builder'
+2023-10-18 16:53:56.665514 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp8973 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/linux-pvgrub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig''.
+2023-10-18 16:53:56.922238 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-10-18 16:53:56.922564 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/linux-pvgrub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2023-10-18 16:53:56.928157 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/linux-pvgrub2'\'' --file-name '\''grub-2.06.tar.xz'\'' --file-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz'\'' --signature-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig'\'' --'
+2023-10-18 16:53:56.928211 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/linux-pvgrub2'\'' --file-name '\''grub-2.06.tar.xz'\'' --file-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz'\'' --signature-url '\''https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig'\'' --'
+2023-10-18 16:53:56.928381 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/linux-pvgrub2 --file-name grub-2.06.tar.xz --file-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz --signature-url https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig --
+2023-10-18 16:53:56.928412 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-10-18 16:53:56.928423 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:53:56.928432 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/linux-pvgrub2
+2023-10-18 16:53:56.928440 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.928448 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.929377 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-10-18 16:53:56.929416 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:53:56.929427 +0000 build-archlinux42: output: + FILE_NAME=grub-2.06.tar.xz
+2023-10-18 16:53:56.929436 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.929444 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.929451 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-10-18 16:53:56.929458 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:53:56.929493 +0000 build-archlinux42: output: + FILE_URL=https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz
+2023-10-18 16:53:56.929502 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.929509 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.930359 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-10-18 16:53:56.930396 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:53:56.930408 +0000 build-archlinux42: output: + SIGNATURE_URL=https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2023-10-18 16:53:56.930417 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.930424 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.930432 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-10-18 16:53:56.930439 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:53:56.930446 +0000 build-archlinux42: output: + shift
+2023-10-18 16:53:56.930453 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-10-18 16:53:56.930480 +0000 build-archlinux42: output: + '[' -z https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz ']'
+2023-10-18 16:53:56.930494 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-10-18 16:53:56.930503 +0000 build-archlinux42: output: + '[' -z grub-2.06.tar.xz ']'
+2023-10-18 16:53:56.930512 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_grub-2.06.tar.xz
+2023-10-18 16:53:56.930521 +0000 build-archlinux42: output: + '[' -n /builder/linux-pvgrub2 ']'
+2023-10-18 16:53:56.930529 +0000 build-archlinux42: output: + mkdir -p /builder/linux-pvgrub2
+2023-10-18 16:53:56.932366 +0000 build-archlinux42: output: + cd /builder/linux-pvgrub2
+2023-10-18 16:53:56.932630 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_grub-2.06.tar.xz -- https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz
+2023-10-18 16:54:10.120969 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2023-10-18 16:54:10.121033 +0000 build-archlinux42: output: + '[' -n https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig ']'
+2023-10-18 16:54:10.133275 +0000 build-archlinux42: output: ++ basename https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2023-10-18 16:54:10.133318 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=grub-2.06.tar.xz.sig
+2023-10-18 16:54:10.133331 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_grub-2.06.tar.xz.sig
+2023-10-18 16:54:10.133345 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_grub-2.06.tar.xz.sig https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz.sig
+2023-10-18 16:54:11.246435 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8973 qubesbuilder.FileCopyOut+__builder__linux-pvgrub2__untrusted_grub-2.06.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmps7yjkrx8
+2023-10-18 16:54:15.773702 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8973 qubesbuilder.FileCopyOut+__builder__linux-pvgrub2__untrusted_grub-2.06.tar.xz.sig /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmps7yjkrx8
+2023-10-18 16:54:21.850688 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmps7yjkrx8 --untrusted-file /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc'.
+2023-10-18 16:54:21.850744 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-10-18 16:54:21.850780 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmps7yjkrx8 --untrusted-file /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc
+2023-10-18 16:54:21.850806 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmps7yjkrx8'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc'\'' --'
+2023-10-18 16:54:21.850831 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmps7yjkrx8'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc'\'' --'
+2023-10-18 16:54:21.850853 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmps7yjkrx8 --untrusted-file /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig --pubkey-file /home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc --
+2023-10-18 16:54:21.850861 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2023-10-18 16:54:21.850870 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2023-10-18 16:54:21.850878 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:54:21.850887 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmps7yjkrx8
+2023-10-18 16:54:21.853904 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.853962 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.853974 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2023-10-18 16:54:21.853982 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:54:21.853993 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz
+2023-10-18 16:54:21.854002 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.854009 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.854017 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2023-10-18 16:54:21.854024 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:54:21.854035 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig
+2023-10-18 16:54:21.854043 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.854050 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.854058 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2023-10-18 16:54:21.854065 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:54:21.854072 +0000 build-archlinux42: output: + PUBKEY_FILE+=("$2")
+2023-10-18 16:54:21.854079 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.854086 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.854094 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2023-10-18 16:54:21.854101 +0000 build-archlinux42: output: + case "$1" in
+2023-10-18 16:54:21.854108 +0000 build-archlinux42: output: + shift
+2023-10-18 16:54:21.854115 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2023-10-18 16:54:21.854125 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz ']'
+2023-10-18 16:54:21.854135 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmps7yjkrx8 ']'
+2023-10-18 16:54:21.854144 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmps7yjkrx8
+2023-10-18 16:54:21.857032 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz
+2023-10-18 16:54:21.862438 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_grub-2.06.tar.xz
+2023-10-18 16:54:21.862511 +0000 build-archlinux42: output: + FILE_NAME=grub-2.06.tar.xz
+2023-10-18 16:54:21.862522 +0000 build-archlinux42: output: + '[' -z '' ']'
+2023-10-18 16:54:21.862533 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig ']'
+2023-10-18 16:54:21.862542 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-10-18 16:54:21.862553 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig ']'
+2023-10-18 16:54:21.862563 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc ']'
+2023-10-18 16:54:21.862574 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig ']'
+2023-10-18 16:54:21.862584 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig ']'
+2023-10-18 16:54:21.862594 +0000 build-archlinux42: output: + '[' '!' -e /home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc ']'
+2023-10-18 16:54:21.862601 +0000 build-archlinux42: output: + '[' -n '' ']'
+2023-10-18 16:54:21.862612 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig ']'
+2023-10-18 16:54:21.862622 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc ']'
+2023-10-18 16:54:21.862632 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig
+2023-10-18 16:54:21.865533 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_grub-2.06.tar.xz.sig
+2023-10-18 16:54:21.865576 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=grub-2.06.tar.xz.sig
+2023-10-18 16:54:21.865607 +0000 build-archlinux42: output: ++ mktemp -u
+2023-10-18 16:54:21.873618 +0000 build-archlinux42: output: + keyring=/tmp/tmp.udZjK0Si1z
+2023-10-18 16:54:21.875128 +0000 build-archlinux42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2023-10-18 16:54:21.875182 +0000 build-archlinux42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.udZjK0Si1z -q --import /home/user/builder-r4.2/sources/linux-pvgrub2/grub2-key.asc
+2023-10-18 16:54:22.025779 +0000 build-archlinux42: output: + gpgv --keyring /tmp/tmp.udZjK0Si1z /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz
+2023-10-18 16:54:22.048049 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz.sig /home/user/builder-r4.2/tmp/tmps7yjkrx8/grub-2.06.tar.xz.sig
+2023-10-18 16:54:22.049838 +0000 build-archlinux42: output: + rm -rf /tmp/tmp.udZjK0Si1z
+2023-10-18 16:54:22.056020 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmps7yjkrx8/untrusted_grub-2.06.tar.xz /home/user/builder-r4.2/tmp/tmps7yjkrx8/grub-2.06.tar.xz
+2023-10-18 16:54:39.281852 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5255 bash -c 'rm -rf /builder/incoming/linux-pvgrub2 /builder/linux-pvgrub2'
+2023-10-18 16:54:39.754654 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp5255 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/linux-pvgrub2
+2023-10-18 16:54:40.559698 +0000 build-archlinux42: copy-in (cmd): /usr/bin/qvm-run-vm disp5255 bash -c 'mkdir -p /builder && mv /builder/incoming/linux-pvgrub2 /builder'
+2023-10-18 16:54:55.704511 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm disp5255 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/linux-pvgrub2/hash /builder/linux-pvgrub2/vtags && cd /builder && git -C /builder/linux-pvgrub2 rev-parse '\''HEAD^{}'\'' >> /builder/linux-pvgrub2/hash && git -C /builder/linux-pvgrub2 tag --points-at HEAD --list '\''v*'\'' >> /builder/linux-pvgrub2/vtags''.
+2023-10-18 16:54:56.548699 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5255 qubesbuilder.FileCopyOut+__builder__linux-pvgrub2__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpjy3bbdcr
+2023-10-18 16:54:57.020602 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5255 qubesbuilder.FileCopyOut+__builder__linux-pvgrub2__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpjy3bbdcr
+2023-10-18 16:55:02.253962 +0000 build-archlinux42: > done
+2023-10-18 16:55:02.254011 +0000 > closing log
