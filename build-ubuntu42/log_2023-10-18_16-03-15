@@ -1,0 +1,117 @@
+2023-10-18 16:03:15.060824 +0000 > starting log
+2023-10-18 16:03:15.061117 +0000 build-ubuntu42: > starting build with log
+2023-10-18 16:03:15.061133 +0000 build-ubuntu42: >> args:
+2023-10-18 16:03:15.061142 +0000 build-ubuntu42: >>   ()
+2023-10-18 16:03:15.061150 +0000 build-ubuntu42: >> component:
+2023-10-18 16:03:15.061158 +0000 build-ubuntu42: >>   xorg-x11-drv-amdgpu
+2023-10-18 16:03:15.061166 +0000 build-ubuntu42: >> distributions:
+2023-10-18 16:03:15.061175 +0000 build-ubuntu42: >>   [<QubesDistribution vm-ubuntu-22.04.amd64>]
+2023-10-18 16:03:28.852285 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8437 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 16:03:30.212178 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8437 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 16:03:31.804612 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8437 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 16:03:32.416964 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp8437 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-xorg-x11-drv-amdgpu.git /builder/xorg-x11-drv-amdgpu /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2023-10-18 16:03:37.398130 +0000 build-ubuntu42: output: --> Verifying tags...
+2023-10-18 16:03:37.398176 +0000 build-ubuntu42: output: ---> Good tag 759868bcdf709dec75b3295cac93e3ba82f979e7.
+2023-10-18 16:03:37.398190 +0000 build-ubuntu42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2023-10-18 16:03:37.398201 +0000 build-ubuntu42: output: --> Switching branch from main branch to main
+2023-10-18 16:03:39.104411 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8437 qubesbuilder.FileCopyOut+__builder__xorg-x11-drv-amdgpu /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2023-10-18 16:04:11.950308 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8860 bash -c 'rm -rf /builder/incoming/fetch /builder/plugins/fetch'
+2023-10-18 16:04:12.219629 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8860 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2023-10-18 16:04:12.505612 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8860 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/fetch /builder/plugins'
+2023-10-18 16:04:12.865261 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8860 bash -c 'rm -rf /builder/incoming/xorg-x11-drv-amdgpu /builder/xorg-x11-drv-amdgpu'
+2023-10-18 16:04:13.068519 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp8860 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu
+2023-10-18 16:04:13.264979 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp8860 bash -c 'mkdir -p /builder && mv /builder/incoming/xorg-x11-drv-amdgpu /builder'
+2023-10-18 16:04:13.461831 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp8860 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/xorg-x11-drv-amdgpu --file-name xf86-video-amdgpu-22.0.0.tar.xz --file-url https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz''.
+2023-10-18 16:04:13.622383 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2023-10-18 16:04:13.622443 +0000 build-ubuntu42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/xorg-x11-drv-amdgpu --file-name xf86-video-amdgpu-22.0.0.tar.xz --file-url https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:13.698485 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/builder/xorg-x11-drv-amdgpu'\'' --file-name '\''xf86-video-amdgpu-22.0.0.tar.xz'\'' --file-url '\''https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz'\'' --'
+2023-10-18 16:04:13.698541 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/builder/xorg-x11-drv-amdgpu'\'' --file-name '\''xf86-video-amdgpu-22.0.0.tar.xz'\'' --file-url '\''https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz'\'' --'
+2023-10-18 16:04:13.698563 +0000 build-ubuntu42: output: ++ set -- --output-dir /builder/xorg-x11-drv-amdgpu --file-name xf86-video-amdgpu-22.0.0.tar.xz --file-url https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz --
+2023-10-18 16:04:13.698572 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-10-18 16:04:13.698581 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:13.698591 +0000 build-ubuntu42: output: + OUTPUT_DIR=/builder/xorg-x11-drv-amdgpu
+2023-10-18 16:04:13.698598 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:13.698606 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:13.698615 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-10-18 16:04:13.698622 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:13.698631 +0000 build-ubuntu42: output: + FILE_NAME=xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:13.698638 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:13.698645 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:13.698653 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-10-18 16:04:13.698660 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:13.698671 +0000 build-ubuntu42: output: + FILE_URL=https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:13.698678 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:13.698685 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:13.698693 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-10-18 16:04:13.698700 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:13.698707 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:13.698715 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-10-18 16:04:13.698725 +0000 build-ubuntu42: output: + '[' -z https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz ']'
+2023-10-18 16:04:13.698736 +0000 build-ubuntu42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2023-10-18 16:04:13.698745 +0000 build-ubuntu42: output: + '[' -z xf86-video-amdgpu-22.0.0.tar.xz ']'
+2023-10-18 16:04:13.698754 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:13.698763 +0000 build-ubuntu42: output: + '[' -n /builder/xorg-x11-drv-amdgpu ']'
+2023-10-18 16:04:13.698771 +0000 build-ubuntu42: output: + mkdir -p /builder/xorg-x11-drv-amdgpu
+2023-10-18 16:04:13.698780 +0000 build-ubuntu42: output: + cd /builder/xorg-x11-drv-amdgpu
+2023-10-18 16:04:13.698795 +0000 build-ubuntu42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_xf86-video-amdgpu-22.0.0.tar.xz -- https://www.x.org/archive/individual/driver/xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:22.673625 +0000 build-ubuntu42: output: + '[' '' == 1 ']'
+2023-10-18 16:04:22.673668 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:04:22.694448 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8860 qubesbuilder.FileCopyOut+__builder__xorg-x11-drv-amdgpu__untrusted_xf86-video-amdgpu-22.0.0.tar.xz /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpycwi4t_q
+2023-10-18 16:04:29.230110 +0000 build-ubuntu42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmpycwi4t_q --untrusted-file /home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512'.
+2023-10-18 16:04:29.230177 +0000 build-ubuntu42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2023-10-18 16:04:29.230215 +0000 build-ubuntu42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmpycwi4t_q --untrusted-file /home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512
+2023-10-18 16:04:29.230241 +0000 build-ubuntu42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmpycwi4t_q'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512'\'' --'
+2023-10-18 16:04:29.230266 +0000 build-ubuntu42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmpycwi4t_q'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz'\'' --checksum-cmd '\''sha512sum'\'' --checksum-file '\''/home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512'\'' --'
+2023-10-18 16:04:29.230288 +0000 build-ubuntu42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmpycwi4t_q --untrusted-file /home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz --checksum-cmd sha512sum --checksum-file /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512 --
+2023-10-18 16:04:29.232460 +0000 build-ubuntu42: output: + PUBKEY_FILE=()
+2023-10-18 16:04:29.232525 +0000 build-ubuntu42: output: + [[ 9 -gt 0 ]]
+2023-10-18 16:04:29.232536 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:29.232547 +0000 build-ubuntu42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmpycwi4t_q
+2023-10-18 16:04:29.232554 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232562 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232569 +0000 build-ubuntu42: output: + [[ 7 -gt 0 ]]
+2023-10-18 16:04:29.232576 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:29.232587 +0000 build-ubuntu42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:29.232596 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232603 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232610 +0000 build-ubuntu42: output: + [[ 5 -gt 0 ]]
+2023-10-18 16:04:29.232618 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:29.232625 +0000 build-ubuntu42: output: + CHECKSUM_CMD=sha512sum
+2023-10-18 16:04:29.232632 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232639 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232647 +0000 build-ubuntu42: output: + [[ 3 -gt 0 ]]
+2023-10-18 16:04:29.232654 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:29.232666 +0000 build-ubuntu42: output: + FILE_CHECKSUM=/home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512
+2023-10-18 16:04:29.232674 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232681 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.232688 +0000 build-ubuntu42: output: + [[ 1 -gt 0 ]]
+2023-10-18 16:04:29.238601 +0000 build-ubuntu42: output: + case "$1" in
+2023-10-18 16:04:29.238661 +0000 build-ubuntu42: output: + shift
+2023-10-18 16:04:29.238673 +0000 build-ubuntu42: output: + [[ 0 -gt 0 ]]
+2023-10-18 16:04:29.238685 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz ']'
+2023-10-18 16:04:29.238697 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/tmp/tmpycwi4t_q ']'
+2023-10-18 16:04:29.238706 +0000 build-ubuntu42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmpycwi4t_q
+2023-10-18 16:04:29.238717 +0000 build-ubuntu42: output: ++ basename /home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:29.238727 +0000 build-ubuntu42: output: + UNTRUSTED_FILE_NAME=untrusted_xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:29.238736 +0000 build-ubuntu42: output: + FILE_NAME=xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:29.238747 +0000 build-ubuntu42: output: + '[' -z /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512 ']'
+2023-10-18 16:04:29.238759 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512 ']'
+2023-10-18 16:04:29.238771 +0000 build-ubuntu42: output: + '[' -e /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512 ']'
+2023-10-18 16:04:29.238778 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:04:29.238786 +0000 build-ubuntu42: output: + '[' -z '' ']'
+2023-10-18 16:04:29.238793 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:04:29.238800 +0000 build-ubuntu42: output: + '[' -n '' ']'
+2023-10-18 16:04:29.238811 +0000 build-ubuntu42: output: + '[' -n /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512 ']'
+2023-10-18 16:04:29.238819 +0000 build-ubuntu42: output: + '[' -z sha512sum ']'
+2023-10-18 16:04:29.238827 +0000 build-ubuntu42: output: + sha512sum --status -c /dev/fd/63
+2023-10-18 16:04:29.240210 +0000 build-ubuntu42: output: +++ cat /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu/xf86-video-amdgpu-22.0.0.tar.xz.sha512
+2023-10-18 16:04:29.240259 +0000 build-ubuntu42: output: ++ printf '%s  -\n' 95c64e3fef7729ced6e7adc5e81c60cc218f6d8b6604f7b290e86ff52c917426b5102decbf8be8a66c9181ccde6e5dff7083dca8cc0c493a39e82625b5c7cb2a
+2023-10-18 16:04:29.605071 +0000 build-ubuntu42: output: + mv /home/user/builder-r4.2/tmp/tmpycwi4t_q/untrusted_xf86-video-amdgpu-22.0.0.tar.xz /home/user/builder-r4.2/tmp/tmpycwi4t_q/xf86-video-amdgpu-22.0.0.tar.xz
+2023-10-18 16:04:42.842129 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1597 bash -c 'rm -rf /builder/incoming/xorg-x11-drv-amdgpu /builder/xorg-x11-drv-amdgpu'
+2023-10-18 16:04:43.651059 +0000 build-ubuntu42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp1597 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/xorg-x11-drv-amdgpu
+2023-10-18 16:04:59.778496 +0000 build-ubuntu42: copy-in (cmd): /usr/bin/qvm-run-vm disp1597 bash -c 'mkdir -p /builder && mv /builder/incoming/xorg-x11-drv-amdgpu /builder'
+2023-10-18 16:05:00.032332 +0000 build-ubuntu42: Executing '/usr/bin/qvm-run-vm disp1597 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' bash -c 'rm -f /builder/xorg-x11-drv-amdgpu/hash /builder/xorg-x11-drv-amdgpu/vtags && cd /builder && git -C /builder/xorg-x11-drv-amdgpu rev-parse '\''HEAD^{}'\'' >> /builder/xorg-x11-drv-amdgpu/hash && git -C /builder/xorg-x11-drv-amdgpu tag --points-at HEAD --list '\''v*'\'' >> /builder/xorg-x11-drv-amdgpu/vtags''.
+2023-10-18 16:05:00.530637 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1597 qubesbuilder.FileCopyOut+__builder__xorg-x11-drv-amdgpu__hash /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpnxvljzw7
+2023-10-18 16:05:00.778645 +0000 build-ubuntu42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp1597 qubesbuilder.FileCopyOut+__builder__xorg-x11-drv-amdgpu__vtags /usr/lib/qubes/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpnxvljzw7
+2023-10-18 16:05:07.237996 +0000 build-ubuntu42: > done
+2023-10-18 16:05:07.238042 +0000 > closing log
