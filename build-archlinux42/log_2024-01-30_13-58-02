@@ -1,0 +1,134 @@
+2024-01-30 13:58:02.012873 +0000 > starting log
+2024-01-30 13:58:02.013183 +0000 build-archlinux42: > starting build with log
+2024-01-30 13:58:02.013200 +0000 build-archlinux42: >> args:
+2024-01-30 13:58:02.013213 +0000 build-archlinux42: >>   ()
+2024-01-30 13:58:02.013223 +0000 build-archlinux42: >> component:
+2024-01-30 13:58:02.013233 +0000 build-archlinux42: >>   vmm-xen
+2024-01-30 13:58:02.013245 +0000 build-archlinux42: >>     commit-hash: 719daa6f656ffeb6d519a0b6af9e0f7e4f885736
+2024-01-30 13:58:02.013261 +0000 build-archlinux42: >>     source-hash: 8fbf8b862fd2ed740b03d5584cfae5c794ba7d0df50fd4696c35b2a792a78c6710b8b049c7738d311cd95dabc40407a86458d4eca050dd527b10d37765f3c930
+2024-01-30 13:58:02.013277 +0000 build-archlinux42: >> distributions:
+2024-01-30 13:58:02.013289 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2024-01-30 13:58:02.013300 +0000 build-archlinux42: vmm-xen: source already fetched. Updating.
+2024-01-30 13:58:11.656990 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6895 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen
+2024-01-30 13:58:14.443179 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6895 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-01-30 13:58:14.707301 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm -- disp6895 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-vmm-xen.git /builder/vmm-xen /builder/keyring /builder/plugins/fetch/keys --git-branch release4.2 --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-01-30 13:58:26.372410 +0000 build-archlinux42: output: --> Verifying tags...
+2024-01-30 13:58:26.372469 +0000 build-archlinux42: output: ---> Good tag 1ff3fd53aaae53f88a69e8d8c380f5ef89bd087e.
+2024-01-30 13:58:26.372487 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-01-30 13:58:26.372500 +0000 build-archlinux42: output: --> Switching branch from main branch to new release4.2
+2024-01-30 13:58:26.372512 +0000 build-archlinux42: output: --> Merging...
+2024-01-30 13:58:26.412648 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6895 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2024-01-30 13:58:38.148386 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6112 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen
+2024-01-30 13:58:38.707306 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6112 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-01-30 13:58:38.902466 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm -- disp6112 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c '/builder/plugins/fetch/scripts/download-file --output-dir /builder/vmm-xen --file-name xen-4.17.3.tar.gz --file-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz --signature-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig''.
+2024-01-30 13:58:39.272016 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE FILE_URL FILE_CHECKSUM CHECKSUM_CMD SIGNATURE_URL PUBKEY_FILE OUTPUT_DIR FETCH_CMD
+2024-01-30 13:58:39.272087 +0000 build-archlinux42: output: ++ getopt -o hf:u:s:o:x --long help,file-name:,file-url:,signature-url:,output-dir:,uncompress -n /builder/plugins/fetch/scripts/download-file -- --output-dir /builder/vmm-xen --file-name xen-4.17.3.tar.gz --file-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz --signature-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig
+2024-01-30 13:58:39.276131 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/builder/vmm-xen'\'' --file-name '\''xen-4.17.3.tar.gz'\'' --file-url '\''https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz'\'' --signature-url '\''https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig'\'' --'
+2024-01-30 13:58:39.276188 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/builder/vmm-xen'\'' --file-name '\''xen-4.17.3.tar.gz'\'' --file-url '\''https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz'\'' --signature-url '\''https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig'\'' --'
+2024-01-30 13:58:39.276211 +0000 build-archlinux42: output: ++ set -- --output-dir /builder/vmm-xen --file-name xen-4.17.3.tar.gz --file-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz --signature-url https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig --
+2024-01-30 13:58:39.276223 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2024-01-30 13:58:39.276234 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 13:58:39.276244 +0000 build-archlinux42: output: + OUTPUT_DIR=/builder/vmm-xen
+2024-01-30 13:58:39.276254 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276279 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276290 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2024-01-30 13:58:39.276300 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 13:58:39.276310 +0000 build-archlinux42: output: + FILE_NAME=xen-4.17.3.tar.gz
+2024-01-30 13:58:39.276319 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276327 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276336 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2024-01-30 13:58:39.276345 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 13:58:39.276356 +0000 build-archlinux42: output: + FILE_URL=https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz
+2024-01-30 13:58:39.276366 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276374 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276383 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2024-01-30 13:58:39.276392 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 13:58:39.276412 +0000 build-archlinux42: output: + SIGNATURE_URL=https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig
+2024-01-30 13:58:39.276422 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276431 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276440 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2024-01-30 13:58:39.276448 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 13:58:39.276456 +0000 build-archlinux42: output: + shift
+2024-01-30 13:58:39.276465 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2024-01-30 13:58:39.276477 +0000 build-archlinux42: output: + '[' -z https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz ']'
+2024-01-30 13:58:39.276497 +0000 build-archlinux42: output: + FETCH_CMD=(curl --proto '=https' --proto-redir '=https' --tlsv1.2 --http1.1 -sSfL -o)
+2024-01-30 13:58:39.276507 +0000 build-archlinux42: output: + '[' -z xen-4.17.3.tar.gz ']'
+2024-01-30 13:58:39.276518 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_xen-4.17.3.tar.gz
+2024-01-30 13:58:39.276528 +0000 build-archlinux42: output: + '[' -n /builder/vmm-xen ']'
+2024-01-30 13:58:39.276537 +0000 build-archlinux42: output: + mkdir -p /builder/vmm-xen
+2024-01-30 13:58:39.278455 +0000 build-archlinux42: output: + cd /builder/vmm-xen
+2024-01-30 13:58:39.278485 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_xen-4.17.3.tar.gz -- https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz
+2024-01-30 14:00:54.144010 +0000 build-archlinux42: output: + '[' '' == 1 ']'
+2024-01-30 14:00:54.144077 +0000 build-archlinux42: output: + '[' -n https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig ']'
+2024-01-30 14:00:54.144562 +0000 build-archlinux42: output: ++ basename https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig
+2024-01-30 14:00:54.146187 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=xen-4.17.3.tar.gz.sig
+2024-01-30 14:00:54.146213 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_xen-4.17.3.tar.gz.sig
+2024-01-30 14:00:54.146244 +0000 build-archlinux42: output: + curl --proto =https --proto-redir =https --tlsv1.2 --http1.1 -sSfL -o untrusted_xen-4.17.3.tar.gz.sig https://downloads.xenproject.org/release/xen/4.17.3/xen-4.17.3.tar.gz.sig
+2024-01-30 14:00:59.677841 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6112 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen-2Funtrusted_xen--4.17.3.tar.gz /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp_f5yo214
+2024-01-30 14:01:00.282764 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6112 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen-2Funtrusted_xen--4.17.3.tar.gz.sig /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp_f5yo214
+2024-01-30 14:01:03.324996 +0000 build-archlinux42: Executing 'bash -c /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file --output-dir /home/user/builder-r4.2/tmp/tmp_f5yo214 --untrusted-file /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc'.
+2024-01-30 14:01:03.328153 +0000 build-archlinux42: output: + unset OPTS GETOPT_COMPATIBLE UNTRUSTED_FILE FILE_CHECKSUM CHECKSUM_CMD UNTRUSTED_SIGNATURE_FILE SIGNATURE_URL OUTPUT_DIR
+2024-01-30 14:01:03.328689 +0000 build-archlinux42: output: ++ getopt -o hf:c:m:s:p:o: --long help,untrusted-file:,checksum-file:,checksum-cmd:,untrusted-signature-file:,pubkey-file:,output-dir: -n /home/user/qubes-builderv2/qubesbuilder/plugins/fetch/scripts/verify-file -- --output-dir /home/user/builder-r4.2/tmp/tmp_f5yo214 --untrusted-file /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc
+2024-01-30 14:01:03.329295 +0000 build-archlinux42: output: + OPTS=' --output-dir '\''/home/user/builder-r4.2/tmp/tmp_f5yo214'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc'\'' --'
+2024-01-30 14:01:03.329455 +0000 build-archlinux42: output: + eval set -- ' --output-dir '\''/home/user/builder-r4.2/tmp/tmp_f5yo214'\'' --untrusted-file '\''/home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz'\'' --untrusted-signature-file '\''/home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig'\'' --pubkey-file '\''/home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc'\'' --'
+2024-01-30 14:01:03.329613 +0000 build-archlinux42: output: ++ set -- --output-dir /home/user/builder-r4.2/tmp/tmp_f5yo214 --untrusted-file /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz --untrusted-signature-file /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig --pubkey-file /home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc --
+2024-01-30 14:01:03.329714 +0000 build-archlinux42: output: + PUBKEY_FILE=()
+2024-01-30 14:01:03.329875 +0000 build-archlinux42: output: + [[ 9 -gt 0 ]]
+2024-01-30 14:01:03.330065 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 14:01:03.330181 +0000 build-archlinux42: output: + OUTPUT_DIR=/home/user/builder-r4.2/tmp/tmp_f5yo214
+2024-01-30 14:01:03.330277 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.330372 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.330467 +0000 build-archlinux42: output: + [[ 7 -gt 0 ]]
+2024-01-30 14:01:03.330559 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 14:01:03.330666 +0000 build-archlinux42: output: + UNTRUSTED_FILE=/home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz
+2024-01-30 14:01:03.330754 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.330849 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.330937 +0000 build-archlinux42: output: + [[ 5 -gt 0 ]]
+2024-01-30 14:01:03.331047 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 14:01:03.331164 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE=/home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig
+2024-01-30 14:01:03.331251 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.331341 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.331504 +0000 build-archlinux42: output: + [[ 3 -gt 0 ]]
+2024-01-30 14:01:03.331527 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 14:01:03.331591 +0000 build-archlinux42: output: + PUBKEY_FILE+=("$2")
+2024-01-30 14:01:03.331686 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.331786 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.331878 +0000 build-archlinux42: output: + [[ 1 -gt 0 ]]
+2024-01-30 14:01:03.331995 +0000 build-archlinux42: output: + case "$1" in
+2024-01-30 14:01:03.332091 +0000 build-archlinux42: output: + shift
+2024-01-30 14:01:03.332181 +0000 build-archlinux42: output: + [[ 0 -gt 0 ]]
+2024-01-30 14:01:03.332361 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz ']'
+2024-01-30 14:01:03.332426 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp_f5yo214 ']'
+2024-01-30 14:01:03.332526 +0000 build-archlinux42: output: + mkdir -p /home/user/builder-r4.2/tmp/tmp_f5yo214
+2024-01-30 14:01:03.333885 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz
+2024-01-30 14:01:03.334448 +0000 build-archlinux42: output: + UNTRUSTED_FILE_NAME=untrusted_xen-4.17.3.tar.gz
+2024-01-30 14:01:03.334563 +0000 build-archlinux42: output: + FILE_NAME=xen-4.17.3.tar.gz
+2024-01-30 14:01:03.334683 +0000 build-archlinux42: output: + '[' -z '' ']'
+2024-01-30 14:01:03.334798 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig ']'
+2024-01-30 14:01:03.334911 +0000 build-archlinux42: output: + '[' -n '' ']'
+2024-01-30 14:01:03.335071 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig ']'
+2024-01-30 14:01:03.335176 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc ']'
+2024-01-30 14:01:03.335296 +0000 build-archlinux42: output: + '[' -z /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig ']'
+2024-01-30 14:01:03.335424 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig ']'
+2024-01-30 14:01:03.335533 +0000 build-archlinux42: output: + '[' '!' -e /home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc ']'
+2024-01-30 14:01:03.335731 +0000 build-archlinux42: output: + '[' -n '' ']'
+2024-01-30 14:01:03.335849 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig ']'
+2024-01-30 14:01:03.335981 +0000 build-archlinux42: output: + '[' -n /home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc ']'
+2024-01-30 14:01:03.336441 +0000 build-archlinux42: output: ++ basename /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig
+2024-01-30 14:01:03.337130 +0000 build-archlinux42: output: + UNTRUSTED_SIGNATURE_FILE_NAME=untrusted_xen-4.17.3.tar.gz.sig
+2024-01-30 14:01:03.337277 +0000 build-archlinux42: output: + SIGNATURE_FILE_NAME=xen-4.17.3.tar.gz.sig
+2024-01-30 14:01:03.337770 +0000 build-archlinux42: output: ++ mktemp -u
+2024-01-30 14:01:03.338639 +0000 build-archlinux42: output: + keyring=/tmp/tmp.E0YQlkoftq
+2024-01-30 14:01:03.338758 +0000 build-archlinux42: output: + for pubkey_file in "${PUBKEY_FILE[@]}"
+2024-01-30 14:01:03.338929 +0000 build-archlinux42: output: + gpg --no-auto-check-trustdb --no-default-keyring --keyring /tmp/tmp.E0YQlkoftq -q --import /home/user/builder-r4.2/sources/vmm-xen/xen.org-key.asc
+2024-01-30 14:01:03.343925 +0000 build-archlinux42: output: + gpgv --keyring /tmp/tmp.E0YQlkoftq /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz
+2024-01-30 14:01:03.391159 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz.sig /home/user/builder-r4.2/tmp/tmp_f5yo214/xen-4.17.3.tar.gz.sig
+2024-01-30 14:01:03.392142 +0000 build-archlinux42: output: + rm -rf /tmp/tmp.E0YQlkoftq
+2024-01-30 14:01:03.392560 +0000 build-archlinux42: output: + mv /home/user/builder-r4.2/tmp/tmp_f5yo214/untrusted_xen-4.17.3.tar.gz /home/user/builder-r4.2/tmp/tmp_f5yo214/xen-4.17.3.tar.gz
+2024-01-30 14:01:03.467387 +0000 build-archlinux42: ['rm -f -- /builder/vmm-xen/hash /builder/vmm-xen/vtags', 'cd -- /builder', "git -C /builder/vmm-xen rev-parse 'HEAD^{}' >> /builder/vmm-xen/hash", "git -C /builder/vmm-xen tag --points-at HEAD --list 'v*' >> /builder/vmm-xen/vtags"]
+2024-01-30 14:01:11.538099 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp9647 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen
+2024-01-30 14:01:12.043478 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm -- disp9647 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'rm -f -- /builder/vmm-xen/hash /builder/vmm-xen/vtags && cd -- /builder && git -C /builder/vmm-xen rev-parse '"'"'HEAD^{}'"'"' >> /builder/vmm-xen/hash && git -C /builder/vmm-xen tag --points-at HEAD --list '"'"'v*'"'"' >> /builder/vmm-xen/vtags''.
+2024-01-30 14:01:12.271551 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9647 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp0lhmoutv
+2024-01-30 14:01:12.661862 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp9647 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvmm--xen-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmp0lhmoutv
+2024-01-30 14:01:15.114945 +0000 build-archlinux42: > done
+2024-01-30 14:01:15.115016 +0000 > closing log
