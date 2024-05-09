@@ -1,0 +1,34 @@
+2024-05-09 02:17:26.809200 +0000 > starting log
+2024-05-09 02:17:26.809697 +0000 build-archlinux42: > starting build with log
+2024-05-09 02:17:26.809746 +0000 build-archlinux42: >> args:
+2024-05-09 02:17:26.809772 +0000 build-archlinux42: >>   ()
+2024-05-09 02:17:26.809789 +0000 build-archlinux42: >> component:
+2024-05-09 02:17:26.809806 +0000 build-archlinux42: >>   python-panflute
+2024-05-09 02:17:26.809822 +0000 build-archlinux42: >> distributions:
+2024-05-09 02:17:26.809839 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2024-05-09 02:17:37.165859 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp8664 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-05-09 02:17:37.749190 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm -- disp8664 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-python-panflute.git /builder/python-panflute /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 274E12AB03F2FE293765FC06DA0434BC706E1FCF --fetch-versions-only''.
+2024-05-09 02:18:15.315114 +0000 build-archlinux42: output: --> Verifying tags...
+2024-05-09 02:18:15.315178 +0000 build-archlinux42: output: ---> Good tag 66ef1a6ca0eb4570917cf3278b669d784a00910f.
+2024-05-09 02:18:15.315208 +0000 build-archlinux42: output: ERROR: CalledProcessError(1, ['git', '-c', 'gpg.program=/usr/bin/gpg-sq', '-c', 'gpg.minTrustLevel=fully', 'verify-tag', '--raw', '--', '4398b8af5100e70fa6cc55c36c2ad79837e364da']); stderr: [GNUPG:] NEWSIG
+2024-05-09 02:18:15.315228 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2024-05-09 02:18:15.315248 +0000 build-archlinux42: output: [GNUPG:] ERRSIG 063938BA42CFA724 1 8 00 1634177680 6 0064428F455451B3EBE78A7F063938BA42CFA724
+2024-05-09 02:18:15.315263 +0000 build-archlinux42: output: 
+2024-05-09 02:18:15.315280 +0000 build-archlinux42: output: ---> Invalid tag 4398b8af5100e70fa6cc55c36c2ad79837e364da.
+2024-05-09 02:18:15.315296 +0000 build-archlinux42: output: ---> Good tag e5d1d75dc895e808d34aa52af554dcff21c12e63.
+2024-05-09 02:18:15.315370 +0000 build-archlinux42: output: ---> Good tag e6e43bbd31b39de36d92481b9a95b924a32d324e.
+2024-05-09 02:18:15.315396 +0000 build-archlinux42: output: ERROR: CalledProcessError(1, ['git', '-c', 'gpg.program=/usr/bin/gpg-sq', '-c', 'gpg.minTrustLevel=fully', 'verify-tag', '--raw', '--', '09077c010eece17390f1b2fe93953fbea112d3f6']); stderr: [GNUPG:] NEWSIG
+2024-05-09 02:18:15.315414 +0000 build-archlinux42: output: [GNUPG:] KEY_CONSIDERED 0064428F455451B3EBE78A7F063938BA42CFA724 0
+2024-05-09 02:18:15.315437 +0000 build-archlinux42: output: [GNUPG:] ERRSIG 063938BA42CFA724 1 8 00 1601784142 6 0064428F455451B3EBE78A7F063938BA42CFA724
+2024-05-09 02:18:15.315503 +0000 build-archlinux42: output: 
+2024-05-09 02:18:15.315554 +0000 build-archlinux42: output: ---> Invalid tag 09077c010eece17390f1b2fe93953fbea112d3f6.
+2024-05-09 02:18:15.315814 +0000 build-archlinux42: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-05-09 02:18:15.315847 +0000 build-archlinux42: output: --> Switching branch from main branch to main
+2024-05-09 02:18:15.327094 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp8664 qubesbuilder.FileCopyOut+-2Fbuilder-2Fpython--panflute /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/sources
+2024-05-09 02:18:18.703590 +0000 build-archlinux42: ['cd -- /builder', "git -C /builder/python-panflute rev-parse 'HEAD^{}' >> hash", "git -C /builder/python-panflute tag --points-at HEAD --list 'v*' >> vtags"]
+2024-05-09 02:18:28.440903 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5933 qubesbuilder.FileCopyIn+-2Fbuilder-2Fpython--panflute /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/python-panflute
+2024-05-09 02:18:28.810112 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm -- disp5933 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/python-panflute rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/python-panflute tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-05-09 02:18:29.132260 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5933 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpr0a7stzf
+2024-05-09 02:18:29.439951 +0000 build-archlinux42: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5933 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.2/tmp/tmpr0a7stzf
+2024-05-09 02:18:32.225184 +0000 build-archlinux42: > done
+2024-05-09 02:18:32.225240 +0000 > closing log
