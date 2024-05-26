@@ -1,0 +1,639 @@
+2024-05-26 12:30:09.044993 +0000 > starting log
+2024-05-26 12:30:09.045553 +0000 build-archlinux43: > starting build with log
+2024-05-26 12:30:09.045601 +0000 build-archlinux43: >> args:
+2024-05-26 12:30:09.045625 +0000 build-archlinux43: >>   ()
+2024-05-26 12:30:09.045642 +0000 build-archlinux43: >> component:
+2024-05-26 12:30:09.045657 +0000 build-archlinux43: >>   core-qubesdb
+2024-05-26 12:30:09.045674 +0000 build-archlinux43: >>     commit-hash: 25a34aad4a6857b8cb7c8564d9a2cece7a184e57
+2024-05-26 12:30:09.045694 +0000 build-archlinux43: >>     source-hash: 3f970346c0b3ede903826c50d047507b9afae93480d9f4cf55edbb0f7d78487ea303ffe4911c25bb0f2b495bece00ba0e0417bacfcbe524032eeaeb8cc82a0e5
+2024-05-26 12:30:09.045708 +0000 build-archlinux43: >> distributions:
+2024-05-26 12:30:09.045723 +0000 build-archlinux43: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2024-05-26 12:30:09.045740 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64: Source hash is the same than already prepared source. Skipping.
+2024-05-26 12:30:09.045758 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64: Cleaning local repository '/home/user/builder-r4.3/repository/vm-archlinux' (all versions).
+2024-05-26 12:30:09.045774 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64: Chroot cache exists. Will use it.
+2024-05-26 12:30:18.323502 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--qubesdb /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/sources/core-qubesdb
+2024-05-26 12:30:18.981906 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcache-2Froot.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/cache/chroot/archlinux/root.tar.gz
+2024-05-26 12:30:24.398985 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--qubesdb-2FPKGBUILD /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/prep/PKGBUILD
+2024-05-26 12:30:24.574393 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--qubesdb-2Fqubes--db--vm--4.2.6--1.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/prep/qubes-db-vm-4.2.6-1.tar.gz
+2024-05-26 12:30:24.725801 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdistfiles-2Fcore--qubesdb /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/distfiles/core-qubesdb
+2024-05-26 12:30:24.886207 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_archlinux /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_archlinux
+2024-05-26 12:30:25.040130 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-05-26 12:30:25.194609 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_archlinux /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_archlinux
+2024-05-26 12:30:25.382146 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp7547 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--archlinux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/repository/vm-archlinux
+2024-05-26 12:30:25.614778 +0000 build-archlinux43: Executing '/usr/bin/qvm-run-vm -- disp7547 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=archlinux PACKAGE_SET=vm bash -c 'sudo cp /builder/plugins/chroot_archlinux/conf/makepkg-x86_64.conf /usr/local/share/devtools/makepkg.conf.d/qubes-x86_64.conf && sudo mkdir -p /builder/cache/qubes-x86_64 && cd /builder/cache/qubes-x86_64 && sudo tar xf /builder/cache/root.tar.gz && sudo /builder/plugins/chroot_archlinux/scripts/generate-pacman /builder/plugins/chroot_archlinux/conf/pacman.conf.j2 /usr/local/share/devtools/pacman.conf.d/qubes-x86_64.conf && sudo rm -rf /etc/pacman.d/gnupg/private-keys-v1.d && sudo pacman-key --init && sudo pacman-key --populate && sudo /builder/plugins/chroot_archlinux/scripts/generate-pacman /builder/plugins/chroot_archlinux/conf/pacman.conf.j2 /usr/local/share/devtools/pacman.conf.d/qubes-x86_64.conf --enable-builder-local && sudo /builder/plugins/build_archlinux/scripts/update-local-repo.sh /builder/cache/qubes-x86_64/root /builder/repository && cd /builder/core-qubesdb && sudo qubes-x86_64-build -r /builder/cache --  -d /builder/repository:/builder/repository --  --syncdeps --noconfirm --skipinteg''.
+2024-05-26 12:30:30.035587 +0000 build-archlinux43: output: ==> Generating pacman master key. This may take some time.
+2024-05-26 12:30:30.039295 +0000 build-archlinux43: output: gpg: Generating pacman keyring master key...
+2024-05-26 12:30:30.639884 +0000 build-archlinux43: output: gpg: revocation certificate stored as '/etc/pacman.d/gnupg/openpgp-revocs.d/ED7BD168019AB311401F1CCD0AD4D89AC20A9A40.rev'
+2024-05-26 12:30:30.639953 +0000 build-archlinux43: output: gpg: Done
+2024-05-26 12:30:30.641000 +0000 build-archlinux43: output: ==> Updating trust database...
+2024-05-26 12:30:30.700858 +0000 build-archlinux43: output: gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+2024-05-26 12:30:30.700920 +0000 build-archlinux43: output: gpg: (use option "--allow-weak-key-signatures" to override)
+2024-05-26 12:30:31.489498 +0000 build-archlinux43: output: gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+2024-05-26 12:30:31.508329 +0000 build-archlinux43: output: gpg: depth: 0  valid:   2  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 2u
+2024-05-26 12:30:31.524140 +0000 build-archlinux43: output: gpg: depth: 1  valid:   5  signed:  98  trust: 0-, 0q, 0n, 5m, 0f, 0u
+2024-05-26 12:30:31.539546 +0000 build-archlinux43: output: gpg: depth: 2  valid:  74  signed:  22  trust: 74-, 0q, 0n, 0m, 0f, 0u
+2024-05-26 12:30:31.539601 +0000 build-archlinux43: output: gpg: next trustdb check due at 2024-06-29
+2024-05-26 12:30:31.586722 +0000 build-archlinux43: output: ==> Appending keys from archlinux.gpg...
+2024-05-26 12:30:35.972920 +0000 build-archlinux43: output: ==> Locally signing trusted keys in keyring...
+2024-05-26 12:30:41.610564 +0000 build-archlinux43: output:   -> Locally signed 5 keys.
+2024-05-26 12:30:41.612274 +0000 build-archlinux43: output: ==> Importing owner trust values...
+2024-05-26 12:30:41.619890 +0000 build-archlinux43: output: ==> Updating trust database...
+2024-05-26 12:30:41.723892 +0000 build-archlinux43: output: gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+2024-05-26 12:30:41.723953 +0000 build-archlinux43: output: gpg: (use option "--allow-weak-key-signatures" to override)
+2024-05-26 12:30:42.969431 +0000 build-archlinux43: output: gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+2024-05-26 12:30:43.018062 +0000 build-archlinux43: output: gpg: depth: 0  valid:   2  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 2u
+2024-05-26 12:30:43.050372 +0000 build-archlinux43: output: gpg: depth: 1  valid:   5  signed:  99  trust: 0-, 0q, 0n, 5m, 0f, 0u
+2024-05-26 12:30:43.077473 +0000 build-archlinux43: output: gpg: depth: 2  valid:  75  signed:  22  trust: 75-, 0q, 0n, 0m, 0f, 0u
+2024-05-26 12:30:43.077511 +0000 build-archlinux43: output: gpg: next trustdb check due at 2024-06-29
+2024-05-26 12:30:43.221110 +0000 build-archlinux43: output: -> Archlinux update-local-repo.sh
+2024-05-26 12:30:43.222538 +0000 build-archlinux43: output:   -> Repo '/builder/repository/pkgs' appears empty; initialising...
+2024-05-26 12:30:43.238859 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:30:43.238905 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:30:43.340339 +0000 build-archlinux43: output: Container root exited successfully.
+2024-05-26 12:30:43.356495 +0000 build-archlinux43: output: 
+2024-05-26 12:30:43.363291 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:30:43.363347 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:30:43.453058 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.468325 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.481341 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/pipewire-qubes-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:43.508547 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:43.517500 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:43.523951 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:43.534372 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:43.619145 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.632506 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.645234 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-gpg-split-2.0.70-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:43.664372 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:43.674055 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:43.679987 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:43.690058 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:43.753193 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.770498 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.787440 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-img-converter-1.2.16-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:43.804920 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:43.814286 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:43.820022 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:43.827156 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:43.892877 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.909861 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:43.929355 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-input-proxy-1.0.36-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:43.954638 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:43.964069 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:43.970139 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:43.986475 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:44.065473 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.082683 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.099714 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-libvchan-xen-4.2.3-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:44.118080 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:44.126279 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:44.132153 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:44.141193 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:44.218689 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.234924 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.253480 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-pdf-converter-2.1.19-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:44.283589 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:44.294948 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:44.300499 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:44.309475 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:44.384395 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.400497 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.417075 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-usb-proxy-1.2.1-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:44.436961 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:44.450121 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:44.456210 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:44.465089 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:44.526047 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.542463 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.556478 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-dependencies-4.3.0-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:44.574603 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:44.582554 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:44.588802 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:44.599106 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:44.689763 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.703634 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.721586 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-gui-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:44.754413 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:44.764460 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:44.771073 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:44.784329 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:44.865734 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.884761 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:44.906655 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-gui-common-4.2.4-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:44.927922 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:44.938360 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:44.943125 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:44.950364 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:45.018284 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.039572 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.056474 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-kernel-support-4.2.16-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:45.071561 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:45.079391 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:45.083649 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:45.091168 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:45.166264 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.183624 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.197861 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-pulseaudio-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:45.220087 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:45.228121 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:45.235569 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:45.244433 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:45.310325 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.327140 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.345007 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-qrexec-4.2.19-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:45.367659 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:45.376406 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:45.383717 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:45.401261 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:45.483694 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.500564 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.517890 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-recommended-4.3.0-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:45.536068 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:45.545357 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:45.551245 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:45.560962 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:45.631592 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.650543 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.668935 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-repo-4.3.0-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:45.689339 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:45.701385 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:45.708360 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:45.718165 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:45.808961 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.826129 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.844859 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-utils-4.2.16-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:45.863968 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:45.873625 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:45.879897 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:45.892071 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:45.976421 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:45.994816 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:30:46.014563 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-xen-4.17.4-3-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:30:46.039917 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:30:46.049454 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:30:46.054151 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:30:46.078558 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:30:46.110207 +0000 build-archlinux43: output: Container root exited successfully.
+2024-05-26 12:30:46.125578 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:30:46.125630 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:30:46.180860 +0000 build-archlinux43: output: Container root exited successfully.
+2024-05-26 12:30:46.188737 +0000 build-archlinux43: output: 
+2024-05-26 12:30:46.192954 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:30:46.192990 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:30:46.253608 +0000 build-archlinux43: output: .[?25l:: Synchronizing package databases....
+2024-05-26 12:30:46.253670 +0000 build-archlinux43: output:  core downloading....
+2024-05-26 12:30:46.253688 +0000 build-archlinux43: output:  community downloading....
+2024-05-26 12:30:46.253758 +0000 build-archlinux43: output:  extra downloading....
+2024-05-26 12:30:46.253781 +0000 build-archlinux43: output:  multilib downloading....
+2024-05-26 12:30:54.791482 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:30:54.791628 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:30:54.791681 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:30:54.791726 +0000 build-archlinux43: output: warning: too many errors from mirror.osbeck.com, skipping for the remainder of this transaction.
+2024-05-26 12:30:54.791769 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:30:54.799330 +0000 build-archlinux43: output: warning: archlinux-keyring-20240520-1 is up to date -- reinstalling.
+2024-05-26 12:30:54.799380 +0000 build-archlinux43: output: resolving dependencies....
+2024-05-26 12:30:54.800859 +0000 build-archlinux43: output: looking for conflicting packages....
+2024-05-26 12:30:54.802664 +0000 build-archlinux43: output: .
+2024-05-26 12:30:54.802707 +0000 build-archlinux43: output: Packages (1) archlinux-keyring-20240520-1.
+2024-05-26 12:30:54.802733 +0000 build-archlinux43: output: .
+2024-05-26 12:30:54.802760 +0000 build-archlinux43: output: Total Download Size:   1.17 MiB.
+2024-05-26 12:30:54.802796 +0000 build-archlinux43: output: Total Installed Size:  1.66 MiB.
+2024-05-26 12:30:54.802823 +0000 build-archlinux43: output: Net Upgrade Size:      0.00 MiB.
+2024-05-26 12:30:54.802846 +0000 build-archlinux43: output: .
+2024-05-26 12:30:54.802987 +0000 build-archlinux43: output: :: Proceed with installation? [Y/n] .
+2024-05-26 12:30:54.803080 +0000 build-archlinux43: output: :: Retrieving packages....
+2024-05-26 12:30:54.803115 +0000 build-archlinux43: output:  archlinux-keyring-20240520-1-any downloading....
+2024-05-26 12:30:56.028428 +0000 build-archlinux43: output: checking keyring....
+2024-05-26 12:30:56.078973 +0000 build-archlinux43: output: checking package integrity....
+2024-05-26 12:30:56.106613 +0000 build-archlinux43: output: loading package files....
+2024-05-26 12:30:56.106676 +0000 build-archlinux43: output: checking for file conflicts....
+2024-05-26 12:30:56.106697 +0000 build-archlinux43: output: :: Processing package changes....
+2024-05-26 12:30:56.106715 +0000 build-archlinux43: output: reinstalling archlinux-keyring....
+2024-05-26 12:30:56.202921 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:56.223214 +0000 build-archlinux43: output: ==> Appending keys from archlinux.gpg....
+2024-05-26 12:30:56.226642 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.769572 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.779955 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.784941 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.795217 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.802593 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.815910 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.823568 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.840529 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.848658 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.866511 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.874410 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.879919 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.883698 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.889572 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.895811 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.901823 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.905742 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.913239 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.920198 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.926621 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.935490 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.941463 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.947336 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.955590 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.969886 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.975753 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.981490 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.987732 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:58.994315 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.000504 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.006689 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.013049 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.020247 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.026224 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.032015 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.037861 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.043768 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.050510 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.056884 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.063411 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.069536 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.075385 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.081689 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.087838 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.094395 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.101155 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.107290 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.114139 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.122475 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.129168 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.134944 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.140934 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.147205 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.153844 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.160319 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.166614 +0000 build-archlinux43: output: ==> Updating trust database....
+2024-05-26 12:30:59.170542 +0000 build-archlinux43: output: gpg: Warning: using insecure memory!.
+2024-05-26 12:30:59.170951 +0000 build-archlinux43: output: gpg: next trustdb check due at 2024-06-29.
+2024-05-26 12:30:59.230385 +0000 build-archlinux43: output: .[?25hContainer root exited successfully.
+2024-05-26 12:30:59.233566 +0000 build-archlinux43: output: 
+2024-05-26 12:30:59.240973 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:30:59.241096 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:30:59.335746 +0000 build-archlinux43: output: .[?25l:: Synchronizing package databases....
+2024-05-26 12:30:59.335807 +0000 build-archlinux43: output:  core downloading....
+2024-05-26 12:30:59.335825 +0000 build-archlinux43: output:  community downloading....
+2024-05-26 12:30:59.335841 +0000 build-archlinux43: output:  extra downloading....
+2024-05-26 12:30:59.335856 +0000 build-archlinux43: output:  multilib downloading....
+2024-05-26 12:31:01.128766 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:31:01.128903 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:31:01.128953 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:31:01.128995 +0000 build-archlinux43: output: warning: too many errors from mirror.osbeck.com, skipping for the remainder of this transaction.
+2024-05-26 12:31:01.129111 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-05-26 12:31:01.129153 +0000 build-archlinux43: output: :: Starting full system upgrade....
+2024-05-26 12:31:01.406426 +0000 build-archlinux43: output:  there is nothing to do.
+2024-05-26 12:31:01.522813 +0000 build-archlinux43: output: .[?25hContainer root exited successfully.
+2024-05-26 12:31:01.527162 +0000 build-archlinux43: output: 
+2024-05-26 12:31:06.220214 +0000 build-archlinux43: output: .[?25l:: Synchronizing package databases....
+2024-05-26 12:31:06.220282 +0000 build-archlinux43: output:  core.
+2024-05-26 12:31:06.220304 +0000 build-archlinux43: output:  community.
+2024-05-26 12:31:06.220351 +0000 build-archlinux43: output:  extra.
+2024-05-26 12:31:06.220377 +0000 build-archlinux43: output:  multilib.
+2024-05-26 12:31:06.220393 +0000 build-archlinux43: output:  qubes.
+2024-05-26 12:31:08.579981 +0000 build-archlinux43: output: .[1F qubes                   4.3 KiB  27.0   B/s 00:00 [######################] 100%. qubes                   4.3 KiB  2.10 MiB/s 00:00 [######################] 100%..[4F core is up to date.[K.[1E community is up to date.[K.[1E extra is up to date.[K.[1E multilib is up to date.[K.[2E:: Starting full system upgrade....
+2024-05-26 12:31:08.778445 +0000 build-archlinux43: output:  there is nothing to do.
+2024-05-26 12:31:08.822422 +0000 build-archlinux43: output: .[?25h==> Building in chroot for [qubes] (x86_64)...
+2024-05-26 12:31:26.088750 +0000 build-archlinux43: output: ==> Synchronizing chroot copy [/builder/cache/qubes-x86_64/root] -> [user]...done
+2024-05-26 12:31:26.841425 +0000 build-archlinux43: output: ==> Making package: qubes-db-vm 4.2.6-1 (Sun May 26 08:31:25 2024)
+2024-05-26 12:31:26.847194 +0000 build-archlinux43: output: ==> Retrieving sources...
+2024-05-26 12:31:26.853619 +0000 build-archlinux43: output:   -> Found qubes-db-vm-4.2.6-1.tar.gz
+2024-05-26 12:31:26.856838 +0000 build-archlinux43: output: ==> WARNING: Skipping all source file integrity checks.
+2024-05-26 12:31:31.066905 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Making package: qubes-db-vm 4.2.6-1 (Sun May 26 08:31:30 2024).[0m.
+2024-05-26 12:31:31.070461 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Checking runtime dependencies....[0m.
+2024-05-26 12:31:31.469729 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Installing missing dependencies....[0m.
+2024-05-26 12:31:31.686701 +0000 build-archlinux43: output: .[?25lresolving dependencies....
+2024-05-26 12:31:31.687001 +0000 build-archlinux43: output: looking for conflicting packages....
+2024-05-26 12:31:31.688777 +0000 build-archlinux43: output: .
+2024-05-26 12:31:31.688825 +0000 build-archlinux43: output: Packages (26) bridge-utils-1.7.1-2  expat-2.6.2-1  libxslt-1.1.39-2  lzo-2.10-5.
+2024-05-26 12:31:31.688847 +0000 build-archlinux43: output:               mpdecimal-4.0.0-2  python-autocommand-2.2.2-6.
+2024-05-26 12:31:31.688867 +0000 build-archlinux43: output:               python-fastjsonschema-2.19.1-3  python-inflect-7.2.1-2.
+2024-05-26 12:31:31.688885 +0000 build-archlinux43: output:               python-jaraco.context-4.3.0-4  python-jaraco.functools-4.0.1-1.
+2024-05-26 12:31:31.689063 +0000 build-archlinux43: output:               python-jaraco.text-3.12.0-3  python-lxml-5.2.2-1.
+2024-05-26 12:31:31.689168 +0000 build-archlinux43: output:               python-more-itertools-10.2.0-2  python-ordered-set-4.1.0-5.
+2024-05-26 12:31:31.689236 +0000 build-archlinux43: output:               python-packaging-24.0-1  python-platformdirs-4.2.0-3.
+2024-05-26 12:31:31.689257 +0000 build-archlinux43: output:               python-tomli-2.0.1-4  python-trove-classifiers-2024.5.22-1.
+2024-05-26 12:31:31.689282 +0000 build-archlinux43: output:               python-typeguard-4.2.1-2  python-typing_extensions-4.12.0-1.
+2024-05-26 12:31:31.689298 +0000 build-archlinux43: output:               python-validate-pyproject-0.16-1  qubes-vm-xen-4.17.4-3.
+2024-05-26 12:31:31.689314 +0000 build-archlinux43: output:               yajl-2.1.0-6  python-3.12.3-1  python-setuptools-1:69.0.3-6.
+2024-05-26 12:31:31.689330 +0000 build-archlinux43: output:               qubes-libvchan-xen-4.2.3-1.
+2024-05-26 12:31:31.689400 +0000 build-archlinux43: output: .
+2024-05-26 12:31:31.689461 +0000 build-archlinux43: output: Total Download Size:   15.81 MiB.
+2024-05-26 12:31:31.689482 +0000 build-archlinux43: output: Total Installed Size:  88.80 MiB.
+2024-05-26 12:31:31.689585 +0000 build-archlinux43: output: .
+2024-05-26 12:31:31.689607 +0000 build-archlinux43: output: :: Proceed with installation? [Y/n] .
+2024-05-26 12:31:31.689621 +0000 build-archlinux43: output: :: Retrieving packages....
+2024-05-26 12:31:31.689738 +0000 build-archlinux43: output:  python-3.12.3-1-x86_64.
+2024-05-26 12:31:31.689769 +0000 build-archlinux43: output:  Total ( 0/26)           0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:31:31.689875 +0000 build-archlinux43: output: .[1F python-lxml-5.2.2-1-x86_64.
+2024-05-26 12:31:31.689905 +0000 build-archlinux43: output:  Total ( 0/26)           0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:31:31.689976 +0000 build-archlinux43: output: .[1F qubes-vm-xen-4.17.4-3-x86_64.
+2024-05-26 12:31:31.690103 +0000 build-archlinux43: output:  Total ( 0/26)           0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:31:31.690131 +0000 build-archlinux43: output: .[1F python-setuptools-1:69.0.3-6-any.
+2024-05-26 12:31:31.690201 +0000 build-archlinux43: output:  Total ( 0/26)           0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:31:31.690326 +0000 build-archlinux43: output: .[1F libxslt-1.1.39-2-x86_64.
+2024-05-26 12:31:31.690352 +0000 build-archlinux43: output:  Total ( 0/26)           0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:31:31.868597 +0000 build-archlinux43: output: .[4F qubes-vm-xen-4.1...    16.0 KiB  68.0   B/s --:-- [----------------------]   1%..[3E Total ( 0/26)          16.0 KiB  68.0   B/s --:-- [----------------------]   0%..[3F python-3.12.3-1-...     0.0   B  0.00   B/s 00:00 [######################] 100%..[2F qubes-vm-xen-4.1...   953.9 KiB  5.32 MiB/s 00:00 [######################] 100%..[5E expat-2.6.2-1-x86_64.
+2024-05-26 12:31:31.868714 +0000 build-archlinux43: output:  Total ( 1/26)          16.0 KiB  68.0   B/s --:-- [----------------------]   0%..
+2024-05-26 12:31:37.251227 +0000 build-archlinux43: output: .[4F python-setuptool...     7.7 KiB  32.0   B/s --:-- [----------------------]   1%..[3E Total ( 1/26)         961.6 KiB   134 KiB/s 01:53 [#---------------------]   5%..[3F python-setuptool...    23.4 KiB  24.5 KiB/s 00:29 [----------------------]   3%..[3E Total ( 1/26)         977.2 KiB   114 KiB/s 02:13 [#---------------------]   6%..[3F python-setuptool...    31.2 KiB  28.9 KiB/s 00:24 [----------------------]   4%..[3E Total ( 1/26)         985.1 KiB  88.6 KiB/s 02:51 [#---------------------]   6%..[5F python-lxml-5.2....    15.5 KiB  64.0   B/s --:-- [----------------------]   1%..[5E Total ( 1/26)        1047.5 KiB   163 KiB/s 01:32 [#---------------------]   6%..[3F python-setuptool...    70.2 KiB  84.4 KiB/s 00:08 [#---------------------]   9%..[2F python-lxml-5.2....    23.4 KiB  12.6 KiB/s 01:41 [----------------------]   1%..[1E python-3.12.3-1-...    15.5 KiB  64.0   B/s --:-- [----------------------]   0%..[2E libxslt-1.1.39-2...     7.7 KiB  32.0   B/s --:-- [----------------------]   3%..[2E Total ( 1/26)        1102.0 KiB   184 KiB/s 01:21 [#---------------------]   6%..[5F python-lxml-5.2....    39.0 KiB  32.1 KiB/s 00:39 [----------------------]   2%..[2E python-setuptool...    93.7 KiB  88.7 KiB/s 00:07 [##--------------------]  12%..[1F python-3.12.3-1-...    15.5 KiB  42.0   B/s --:-- [----------------------]   0%..[2E libxslt-1.1.39-2...    23.4 KiB  22.9 KiB/s 00:08 [##--------------------]  11%..[2E Total ( 1/26)        1125.4 KiB   160 KiB/s 01:34 [#---------------------]   6%..[5F python-lxml-5.2....    39.0 KiB  21.4 KiB/s 00:59 [----------------------]   2%..[2E python-setuptool...    93.7 KiB  59.1 KiB/s 00:11 [##--------------------]  12%..[1F python-3.12.3-1-...    15.5 KiB  28.0   B/s --:-- [----------------------]   0%..[2E libxslt-1.1.39-2...    31.2 KiB  27.9 KiB/s 00:06 [###-------------------]  14%..[2E Total ( 1/26)        1148.9 KiB   144 KiB/s 01:44 [#---------------------]   7%..[5F python-lxml-5.2....    39.0 KiB  14.3 KiB/s 01:29 [----------------------]   2%..[2E python-setuptool...   109.3 KiB  64.7 KiB/s 00:09 [###-------------------]  14%..[1F python-3.12.3-1-...    15.5 KiB  19.0   B/s --:-- [----------------------]   0%..[2E libxslt-1.1.39-2...    39.0 KiB  30.3 KiB/s 00:05 [###-------------------]  18%..[1E expat-2.6.2-1-x86_64   46.8 KiB   192   B/s 06:12 [########--------------]  40%..[1E Total ( 1/26)        1351.9 KiB   379 KiB/s 00:39 [#---------------------]   8%..[5F python-lxml-5.2....    85.9 KiB  74.9 KiB/s 00:16 [#---------------------]   6%..[2E python-setuptool...   156.2 KiB   109 KiB/s 00:05 [####------------------]  20%..[1F python-3.12.3-1-...    31.2 KiB  25.5 KiB/s 08:21 [----------------------]   0%..[2E libxslt-1.1.39-2...    85.9 KiB  96.8 KiB/s 00:01 [########--------------]  40%..[1E expat-2.6.2-1-x86_64   46.8 KiB   128   B/s 09:18 [########--------------]  40%..[1E Total ( 1/26)        1375.4 KiB   288 KiB/s 00:51 [#---------------------]   8%..[5F python-lxml-5.2....    85.9 KiB  49.9 KiB/s 00:24 [#---------------------]   6%..[2E python-setuptool...   171.8 KiB  95.6 KiB/s 00:06 [####------------------]  22%..[1F python-3.12.3-1-...    39.0 KiB  28.7 KiB/s 07:25 [----------------------]   0%..[2E libxslt-1.1.39-2...    85.9 KiB  64.5 KiB/s 00:01 [########--------------]  40%..[1E expat-2.6.2-1-x86_64   46.8 KiB  85.0   B/s 13:57 [########--------------]  40%..[1E Total ( 1/26)        1406.6 KiB   242 KiB/s 01:01 [#---------------------]   8%..[5F python-lxml-5.2....   101.5 KiB  58.1 KiB/s 00:20 [#---------------------]   7%..[2E python-setuptool...   171.8 KiB  63.7 KiB/s 00:09 [####------------------]  22%..[1F python-3.12.3-1-...    46.8 KiB  32.0 KiB/s 06:39 [----------------------]   0%..[2E libxslt-1.1.39-2...    85.9 KiB  43.0 KiB/s 00:02 [########--------------]  40%..[1E expat-2.6.2-1-x86_64   62.4 KiB  25.1 KiB/s 00:02 [###########-----------]  53%..[1E Total ( 1/26)        1430.0 KiB   200 KiB/s 01:13 [#---------------------]   8%..[5F python-lxml-5.2....   101.5 KiB  38.7 KiB/s 00:31 [#---------------------]   7%..[2E python-setuptool...   179.6 KiB  55.4 KiB/s 00:10 [#####-----------------]  23%..[1F python-3.12.3-1-...   109.3 KiB   116 KiB/s 01:49 [----------------------]   0%..[2E libxslt-1.1.39-2...   132.7 KiB   100 KiB/s 00:00 [#############---------]  62%..[1E expat-2.6.2-1-x86_64  116.7 KiB   104 KiB/s 00:00 [######################] 100%. python-lxml-5.2....   101.5 KiB  38.7 KiB/s 00:31 [#---------------------]   7%..[4F expat-2.6.2-1-x86_64  116.7 KiB  25.0 KiB/s 00:05 [######################] 100%..[5E Total ( 2/26)        1749.9 KiB   490 KiB/s 00:29 [##--------------------]  10%..[1F python-lxml-5.2....   164.0 KiB  95.5 KiB/s 00:12 [##--------------------]  12%..[2F python-setuptool...   281.2 KiB   150 KiB/s 00:03 [########--------------]  37%..[1F python-3.12.3-1-...   124.9 KiB   101 KiB/s 02:05 [----------------------]   0%..[2E libxslt-1.1.39-2...   179.6 KiB   138 KiB/s 00:00 [##################----]  85%..[2E Total ( 2/26)        1867.1 KiB   519 KiB/s 00:27 [##--------------------]  11%..[1F python-lxml-5.2....   164.0 KiB  63.7 KiB/s 00:18 [##--------------------]  12%..[2F python-setuptool...   312.4 KiB   151 KiB/s 00:02 [#########-------------]  41%..[1E python-3.12.3-1-...   124.9 KiB   101 KiB/s 02:05 [----------------------]   0%..[2F libxslt-1.1.39-2...   211.0 KiB  41.1 KiB/s 00:05 [######################] 100%..[2E python-3.12.3-1-...   140.5 KiB  92.9 KiB/s 02:16 [----------------------]   1%..[2E Total ( 3/26)        1953.2 KiB   485 KiB/s 00:29 [##--------------------]  12%..[1F python-lxml-5.2....   179.6 KiB  67.6 KiB/s 00:16 [##--------------------]  13%..[2F python-setuptool...   335.9 KiB   139 KiB/s 00:02 [#########-------------]  44%..[1E python-3.12.3-1-...   281.2 KiB   294 KiB/s 00:42 [----------------------]   2%..[2E Total ( 3/26)           2.3 MiB   968 KiB/s 00:14 [###-------------------]  14%..[1F python-lxml-5.2....   296.8 KiB   238 KiB/s 00:04 [####------------------]  22%..[2F python-setuptool...   492.1 KiB   350 KiB/s 00:00 [##############--------]  65%..[3E python-packaging-24.0-1-any.
+2024-05-26 12:31:37.251499 +0000 build-archlinux43: output:  Total ( 3/26)           2.3 MiB   968 KiB/s 00:14 [###-------------------]  14%..
+2024-05-26 12:31:38.324810 +0000 build-archlinux43: output: .[4F python-3.12.3-1-...   296.8 KiB   220 KiB/s 00:56 [----------------------]   2%..[3E Total ( 3/26)           2.4 MiB   838 KiB/s 00:16 [###-------------------]  15%..[2F python-lxml-5.2....   335.9 KiB   223 KiB/s 00:04 [#####-----------------]  25%..[2F python-setuptool...   523.4 KiB   285 KiB/s 00:00 [###############-------]  69%..[1E python-3.12.3-1-...   406.2 KiB   324 KiB/s 00:38 [----------------------]   3%..[3E Total ( 3/26)           2.8 MiB  1153 KiB/s 00:11 [###-------------------]  17%..[2F python-lxml-5.2....   499.9 KiB   414 KiB/s 00:01 [########--------------]  38%..[2F python-setuptool...   601.5 KiB   316 KiB/s 00:00 [#################-----]  80%..[1E python-3.12.3-1-...   546.8 KiB   448 KiB/s 00:27 [----------------------]   4%..[3E Total ( 3/26)           3.0 MiB  1140 KiB/s 00:11 [###-------------------]  18%..[2F python-lxml-5.2....   585.9 KiB   413 KiB/s 00:01 [#########-------------]  44%..[2F python-setuptool...   679.6 KiB   334 KiB/s 00:00 [###################---]  90%..[1E python-3.12.3-1-...   593.7 KiB   377 KiB/s 00:32 [----------------------]   4%..[3E Total ( 3/26)           3.1 MiB  1004 KiB/s 00:12 [####------------------]  19%..[2F python-lxml-5.2....   617.1 KiB   326 KiB/s 00:02 [##########------------]  47%..[2F python-setuptool...   710.9 KiB   274 KiB/s 00:00 [####################--]  94%. python-setuptool...   749.0 KiB   118 KiB/s 00:06 [######################] 100%..[1E python-3.12.3-1-...   671.8 KiB   381 KiB/s 00:31 [#---------------------]   5%. python-3.12.3-1-...   726.5 KiB   325 KiB/s 00:37 [#---------------------]   5%..[3E Total ( 4/26)           3.4 MiB   979 KiB/s 00:12 [####------------------]  21%..[2F python-lxml-5.2....   773.4 KiB   369 KiB/s 00:01 [############----------]  59%..[2E mpdecimal-4.0.0-2-x86_64.
+2024-05-26 12:31:38.324942 +0000 build-archlinux43: output:  Total ( 4/26)           3.4 MiB   979 KiB/s 00:12 [####------------------]  21%..
+2024-05-26 12:31:38.712282 +0000 build-archlinux43: output: .[5F python-3.12.3-1-...   882.7 KiB   468 KiB/s 00:25 [#---------------------]   6%..[4E Total ( 4/26)           3.8 MiB  1168 KiB/s 00:10 [#####-----------------]  23%..[3F python-lxml-5.2....   945.2 KiB   523 KiB/s 00:00 [###############-------]  72%..[1E python-packaging...     7.7 KiB  30.0   B/s 52:10 [#---------------------]   7%..[2E python-more-itertools-10.2.0-2-any.
+2024-05-26 12:31:38.712438 +0000 build-archlinux43: output:  Total ( 4/26)           3.8 MiB  1168 KiB/s 00:10 [#####-----------------]  23%..
+2024-05-26 12:31:40.501823 +0000 build-archlinux43: output: .[6F python-3.12.3-1-...   984.3 KiB   478 KiB/s 00:24 [#---------------------]   7%..[5E Total ( 4/26)           4.0 MiB  1175 KiB/s 00:10 [#####-----------------]  25%..[4F python-lxml-5.2....  1046.8 KiB   514 KiB/s 00:00 [#################-----]  79%..[1E python-packaging...    46.8 KiB  64.8 KiB/s 00:00 [##########------------]  46%..[2F python-3.12.3-1-...  1109.3 KiB   526 KiB/s 00:22 [#---------------------]   8%..[5E Total ( 4/26)           4.3 MiB  1288 KiB/s 00:09 [#####-----------------]  27%..[4F python-lxml-5.2....  1203.0 KiB   602 KiB/s 00:00 [####################--]  91%..[1E python-packaging...    78.0 KiB  95.0 KiB/s 00:00 [################------]  76%..[1F python-3.12.3-1-...  1109.3 KiB   526 KiB/s 00:22 [#---------------------]   8%..[1F python-lxml-5.2....  1310.5 KiB   176 KiB/s 00:07 [######################] 100%..[1E python-3.12.3-1-...  1257.7 KiB   598 KiB/s 00:19 [#---------------------]   9%..[4E Total ( 5/26)           4.6 MiB  1337 KiB/s 00:08 [######----------------]  28%..[2F mpdecimal-4.0.0-...     7.7 KiB  30.0   B/s 51:34 [#---------------------]   7%..[1F python-3.12.3-1-...  1257.7 KiB   598 KiB/s 00:19 [#---------------------]   9%..[1F python-packaging...   101.4 KiB  52.6 KiB/s 00:02 [######################] 100%..[1E python-3.12.3-1-...  1289.0 KiB   437 KiB/s 00:26 [##--------------------]  10%..[3E Total ( 6/26)           4.6 MiB   977 KiB/s 00:11 [######----------------]  29%..[2F mpdecimal-4.0.0-...    23.4 KiB  20.5 KiB/s 00:03 [#####-----------------]  23%. python-3.12.3-1-...  1289.0 KiB   437 KiB/s 00:26 [##--------------------]  10%..[1F mpdecimal-4.0.0-...    99.8 KiB  76.8 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...  1320.2 KiB   338 KiB/s 00:34 [##--------------------]  10%..[2E Total ( 7/26)           4.7 MiB   813 KiB/s 00:13 [######----------------]  30%..[2F python-3.12.3-1-...  1679.6 KiB   821 KiB/s 00:13 [##--------------------]  13%..[2E Total ( 7/26)           5.1 MiB  1138 KiB/s 00:09 [#######---------------]  32%..[1F python-more-iter...     7.7 KiB  30.0   B/s 50:25 [#---------------------]   7%..[1F python-3.12.3-1-...  1796.8 KiB   708 KiB/s 00:15 [###-------------------]  14%..[2E Total ( 7/26)           5.2 MiB   951 KiB/s 00:11 [#######---------------]  33%..[1F python-more-iter...    31.2 KiB  32.7 KiB/s 00:02 [#######---------------]  32%..[1F python-3.12.3-1-...  1890.5 KiB   621 KiB/s 00:17 [###-------------------]  14%..[2E Total ( 7/26)           5.4 MiB   857 KiB/s 00:12 [#######---------------]  33%..[1F python-more-iter...    70.2 KiB  84.1 KiB/s 00:00 [###############-------]  72%. python-3.12.3-1-...  1890.5 KiB   621 KiB/s 00:17 [###-------------------]  14%..[1F python-more-iter...    97.0 KiB  58.4 KiB/s 00:02 [######################] 100%..[1E python-3.12.3-1-...     2.2 MiB  1081 KiB/s 00:09 [###-------------------]  17%..[1E Total ( 8/26)           5.8 MiB  1282 KiB/s 00:07 [#######---------------]  36%. lzo-2.10-5-x86_64.
+2024-05-26 12:31:40.502086 +0000 build-archlinux43: output:  Total ( 8/26)           5.8 MiB  1282 KiB/s 00:07 [#######---------------]  36%..
+2024-05-26 12:31:40.554569 +0000 build-archlinux43: output: .[1F python-typeguard-4.2.1-2-any.
+2024-05-26 12:31:40.554847 +0000 build-archlinux43: output:  Total ( 8/26)           5.8 MiB  1282 KiB/s 00:07 [#######---------------]  36%..
+2024-05-26 12:31:40.880655 +0000 build-archlinux43: output: .[4F python-3.12.3-1-...     2.3 MiB   818 KiB/s 00:12 [###-------------------]  18%..[3E Total ( 8/26)           5.9 MiB   952 KiB/s 00:10 [########--------------]  37%. python-validate-pyproject-0.16-1-any.
+2024-05-26 12:31:40.880795 +0000 build-archlinux43: output:  Total ( 8/26)           5.9 MiB   952 KiB/s 00:10 [########--------------]  37%..
+2024-05-26 12:31:41.157585 +0000 build-archlinux43: output: .[5F python-3.12.3-1-...     2.3 MiB   545 KiB/s 00:19 [###-------------------]  18%..[4E Total ( 8/26)           5.9 MiB   635 KiB/s 00:16 [########--------------]  37%. python-inflect-7.2.1-2-any.
+2024-05-26 12:31:41.157780 +0000 build-archlinux43: output:  Total ( 8/26)           5.9 MiB   635 KiB/s 00:16 [########--------------]  37%..
+2024-05-26 12:31:42.353829 +0000 build-archlinux43: output: .[6F python-3.12.3-1-...     2.3 MiB   364 KiB/s 00:28 [###-------------------]  18%..[5E Total ( 8/26)           5.9 MiB   423 KiB/s 00:24 [########--------------]  37%..[4F lzo-2.10-5-x86_64       7.7 KiB  29.0   B/s 45:56 [#---------------------]   8%..[1E python-typeguard...     7.7 KiB  29.0   B/s 41:08 [#---------------------]   9%..[2F python-3.12.3-1-...     2.4 MiB   330 KiB/s 00:31 [###-------------------]  18%..[5E Total ( 8/26)           6.0 MiB   507 KiB/s 00:19 [########--------------]  38%..[4F lzo-2.10-5-x86_64      70.2 KiB   103 KiB/s 00:00 [#################-----]  79%..[1E python-typeguard...    46.8 KiB  64.5 KiB/s 00:00 [############----------]  58%..[2F python-3.12.3-1-...     2.7 MiB   738 KiB/s 00:13 [####------------------]  21%..[5E Total ( 8/26)           6.4 MiB   934 KiB/s 00:10 [########--------------]  40%..[4F lzo-2.10-5-x86_64      87.8 KiB  97.8 KiB/s 00:00 [######################] 100%. python-3.12.3-1-...     2.7 MiB   738 KiB/s 00:13 [####------------------]  21%..[1F lzo-2.10-5-x86_64      87.8 KiB  77.0 KiB/s 00:01 [######################] 100%..[2E python-typeguard...    70.2 KiB  81.5 KiB/s 00:00 [###################---]  88%. python-3.12.3-1-...     2.7 MiB   738 KiB/s 00:13 [####------------------]  21%..[1F python-typeguard...    79.4 KiB  66.4 KiB/s 00:01 [######################] 100%..[2E python-validate-...     7.7 KiB  29.0   B/s 40:18 [#---------------------]   9%..[1F python-3.12.3-1-...     2.7 MiB   609 KiB/s 00:16 [####------------------]  21%..[3E Total (10/26)           6.5 MiB   810 KiB/s 00:11 [########--------------]  40%..[2F python-validate-...    15.5 KiB  12.8 KiB/s 00:04 [####------------------]  20%..[1F python-3.12.3-1-...     2.9 MiB   600 KiB/s 00:16 [####------------------]  22%..[3E Total (10/26)           6.6 MiB   747 KiB/s 00:12 [#########-------------]  41%..[2F python-3.12.3-1-...     2.9 MiB   600 KiB/s 00:16 [####------------------]  22%..[1F python-validate-...    77.6 KiB  63.3 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     3.1 MiB   738 KiB/s 00:13 [#####-----------------]  24%..[2E Total (11/26)           6.9 MiB   940 KiB/s 00:09 [#########-------------]  43%..[1F python-inflect-7...     7.7 KiB  29.0   B/s 38:23 [##--------------------]  10%..[1E python-typing_extensions-4.12.0-1-any.
+2024-05-26 12:31:42.353958 +0000 build-archlinux43: output:  Total (11/26)           6.9 MiB   940 KiB/s 00:09 [#########-------------]  43%..
+2024-05-26 12:31:42.424376 +0000 build-archlinux43: output: .[3F python-3.12.3-1-...     3.1 MiB   738 KiB/s 00:13 [#####-----------------]  24%..[1F python-inflect-7...    73.9 KiB  61.7 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     3.2 MiB   800 KiB/s 00:11 [#####-----------------]  25%..[2E Total (12/26)           7.1 MiB  1056 KiB/s 00:08 [#########-------------]  44%. yajl-2.1.0-6-x86_64.
+2024-05-26 12:31:42.424559 +0000 build-archlinux43: output:  Total (12/26)           7.1 MiB  1056 KiB/s 00:08 [#########-------------]  44%..
+2024-05-26 12:31:42.690132 +0000 build-archlinux43: output: .[4F python-3.12.3-1-...     3.5 MiB   852 KiB/s 00:10 [#####-----------------]  27%..[3E Total (12/26)           7.3 MiB  1022 KiB/s 00:08 [##########------------]  46%. python-fastjsonschema-2.19.1-3-any.
+2024-05-26 12:31:42.690270 +0000 build-archlinux43: output:  Total (12/26)           7.3 MiB  1022 KiB/s 00:08 [##########------------]  46%..
+2024-05-26 12:31:42.926277 +0000 build-archlinux43: output: .[5F python-3.12.3-1-...     3.8 MiB  1089 KiB/s 00:08 [######----------------]  30%..[4E Total (12/26)           7.6 MiB  1202 KiB/s 00:06 [##########------------]  48%. python-platformdirs-4.2.0-3-any.
+2024-05-26 12:31:42.926457 +0000 build-archlinux43: output:  Total (12/26)           7.6 MiB  1202 KiB/s 00:06 [##########------------]  48%..
+2024-05-26 12:31:43.681728 +0000 build-archlinux43: output: .[5F python-typing_ex...     7.7 KiB  29.0   B/s 38:14 [##--------------------]  10%..[1F python-3.12.3-1-...     4.0 MiB  1051 KiB/s 00:08 [######----------------]  31%..[5E Total (12/26)           7.9 MiB  1231 KiB/s 00:06 [##########------------]  49%..[3F yajl-2.1.0-6-x86_64     7.7 KiB  29.0   B/s 24:48 [###-------------------]  15%..[1F python-3.12.3-1-...     4.0 MiB  1051 KiB/s 00:08 [######----------------]  31%..[1F python-typing_ex...    73.1 KiB   105 KiB/s 00:01 [######################] 100%..[2E python-3.12.3-1-...     4.0 MiB  1051 KiB/s 00:08 [######----------------]  31%..[1F yajl-2.1.0-6-x86_64    50.1 KiB  72.5 KiB/s 00:01 [######################] 100%..[2E python-fastjsons...     7.7 KiB  29.0   B/s 23:12 [###-------------------]  16%. python-3.12.3-1-...     4.0 MiB  1051 KiB/s 00:08 [######----------------]  31%..[1F python-fastjsons...    47.3 KiB  83.0 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     4.2 MiB  1092 KiB/s 00:07 [#######---------------]  33%..[2E Total (15/26)           8.2 MiB  1375 KiB/s 00:05 [###########-----------]  52%..[2F python-3.12.3-1-...     4.4 MiB  1093 KiB/s 00:07 [#######---------------]  35%..[2E Total (15/26)           8.5 MiB  1282 KiB/s 00:05 [###########-----------]  53%..[1F python-platformd...     7.7 KiB  28.0   B/s 14:01 [#####-----------------]  24%. python-3.12.3-1-...     4.4 MiB  1093 KiB/s 00:07 [#######---------------]  35%..[1F python-platformd...    31.6 KiB  49.2 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     4.6 MiB   944 KiB/s 00:08 [#######---------------]  36%..[1E Total (16/26)           8.6 MiB  1122 KiB/s 00:06 [###########-----------]  54%. python-tomli-2.0.1-4-any.
+2024-05-26 12:31:43.681876 +0000 build-archlinux43: output:  Total (16/26)           8.6 MiB  1122 KiB/s 00:06 [###########-----------]  54%..
+2024-05-26 12:31:43.776375 +0000 build-archlinux43: output: .[1F python-autocommand-2.2.2-6-any.
+2024-05-26 12:31:43.776497 +0000 build-archlinux43: output:  Total (16/26)           8.6 MiB  1122 KiB/s 00:06 [###########-----------]  54%..
+2024-05-26 12:31:43.821527 +0000 build-archlinux43: output: .[1F python-jaraco.text-3.12.0-3-any.
+2024-05-26 12:31:43.821602 +0000 build-archlinux43: output:  Total (16/26)           8.6 MiB  1122 KiB/s 00:06 [###########-----------]  54%..
+2024-05-26 12:31:44.036796 +0000 build-archlinux43: output: .[5F python-3.12.3-1-...     4.6 MiB   734 KiB/s 00:11 [#######---------------]  36%..[4E Total (16/26)           8.7 MiB   852 KiB/s 00:08 [###########-----------]  54%. python-trove-classifiers-2024.5.22-1-any.
+2024-05-26 12:31:44.036891 +0000 build-archlinux43: output:  Total (16/26)           8.7 MiB   852 KiB/s 00:08 [###########-----------]  54%..
+2024-05-26 12:31:44.743406 +0000 build-archlinux43: output: .[5F python-tomli-2.0...     7.7 KiB  28.0   B/s 11:08 [######----------------]  29%..[1F python-3.12.3-1-...     4.7 MiB   539 KiB/s 00:14 [########--------------]  37%..[5E Total (16/26)           8.7 MiB   631 KiB/s 00:11 [############----------]  55%..[4F python-3.12.3-1-...     4.7 MiB   539 KiB/s 00:14 [########--------------]  37%..[1F python-tomli-2.0...    26.6 KiB  60.1 KiB/s 00:00 [######################] 100%..[1E python-3.12.3-1-...     4.7 MiB   422 KiB/s 00:18 [########--------------]  37%..[4E Total (17/26)           8.8 MiB   514 KiB/s 00:13 [############----------]  55%..[2F python-jaraco.te...     7.7 KiB  28.0   B/s 07:04 [########--------------]  39%..[1F python-autocomma...     7.7 KiB  28.0   B/s 09:28 [#######---------------]  32%..[1E python-3.12.3-1-...     4.7 MiB   422 KiB/s 00:18 [########--------------]  37%..[2F python-jaraco.te...    19.7 KiB  34.7 KiB/s 00:01 [######################] 100%..[1E python-autocomma...    23.7 KiB  35.8 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     4.9 MiB   580 KiB/s 00:13 [########--------------]  38%..[2E Total (19/26)           9.0 MiB   712 KiB/s 00:09 [############----------]  56%..[1F python-trove-cla...     7.7 KiB  28.0   B/s 06:36 [#########-------------]  41%. python-3.12.3-1-...     4.9 MiB   580 KiB/s 00:13 [########--------------]  38%..[1F python-trove-cla...    18.8 KiB  33.7 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     5.0 MiB   632 KiB/s 00:12 [########--------------]  40%..[1E Total (20/26)           9.2 MiB   750 KiB/s 00:09 [############----------]  58%. python-jaraco.functools-4.0.1-1-any.
+2024-05-26 12:31:44.743572 +0000 build-archlinux43: output:  Total (20/26)           9.2 MiB   750 KiB/s 00:09 [############----------]  58%..
+2024-05-26 12:31:44.849753 +0000 build-archlinux43: output: .[1F bridge-utils-1.7.1-2-x86_64.
+2024-05-26 12:31:44.849883 +0000 build-archlinux43: output:  Total (20/26)           9.2 MiB   750 KiB/s 00:09 [############----------]  58%..
+2024-05-26 12:31:44.906967 +0000 build-archlinux43: output: .[1F python-ordered-set-4.1.0-5-any.
+2024-05-26 12:31:44.907094 +0000 build-archlinux43: output:  Total (20/26)           9.2 MiB   750 KiB/s 00:09 [############----------]  58%..
+2024-05-26 12:31:45.024226 +0000 build-archlinux43: output: .[5F python-3.12.3-1-...     5.1 MiB   499 KiB/s 00:15 [########--------------]  40%..[4E Total (20/26)           9.2 MiB   578 KiB/s 00:11 [############----------]  58%. python-jaraco.context-4.3.0-4-any.
+2024-05-26 12:31:45.024351 +0000 build-archlinux43: output:  Total (20/26)           9.2 MiB   578 KiB/s 00:11 [############----------]  58%..
+2024-05-26 12:31:45.745585 +0000 build-archlinux43: output: .[6F python-3.12.3-1-...     5.1 MiB   433 KiB/s 00:17 [########--------------]  40%..[5E Total (20/26)           9.3 MiB   486 KiB/s 00:13 [############----------]  58%..[3F bridge-utils-1.7...     7.7 KiB  28.0   B/s 05:04 [##########------------]  47%..[2F python-3.12.3-1-...     5.2 MiB   431 KiB/s 00:17 [#########-------------]  41%..[5E Total (20/26)           9.4 MiB   478 KiB/s 00:13 [############----------]  59%..[4F python-jaraco.fu...     7.7 KiB  28.0   B/s 05:18 [##########------------]  46%..[1E python-3.12.3-1-...     5.2 MiB   431 KiB/s 00:17 [#########-------------]  41%..[2F bridge-utils-1.7...    16.2 KiB  34.2 KiB/s 00:00 [######################] 100%..[1E python-jaraco.fu...    16.6 KiB  28.6 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     5.6 MiB   912 KiB/s 00:07 [#########-------------]  44%..[3E Total (22/26)           9.8 MiB   986 KiB/s 00:06 [#############---------]  61%..[2F python-ordered-s...     7.7 KiB  28.0   B/s 04:32 [###########-----------]  50%. python-3.12.3-1-...     5.6 MiB   912 KiB/s 00:07 [#########-------------]  44%..[1F python-ordered-s...    15.3 KiB  22.1 KiB/s 00:01 [######################] 100%..[2E python-jaraco.co...     7.7 KiB  28.0   B/s 01:53 [###############-------]  71%. python-3.12.3-1-...     5.6 MiB   912 KiB/s 00:07 [#########-------------]  44%..[1F python-jaraco.co...    10.9 KiB  16.0 KiB/s 00:01 [######################] 100%..[1E python-3.12.3-1-...     5.7 MiB   723 KiB/s 00:09 [#########-------------]  45%..[1E Total (24/26)           9.9 MiB   815 KiB/s 00:07 [#############---------]  62%. qubes-libvchan-xen-4.2.3-1-x86_64.
+2024-05-26 12:31:45.745761 +0000 build-archlinux43: output:  Total (24/26)           9.9 MiB   815 KiB/s 00:07 [#############---------]  62%..
+2024-05-26 12:31:54.708217 +0000 build-archlinux43: output: .[2F qubes-libvchan-x...     8.5 KiB  31.0   B/s 00:00 [######################] 100%. python-3.12.3-1-...     5.7 MiB   723 KiB/s 00:09 [#########-------------]  45%..[1F qubes-libvchan-x...     8.5 KiB  1696 KiB/s 00:00 [######################] 100%..[1E python-3.12.3-1-...     5.9 MiB   877 KiB/s 00:07 [##########------------]  47%..[1E Total (25/26)          10.1 MiB   952 KiB/s 00:06 [#############---------]  63%..[1F python-3.12.3-1-...     5.9 MiB   585 KiB/s 00:11 [##########------------]  47%..[1E Total (25/26)          10.1 MiB   634 KiB/s 00:09 [#############---------]  63%..[1F python-3.12.3-1-...     5.9 MiB   390 KiB/s 00:17 [##########------------]  47%..[1E Total (25/26)          10.1 MiB   423 KiB/s 00:13 [#############---------]  63%..[1F python-3.12.3-1-...     5.9 MiB   309 KiB/s 00:21 [##########------------]  47%..[1E Total (25/26)          10.2 MiB   331 KiB/s 00:17 [##############--------]  64%..[1F python-3.12.3-1-...     6.2 MiB   626 KiB/s 00:10 [##########------------]  49%..[1E Total (25/26)          10.5 MiB   641 KiB/s 00:08 [##############--------]  66%..[1F python-3.12.3-1-...     6.6 MiB  1081 KiB/s 00:05 [###########-----------]  53%..[1E Total (25/26)          10.9 MiB  1091 KiB/s 00:04 [##############--------]  68%..[1F python-3.12.3-1-...     6.9 MiB  1187 KiB/s 00:04 [############----------]  55%..[1E Total (25/26)          11.1 MiB  1194 KiB/s 00:04 [###############-------]  70%..[1F python-3.12.3-1-...     7.1 MiB  1065 KiB/s 00:05 [############----------]  56%..[1E Total (25/26)          11.3 MiB  1069 KiB/s 00:04 [###############-------]  71%..[1F python-3.12.3-1-...     7.3 MiB  1047 KiB/s 00:05 [############----------]  58%..[1E Total (25/26)          11.5 MiB  1050 KiB/s 00:04 [###############-------]  72%..[1F python-3.12.3-1-...     7.5 MiB  1061 KiB/s 00:04 [#############---------]  60%..[1E Total (25/26)          11.7 MiB  1063 KiB/s 00:03 [################------]  74%..[1F python-3.12.3-1-...     7.7 MiB   971 KiB/s 00:05 [#############---------]  61%..[1E Total (25/26)          11.9 MiB   971 KiB/s 00:04 [################------]  75%..[1F python-3.12.3-1-...     8.0 MiB  1192 KiB/s 00:03 [#############---------]  63%..[1E Total (25/26)          12.2 MiB  1195 KiB/s 00:03 [################------]  77%..[1F python-3.12.3-1-...     8.1 MiB   969 KiB/s 00:04 [##############--------]  64%..[1E Total (25/26)          12.3 MiB   971 KiB/s 00:03 [#################-----]  78%..[1F python-3.12.3-1-...     8.3 MiB   892 KiB/s 00:04 [##############--------]  66%..[1E Total (25/26)          12.5 MiB   893 KiB/s 00:03 [#################-----]  79%..[1F python-3.12.3-1-...     8.5 MiB   970 KiB/s 00:04 [##############--------]  67%..[1E Total (25/26)          12.7 MiB   971 KiB/s 00:03 [#################-----]  80%..[1F python-3.12.3-1-...     8.5 MiB   659 KiB/s 00:06 [##############--------]  67%..[1E Total (25/26)          12.7 MiB   660 KiB/s 00:04 [#################-----]  80%..[1F python-3.12.3-1-...     8.8 MiB   826 KiB/s 00:04 [###############-------]  69%..[1E Total (25/26)          13.0 MiB   827 KiB/s 00:03 [##################----]  82%..[1F python-3.12.3-1-...     8.8 MiB   599 KiB/s 00:06 [###############-------]  70%..[1E Total (25/26)          13.0 MiB   599 KiB/s 00:04 [##################----]  82%..[1F python-3.12.3-1-...     8.8 MiB   435 KiB/s 00:08 [###############-------]  70%..[1E Total (25/26)          13.0 MiB   435 KiB/s 00:06 [##################----]  82%..[1F python-3.12.3-1-...     9.2 MiB   912 KiB/s 00:03 [################------]  73%..[1E Total (25/26)          13.4 MiB   912 KiB/s 00:02 [##################----]  84%..[1F python-3.12.3-1-...     9.6 MiB  1407 KiB/s 00:02 [################------]  76%..[1E Total (25/26)          13.9 MiB  1407 KiB/s 00:01 [###################---]  87%..[1F python-3.12.3-1-...     9.7 MiB  1024 KiB/s 00:02 [################------]  77%..[1E Total (25/26)          13.9 MiB  1024 KiB/s 00:01 [###################---]  88%..[1F python-3.12.3-1-...     9.8 MiB   810 KiB/s 00:03 [################------]  77%..[1E Total (25/26)          14.0 MiB   810 KiB/s 00:02 [###################---]  88%..[1F python-3.12.3-1-...     9.8 MiB   631 KiB/s 00:04 [#################-----]  78%..[1E Total (25/26)          14.0 MiB   631 KiB/s 00:02 [###################---]  88%..[1F python-3.12.3-1-...     9.9 MiB   561 KiB/s 00:04 [#################-----]  79%..[1E Total (25/26)          14.1 MiB   561 KiB/s 00:03 [###################---]  89%..[1F python-3.12.3-1-...    10.4 MiB  1183 KiB/s 00:01 [##################----]  83%..[1E Total (25/26)          14.6 MiB  1183 KiB/s 00:01 [####################--]  92%..[1F python-3.12.3-1-...    10.8 MiB  1326 KiB/s 00:01 [##################----]  85%..[1E Total (25/26)          15.0 MiB  1326 KiB/s 00:00 [####################--]  94%..[1F python-3.12.3-1-...    10.9 MiB  1087 KiB/s 00:01 [###################---]  87%..[1E Total (25/26)          15.1 MiB  1087 KiB/s 00:00 [####################--]  95%..[1F python-3.12.3-1-...    11.2 MiB  1086 KiB/s 00:01 [###################---]  89%..[1E Total (25/26)          15.4 MiB  1086 KiB/s 00:00 [#####################-]  97%..[1F python-3.12.3-1-...    11.4 MiB  1113 KiB/s 00:01 [####################--]  91%..[1E Total (25/26)          15.6 MiB  1113 KiB/s 00:00 [#####################-]  98%..[1F python-3.12.3-1-...    11.4 MiB   807 KiB/s 00:01 [####################--]  91%..[1E Total (25/26)          15.7 MiB   807 KiB/s 00:00 [#####################-]  99%..[1F python-3.12.3-1-...    11.6 MiB   852 KiB/s 00:01 [####################--]  92%..[1E Total (25/26)          15.8 MiB   852 KiB/s 00:00 [######################] 100%..[1F python-3.12.3-1-...    11.8 MiB   872 KiB/s 00:00 [####################--]  94%..[1E Total (25/26)          16.0 MiB   872 KiB/s 00:00 [######################] 101%..[1F python-3.12.3-1-...    12.3 MiB  1297 KiB/s 00:00 [#####################-]  97%..[1E Total (25/26)          16.5 MiB  1297 KiB/s 00:00 [######################] 104%..[1F python-3.12.3-1-...    12.5 MiB  1307 KiB/s 00:00 [#####################-]  99%..[1E Total (25/26)          16.7 MiB  1307 KiB/s 00:00 [######################] 105%..[1F python-3.12.3-1-...    12.5 MiB   594 KiB/s 00:22 [######################] 100%..[1E Total (26/26)          15.8 MiB   703 KiB/s 00:23 [######################] 100%..
+2024-05-26 12:31:54.881794 +0000 build-archlinux43: output: ( 0/26) checking keys in keyring                   [----------------------]   0%.( 1/26) checking keys in keyring                   [----------------------]   3%.( 2/26) checking keys in keyring                   [#---------------------]   7%.( 3/26) checking keys in keyring                   [##--------------------]  11%.( 4/26) checking keys in keyring                   [###-------------------]  15%.( 5/26) checking keys in keyring                   [####------------------]  19%.( 6/26) checking keys in keyring                   [#####-----------------]  23%.( 7/26) checking keys in keyring                   [#####-----------------]  26%.( 8/26) checking keys in keyring                   [######----------------]  30%.( 9/26) checking keys in keyring                   [#######---------------]  34%.(10/26) checking keys in keyring                   [########--------------]  38%.(11/26) checking keys in keyring                   [#########-------------]  42%.(12/26) checking keys in keyring                   [##########------------]  46%.(13/26) checking keys in keyring                   [###########-----------]  50%.(14/26) checking keys in keyring                   [###########-----------]  53%.(15/26) checking keys in keyring                   [############----------]  57%.(16/26) checking keys in keyring                   [#############---------]  61%.(17/26) checking keys in keyring                   [##############--------]  65%.(18/26) checking keys in keyring                   [###############-------]  69%.(19/26) checking keys in keyring                   [################------]  73%.(20/26) checking keys in keyring                   [################------]  76%.(21/26) checking keys in keyring                   [#################-----]  80%.(22/26) checking keys in keyring                   [##################----]  84%.(23/26) checking keys in keyring                   [###################---]  88%.(24/26) checking keys in keyring                   [####################--]  92%.(25/26) checking keys in keyring                   [#####################-]  96%.(26/26) checking keys in keyring                   [######################] 100%..
+2024-05-26 12:31:55.494383 +0000 build-archlinux43: output: ( 0/26) checking package integrity                 [----------------------]   0%.( 1/26) checking package integrity                 [----------------------]   0%.( 2/26) checking package integrity                 [----------------------]   1%.( 3/26) checking package integrity                 [################------]  76%.( 4/26) checking package integrity                 [################------]  76%.( 5/26) checking package integrity                 [################------]  76%.( 6/26) checking package integrity                 [################------]  76%.( 7/26) checking package integrity                 [################------]  76%.( 8/26) checking package integrity                 [################------]  77%.( 9/26) checking package integrity                 [################------]  77%.(10/26) checking package integrity                 [#################-----]  78%.(11/26) checking package integrity                 [#################-----]  78%.(12/26) checking package integrity                 [#################-----]  78%.(13/26) checking package integrity                 [#################-----]  79%.(14/26) checking package integrity                 [#################-----]  79%.(15/26) checking package integrity                 [#################-----]  79%.(16/26) checking package integrity                 [#################-----]  79%.(17/26) checking package integrity                 [#################-----]  79%.(18/26) checking package integrity                 [#################-----]  80%.(19/26) checking package integrity                 [##################----]  84%.(20/26) checking package integrity                 [##################----]  84%.(21/26) checking package integrity                 [##################----]  85%.(22/26) checking package integrity                 [####################--]  93%.(23/26) checking package integrity                 [####################--]  94%.(24/26) checking package integrity                 [####################--]  94%.(25/26) checking package integrity                 [#####################-]  99%.(26/26) checking package integrity                 [######################] 100%..
+2024-05-26 12:31:55.523738 +0000 build-archlinux43: output: ( 0/26) loading package files                      [----------------------]   0%.( 1/26) loading package files                      [----------------------]   0%.( 2/26) loading package files                      [----------------------]   1%.( 3/26) loading package files                      [################------]  76%.( 4/26) loading package files                      [################------]  76%.( 5/26) loading package files                      [################------]  76%.( 6/26) loading package files                      [################------]  76%.( 7/26) loading package files                      [################------]  76%.( 8/26) loading package files                      [################------]  77%.( 9/26) loading package files                      [################------]  77%.(10/26) loading package files                      [#################-----]  78%.(11/26) loading package files                      [#################-----]  78%.(12/26) loading package files                      [#################-----]  78%.(13/26) loading package files                      [#################-----]  79%.(14/26) loading package files                      [#################-----]  79%.(15/26) loading package files                      [#################-----]  79%.(16/26) loading package files                      [#################-----]  79%.(17/26) loading package files                      [#################-----]  79%.(18/26) loading package files                      [#################-----]  80%.(19/26) loading package files                      [##################----]  84%.(20/26) loading package files                      [##################----]  84%.(21/26) loading package files                      [##################----]  85%.(22/26) loading package files                      [####################--]  93%.(23/26) loading package files                      [####################--]  94%.(24/26) loading package files                      [####################--]  94%.(25/26) loading package files                      [#####################-]  99%.(26/26) loading package files                      [######################] 100%..
+2024-05-26 12:31:55.534111 +0000 build-archlinux43: output: ( 0/26) checking for file conflicts                [----------------------]   0%.( 1/26) checking for file conflicts                [----------------------]   3%.( 2/26) checking for file conflicts                [#---------------------]   7%.( 3/26) checking for file conflicts                [##--------------------]  11%.( 4/26) checking for file conflicts                [###-------------------]  15%.( 5/26) checking for file conflicts                [####------------------]  19%.( 6/26) checking for file conflicts                [#####-----------------]  23%.( 7/26) checking for file conflicts                [#####-----------------]  26%.( 8/26) checking for file conflicts                [######----------------]  30%.( 9/26) checking for file conflicts                [#######---------------]  34%.(10/26) checking for file conflicts                [########--------------]  38%.(11/26) checking for file conflicts                [#########-------------]  42%.(12/26) checking for file conflicts                [##########------------]  46%.(13/26) checking for file conflicts                [###########-----------]  50%.(14/26) checking for file conflicts                [###########-----------]  53%.(15/26) checking for file conflicts                [############----------]  57%.(16/26) checking for file conflicts                [#############---------]  61%.(17/26) checking for file conflicts                [##############--------]  65%.(18/26) checking for file conflicts                [###############-------]  69%.(19/26) checking for file conflicts                [################------]  73%.(20/26) checking for file conflicts                [################------]  76%.(21/26) checking for file conflicts                [#################-----]  80%.(22/26) checking for file conflicts                [##################----]  84%.(23/26) checking for file conflicts                [###################---]  88%.(24/26) checking for file conflicts                [####################--]  92%.(25/26) checking for file conflicts                [#####################-]  96%.(26/26) checking for file conflicts                [######################] 100%..
+2024-05-26 12:31:55.535670 +0000 build-archlinux43: output: :: Processing package changes....
+2024-05-26 12:31:55.541207 +0000 build-archlinux43: output: ( 1/26) installing expat                           [----------------------]   0%.( 1/26) installing expat                           [######################] 100%..
+2024-05-26 12:31:55.543496 +0000 build-archlinux43: output: ( 2/26) installing mpdecimal                       [----------------------]   0%.( 2/26) installing mpdecimal                       [######################] 100%..
+2024-05-26 12:31:55.940116 +0000 build-archlinux43: output: ( 3/26) installing python                          [----------------------]   0%.( 3/26) installing python                          [----------------------]   0%.( 3/26) installing python                          [----------------------]   0%.( 3/26) installing python                          [######################] 100%..
+2024-05-26 12:31:55.946809 +0000 build-archlinux43: output: Optional dependencies for python.
+2024-05-26 12:31:55.946846 +0000 build-archlinux43: output:     python-setuptools: for building Python packages using tooling that is.
+2024-05-26 12:31:55.946866 +0000 build-archlinux43: output:     usually bundled with Python [pending].
+2024-05-26 12:31:55.946883 +0000 build-archlinux43: output:     python-pip: for installing Python packages using tooling that is usually.
+2024-05-26 12:31:55.946896 +0000 build-archlinux43: output:     bundled with Python.
+2024-05-26 12:31:55.946912 +0000 build-archlinux43: output:     python-pipx: for installing Python software not packaged on Arch Linux.
+2024-05-26 12:31:55.946927 +0000 build-archlinux43: output:     sqlite: for a default database integration [installed].
+2024-05-26 12:31:55.946941 +0000 build-archlinux43: output:     xz: for lzma [installed].
+2024-05-26 12:31:55.946954 +0000 build-archlinux43: output:     tk: for tkinter.
+2024-05-26 12:31:55.953000 +0000 build-archlinux43: output: ( 4/26) installing python-more-itertools           [----------------------]   0%.( 4/26) installing python-more-itertools           [######################] 100%..
+2024-05-26 12:31:55.953223 +0000 build-archlinux43: output: ( 5/26) installing python-jaraco.functools         [----------------------]   0%.( 5/26) installing python-jaraco.functools         [######################] 100%..
+2024-05-26 12:31:55.953424 +0000 build-archlinux43: output: ( 6/26) installing python-jaraco.context           [----------------------]   0%.( 6/26) installing python-jaraco.context           [######################] 100%..
+2024-05-26 12:31:55.954810 +0000 build-archlinux43: output: ( 7/26) installing python-autocommand              [----------------------]   0%.( 7/26) installing python-autocommand              [######################] 100%..
+2024-05-26 12:31:55.958704 +0000 build-archlinux43: output: ( 8/26) installing python-typing_extensions        [----------------------]   0%.( 8/26) installing python-typing_extensions        [######################] 100%..
+2024-05-26 12:31:55.962924 +0000 build-archlinux43: output: ( 9/26) installing python-typeguard                [----------------------]   0%.( 9/26) installing python-typeguard                [######################] 100%..
+2024-05-26 12:31:55.965925 +0000 build-archlinux43: output: (10/26) installing python-inflect                  [----------------------]   0%.(10/26) installing python-inflect                  [######################] 100%..
+2024-05-26 12:31:55.966683 +0000 build-archlinux43: output: (11/26) installing python-jaraco.text              [----------------------]   0%.(11/26) installing python-jaraco.text              [######################] 100%..
+2024-05-26 12:31:55.969206 +0000 build-archlinux43: output: (12/26) installing python-ordered-set              [----------------------]   0%.(12/26) installing python-ordered-set              [######################] 100%..
+2024-05-26 12:31:55.976104 +0000 build-archlinux43: output: (13/26) installing python-packaging                [----------------------]   0%.(13/26) installing python-packaging                [######################] 100%..
+2024-05-26 12:31:55.980988 +0000 build-archlinux43: output: (14/26) installing python-platformdirs             [----------------------]   0%.(14/26) installing python-platformdirs             [######################] 100%..
+2024-05-26 12:31:55.984339 +0000 build-archlinux43: output: (15/26) installing python-tomli                    [----------------------]   0%.(15/26) installing python-tomli                    [######################] 100%..
+2024-05-26 12:31:55.988813 +0000 build-archlinux43: output: (16/26) installing python-fastjsonschema           [----------------------]   0%.(16/26) installing python-fastjsonschema           [######################] 100%..
+2024-05-26 12:31:55.990975 +0000 build-archlinux43: output: (17/26) installing python-trove-classifiers        [----------------------]   0%.(17/26) installing python-trove-classifiers        [######################] 100%..
+2024-05-26 12:31:55.997791 +0000 build-archlinux43: output: (18/26) installing python-validate-pyproject       [----------------------]   0%.(18/26) installing python-validate-pyproject       [######################] 100%..
+2024-05-26 12:31:56.048746 +0000 build-archlinux43: output: (19/26) installing python-setuptools               [----------------------]   0%.(19/26) installing python-setuptools               [######################] 100%..
+2024-05-26 12:31:56.050989 +0000 build-archlinux43: output: (20/26) installing bridge-utils                    [----------------------]   0%.(20/26) installing bridge-utils                    [######################] 100%..
+2024-05-26 12:31:56.056833 +0000 build-archlinux43: output: (21/26) installing libxslt                         [----------------------]   0%.(21/26) installing libxslt                         [######################] 100%..
+2024-05-26 12:31:56.057415 +0000 build-archlinux43: output: Optional dependencies for libxslt.
+2024-05-26 12:31:56.057498 +0000 build-archlinux43: output:     python: Python bindings [installed].
+2024-05-26 12:31:56.088631 +0000 build-archlinux43: output: (22/26) installing python-lxml                     [----------------------]   0%.(22/26) installing python-lxml                     [######################] 100%..
+2024-05-26 12:31:56.088711 +0000 build-archlinux43: output: Optional dependencies for python-lxml.
+2024-05-26 12:31:56.088798 +0000 build-archlinux43: output:     python-beautifulsoup4: support for beautifulsoup parser to parse not well.
+2024-05-26 12:31:56.088886 +0000 build-archlinux43: output:     formed HTML.
+2024-05-26 12:31:56.089787 +0000 build-archlinux43: output:     python-cssselect: support for cssselect.
+2024-05-26 12:31:56.089844 +0000 build-archlinux43: output:     python-html5lib: support for html5lib parser.
+2024-05-26 12:31:56.089867 +0000 build-archlinux43: output:     python-lxml-docs: offline docs.
+2024-05-26 12:31:56.093005 +0000 build-archlinux43: output: (23/26) installing lzo                             [----------------------]   0%.(23/26) installing lzo                             [######################] 100%..
+2024-05-26 12:31:56.098252 +0000 build-archlinux43: output: (24/26) installing yajl                            [----------------------]   0%.(24/26) installing yajl                            [######################] 100%..
+2024-05-26 12:31:56.134987 +0000 build-archlinux43: output: (25/26) installing qubes-vm-xen                    [----------------------]   0%.(25/26) installing qubes-vm-xen                    [######################] 100%..
+2024-05-26 12:31:56.136840 +0000 build-archlinux43: output: (26/26) installing qubes-libvchan-xen              [----------------------]   0%.(26/26) installing qubes-libvchan-xen              [######################] 100%..
+2024-05-26 12:31:56.376214 +0000 build-archlinux43: output: .[?25h.[1m.[32m==>.[0m.[1m Checking buildtime dependencies....[0m.
+2024-05-26 12:31:56.389572 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Retrieving sources....[0m.
+2024-05-26 12:31:56.398401 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Found qubes-db-vm-4.2.6-1.tar.gz.[0m.
+2024-05-26 12:31:56.430709 +0000 build-archlinux43: output: .[1m.[33m==> WARNING:.[0m.[1m Skipping all source file integrity checks..[0m.
+2024-05-26 12:31:56.443978 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting sources....[0m.
+2024-05-26 12:31:56.517915 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Extracting qubes-db-vm-4.2.6-1.tar.gz with bsdtar.[0m.
+2024-05-26 12:31:56.609727 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Starting build()....[0m.
+2024-05-26 12:31:56.626693 +0000 build-archlinux43: output: make -C daemon.
+2024-05-26 12:31:56.630422 +0000 build-archlinux43: output: make[1]: Entering directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/daemon'.
+2024-05-26 12:31:56.640085 +0000 build-archlinux43: output: cc -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -I../include -I. -g -Wall -Werror -pie -fPIC -O2 `pkg-config --cflags vchan` `pkg-config --cflags libsystemd || pkg-config --cflags libsystemd-daemon` -DHAVE_SYSTEMD -DBACKEND_VMM_xen   -c -o db-cmds.o db-cmds.c.
+2024-05-26 12:31:56.839244 +0000 build-archlinux43: output: cc -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -I../include -I. -g -Wall -Werror -pie -fPIC -O2 `pkg-config --cflags vchan` `pkg-config --cflags libsystemd || pkg-config --cflags libsystemd-daemon` -DHAVE_SYSTEMD -DBACKEND_VMM_xen   -c -o db-daemon.o db-daemon.c.
+2024-05-26 12:31:56.968448 +0000 build-archlinux43: output: cc -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -I../include -I. -g -Wall -Werror -pie -fPIC -O2 `pkg-config --cflags vchan` `pkg-config --cflags libsystemd || pkg-config --cflags libsystemd-daemon` -DHAVE_SYSTEMD -DBACKEND_VMM_xen   -c -o db-core.o db-core.c.
+2024-05-26 12:31:57.051357 +0000 build-archlinux43: output: cc -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -I../include -I. -g -Wall -Werror -pie -fPIC -O2 `pkg-config --cflags vchan` `pkg-config --cflags libsystemd || pkg-config --cflags libsystemd-daemon` -DHAVE_SYSTEMD -DBACKEND_VMM_xen   -c -o buffer.o buffer.c.
+2024-05-26 12:31:57.114192 +0000 build-archlinux43: output: cc -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -flto=auto -o qubesdb-daemon db-cmds.o db-daemon.o db-core.o buffer.o  `pkg-config --libs libsystemd || pkg-config --libs libsystemd-daemon` `pkg-config --libs vchan`.
+2024-05-26 12:31:57.762201 +0000 build-archlinux43: output: make[1]: Leaving directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/daemon'.
+2024-05-26 12:31:57.762287 +0000 build-archlinux43: output: make -C client.
+2024-05-26 12:31:57.768441 +0000 build-archlinux43: output: make[1]: Entering directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/client'.
+2024-05-26 12:31:57.778322 +0000 build-archlinux43: output: cc -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -I../include -g -Wall -Wextra -Werror -pie -fPIC -DBACKEND_VMM_xen   -c -o qdb-client.o qdb-client.c.
+2024-05-26 12:31:57.873126 +0000 build-archlinux43: output: cc -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -flto=auto -shared -o libqubesdb.so qdb-client.o .
+2024-05-26 12:31:58.192750 +0000 build-archlinux43: output: cc -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto -I../include -g -Wall -Wextra -Werror -pie -fPIC -DBACKEND_VMM_xen   -c -o qubesdb-cmd.o qubesdb-cmd.c.
+2024-05-26 12:31:58.248000 +0000 build-archlinux43: output: cc -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -flto=auto -o qubesdb-cmd qubesdb-cmd.o  -L. -lqubesdb.
+2024-05-26 12:31:58.477685 +0000 build-archlinux43: output: make[1]: Leaving directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/client'.
+2024-05-26 12:31:58.477756 +0000 build-archlinux43: output: make -C python.
+2024-05-26 12:31:58.481516 +0000 build-archlinux43: output: make[1]: Entering directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/python'.
+2024-05-26 12:31:58.481554 +0000 build-archlinux43: output: CC="cc" CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto" python3 setup.py build.
+2024-05-26 12:31:58.661742 +0000 build-archlinux43: output: running build.
+2024-05-26 12:31:58.661808 +0000 build-archlinux43: output: running build_ext.
+2024-05-26 12:31:58.671644 +0000 build-archlinux43: output: building 'qubesdb' extension.
+2024-05-26 12:31:58.671695 +0000 build-archlinux43: output: creating build.
+2024-05-26 12:31:58.671715 +0000 build-archlinux43: output: creating build/temp.linux-x86_64-cpython-312.
+2024-05-26 12:31:58.672582 +0000 build-archlinux43: output: cc -fno-strict-overflow -DNDEBUG -g -O3 -Wall -march=x86-64 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -g -ffile-prefix-map=/build/python/src=/usr/src/debug/python -flto=auto -ffat-lto-objects -march=x86-64 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -g -ffile-prefix-map=/build/python/src=/usr/src/debug/python -flto=auto -march=x86-64 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -g -ffile-prefix-map=/build/python/src=/usr/src/debug/python -flto=auto -Wp,-U_FORTIFY_SOURCE -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -flto=auto -fPIC -I../include -I/usr/include/python3.12 -c qubesdb.c -o build/temp.linux-x86_64-cpython-312/qubesdb.o -fno-strict-aliasing -Werror.
+2024-05-26 12:31:59.010649 +0000 build-archlinux43: output: creating build/lib.linux-x86_64-cpython-312.
+2024-05-26 12:31:59.010764 +0000 build-archlinux43: output: cc -shared -Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs -flto=auto -Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-z,pack-relative-relocs -flto=auto -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -flto=auto -Wp,-U_FORTIFY_SOURCE -march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -flto=auto build/temp.linux-x86_64-cpython-312/qubesdb.o -L../client -L/usr/lib -lqubesdb -o build/lib.linux-x86_64-cpython-312/qubesdb.cpython-312-x86_64-linux-gnu.so.
+2024-05-26 12:31:59.188817 +0000 build-archlinux43: output: make[1]: Leaving directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/python'.
+2024-05-26 12:31:59.196810 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Entering fakeroot environment....[0m.
+2024-05-26 12:32:00.493076 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Starting package()....[0m.
+2024-05-26 12:32:00.507065 +0000 build-archlinux43: output: make -C daemon install.
+2024-05-26 12:32:00.511086 +0000 build-archlinux43: output: make[1]: Entering directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/daemon'.
+2024-05-26 12:32:00.511229 +0000 build-archlinux43: output: install -d /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin.
+2024-05-26 12:32:00.522145 +0000 build-archlinux43: output: install qubesdb-daemon /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/.
+2024-05-26 12:32:00.523416 +0000 build-archlinux43: output: make[1]: Leaving directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/daemon'.
+2024-05-26 12:32:00.523487 +0000 build-archlinux43: output: make -C client install.
+2024-05-26 12:32:00.527783 +0000 build-archlinux43: output: make[1]: Entering directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/client'.
+2024-05-26 12:32:00.527853 +0000 build-archlinux43: output: install -d /build/qubes-db-vm/pkg/qubes-db-vm/usr/lib.
+2024-05-26 12:32:00.538776 +0000 build-archlinux43: output: install libqubesdb.so* /build/qubes-db-vm/pkg/qubes-db-vm/usr/lib/.
+2024-05-26 12:32:00.544503 +0000 build-archlinux43: output: install -d /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin.
+2024-05-26 12:32:00.546557 +0000 build-archlinux43: output: install qubesdb-cmd /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/.
+2024-05-26 12:32:00.548225 +0000 build-archlinux43: output: ln -s qubesdb-cmd /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/qubesdb-read.
+2024-05-26 12:32:00.551687 +0000 build-archlinux43: output: ln -s qubesdb-cmd /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/qubesdb-write.
+2024-05-26 12:32:00.554941 +0000 build-archlinux43: output: ln -s qubesdb-cmd /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/qubesdb-rm.
+2024-05-26 12:32:00.557179 +0000 build-archlinux43: output: ln -s qubesdb-cmd /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/qubesdb-multiread.
+2024-05-26 12:32:00.562827 +0000 build-archlinux43: output: ln -s qubesdb-cmd /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/qubesdb-list.
+2024-05-26 12:32:00.566829 +0000 build-archlinux43: output: ln -s qubesdb-cmd /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/qubesdb-watch.
+2024-05-26 12:32:00.572167 +0000 build-archlinux43: output: install qubesdb-read-bool /build/qubes-db-vm/pkg/qubes-db-vm/usr/bin/.
+2024-05-26 12:32:00.576832 +0000 build-archlinux43: output: make[1]: Leaving directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/client'.
+2024-05-26 12:32:00.577119 +0000 build-archlinux43: output: make -C python install.
+2024-05-26 12:32:00.583627 +0000 build-archlinux43: output: make[1]: Entering directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/python'.
+2024-05-26 12:32:00.583686 +0000 build-archlinux43: output: CC="cc" CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -flto=auto" python3 setup.py install \.
+2024-05-26 12:32:00.583760 +0000 build-archlinux43: output: . --root="/build/qubes-db-vm/pkg/qubes-db-vm" --force.
+2024-05-26 12:32:00.790262 +0000 build-archlinux43: output: running install.
+2024-05-26 12:32:00.790337 +0000 build-archlinux43: output: /usr/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated..
+2024-05-26 12:32:00.790359 +0000 build-archlinux43: output: !!.
+2024-05-26 12:32:00.790429 +0000 build-archlinux43: output: .
+2024-05-26 12:32:00.790452 +0000 build-archlinux43: output:         ********************************************************************************.
+2024-05-26 12:32:00.790557 +0000 build-archlinux43: output:         Please avoid running ``setup.py`` directly..
+2024-05-26 12:32:00.790622 +0000 build-archlinux43: output:         Instead, use pypa/build, pypa/installer or other.
+2024-05-26 12:32:00.790820 +0000 build-archlinux43: output:         standards-based tools..
+2024-05-26 12:32:00.790856 +0000 build-archlinux43: output: .
+2024-05-26 12:32:00.790877 +0000 build-archlinux43: output:         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details..
+2024-05-26 12:32:00.790944 +0000 build-archlinux43: output:         ********************************************************************************.
+2024-05-26 12:32:00.791076 +0000 build-archlinux43: output: .
+2024-05-26 12:32:00.791099 +0000 build-archlinux43: output: !!.
+2024-05-26 12:32:00.791119 +0000 build-archlinux43: output:   self.initialize_options().
+2024-05-26 12:32:00.798116 +0000 build-archlinux43: output: running build.
+2024-05-26 12:32:00.798153 +0000 build-archlinux43: output: running build_ext.
+2024-05-26 12:32:00.804564 +0000 build-archlinux43: output: running install_lib.
+2024-05-26 12:32:00.807606 +0000 build-archlinux43: output: creating /build/qubes-db-vm/pkg/qubes-db-vm/usr/lib/python3.12.
+2024-05-26 12:32:00.807649 +0000 build-archlinux43: output: creating /build/qubes-db-vm/pkg/qubes-db-vm/usr/lib/python3.12/site-packages.
+2024-05-26 12:32:00.807770 +0000 build-archlinux43: output: copying build/lib.linux-x86_64-cpython-312/qubesdb.cpython-312-x86_64-linux-gnu.so -> /build/qubes-db-vm/pkg/qubes-db-vm/usr/lib/python3.12/site-packages.
+2024-05-26 12:32:00.808821 +0000 build-archlinux43: output: running install_egg_info.
+2024-05-26 12:32:00.819200 +0000 build-archlinux43: output: running egg_info.
+2024-05-26 12:32:00.820915 +0000 build-archlinux43: output: creating QubesDB.egg-info.
+2024-05-26 12:32:00.821023 +0000 build-archlinux43: output: writing QubesDB.egg-info/PKG-INFO.
+2024-05-26 12:32:00.821256 +0000 build-archlinux43: output: writing dependency_links to QubesDB.egg-info/dependency_links.txt.
+2024-05-26 12:32:00.821729 +0000 build-archlinux43: output: writing top-level names to QubesDB.egg-info/top_level.txt.
+2024-05-26 12:32:00.821985 +0000 build-archlinux43: output: writing manifest file 'QubesDB.egg-info/SOURCES.txt'.
+2024-05-26 12:32:00.824188 +0000 build-archlinux43: output: reading manifest file 'QubesDB.egg-info/SOURCES.txt'.
+2024-05-26 12:32:00.825445 +0000 build-archlinux43: output: writing manifest file 'QubesDB.egg-info/SOURCES.txt'.
+2024-05-26 12:32:00.825785 +0000 build-archlinux43: output: Copying QubesDB.egg-info to /build/qubes-db-vm/pkg/qubes-db-vm/usr/lib/python3.12/site-packages/QubesDB-1.0-py3.12.egg-info.
+2024-05-26 12:32:00.828227 +0000 build-archlinux43: output: running install_scripts.
+2024-05-26 12:32:00.913175 +0000 build-archlinux43: output: make[1]: Leaving directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/python'.
+2024-05-26 12:32:00.913242 +0000 build-archlinux43: output: make -C include install.
+2024-05-26 12:32:00.915724 +0000 build-archlinux43: output: make[1]: Entering directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/include'.
+2024-05-26 12:32:00.915816 +0000 build-archlinux43: output: install -d /build/qubes-db-vm/pkg/qubes-db-vm/usr/include.
+2024-05-26 12:32:00.917441 +0000 build-archlinux43: output: install -m 0644 qubesdb.h /build/qubes-db-vm/pkg/qubes-db-vm/usr/include/.
+2024-05-26 12:32:00.919264 +0000 build-archlinux43: output: install -m 0644 qubesdb-client.h /build/qubes-db-vm/pkg/qubes-db-vm/usr/include/.
+2024-05-26 12:32:00.921369 +0000 build-archlinux43: output: make[1]: Leaving directory '/build/qubes-db-vm/src/qubes-db-vm-4.2.6-1/include'.
+2024-05-26 12:32:00.940720 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Tidying install....[0m.
+2024-05-26 12:32:00.944819 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Removing libtool files....[0m.
+2024-05-26 12:32:00.956357 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Purging unwanted files....[0m.
+2024-05-26 12:32:00.980205 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Removing static library files....[0m.
+2024-05-26 12:32:00.994927 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Stripping unneeded symbols from binaries and libraries....[0m.
+2024-05-26 12:32:01.136909 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Compressing man and info pages....[0m.
+2024-05-26 12:32:01.142616 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Checking for packaging issues....[0m.
+2024-05-26 12:32:01.162884 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating package "qubes-db-vm"....[0m.
+2024-05-26 12:32:01.166340 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Generating .PKGINFO file....[0m.
+2024-05-26 12:32:01.201063 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Generating .BUILDINFO file....[0m.
+2024-05-26 12:32:01.231958 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Adding install file....[0m.
+2024-05-26 12:32:01.262503 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Generating .MTREE file....[0m.
+2024-05-26 12:32:01.286216 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Compressing package....[0m.
+2024-05-26 12:32:01.522985 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Leaving fakeroot environment..[0m.
+2024-05-26 12:32:01.541511 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Finished making: qubes-db-vm 4.2.6-1 (Sun May 26 08:32:00 2024).[0m.
+2024-05-26 12:32:01.557963 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Installing package qubes-db-vm with pacman -U....[0m.
+2024-05-26 12:32:01.636097 +0000 build-archlinux43: output: .[?25lloading packages....
+2024-05-26 12:32:01.636899 +0000 build-archlinux43: output: resolving dependencies....
+2024-05-26 12:32:01.639065 +0000 build-archlinux43: output: looking for conflicting packages....
+2024-05-26 12:32:01.644545 +0000 build-archlinux43: output: .
+2024-05-26 12:32:01.644774 +0000 build-archlinux43: output: Packages (1) qubes-db-vm-4.2.6-1.
+2024-05-26 12:32:01.646387 +0000 build-archlinux43: output: .
+2024-05-26 12:32:01.647967 +0000 build-archlinux43: output: Total Installed Size:  0.09 MiB.
+2024-05-26 12:32:01.650786 +0000 build-archlinux43: output: .
+2024-05-26 12:32:01.651116 +0000 build-archlinux43: output: :: Proceed with installation? [Y/n] .
+2024-05-26 12:32:01.651346 +0000 build-archlinux43: output: (0/1) checking keys in keyring                     [----------------------]   0%.(1/1) checking keys in keyring                     [######################] 100%..
+2024-05-26 12:32:01.652469 +0000 build-archlinux43: output: (0/1) checking package integrity                   [----------------------]   0%.(1/1) checking package integrity                   [######################] 100%..
+2024-05-26 12:32:01.652742 +0000 build-archlinux43: output: (0/1) loading package files                        [----------------------]   0%.(1/1) loading package files                        [######################] 100%..
+2024-05-26 12:32:01.652932 +0000 build-archlinux43: output: (0/1) checking for file conflicts                  [----------------------]   0%.(1/1) checking for file conflicts                  [######################] 100%..
+2024-05-26 12:32:01.653108 +0000 build-archlinux43: output: :: Processing package changes....
+2024-05-26 12:32:01.662730 +0000 build-archlinux43: output: (1/1) installing qubes-db-vm                       [----------------------]   0%.(1/1) installing qubes-db-vm                       [######################] 100%..
+2024-05-26 12:32:01.739934 +0000 build-archlinux43: output: /tmp/alpm_J3r3ZD/.INSTALL: line 5: systemctl: command not found.
+2024-05-26 12:32:01.740001 +0000 build-archlinux43: output: error: command failed to execute correctly.
+2024-05-26 12:32:02.005367 +0000 build-archlinux43: output: .[?25h.[?25lresolving dependencies....
+2024-05-26 12:32:02.005689 +0000 build-archlinux43: output: looking for conflicting packages....
+2024-05-26 12:32:02.006367 +0000 build-archlinux43: output: .
+2024-05-26 12:32:02.006414 +0000 build-archlinux43: output: Packages (7) elfutils-0.191-3  licenses-20240206-1  pyalpm-0.10.9-2.
+2024-05-26 12:32:02.006437 +0000 build-archlinux43: output:              python-boolean.py-4.0-3  python-license-expression-30.2.0-2.
+2024-05-26 12:32:02.006555 +0000 build-archlinux43: output:              python-pyelftools-0.31-2  namcap-3.5.2-2.
+2024-05-26 12:32:02.006605 +0000 build-archlinux43: output: .
+2024-05-26 12:32:02.006628 +0000 build-archlinux43: output: Total Download Size:   1.39 MiB.
+2024-05-26 12:32:02.006643 +0000 build-archlinux43: output: Total Installed Size:  9.71 MiB.
+2024-05-26 12:32:02.006656 +0000 build-archlinux43: output: .
+2024-05-26 12:32:02.006757 +0000 build-archlinux43: output: :: Proceed with installation? [Y/n] .
+2024-05-26 12:32:02.006775 +0000 build-archlinux43: output: :: Retrieving packages....
+2024-05-26 12:32:02.006797 +0000 build-archlinux43: output:  elfutils-0.191-3-x86_64.
+2024-05-26 12:32:02.006814 +0000 build-archlinux43: output:  Total (0/7)             0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:32:02.006828 +0000 build-archlinux43: output: .[1F python-pyelftools-0.31-2-any.
+2024-05-26 12:32:02.006843 +0000 build-archlinux43: output:  Total (0/7)             0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:32:02.006857 +0000 build-archlinux43: output: .[1F namcap-3.5.2-2-any.
+2024-05-26 12:32:02.006873 +0000 build-archlinux43: output:  Total (0/7)             0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:32:02.006887 +0000 build-archlinux43: output: .[1F python-license-expression-30.2.0-2-any.
+2024-05-26 12:32:02.006902 +0000 build-archlinux43: output:  Total (0/7)             0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:32:02.006915 +0000 build-archlinux43: output: .[1F licenses-20240206-1-any.
+2024-05-26 12:32:02.006931 +0000 build-archlinux43: output:  Total (0/7)             0.0   B  0.00   B/s 00:00 [----------------------]   0%..
+2024-05-26 12:32:06.129247 +0000 build-archlinux43: output: .[4F namcap-3.5.2-2-any      7.7 KiB  23.0   B/s --:-- [#---------------------]   5%..[3E Total (0/7)             7.7 KiB  23.0   B/s --:-- [----------------------]   0%..[3F namcap-3.5.2-2-any     31.2 KiB  35.4 KiB/s 00:03 [####------------------]  20%..[3E Total (0/7)            31.2 KiB  35.4 KiB/s 00:39 [----------------------]   2%..[5F elfutils-0.191-3...    15.5 KiB  47.0   B/s --:-- [----------------------]   2%..[1E python-pyelftool...    15.5 KiB  47.0   B/s --:-- [----------------------]   4%..[3E licenses-2024020...    23.4 KiB  71.0   B/s 19:34 [####------------------]  22%..[4F elfutils-0.191-3...    15.5 KiB  31.0   B/s --:-- [----------------------]   2%..[5E Total (0/7)           132.5 KiB  90.2 KiB/s 00:14 [#---------------------]   9%..[4F python-pyelftool...    15.5 KiB  31.0   B/s --:-- [----------------------]   4%..[1E namcap-3.5.2-2-any     78.0 KiB  54.4 KiB/s 00:01 [###########-----------]  52%..[2E licenses-2024020...    23.4 KiB  47.0   B/s 29:22 [####------------------]  22%..[4F elfutils-0.191-3...    23.4 KiB  11.8 KiB/s 00:47 [----------------------]   4%..[5E Total (0/7)           171.6 KiB   119 KiB/s 00:10 [##--------------------]  12%..[4F python-pyelftool...    15.5 KiB  21.0   B/s --:-- [----------------------]   4%..[1E namcap-3.5.2-2-any     93.7 KiB  59.7 KiB/s 00:00 [#############---------]  62%..[2E licenses-2024020...    39.0 KiB  23.5 KiB/s 00:02 [#######---------------]  36%..[1F python-license-e...     7.7 KiB  23.0   B/s 78:53 [#---------------------]   6%..[1F elfutils-0.191-3...    23.4 KiB  11.8 KiB/s 00:47 [----------------------]   4%..[2F namcap-3.5.2-2-any    149.5 KiB  62.1 KiB/s 00:02 [######################] 100%..[4E python-pyelftool...    15.5 KiB  21.0   B/s --:-- [----------------------]   4%..[3F licenses-2024020...   105.6 KiB  43.9 KiB/s 00:02 [######################] 100%..[2E elfutils-0.191-3...    23.4 KiB  11.8 KiB/s 00:47 [----------------------]   4%..[1F python-license-e...   116.7 KiB  48.0 KiB/s 00:02 [######################] 100%..[1E elfutils-0.191-3...   179.6 KiB   139 KiB/s 00:02 [######----------------]  30%..[2E Total (3/7)           707.6 KiB   529 KiB/s 00:01 [##########------------]  49%..[1F python-pyelftool...   171.8 KiB   131 KiB/s 00:01 [##########------------]  49%..[1F elfutils-0.191-3...   195.2 KiB   117 KiB/s 00:03 [#######---------------]  33%..[2E Total (3/7)           738.8 KiB   402 KiB/s 00:01 [###########-----------]  51%..[1F python-pyelftool...   179.6 KiB  99.9 KiB/s 00:01 [###########-----------]  52%..[1F elfutils-0.191-3...   273.4 KiB   197 KiB/s 00:01 [##########------------]  46%..[2E Total (3/7)           910.7 KiB   529 KiB/s 00:00 [#############---------]  63%..[1F python-pyelftool...   273.4 KiB   209 KiB/s 00:00 [#################-----]  79%. elfutils-0.191-3...   273.4 KiB   197 KiB/s 00:01 [##########------------]  46%..[1F python-pyelftool...   345.2 KiB   106 KiB/s 00:03 [######################] 100%..[1E elfutils-0.191-3...   468.7 KiB   452 KiB/s 00:00 [#################-----]  80%..[1E Total (4/7)          1185.7 KiB   804 KiB/s 00:00 [##################----]  83%..[1F elfutils-0.191-3...   578.0 KiB   449 KiB/s 00:00 [#####################-]  99%..[1E Total (4/7)          1295.1 KiB   684 KiB/s 00:00 [###################---]  90%..[1F elfutils-0.191-3...   583.7 KiB   155 KiB/s 00:04 [######################] 100%..[1E pyalpm-0.10.9-2-x86_64.
+2024-05-26 12:32:06.129431 +0000 build-archlinux43: output:  Total (5/7)          1295.1 KiB   684 KiB/s 00:00 [###################---]  90%..
+2024-05-26 12:32:06.129477 +0000 build-archlinux43: output: .[1F python-boolean.py-4.0-3-any.
+2024-05-26 12:32:06.129518 +0000 build-archlinux43: output:  Total (5/7)          1295.1 KiB   684 KiB/s 00:00 [###################---]  90%..
+2024-05-26 12:32:08.145297 +0000 build-archlinux43: output: .[3F pyalpm-0.10.9-2-...     7.7 KiB  23.0   B/s 41:11 [##--------------------]  12%..[2E Total (5/7)          1308.5 KiB   461 KiB/s 00:00 [####################--]  91%..[1F python-boolean.p...     7.7 KiB  23.0   B/s 40:28 [##--------------------]  12%..[1F pyalpm-0.10.9-2-...    63.5 KiB  93.8 KiB/s 00:01 [######################] 100%..[1E python-boolean.p...    62.5 KiB  57.9 KiB/s 00:01 [######################] 100%..[1E Total (7/7)          1426.8 KiB   233 KiB/s 00:06 [######################] 100%..
+2024-05-26 12:32:08.232264 +0000 build-archlinux43: output: (0/7) checking keys in keyring                     [----------------------]   0%.(1/7) checking keys in keyring                     [###-------------------]  14%.(2/7) checking keys in keyring                     [######----------------]  28%.(3/7) checking keys in keyring                     [#########-------------]  42%.(4/7) checking keys in keyring                     [############----------]  57%.(5/7) checking keys in keyring                     [###############-------]  71%.(6/7) checking keys in keyring                     [##################----]  85%.(7/7) checking keys in keyring                     [######################] 100%..
+2024-05-26 12:32:08.415780 +0000 build-archlinux43: output: (0/7) checking package integrity                   [----------------------]   0%.(1/7) checking package integrity                   [########--------------]  40%.(2/7) checking package integrity                   [##########------------]  48%.(3/7) checking package integrity                   [###########-----------]  52%.(4/7) checking package integrity                   [############----------]  57%.(5/7) checking package integrity                   [##############--------]  65%.(6/7) checking package integrity                   [###################---]  89%.(7/7) checking package integrity                   [######################] 100%..
+2024-05-26 12:32:08.419642 +0000 build-archlinux43: output: (0/7) loading package files                        [----------------------]   0%.(1/7) loading package files                        [########--------------]  40%.(2/7) loading package files                        [##########------------]  48%.(3/7) loading package files                        [###########-----------]  52%.(4/7) loading package files                        [############----------]  57%.(5/7) loading package files                        [##############--------]  65%.(6/7) loading package files                        [###################---]  89%.(7/7) loading package files                        [######################] 100%..
+2024-05-26 12:32:08.420294 +0000 build-archlinux43: output: (0/7) checking for file conflicts                  [----------------------]   0%.(1/7) checking for file conflicts                  [###-------------------]  14%.(2/7) checking for file conflicts                  [######----------------]  28%.(3/7) checking for file conflicts                  [#########-------------]  42%.(4/7) checking for file conflicts                  [############----------]  57%.(5/7) checking for file conflicts                  [###############-------]  71%.(6/7) checking for file conflicts                  [##################----]  85%.(7/7) checking for file conflicts                  [######################] 100%..
+2024-05-26 12:32:08.420432 +0000 build-archlinux43: output: :: Processing package changes....
+2024-05-26 12:32:08.428174 +0000 build-archlinux43: output: (1/7) installing elfutils                          [----------------------]   0%.(1/7) installing elfutils                          [######################] 100%..
+2024-05-26 12:32:08.436293 +0000 build-archlinux43: output: (2/7) installing licenses                          [----------------------]   0%.(2/7) installing licenses                          [######################] 100%..
+2024-05-26 12:32:08.438001 +0000 build-archlinux43: output: (3/7) installing pyalpm                            [----------------------]   0%.(3/7) installing pyalpm                            [######################] 100%..
+2024-05-26 12:32:08.439740 +0000 build-archlinux43: output: (4/7) installing python-boolean.py                 [----------------------]   0%.(4/7) installing python-boolean.py                 [######################] 100%..
+2024-05-26 12:32:08.442124 +0000 build-archlinux43: output: (5/7) installing python-license-expression         [----------------------]   0%.(5/7) installing python-license-expression         [######################] 100%..
+2024-05-26 12:32:08.451279 +0000 build-archlinux43: output: (6/7) installing python-pyelftools                 [----------------------]   0%.(6/7) installing python-pyelftools                 [######################] 100%..
+2024-05-26 12:32:08.467710 +0000 build-archlinux43: output: (7/7) installing namcap                            [----------------------]   0%.(7/7) installing namcap                            [######################] 100%..
+2024-05-26 12:32:08.703229 +0000 build-archlinux43: output: .[?25hChecking PKGBUILD.
+2024-05-26 12:32:09.040698 +0000 build-archlinux43: output: Checking qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst.
+2024-05-26 12:32:09.492928 +0000 build-archlinux43: output: qubes-db-vm E: GPL is not a valid SPDX license identifier. See https://spdx.org/licenses/ for valid identifiers, or prefix the identifier with 'LicenseRef-', if it is custom..
+2024-05-26 12:32:09.493001 +0000 build-archlinux43: output: qubes-db-vm W: Dependency included, but may not be needed ('python-setuptools').
+2024-05-26 12:32:09.493065 +0000 build-archlinux43: output: qubes-db-vm W: Dependency included, but may not be needed ('python').
+2024-05-26 12:32:09.625250 +0000 build-archlinux43: output: ==> Running checkpkg
+2024-05-26 12:32:09.860745 +0000 build-archlinux43: output: error: target not found: qubes-db-vm
+2024-05-26 12:32:09.879962 +0000 build-archlinux43: output: ==> WARNING: Skipped checkpkg due to missing repo packages
+2024-05-26 12:32:09.883830 +0000 build-archlinux43: output: tput: unknown terminal "unknown"
+2024-05-26 12:32:09.901820 +0000 build-archlinux43: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp7547 qubesbuilder.FileCopyOut+-2Fbuilder-2Fcore--qubesdb-2Fqubes--db--vm--4.2.6--1--x86_64.pkg.tar.zst /usr/bin/qfile-unpacker 1000 /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/build/pkgs
+2024-05-26 12:32:38.190485 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64:archlinux: Provisioning local repository '/home/user/builder-r4.3/repository/vm-archlinux'.
+2024-05-26 12:32:38.203423 +0000 build-archlinux43: Executing 'bash -c qubes-gpg-client-wrapper --armor --export F3DFBD70558A3F45F01A7BA3AB187C9F85BDFCC0 > /tmp/tmpn98gdfgr/F3DFBD70558A3F45F01A7BA3AB187C9F85BDFCC0.asc&&gpg2 --homedir /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/sign/keyring --import /tmp/tmpn98gdfgr/F3DFBD70558A3F45F01A7BA3AB187C9F85BDFCC0.asc'.
+2024-05-26 12:32:38.346444 +0000 build-archlinux43: output: gpg: keybox '/home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/sign/keyring/pubring.kbx' created
+2024-05-26 12:32:38.349370 +0000 build-archlinux43: output: gpg: /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/sign/keyring/trustdb.gpg: trustdb created
+2024-05-26 12:32:38.349531 +0000 build-archlinux43: output: gpg: key AB187C9F85BDFCC0: public key "Qubes OS 4.3 Archlinux Packages Signing Key" imported
+2024-05-26 12:32:38.356671 +0000 build-archlinux43: output: gpg: Total number processed: 1
+2024-05-26 12:32:38.357359 +0000 build-archlinux43: output: gpg:               imported: 1
+2024-05-26 12:32:38.396538 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64:archlinux: Signing 'qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst'.
+2024-05-26 12:32:38.396645 +0000 build-archlinux43: Executing 'bash -c qubes-gpg-client-wrapper --batch --no-tty --yes --detach-sign -u F3DFBD70558A3F45F01A7BA3AB187C9F85BDFCC0 /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/build/pkgs/qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst > /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/build/pkgs/qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst.sig'.
+2024-05-26 12:32:38.568743 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64:archlinux: Publishing packages.
+2024-05-26 12:32:38.568815 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64:archlinux: Verifying signatures.
+2024-05-26 12:32:38.568936 +0000 build-archlinux43: Executing 'bash -c gpg2 -q --homedir /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/sign/keyring --verify /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/build/pkgs/qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst.sig /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/build/pkgs/qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst'.
+2024-05-26 12:32:38.573685 +0000 build-archlinux43: output: gpg: Signature made Sun May 26 08:32:38 2024 EDT
+2024-05-26 12:32:38.573735 +0000 build-archlinux43: output: gpg:                using EDDSA key F3DFBD70558A3F45F01A7BA3AB187C9F85BDFCC0
+2024-05-26 12:32:38.574513 +0000 build-archlinux43: output: gpg: Good signature from "Qubes OS 4.3 Archlinux Packages Signing Key" [unknown]
+2024-05-26 12:32:38.574540 +0000 build-archlinux43: output: gpg: WARNING: This key is not certified with a trusted signature!
+2024-05-26 12:32:38.574560 +0000 build-archlinux43: output: gpg:          There is no indication that the signature belongs to the owner.
+2024-05-26 12:32:38.574578 +0000 build-archlinux43: output: Primary key fingerprint: F3DF BD70 558A 3F45 F01A  7BA3 AB18 7C9F 85BD FCC0
+2024-05-26 12:32:38.587588 +0000 build-archlinux43: Executing 'bash -c repo-add /home/user/builder-r4.3/repository-publish/archlinux/r4.3/current-testing/vm/archlinux/pkgs/qubes-r4.3-current-testing.db.tar.gz /home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/build/pkgs/qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst'.
+2024-05-26 12:32:38.615098 +0000 build-archlinux43: output: ==> Extracting qubes-r4.3-current-testing.db.tar.gz to a temporary location...
+2024-05-26 12:32:38.628400 +0000 build-archlinux43: output: ==> Extracting qubes-r4.3-current-testing.files.tar.gz to a temporary location...
+2024-05-26 12:32:38.644878 +0000 build-archlinux43: output: ==> Adding package '/home/user/builder-r4.3/components/core-qubesdb/4.2.6-1/vm-archlinux/build/pkgs/qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst'
+2024-05-26 12:32:38.677371 +0000 build-archlinux43: output:   -> Adding package signature...
+2024-05-26 12:32:38.683193 +0000 build-archlinux43: output:   -> Computing checksums...
+2024-05-26 12:32:38.690773 +0000 build-archlinux43: output:   -> Removing existing entry 'qubes-db-vm-4.2.5-1'...
+2024-05-26 12:32:38.702224 +0000 build-archlinux43: output:   -> Creating 'desc' db entry...
+2024-05-26 12:32:38.706553 +0000 build-archlinux43: output:   -> Creating 'files' db entry...
+2024-05-26 12:32:38.711336 +0000 build-archlinux43: output: ==> Creating updated database file '/home/user/builder-r4.3/repository-publish/archlinux/r4.3/current-testing/vm/archlinux/pkgs/qubes-r4.3-current-testing.db.tar.gz'
+2024-05-26 12:32:38.778648 +0000 build-archlinux43: core-qubesdb:vm-archlinux-rolling.x86_64:archlinux: Signing metadata.
+2024-05-26 12:32:38.779098 +0000 build-archlinux43: Executing 'bash -c qubes-gpg-client-wrapper --batch --no-tty --yes --detach-sign --armor -u F3DFBD70558A3F45F01A7BA3AB187C9F85BDFCC0 /home/user/builder-r4.3/repository-publish/archlinux/r4.3/current-testing/vm/archlinux/pkgs/qubes-r4.3-current-testing.db.tar.gz > /home/user/builder-r4.3/repository-publish/archlinux/r4.3/current-testing/vm/archlinux/pkgs/qubes-r4.3-current-testing.db.tar.gz.sig'.
+2024-05-26 12:32:38.909109 +0000 build-archlinux43: > done
+2024-05-26 12:32:38.909183 +0000 > closing log
