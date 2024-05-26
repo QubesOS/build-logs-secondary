@@ -1,0 +1,430 @@
+2024-05-26 12:21:03.409766 +0000 > starting log
+2024-05-26 12:21:03.410468 +0000 build-archlinux43: > starting build with log
+2024-05-26 12:21:03.410513 +0000 build-archlinux43: >> args:
+2024-05-26 12:21:03.410539 +0000 build-archlinux43: >>   ()
+2024-05-26 12:21:03.410556 +0000 build-archlinux43: >> component:
+2024-05-26 12:21:03.410574 +0000 build-archlinux43: >>   core-agent-linux
+2024-05-26 12:21:03.410592 +0000 build-archlinux43: >>     commit-hash: aa6b2b87a2340e657e356a1ef6c103dc432e2299
+2024-05-26 12:21:03.410614 +0000 build-archlinux43: >>     source-hash: fa04bb8aedd3c1ce16a3c0533d760cd05c377b064be93a0983abc0febe86735f21f88257c4f10fcda39f7ac9983c5e82476d66bb7bb1345b81c7c221d553b439
+2024-05-26 12:21:03.410630 +0000 build-archlinux43: >> distributions:
+2024-05-26 12:21:03.410646 +0000 build-archlinux43: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2024-05-26 12:21:03.410665 +0000 build-archlinux43: core-agent-linux:vm-archlinux-rolling.x86_64: Source hash is the same than already prepared source. Skipping.
+2024-05-26 12:21:03.410686 +0000 build-archlinux43: core-agent-linux:vm-archlinux-rolling.x86_64: Cleaning local repository '/home/user/builder-r4.3/repository/vm-archlinux' (all versions).
+2024-05-26 12:21:03.410704 +0000 build-archlinux43: core-agent-linux:vm-archlinux-rolling.x86_64: Chroot cache exists. Will use it.
+2024-05-26 12:21:20.648640 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--agent--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/sources/core-agent-linux
+2024-05-26 12:21:21.765982 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcache-2Froot.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/cache/chroot/archlinux/root.tar.gz
+2024-05-26 12:21:32.902059 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--agent--linux-2Fqubes--vm--core--4.3.0--1.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/components/core-agent-linux/4.3.0-1/vm-archlinux/prep/qubes-vm-core-4.3.0-1.tar.gz
+2024-05-26 12:21:33.353447 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcore--agent--linux-2FPKGBUILD /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/components/core-agent-linux/4.3.0-1/vm-archlinux/prep/PKGBUILD
+2024-05-26 12:21:33.620665 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdistfiles-2Fcore--agent--linux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/distfiles/core-agent-linux
+2024-05-26 12:21:33.824210 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_archlinux /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_archlinux
+2024-05-26 12:21:33.995484 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_archlinux /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_archlinux
+2024-05-26 12:21:34.186814 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-05-26 12:21:34.403105 +0000 build-archlinux43: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp537 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--archlinux /usr/lib/qubes/qfile-agent /home/user/builder-r4.3/repository/vm-archlinux
+2024-05-26 12:21:34.645483 +0000 build-archlinux43: Executing '/usr/bin/qvm-run-vm -- disp537 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=archlinux PACKAGE_SET=vm bash -c 'sudo cp /builder/plugins/chroot_archlinux/conf/makepkg-x86_64.conf /usr/local/share/devtools/makepkg.conf.d/qubes-x86_64.conf && sudo mkdir -p /builder/cache/qubes-x86_64 && cd /builder/cache/qubes-x86_64 && sudo tar xf /builder/cache/root.tar.gz && sudo /builder/plugins/chroot_archlinux/scripts/generate-pacman /builder/plugins/chroot_archlinux/conf/pacman.conf.j2 /usr/local/share/devtools/pacman.conf.d/qubes-x86_64.conf && sudo rm -rf /etc/pacman.d/gnupg/private-keys-v1.d && sudo pacman-key --init && sudo pacman-key --populate && sudo /builder/plugins/chroot_archlinux/scripts/generate-pacman /builder/plugins/chroot_archlinux/conf/pacman.conf.j2 /usr/local/share/devtools/pacman.conf.d/qubes-x86_64.conf --enable-builder-local && sudo /builder/plugins/build_archlinux/scripts/update-local-repo.sh /builder/cache/qubes-x86_64/root /builder/repository && cd /builder/core-agent-linux && sudo qubes-x86_64-build -r /builder/cache --  -d /builder/repository:/builder/repository --  --syncdeps --noconfirm --skipinteg''.
+2024-05-26 12:21:51.074459 +0000 build-archlinux43: output: ==> Generating pacman master key. This may take some time.
+2024-05-26 12:21:51.077211 +0000 build-archlinux43: output: gpg: Generating pacman keyring master key...
+2024-05-26 12:21:53.249153 +0000 build-archlinux43: output: gpg: revocation certificate stored as '/etc/pacman.d/gnupg/openpgp-revocs.d/04FF7B1A54C104CCEBD9C4CD65F8D438F284A778.rev'
+2024-05-26 12:21:53.249217 +0000 build-archlinux43: output: gpg: Done
+2024-05-26 12:21:53.250939 +0000 build-archlinux43: output: ==> Updating trust database...
+2024-05-26 12:21:53.335926 +0000 build-archlinux43: output: gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+2024-05-26 12:21:53.335993 +0000 build-archlinux43: output: gpg: (use option "--allow-weak-key-signatures" to override)
+2024-05-26 12:21:54.652632 +0000 build-archlinux43: output: gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+2024-05-26 12:21:54.702989 +0000 build-archlinux43: output: gpg: depth: 0  valid:   2  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 2u
+2024-05-26 12:21:54.760686 +0000 build-archlinux43: output: gpg: depth: 1  valid:   5  signed:  98  trust: 0-, 0q, 0n, 5m, 0f, 0u
+2024-05-26 12:21:54.813377 +0000 build-archlinux43: output: gpg: depth: 2  valid:  74  signed:  22  trust: 74-, 0q, 0n, 0m, 0f, 0u
+2024-05-26 12:21:54.813455 +0000 build-archlinux43: output: gpg: next trustdb check due at 2024-06-29
+2024-05-26 12:21:54.882124 +0000 build-archlinux43: output: ==> Appending keys from archlinux.gpg...
+2024-05-26 12:21:59.473579 +0000 build-archlinux43: output: ==> Locally signing trusted keys in keyring...
+2024-05-26 12:22:05.740810 +0000 build-archlinux43: output:   -> Locally signed 5 keys.
+2024-05-26 12:22:05.741544 +0000 build-archlinux43: output: ==> Importing owner trust values...
+2024-05-26 12:22:05.744505 +0000 build-archlinux43: output: ==> Updating trust database...
+2024-05-26 12:22:05.804927 +0000 build-archlinux43: output: gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+2024-05-26 12:22:05.804993 +0000 build-archlinux43: output: gpg: (use option "--allow-weak-key-signatures" to override)
+2024-05-26 12:22:06.699475 +0000 build-archlinux43: output: gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+2024-05-26 12:22:06.730293 +0000 build-archlinux43: output: gpg: depth: 0  valid:   2  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 2u
+2024-05-26 12:22:06.748290 +0000 build-archlinux43: output: gpg: depth: 1  valid:   5  signed:  99  trust: 0-, 0q, 0n, 5m, 0f, 0u
+2024-05-26 12:22:06.763072 +0000 build-archlinux43: output: gpg: depth: 2  valid:  75  signed:  22  trust: 75-, 0q, 0n, 0m, 0f, 0u
+2024-05-26 12:22:06.763179 +0000 build-archlinux43: output: gpg: next trustdb check due at 2024-06-29
+2024-05-26 12:22:06.874751 +0000 build-archlinux43: output: -> Archlinux update-local-repo.sh
+2024-05-26 12:22:06.876749 +0000 build-archlinux43: output:   -> Repo '/builder/repository/pkgs' appears empty; initialising...
+2024-05-26 12:22:06.900343 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:22:06.900427 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:22:06.992563 +0000 build-archlinux43: output: Container root exited successfully.
+2024-05-26 12:22:07.001525 +0000 build-archlinux43: output: 
+2024-05-26 12:22:07.005467 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:22:07.005534 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:22:07.174052 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.193620 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.222256 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/pipewire-qubes-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:07.257305 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:07.273209 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:07.282119 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:07.295801 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:07.437331 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.465981 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.509568 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-gpg-split-2.0.70-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:07.539136 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:07.552154 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:07.563879 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:07.575330 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:07.643978 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.653883 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.673082 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-img-converter-1.2.16-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:07.687874 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:07.693885 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:07.697593 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:07.704114 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:07.776624 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.787747 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.816205 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-input-proxy-1.0.36-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:07.836413 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:07.844181 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:07.848857 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:07.856874 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:07.921230 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.932216 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:07.944131 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-libvchan-xen-4.2.3-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:07.961538 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:07.968234 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:07.972975 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:07.978972 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:08.071194 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.083084 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.103754 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-pdf-converter-2.1.19-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:08.128966 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:08.138489 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:08.145304 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:08.157111 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:08.254226 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.275840 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.298810 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-usb-proxy-1.2.1-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:08.328584 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:08.338908 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:08.345888 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:08.357908 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:08.446086 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.457265 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.468978 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-dependencies-4.3.0-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:08.483817 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:08.493195 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:08.501176 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:08.512994 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:08.571152 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.581714 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.593914 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-gui-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:08.623891 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:08.630624 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:08.636373 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:08.646238 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:08.708272 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.725923 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.746310 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-gui-common-4.2.4-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:08.762934 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:08.779651 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:08.787852 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:08.796312 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:08.870315 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.884969 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:08.901586 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-kernel-support-4.2.16-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:08.917795 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:08.924731 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:08.931795 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:08.937076 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:08.998230 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.013731 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.030532 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-pulseaudio-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:09.059693 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:09.069466 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:09.072882 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:09.080969 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:09.155209 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.166625 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.179598 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-qrexec-4.2.19-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:09.195268 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:09.201573 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:09.205366 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:09.213959 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:09.267440 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.278457 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.290173 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-recommended-4.3.0-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:09.303107 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:09.308515 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:09.312877 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:09.319153 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:09.377310 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.388543 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.412095 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-repo-4.3.0-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:09.428651 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:09.435881 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:09.439804 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:09.446618 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:09.531412 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.543766 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.555585 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-utils-4.2.16-1-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:09.572467 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:09.579905 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:09.585484 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:09.592499 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:09.653896 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.664343 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-05-26 12:22:09.676730 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-xen-4.17.4-3-x86_64.pkg.tar.zst'.[0m.
+2024-05-26 12:22:09.693015 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-05-26 12:22:09.701798 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-05-26 12:22:09.705465 +0000 build-archlinux43: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-05-26 12:22:09.718701 +0000 build-archlinux43: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-05-26 12:22:09.753278 +0000 build-archlinux43: output: Container root exited successfully.
+2024-05-26 12:22:09.758768 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:22:09.758834 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:22:09.798772 +0000 build-archlinux43: output: Container root exited successfully.
+2024-05-26 12:22:09.805305 +0000 build-archlinux43: output: 
+2024-05-26 12:22:09.810787 +0000 build-archlinux43: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-05-26 12:22:09.811596 +0000 build-archlinux43: output: Press Ctrl-] three times within 1s to kill container.
+2024-05-26 12:22:09.879456 +0000 build-archlinux43: output: .[?25l:: Synchronizing package databases....
+2024-05-26 12:22:09.879524 +0000 build-archlinux43: output:  core downloading....
+2024-05-26 12:22:09.879547 +0000 build-archlinux43: output:  community downloading....
+2024-05-26 12:22:09.879817 +0000 build-archlinux43: output:  extra downloading....
+2024-05-26 12:22:09.879847 +0000 build-archlinux43: output:  multilib downloading....
+2024-05-26 12:24:58.671412 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.osbeck.com : Could not resolve host: mirror.osbeck.com.
+2024-05-26 12:24:58.671523 +0000 build-archlinux43: output: warning: fatal error from mirror.osbeck.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.671565 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.osbeck.com : Could not resolve host: mirror.osbeck.com.
+2024-05-26 12:24:58.671601 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.osbeck.com : Could not resolve host: mirror.osbeck.com.
+2024-05-26 12:24:58.671635 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.osbeck.com : Could not resolve host: mirror.osbeck.com.
+2024-05-26 12:24:58.671670 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from md.mirrors.hacktegic.com : Could not resolve host: md.mirrors.hacktegic.com.
+2024-05-26 12:24:58.671701 +0000 build-archlinux43: output: warning: fatal error from md.mirrors.hacktegic.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.671734 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from md.mirrors.hacktegic.com : Could not resolve host: md.mirrors.hacktegic.com.
+2024-05-26 12:24:58.671766 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from md.mirrors.hacktegic.com : Could not resolve host: md.mirrors.hacktegic.com.
+2024-05-26 12:24:58.671798 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from md.mirrors.hacktegic.com : Could not resolve host: md.mirrors.hacktegic.com.
+2024-05-26 12:24:58.671828 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from us.mirrors.cicku.me : Could not resolve host: us.mirrors.cicku.me.
+2024-05-26 12:24:58.671857 +0000 build-archlinux43: output: warning: fatal error from us.mirrors.cicku.me, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.671887 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from us.mirrors.cicku.me : Could not resolve host: us.mirrors.cicku.me.
+2024-05-26 12:24:58.671916 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from us.mirrors.cicku.me : Could not resolve host: us.mirrors.cicku.me.
+2024-05-26 12:24:58.671946 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from us.mirrors.cicku.me : Could not resolve host: us.mirrors.cicku.me.
+2024-05-26 12:24:58.671976 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.tmmworkshop.com : Could not resolve host: mirror.tmmworkshop.com.
+2024-05-26 12:24:58.672101 +0000 build-archlinux43: output: warning: fatal error from mirror.tmmworkshop.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.672142 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.tmmworkshop.com : Could not resolve host: mirror.tmmworkshop.com.
+2024-05-26 12:24:58.672547 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.tmmworkshop.com : Could not resolve host: mirror.tmmworkshop.com.
+2024-05-26 12:24:58.672644 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.tmmworkshop.com : Could not resolve host: mirror.tmmworkshop.com.
+2024-05-26 12:24:58.672681 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror3.sl-chat.ru : Could not resolve host: mirror3.sl-chat.ru.
+2024-05-26 12:24:58.672712 +0000 build-archlinux43: output: warning: fatal error from mirror3.sl-chat.ru, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.672743 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror3.sl-chat.ru : Could not resolve host: mirror3.sl-chat.ru.
+2024-05-26 12:24:58.672773 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror3.sl-chat.ru : Could not resolve host: mirror3.sl-chat.ru.
+2024-05-26 12:24:58.672806 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror3.sl-chat.ru : Could not resolve host: mirror3.sl-chat.ru.
+2024-05-26 12:24:58.672839 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from america.mirror.pkgbuild.com : Could not resolve host: america.mirror.pkgbuild.com.
+2024-05-26 12:24:58.672870 +0000 build-archlinux43: output: warning: fatal error from america.mirror.pkgbuild.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.673171 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from america.mirror.pkgbuild.com : Could not resolve host: america.mirror.pkgbuild.com.
+2024-05-26 12:24:58.673296 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from america.mirror.pkgbuild.com : Could not resolve host: america.mirror.pkgbuild.com.
+2024-05-26 12:24:58.673405 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from america.mirror.pkgbuild.com : Could not resolve host: america.mirror.pkgbuild.com.
+2024-05-26 12:24:58.673451 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from europe.mirror.pkgbuild.com : Could not resolve host: europe.mirror.pkgbuild.com.
+2024-05-26 12:24:58.673569 +0000 build-archlinux43: output: warning: fatal error from europe.mirror.pkgbuild.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.673678 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from europe.mirror.pkgbuild.com : Could not resolve host: europe.mirror.pkgbuild.com.
+2024-05-26 12:24:58.673724 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from europe.mirror.pkgbuild.com : Could not resolve host: europe.mirror.pkgbuild.com.
+2024-05-26 12:24:58.673829 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from europe.mirror.pkgbuild.com : Could not resolve host: europe.mirror.pkgbuild.com.
+2024-05-26 12:24:58.673876 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror1.sl-chat.ru : Could not resolve host: mirror1.sl-chat.ru.
+2024-05-26 12:24:58.673919 +0000 build-archlinux43: output: warning: fatal error from mirror1.sl-chat.ru, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.673951 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror1.sl-chat.ru : Could not resolve host: mirror1.sl-chat.ru.
+2024-05-26 12:24:58.674173 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror1.sl-chat.ru : Could not resolve host: mirror1.sl-chat.ru.
+2024-05-26 12:24:58.674250 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror1.sl-chat.ru : Could not resolve host: mirror1.sl-chat.ru.
+2024-05-26 12:24:58.674284 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror2.sl-chat.ru : Could not resolve host: mirror2.sl-chat.ru.
+2024-05-26 12:24:58.674399 +0000 build-archlinux43: output: warning: fatal error from mirror2.sl-chat.ru, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.674511 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror2.sl-chat.ru : Could not resolve host: mirror2.sl-chat.ru.
+2024-05-26 12:24:58.674632 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror2.sl-chat.ru : Could not resolve host: mirror2.sl-chat.ru.
+2024-05-26 12:24:58.674682 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror2.sl-chat.ru : Could not resolve host: mirror2.sl-chat.ru.
+2024-05-26 12:24:58.674812 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.sahil.world : Could not resolve host: mirror.sahil.world.
+2024-05-26 12:24:58.674892 +0000 build-archlinux43: output: warning: fatal error from mirror.sahil.world, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.675003 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.sahil.world : Could not resolve host: mirror.sahil.world.
+2024-05-26 12:24:58.675054 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.sahil.world : Could not resolve host: mirror.sahil.world.
+2024-05-26 12:24:58.675143 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.sahil.world : Could not resolve host: mirror.sahil.world.
+2024-05-26 12:24:58.675171 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from archlinux.thaller.ws : Could not resolve host: archlinux.thaller.ws.
+2024-05-26 12:24:58.675226 +0000 build-archlinux43: output: warning: fatal error from archlinux.thaller.ws, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.675338 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from archlinux.thaller.ws : Could not resolve host: archlinux.thaller.ws.
+2024-05-26 12:24:58.675371 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from archlinux.thaller.ws : Could not resolve host: archlinux.thaller.ws.
+2024-05-26 12:24:58.675439 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from archlinux.thaller.ws : Could not resolve host: archlinux.thaller.ws.
+2024-05-26 12:24:58.675531 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirrors.lug.mtu.edu : Could not resolve host: mirrors.lug.mtu.edu.
+2024-05-26 12:24:58.675558 +0000 build-archlinux43: output: warning: fatal error from mirrors.lug.mtu.edu, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.675620 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirrors.lug.mtu.edu : Could not resolve host: mirrors.lug.mtu.edu.
+2024-05-26 12:24:58.675688 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirrors.lug.mtu.edu : Could not resolve host: mirrors.lug.mtu.edu.
+2024-05-26 12:24:58.675745 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirrors.lug.mtu.edu : Could not resolve host: mirrors.lug.mtu.edu.
+2024-05-26 12:24:58.675862 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirrors.qontinuum.space : Could not resolve host: mirrors.qontinuum.space.
+2024-05-26 12:24:58.675896 +0000 build-archlinux43: output: warning: fatal error from mirrors.qontinuum.space, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.675950 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirrors.qontinuum.space : Could not resolve host: mirrors.qontinuum.space.
+2024-05-26 12:24:58.676079 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirrors.qontinuum.space : Could not resolve host: mirrors.qontinuum.space.
+2024-05-26 12:24:58.676108 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirrors.qontinuum.space : Could not resolve host: mirrors.qontinuum.space.
+2024-05-26 12:24:58.676197 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from geo.mirror.pkgbuild.com : Could not resolve host: geo.mirror.pkgbuild.com.
+2024-05-26 12:24:58.676224 +0000 build-archlinux43: output: warning: fatal error from geo.mirror.pkgbuild.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.676292 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from geo.mirror.pkgbuild.com : Could not resolve host: geo.mirror.pkgbuild.com.
+2024-05-26 12:24:58.676384 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from geo.mirror.pkgbuild.com : Could not resolve host: geo.mirror.pkgbuild.com.
+2024-05-26 12:24:58.676413 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from geo.mirror.pkgbuild.com : Could not resolve host: geo.mirror.pkgbuild.com.
+2024-05-26 12:24:58.676499 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.f4st.host : Could not resolve host: mirror.f4st.host.
+2024-05-26 12:24:58.676526 +0000 build-archlinux43: output: warning: fatal error from mirror.f4st.host, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.676612 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.f4st.host : Could not resolve host: mirror.f4st.host.
+2024-05-26 12:24:58.676634 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.f4st.host : Could not resolve host: mirror.f4st.host.
+2024-05-26 12:24:58.676705 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.f4st.host : Could not resolve host: mirror.f4st.host.
+2024-05-26 12:24:58.676764 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.lty.me : Could not resolve host: mirror.lty.me.
+2024-05-26 12:24:58.676847 +0000 build-archlinux43: output: warning: fatal error from mirror.lty.me, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.676921 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.lty.me : Could not resolve host: mirror.lty.me.
+2024-05-26 12:24:58.676973 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.lty.me : Could not resolve host: mirror.lty.me.
+2024-05-26 12:24:58.677127 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.lty.me : Could not resolve host: mirror.lty.me.
+2024-05-26 12:24:58.677150 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from ftp.acc.umu.se : Could not resolve host: ftp.acc.umu.se.
+2024-05-26 12:24:58.677208 +0000 build-archlinux43: output: warning: fatal error from ftp.acc.umu.se, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.677323 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from ftp.acc.umu.se : Could not resolve host: ftp.acc.umu.se.
+2024-05-26 12:24:58.677348 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from ftp.acc.umu.se : Could not resolve host: ftp.acc.umu.se.
+2024-05-26 12:24:58.677436 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from ftp.acc.umu.se : Could not resolve host: ftp.acc.umu.se.
+2024-05-26 12:24:58.677461 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from arch.jensgutermuth.de : Could not resolve host: arch.jensgutermuth.de.
+2024-05-26 12:24:58.677523 +0000 build-archlinux43: output: warning: fatal error from arch.jensgutermuth.de, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.677610 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from arch.jensgutermuth.de : Could not resolve host: arch.jensgutermuth.de.
+2024-05-26 12:24:58.677635 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from arch.jensgutermuth.de : Could not resolve host: arch.jensgutermuth.de.
+2024-05-26 12:24:58.677701 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from arch.jensgutermuth.de : Could not resolve host: arch.jensgutermuth.de.
+2024-05-26 12:24:58.677781 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.nw-sys.ru : Could not resolve host: mirror.nw-sys.ru.
+2024-05-26 12:24:58.677804 +0000 build-archlinux43: output: warning: fatal error from mirror.nw-sys.ru, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.677956 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.nw-sys.ru : Could not resolve host: mirror.nw-sys.ru.
+2024-05-26 12:24:58.677981 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.nw-sys.ru : Could not resolve host: mirror.nw-sys.ru.
+2024-05-26 12:24:58.678074 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.nw-sys.ru : Could not resolve host: mirror.nw-sys.ru.
+2024-05-26 12:24:58.678097 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.qctronics.com : Could not resolve host: mirror.qctronics.com.
+2024-05-26 12:24:58.678182 +0000 build-archlinux43: output: warning: fatal error from mirror.qctronics.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.678211 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.qctronics.com : Could not resolve host: mirror.qctronics.com.
+2024-05-26 12:24:58.678329 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.qctronics.com : Could not resolve host: mirror.qctronics.com.
+2024-05-26 12:24:58.678352 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.qctronics.com : Could not resolve host: mirror.qctronics.com.
+2024-05-26 12:24:58.678450 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.tux.si : Could not resolve host: mirror.tux.si.
+2024-05-26 12:24:58.678474 +0000 build-archlinux43: output: warning: fatal error from mirror.tux.si, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.678563 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.tux.si : Could not resolve host: mirror.tux.si.
+2024-05-26 12:24:58.678585 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.tux.si : Could not resolve host: mirror.tux.si.
+2024-05-26 12:24:58.678655 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.tux.si : Could not resolve host: mirror.tux.si.
+2024-05-26 12:24:58.678749 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirrors.celianvdb.fr : Could not resolve host: mirrors.celianvdb.fr.
+2024-05-26 12:24:58.678837 +0000 build-archlinux43: output: warning: fatal error from mirrors.celianvdb.fr, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.678865 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirrors.celianvdb.fr : Could not resolve host: mirrors.celianvdb.fr.
+2024-05-26 12:24:58.678921 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirrors.celianvdb.fr : Could not resolve host: mirrors.celianvdb.fr.
+2024-05-26 12:24:58.679058 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirrors.celianvdb.fr : Could not resolve host: mirrors.celianvdb.fr.
+2024-05-26 12:24:58.679083 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.sunred.org : Could not resolve host: mirror.sunred.org.
+2024-05-26 12:24:58.679195 +0000 build-archlinux43: output: warning: fatal error from mirror.sunred.org, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.679223 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.sunred.org : Could not resolve host: mirror.sunred.org.
+2024-05-26 12:24:58.679241 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.sunred.org : Could not resolve host: mirror.sunred.org.
+2024-05-26 12:24:58.679371 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.sunred.org : Could not resolve host: mirror.sunred.org.
+2024-05-26 12:24:58.679397 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.cmt.de : Could not resolve host: mirror.cmt.de.
+2024-05-26 12:24:58.679420 +0000 build-archlinux43: output: warning: fatal error from mirror.cmt.de, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.679720 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.cmt.de : Could not resolve host: mirror.cmt.de.
+2024-05-26 12:24:58.679751 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.cmt.de : Could not resolve host: mirror.cmt.de.
+2024-05-26 12:24:58.679770 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.cmt.de : Could not resolve host: mirror.cmt.de.
+2024-05-26 12:24:58.679789 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from theswissbay.ch : Could not resolve host: theswissbay.ch.
+2024-05-26 12:24:58.679892 +0000 build-archlinux43: output: warning: fatal error from theswissbay.ch, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.679916 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from theswissbay.ch : Could not resolve host: theswissbay.ch.
+2024-05-26 12:24:58.679934 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from theswissbay.ch : Could not resolve host: theswissbay.ch.
+2024-05-26 12:24:58.682844 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from theswissbay.ch : Could not resolve host: theswissbay.ch.
+2024-05-26 12:24:58.682898 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from arch.unixpeople.org : Could not resolve host: arch.unixpeople.org.
+2024-05-26 12:24:58.682915 +0000 build-archlinux43: output: warning: fatal error from arch.unixpeople.org, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.682932 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from arch.unixpeople.org : Could not resolve host: arch.unixpeople.org.
+2024-05-26 12:24:58.682950 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from arch.unixpeople.org : Could not resolve host: arch.unixpeople.org.
+2024-05-26 12:24:58.682969 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from arch.unixpeople.org : Could not resolve host: arch.unixpeople.org.
+2024-05-26 12:24:58.682986 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.zackmyers.io : Could not resolve host: mirror.zackmyers.io.
+2024-05-26 12:24:58.683002 +0000 build-archlinux43: output: warning: fatal error from mirror.zackmyers.io, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683057 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.zackmyers.io : Could not resolve host: mirror.zackmyers.io.
+2024-05-26 12:24:58.683079 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.zackmyers.io : Could not resolve host: mirror.zackmyers.io.
+2024-05-26 12:24:58.683096 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.zackmyers.io : Could not resolve host: mirror.zackmyers.io.
+2024-05-26 12:24:58.683132 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from sydney.mirror.pkgbuild.com : Could not resolve host: sydney.mirror.pkgbuild.com.
+2024-05-26 12:24:58.683151 +0000 build-archlinux43: output: warning: fatal error from sydney.mirror.pkgbuild.com, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683169 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from sydney.mirror.pkgbuild.com : Could not resolve host: sydney.mirror.pkgbuild.com.
+2024-05-26 12:24:58.683187 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from sydney.mirror.pkgbuild.com : Could not resolve host: sydney.mirror.pkgbuild.com.
+2024-05-26 12:24:58.683204 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from sydney.mirror.pkgbuild.com : Could not resolve host: sydney.mirror.pkgbuild.com.
+2024-05-26 12:24:58.683221 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.neuf.no : Could not resolve host: mirror.neuf.no.
+2024-05-26 12:24:58.683238 +0000 build-archlinux43: output: warning: fatal error from mirror.neuf.no, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683254 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.neuf.no : Could not resolve host: mirror.neuf.no.
+2024-05-26 12:24:58.683271 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.neuf.no : Could not resolve host: mirror.neuf.no.
+2024-05-26 12:24:58.683289 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.neuf.no : Could not resolve host: mirror.neuf.no.
+2024-05-26 12:24:58.683306 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from ca.mirrors.cicku.me : Could not resolve host: ca.mirrors.cicku.me.
+2024-05-26 12:24:58.683322 +0000 build-archlinux43: output: warning: fatal error from ca.mirrors.cicku.me, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683339 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from ca.mirrors.cicku.me : Could not resolve host: ca.mirrors.cicku.me.
+2024-05-26 12:24:58.683356 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from ca.mirrors.cicku.me : Could not resolve host: ca.mirrors.cicku.me.
+2024-05-26 12:24:58.683373 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from ca.mirrors.cicku.me : Could not resolve host: ca.mirrors.cicku.me.
+2024-05-26 12:24:58.683391 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from de.arch.mirror.kescher.at : Could not resolve host: de.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683407 +0000 build-archlinux43: output: warning: fatal error from de.arch.mirror.kescher.at, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683426 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from de.arch.mirror.kescher.at : Could not resolve host: de.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683444 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from de.arch.mirror.kescher.at : Could not resolve host: de.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683461 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from de.arch.mirror.kescher.at : Could not resolve host: de.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683478 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from arch.jsc.mx : Could not resolve host: arch.jsc.mx.
+2024-05-26 12:24:58.683496 +0000 build-archlinux43: output: warning: fatal error from arch.jsc.mx, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683512 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from arch.jsc.mx : Could not resolve host: arch.jsc.mx.
+2024-05-26 12:24:58.683554 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from arch.jsc.mx : Could not resolve host: arch.jsc.mx.
+2024-05-26 12:24:58.683573 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from arch.jsc.mx : Could not resolve host: arch.jsc.mx.
+2024-05-26 12:24:58.683591 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from at.arch.mirror.kescher.at : Could not resolve host: at.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683608 +0000 build-archlinux43: output: warning: fatal error from at.arch.mirror.kescher.at, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683625 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from at.arch.mirror.kescher.at : Could not resolve host: at.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683643 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from at.arch.mirror.kescher.at : Could not resolve host: at.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683660 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from at.arch.mirror.kescher.at : Could not resolve host: at.arch.mirror.kescher.at.
+2024-05-26 12:24:58.683677 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.moson.org : Could not resolve host: mirror.moson.org.
+2024-05-26 12:24:58.683693 +0000 build-archlinux43: output: warning: fatal error from mirror.moson.org, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683711 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.moson.org : Could not resolve host: mirror.moson.org.
+2024-05-26 12:24:58.683727 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.moson.org : Could not resolve host: mirror.moson.org.
+2024-05-26 12:24:58.683744 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.moson.org : Could not resolve host: mirror.moson.org.
+2024-05-26 12:24:58.683761 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.vinehost.net : Could not resolve host: mirror.vinehost.net.
+2024-05-26 12:24:58.683777 +0000 build-archlinux43: output: warning: fatal error from mirror.vinehost.net, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683794 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.vinehost.net : Could not resolve host: mirror.vinehost.net.
+2024-05-26 12:24:58.683812 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.vinehost.net : Could not resolve host: mirror.vinehost.net.
+2024-05-26 12:24:58.683829 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.vinehost.net : Could not resolve host: mirror.vinehost.net.
+2024-05-26 12:24:58.683847 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.cyberbits.eu : Could not resolve host: mirror.cyberbits.eu.
+2024-05-26 12:24:58.683863 +0000 build-archlinux43: output: warning: fatal error from mirror.cyberbits.eu, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.683880 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.cyberbits.eu : Could not resolve host: mirror.cyberbits.eu.
+2024-05-26 12:24:58.684133 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.cyberbits.eu : Could not resolve host: mirror.cyberbits.eu.
+2024-05-26 12:24:58.684197 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.cyberbits.eu : Could not resolve host: mirror.cyberbits.eu.
+2024-05-26 12:24:58.684257 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.dkm.cz : Could not resolve host: mirror.dkm.cz.
+2024-05-26 12:24:58.684316 +0000 build-archlinux43: output: warning: fatal error from mirror.dkm.cz, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.684387 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.dkm.cz : Could not resolve host: mirror.dkm.cz.
+2024-05-26 12:24:58.684453 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.dkm.cz : Could not resolve host: mirror.dkm.cz.
+2024-05-26 12:24:58.684514 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.dkm.cz : Could not resolve host: mirror.dkm.cz.
+2024-05-26 12:24:58.684573 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from archmirror1.octyl.net : Could not resolve host: archmirror1.octyl.net.
+2024-05-26 12:24:58.684596 +0000 build-archlinux43: output: warning: fatal error from archmirror1.octyl.net, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.684614 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from archmirror1.octyl.net : Could not resolve host: archmirror1.octyl.net.
+2024-05-26 12:24:58.684675 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from archmirror1.octyl.net : Could not resolve host: archmirror1.octyl.net.
+2024-05-26 12:24:58.684732 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from archmirror1.octyl.net : Could not resolve host: archmirror1.octyl.net.
+2024-05-26 12:24:58.684793 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirrors.melbourne.co.uk : Could not resolve host: mirrors.melbourne.co.uk.
+2024-05-26 12:24:58.684815 +0000 build-archlinux43: output: warning: fatal error from mirrors.melbourne.co.uk, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.684876 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirrors.melbourne.co.uk : Could not resolve host: mirrors.melbourne.co.uk.
+2024-05-26 12:24:58.684937 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirrors.melbourne.co.uk : Could not resolve host: mirrors.melbourne.co.uk.
+2024-05-26 12:24:58.684997 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirrors.melbourne.co.uk : Could not resolve host: mirrors.melbourne.co.uk.
+2024-05-26 12:24:58.685105 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from iad.mirrors.misaka.one : Could not resolve host: iad.mirrors.misaka.one.
+2024-05-26 12:24:58.685144 +0000 build-archlinux43: output: warning: fatal error from iad.mirrors.misaka.one, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.685164 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from iad.mirrors.misaka.one : Could not resolve host: iad.mirrors.misaka.one.
+2024-05-26 12:24:58.685212 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from iad.mirrors.misaka.one : Could not resolve host: iad.mirrors.misaka.one.
+2024-05-26 12:24:58.685230 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from iad.mirrors.misaka.one : Could not resolve host: iad.mirrors.misaka.one.
+2024-05-26 12:24:58.685248 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.erickochen.nl : Could not resolve host: mirror.erickochen.nl.
+2024-05-26 12:24:58.685264 +0000 build-archlinux43: output: warning: fatal error from mirror.erickochen.nl, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.685292 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.erickochen.nl : Could not resolve host: mirror.erickochen.nl.
+2024-05-26 12:24:58.685313 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.erickochen.nl : Could not resolve host: mirror.erickochen.nl.
+2024-05-26 12:24:58.685331 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.erickochen.nl : Could not resolve host: mirror.erickochen.nl.
+2024-05-26 12:24:58.685368 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from arch.kurdy.org : Could not resolve host: arch.kurdy.org.
+2024-05-26 12:24:58.685387 +0000 build-archlinux43: output: warning: fatal error from arch.kurdy.org, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.685405 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from arch.kurdy.org : Could not resolve host: arch.kurdy.org.
+2024-05-26 12:24:58.685422 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from arch.kurdy.org : Could not resolve host: arch.kurdy.org.
+2024-05-26 12:24:58.685439 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from arch.kurdy.org : Could not resolve host: arch.kurdy.org.
+2024-05-26 12:24:58.685456 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.pseudoform.org : Could not resolve host: mirror.pseudoform.org.
+2024-05-26 12:24:58.685472 +0000 build-archlinux43: output: warning: fatal error from mirror.pseudoform.org, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.685490 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.pseudoform.org : Could not resolve host: mirror.pseudoform.org.
+2024-05-26 12:24:58.685507 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.pseudoform.org : Could not resolve host: mirror.pseudoform.org.
+2024-05-26 12:24:58.685524 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.pseudoform.org : Could not resolve host: mirror.pseudoform.org.
+2024-05-26 12:24:58.685549 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirrors.atviras.lt : Could not resolve host: mirrors.atviras.lt.
+2024-05-26 12:24:58.685565 +0000 build-archlinux43: output: warning: fatal error from mirrors.atviras.lt, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.685582 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirrors.atviras.lt : Could not resolve host: mirrors.atviras.lt.
+2024-05-26 12:24:58.685603 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirrors.atviras.lt : Could not resolve host: mirrors.atviras.lt.
+2024-05-26 12:24:58.685669 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirrors.atviras.lt : Could not resolve host: mirrors.atviras.lt.
+2024-05-26 12:24:58.685792 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirrors.uni-plovdiv.net : Could not resolve host: mirrors.uni-plovdiv.net.
+2024-05-26 12:24:58.685821 +0000 build-archlinux43: output: warning: fatal error from mirrors.uni-plovdiv.net, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.685874 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirrors.uni-plovdiv.net : Could not resolve host: mirrors.uni-plovdiv.net.
+2024-05-26 12:24:58.685988 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirrors.uni-plovdiv.net : Could not resolve host: mirrors.uni-plovdiv.net.
+2024-05-26 12:24:58.686050 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirrors.uni-plovdiv.net : Could not resolve host: mirrors.uni-plovdiv.net.
+2024-05-26 12:24:58.686123 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from nnenix.mm.fcix.net : Could not resolve host: nnenix.mm.fcix.net.
+2024-05-26 12:24:58.686187 +0000 build-archlinux43: output: warning: fatal error from nnenix.mm.fcix.net, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.686218 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from nnenix.mm.fcix.net : Could not resolve host: nnenix.mm.fcix.net.
+2024-05-26 12:24:58.686302 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from nnenix.mm.fcix.net : Could not resolve host: nnenix.mm.fcix.net.
+2024-05-26 12:24:58.686341 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from nnenix.mm.fcix.net : Could not resolve host: nnenix.mm.fcix.net.
+2024-05-26 12:24:58.686442 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirror.ubrco.de : Could not resolve host: mirror.ubrco.de.
+2024-05-26 12:24:58.686464 +0000 build-archlinux43: output: warning: fatal error from mirror.ubrco.de, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.686562 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirror.ubrco.de : Could not resolve host: mirror.ubrco.de.
+2024-05-26 12:24:58.686584 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirror.ubrco.de : Could not resolve host: mirror.ubrco.de.
+2024-05-26 12:24:58.686645 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirror.ubrco.de : Could not resolve host: mirror.ubrco.de.
+2024-05-26 12:24:58.686716 +0000 build-archlinux43: output: error: failed retrieving file 'community.db' from mirrors.vectair.net : Could not resolve host: mirrors.vectair.net.
+2024-05-26 12:24:58.686783 +0000 build-archlinux43: output: warning: fatal error from mirrors.vectair.net, skipping for the remainder of this transaction.
+2024-05-26 12:24:58.686853 +0000 build-archlinux43: output: error: failed retrieving file 'extra.db' from mirrors.vectair.net : Could not resolve host: mirrors.vectair.net.
+2024-05-26 12:24:58.686941 +0000 build-archlinux43: output: error: failed retrieving file 'core.db' from mirrors.vectair.net : Could not resolve host: mirrors.vectair.net.
+2024-05-26 12:24:58.686969 +0000 build-archlinux43: output: error: failed retrieving file 'multilib.db' from mirrors.vectair.net : Could not resolve host: mirrors.vectair.net.
+2024-05-26 12:24:58.687076 +0000 build-archlinux43: output: error: failed to synchronize all databases (invalid url for server).
+2024-05-26 12:24:58.687097 +0000 build-archlinux43: output: .[?25hContainer root failed with error code 1.
+2024-05-26 12:24:58.687154 +0000 build-archlinux43: output: 
+2024-05-26 12:25:17.419418 +0000 > closing log
