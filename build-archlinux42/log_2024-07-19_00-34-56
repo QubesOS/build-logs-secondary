@@ -1,0 +1,354 @@
+2024-07-19 00:34:56.319399 +0000 > starting log
+2024-07-19 00:34:56.319637 +0000 build-archlinux42: > starting build with log
+2024-07-19 00:34:56.319654 +0000 build-archlinux42: >> args:
+2024-07-19 00:34:56.319661 +0000 build-archlinux42: >>   ()
+2024-07-19 00:34:56.319666 +0000 build-archlinux42: >> component:
+2024-07-19 00:34:56.319671 +0000 build-archlinux42: >>   vmm-xen
+2024-07-19 00:34:56.319677 +0000 build-archlinux42: >>     commit-hash: e4266f1cb7465e6daa61a0e69c706342bab0ecda
+2024-07-19 00:34:56.319685 +0000 build-archlinux42: >>     source-hash: ba2204b0e8f569e7dc261a530b192cefbe64df9ea4fffe3abf62db942996681f31ab7806cfdea76581da85861636cc7e03d4702f2dc422271c917a030a5af5fc
+2024-07-19 00:34:56.319690 +0000 build-archlinux42: >> distributions:
+2024-07-19 00:34:56.319696 +0000 build-archlinux42: >>   [<QubesDistribution vm-archlinux-rolling.x86_64>]
+2024-07-19 00:34:56.319702 +0000 build-archlinux42: vmm-xen:vm-archlinux-rolling.x86_64: Source hash is the same than already prepared source. Skipping.
+2024-07-19 00:34:56.319709 +0000 build-archlinux42: vmm-xen:vm-archlinux-rolling.x86_64: Cleaning local repository '/home/user/builder-r4.2/repository/vm-archlinux' (all versions).
+2024-07-19 00:34:56.319715 +0000 build-archlinux42: vmm-xen:vm-archlinux-rolling.x86_64: Chroot cache exists. Will use it.
+2024-07-19 00:35:06.103339 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/sources/vmm-xen
+2024-07-19 00:35:06.713736 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Fcache-2Froot.tar.gz /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/cache/chroot/archlinux/root.tar.gz
+2024-07-19 00:35:12.599605 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Fdistfiles-2Fvmm--xen /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/distfiles/vmm-xen
+2024-07-19 00:35:14.349514 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build
+2024-07-19 00:35:14.535348 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fchroot_archlinux /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_archlinux
+2024-07-19 00:35:14.714091 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Fbuild_archlinux /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/build_archlinux
+2024-07-19 00:35:14.900445 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Frepository-2Fvm--archlinux /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/repository/vm-archlinux
+2024-07-19 00:35:15.084786 +0000 build-archlinux42: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp14 qubesbuilder.FileCopyIn+-2Fbuilder-2Fvmm--xen-2FPKGBUILD /usr/lib/qubes/qfile-agent /home/user/builder-r4.2/components/vmm-xen/4.17.4-4/vm-archlinux/prep/PKGBUILD
+2024-07-19 00:35:15.270728 +0000 build-archlinux42: Executing '/usr/bin/qvm-run-vm -- disp14 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen DIST=archlinux PACKAGE_SET=vm bash -c 'sudo cp /builder/plugins/chroot_archlinux/conf/makepkg-x86_64.conf /usr/local/share/devtools/makepkg.conf.d/qubes-x86_64.conf && sudo mkdir -p /builder/cache/qubes-x86_64 && cd /builder/cache/qubes-x86_64 && sudo tar xf /builder/cache/root.tar.gz && sudo /builder/plugins/chroot_archlinux/scripts/generate-pacman /builder/plugins/chroot_archlinux/conf/pacman.conf.j2 /usr/local/share/devtools/pacman.conf.d/qubes-x86_64.conf && sudo rm -rf /etc/pacman.d/gnupg/private-keys-v1.d && sudo pacman-key --init && sudo pacman-key --populate && sudo /builder/plugins/chroot_archlinux/scripts/generate-pacman /builder/plugins/chroot_archlinux/conf/pacman.conf.j2 /usr/local/share/devtools/pacman.conf.d/qubes-x86_64.conf --enable-builder-local && sudo /builder/plugins/build_archlinux/scripts/update-local-repo.sh /builder/cache/qubes-x86_64/root /builder/repository && mv /builder/distfiles/vmm-xen/xen-4.17.4.tar.gz /builder/vmm-xen && mv /builder/distfiles/vmm-xen/xen-4.17.4.tar.gz.sig /builder/vmm-xen && cd /builder/vmm-xen && sudo qubes-x86_64-build -r /builder/cache --  -d /builder/repository:/builder/repository --  --syncdeps --noconfirm --skipinteg | cat''.
+2024-07-19 00:35:27.388208 +0000 build-archlinux42: output: gpg: checking the trustdb
+2024-07-19 00:35:27.494218 +0000 build-archlinux42: output: gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+2024-07-19 00:35:27.494283 +0000 build-archlinux42: output: gpg: (use option "--allow-weak-key-signatures" to override)
+2024-07-19 00:35:28.703244 +0000 build-archlinux42: output: gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+2024-07-19 00:35:28.740398 +0000 build-archlinux42: output: gpg: depth: 0  valid:   1  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 1u
+2024-07-19 00:35:28.766950 +0000 build-archlinux42: output: gpg: depth: 1  valid:   5  signed:  96  trust: 0-, 0q, 0n, 5m, 0f, 0u
+2024-07-19 00:35:28.790807 +0000 build-archlinux42: output: gpg: depth: 2  valid:  73  signed:  21  trust: 73-, 0q, 0n, 0m, 0f, 0u
+2024-07-19 00:35:28.790952 +0000 build-archlinux42: output: gpg: next trustdb check due at 2024-08-05
+2024-07-19 00:35:28.815112 +0000 build-archlinux42: output: ==> Generating pacman master key. This may take some time.
+2024-07-19 00:35:28.817959 +0000 build-archlinux42: output: gpg: Generating pacman keyring master key...
+2024-07-19 00:35:29.756082 +0000 build-archlinux42: output: gpg: revocation certificate stored as '/etc/pacman.d/gnupg/openpgp-revocs.d/62C253109133DF49AE0C235AC98996B4A051C4FB.rev'
+2024-07-19 00:35:29.756130 +0000 build-archlinux42: output: gpg: Done
+2024-07-19 00:35:29.757716 +0000 build-archlinux42: output: ==> Updating trust database...
+2024-07-19 00:35:29.861398 +0000 build-archlinux42: output: gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+2024-07-19 00:35:29.861431 +0000 build-archlinux42: output: gpg: (use option "--allow-weak-key-signatures" to override)
+2024-07-19 00:35:31.100858 +0000 build-archlinux42: output: gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+2024-07-19 00:35:31.138688 +0000 build-archlinux42: output: gpg: depth: 0  valid:   2  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 2u
+2024-07-19 00:35:31.165809 +0000 build-archlinux42: output: gpg: depth: 1  valid:   5  signed:  96  trust: 0-, 0q, 0n, 5m, 0f, 0u
+2024-07-19 00:35:31.189590 +0000 build-archlinux42: output: gpg: depth: 2  valid:  73  signed:  21  trust: 73-, 0q, 0n, 0m, 0f, 0u
+2024-07-19 00:35:31.189736 +0000 build-archlinux42: output: gpg: next trustdb check due at 2024-08-05
+2024-07-19 00:35:31.244836 +0000 build-archlinux42: output: ==> Appending keys from archlinux.gpg...
+2024-07-19 00:35:35.757259 +0000 build-archlinux42: output: ==> Locally signing trusted keys in keyring...
+2024-07-19 00:35:42.975082 +0000 build-archlinux42: output:   -> Locally signed 5 keys.
+2024-07-19 00:35:42.976386 +0000 build-archlinux42: output: ==> Importing owner trust values...
+2024-07-19 00:35:42.981367 +0000 build-archlinux42: output: ==> Updating trust database...
+2024-07-19 00:35:43.083852 +0000 build-archlinux42: output: gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+2024-07-19 00:35:43.083885 +0000 build-archlinux42: output: gpg: (use option "--allow-weak-key-signatures" to override)
+2024-07-19 00:35:44.311218 +0000 build-archlinux42: output: gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+2024-07-19 00:35:44.351789 +0000 build-archlinux42: output: gpg: depth: 0  valid:   2  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 2u
+2024-07-19 00:35:44.381560 +0000 build-archlinux42: output: gpg: depth: 1  valid:   5  signed:  97  trust: 0-, 0q, 0n, 5m, 0f, 0u
+2024-07-19 00:35:44.405901 +0000 build-archlinux42: output: gpg: depth: 2  valid:  74  signed:  21  trust: 74-, 0q, 0n, 0m, 0f, 0u
+2024-07-19 00:35:44.405969 +0000 build-archlinux42: output: gpg: next trustdb check due at 2024-08-05
+2024-07-19 00:35:44.558852 +0000 build-archlinux42: output: -> Archlinux update-local-repo.sh
+2024-07-19 00:35:44.561826 +0000 build-archlinux42: output:   -> Repo '/builder/repository/pkgs' appears empty; initialising...
+2024-07-19 00:35:44.587686 +0000 build-archlinux42: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-07-19 00:35:44.587748 +0000 build-archlinux42: output: Press Ctrl-] three times within 1s to kill container.
+2024-07-19 00:35:44.741901 +0000 build-archlinux42: output: Container root exited successfully.
+2024-07-19 00:35:44.744609 +0000 build-archlinux42: output: 
+2024-07-19 00:35:44.749956 +0000 build-archlinux42: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-07-19 00:35:44.750008 +0000 build-archlinux42: output: Press Ctrl-] three times within 1s to kill container.
+2024-07-19 00:35:44.887334 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:44.912009 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:44.930983 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/pipewire-qubes-4.2.15-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:44.969716 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:44.981119 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:44.991064 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:45.000395 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:45.090040 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.108715 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.125778 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-db-vm-4.2.6-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:45.149008 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:45.159221 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:45.165374 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:45.175815 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:45.265230 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.283426 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.302832 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-gpg-split-2.0.72-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:45.327724 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:45.338784 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:45.345869 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:45.357071 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:45.447117 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.464904 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.483847 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-img-converter-1.2.16-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:45.510329 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:45.521993 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:45.528024 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:45.539633 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:45.627045 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.645485 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.664558 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-input-proxy-1.0.37-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:45.687483 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:45.697824 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:45.704616 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:45.715936 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:45.804782 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.823254 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:45.843453 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-libvchan-xen-4.2.3-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:45.869149 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:45.879703 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:45.886322 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:45.897216 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:45.987332 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.004571 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.024042 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-pdf-converter-2.1.18-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:46.053303 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:46.063583 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:46.069939 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:46.081639 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:46.168911 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.186670 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.205083 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-usb-proxy-1.3.0-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:46.228255 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:46.239467 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:46.245579 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:46.255441 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:46.344496 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.362054 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.382632 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-core-4.2.35-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:46.429542 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:46.440704 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:46.446953 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:46.462688 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:46.553794 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.571039 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.591286 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-dependencies-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:46.614819 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:46.625422 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:46.632754 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:46.643721 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:46.732749 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.750298 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.771438 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-gui-4.2.15-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:46.805759 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:46.817061 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:46.823375 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:46.836311 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:46.926924 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.946505 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:46.966355 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-gui-common-4.2.4-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:46.987209 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:46.996628 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:47.003441 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:47.013926 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:47.103081 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.121785 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.177913 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-kernel-support-4.2.17-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:47.199883 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:47.209843 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:47.218545 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:47.226407 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:47.314565 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.332608 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.352969 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-keyring-4.2.35-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:47.385207 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:47.395420 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:47.402306 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:47.413666 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:47.504722 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.523284 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.543822 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-networking-4.2.35-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:47.576936 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:47.586561 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:47.593959 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:47.605087 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:47.696260 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.714958 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.735409 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-passwordless-root-4.2.35-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:47.765360 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:47.775747 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:47.782845 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:47.794271 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:47.887109 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.906090 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:47.927198 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-pulseaudio-4.2.15-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:47.960361 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:47.970725 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:47.977629 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:47.989222 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:48.079213 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.097555 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.119137 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-qrexec-4.2.21-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:48.148355 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:48.159794 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:48.166578 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:48.183285 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:48.277426 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.298038 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.318972 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-recommended-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:48.342424 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:48.352192 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:48.359863 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:48.370955 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:48.464976 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.484118 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.505810 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-repo-4.2.14-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:48.528679 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:48.539237 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:48.546273 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:48.557490 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:48.650855 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.db.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.670657 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Extracting qubes.files.tar.gz to a temporary location....[0m.
+2024-07-19 00:35:48.692025 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Adding package 'pkgs/qubes-vm-utils-4.2.17-1-x86_64.pkg.tar.zst'.[0m.
+2024-07-19 00:35:48.716321 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Computing checksums....[0m.
+2024-07-19 00:35:48.727604 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'desc' db entry....[0m.
+2024-07-19 00:35:48.734702 +0000 build-archlinux42: output: .[1m.[34m  ->.[0m.[1m Creating 'files' db entry....[0m.
+2024-07-19 00:35:48.746632 +0000 build-archlinux42: output: .[1m.[32m==>.[0m.[1m Creating updated database file 'pkgs/qubes.db.tar.gz'.[0m.
+2024-07-19 00:35:48.804045 +0000 build-archlinux42: output: Container root exited successfully.
+2024-07-19 00:35:48.817270 +0000 build-archlinux42: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-07-19 00:35:48.817325 +0000 build-archlinux42: output: Press Ctrl-] three times within 1s to kill container.
+2024-07-19 00:35:48.895528 +0000 build-archlinux42: output: Container root exited successfully.
+2024-07-19 00:35:48.906607 +0000 build-archlinux42: output: 
+2024-07-19 00:35:48.911618 +0000 build-archlinux42: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-07-19 00:35:48.911674 +0000 build-archlinux42: output: Press Ctrl-] three times within 1s to kill container.
+2024-07-19 00:35:49.002468 +0000 build-archlinux42: output: .[?25l:: Synchronizing package databases....
+2024-07-19 00:35:49.002527 +0000 build-archlinux42: output:  core downloading....
+2024-07-19 00:35:49.002547 +0000 build-archlinux42: output:  community downloading....
+2024-07-19 00:35:49.002564 +0000 build-archlinux42: output:  extra downloading....
+2024-07-19 00:35:49.002578 +0000 build-archlinux42: output:  multilib downloading....
+2024-07-19 00:36:06.588049 +0000 build-archlinux42: output: error: failed retrieving file 'multilib.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:06.588101 +0000 build-archlinux42: output: error: failed retrieving file 'core.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:06.588110 +0000 build-archlinux42: output: error: failed retrieving file 'community.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:06.588117 +0000 build-archlinux42: output: warning: too many errors from mirror.osbeck.com, skipping for the remainder of this transaction.
+2024-07-19 00:36:06.588124 +0000 build-archlinux42: output: error: failed retrieving file 'extra.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:06.593669 +0000 build-archlinux42: output: resolving dependencies....
+2024-07-19 00:36:06.619823 +0000 build-archlinux42: output: looking for conflicting packages....
+2024-07-19 00:36:06.628588 +0000 build-archlinux42: output: .
+2024-07-19 00:36:06.628609 +0000 build-archlinux42: output: Packages (1) archlinux-keyring-20240609-1.
+2024-07-19 00:36:06.628615 +0000 build-archlinux42: output: .
+2024-07-19 00:36:06.628621 +0000 build-archlinux42: output: Total Download Size:   1.17 MiB.
+2024-07-19 00:36:06.628627 +0000 build-archlinux42: output: Total Installed Size:  1.66 MiB.
+2024-07-19 00:36:06.628632 +0000 build-archlinux42: output: Net Upgrade Size:      0.00 MiB.
+2024-07-19 00:36:06.628636 +0000 build-archlinux42: output: .
+2024-07-19 00:36:06.628641 +0000 build-archlinux42: output: :: Proceed with installation? [Y/n] .
+2024-07-19 00:36:06.628646 +0000 build-archlinux42: output: :: Retrieving packages....
+2024-07-19 00:36:06.628673 +0000 build-archlinux42: output:  archlinux-keyring-20240609-1-any downloading....
+2024-07-19 00:36:10.288087 +0000 build-archlinux42: output: checking keyring....
+2024-07-19 00:36:11.753676 +0000 build-archlinux42: output: checking package integrity....
+2024-07-19 00:36:11.787073 +0000 build-archlinux42: output: loading package files....
+2024-07-19 00:36:11.787932 +0000 build-archlinux42: output: checking for file conflicts....
+2024-07-19 00:36:11.789996 +0000 build-archlinux42: output: :: Processing package changes....
+2024-07-19 00:36:11.790038 +0000 build-archlinux42: output: upgrading archlinux-keyring....
+2024-07-19 00:36:11.902552 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:11.926381 +0000 build-archlinux42: output: ==> Appending keys from archlinux.gpg....
+2024-07-19 00:36:11.929903 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.054710 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.072116 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.080025 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.096615 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.103932 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.121112 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.128706 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.146314 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.155110 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.172679 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.184039 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.189784 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.196402 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.202787 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.208776 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.215020 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.221453 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.228077 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.234288 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.240499 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.247011 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.253974 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.260691 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.267185 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.281886 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.288606 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.295127 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.302078 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.308988 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.315976 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.322692 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.329233 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.335586 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.341733 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.348662 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.354923 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.361603 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.367918 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.374240 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.380951 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.387431 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.394023 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.400859 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.407247 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.414337 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.421077 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.427820 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.434773 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.441322 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.448238 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.454652 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.461373 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.467936 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.474340 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.480982 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.486949 +0000 build-archlinux42: output: ==> Updating trust database....
+2024-07-19 00:36:16.490861 +0000 build-archlinux42: output: gpg: Warning: using insecure memory!.
+2024-07-19 00:36:16.490890 +0000 build-archlinux42: output: gpg: next trustdb check due at 2024-08-11.
+2024-07-19 00:36:16.551447 +0000 build-archlinux42: output: .[?25hContainer root exited successfully.
+2024-07-19 00:36:16.560670 +0000 build-archlinux42: output: 
+2024-07-19 00:36:16.566099 +0000 build-archlinux42: output: Spawning container root on /builder/cache/qubes-x86_64/root.
+2024-07-19 00:36:16.566117 +0000 build-archlinux42: output: Press Ctrl-] three times within 1s to kill container.
+2024-07-19 00:36:16.653043 +0000 build-archlinux42: output: .[?25l:: Synchronizing package databases....
+2024-07-19 00:36:16.653092 +0000 build-archlinux42: output:  core downloading....
+2024-07-19 00:36:16.653099 +0000 build-archlinux42: output:  community downloading....
+2024-07-19 00:36:16.653105 +0000 build-archlinux42: output:  extra downloading....
+2024-07-19 00:36:16.653111 +0000 build-archlinux42: output:  multilib downloading....
+2024-07-19 00:36:20.737338 +0000 build-archlinux42: output: error: failed retrieving file 'community.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:20.737386 +0000 build-archlinux42: output: error: failed retrieving file 'extra.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:20.737395 +0000 build-archlinux42: output: error: failed retrieving file 'multilib.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:20.737402 +0000 build-archlinux42: output: warning: too many errors from mirror.osbeck.com, skipping for the remainder of this transaction.
+2024-07-19 00:36:20.737409 +0000 build-archlinux42: output: error: failed retrieving file 'core.db' from mirror.osbeck.com : The requested URL returned error: 403.
+2024-07-19 00:36:20.737414 +0000 build-archlinux42: output: :: Starting full system upgrade....
+2024-07-19 00:36:21.006100 +0000 build-archlinux42: output: resolving dependencies....
+2024-07-19 00:36:21.006767 +0000 build-archlinux42: output: looking for conflicting packages....
+2024-07-19 00:36:21.028757 +0000 build-archlinux42: output: .
+2024-07-19 00:36:21.030389 +0000 build-archlinux42: output: Packages (22) ca-certificates-20240618-1  ca-certificates-mozilla-3.101.1-1.
+2024-07-19 00:36:21.030406 +0000 build-archlinux42: output:               ca-certificates-utils-20240618-1  e2fsprogs-1.47.1-4.
+2024-07-19 00:36:21.030413 +0000 build-archlinux42: output:               fakeroot-1.35-1  findutils-4.10.0-1  glib2-2.80.3-2.
+2024-07-19 00:36:21.030419 +0000 build-archlinux42: output:               groff-1.23.0-6  guile-3.0.10-1  libgcrypt-1.11.0-2.
+2024-07-19 00:36:21.030425 +0000 build-archlinux42: output:               libgpg-error-1.50-1  libksba-1.6.7-1  libldap-2.6.8-1.
+2024-07-19 00:36:21.030434 +0000 build-archlinux42: output:               libnghttp3-1.4.0-1  libtool-2.5.0+14+g9a4a0261-1.
+2024-07-19 00:36:21.030440 +0000 build-archlinux42: output:               libxml2-2.13.1-1  ncurses-6.5-3  nettle-3.10-1  openssl-3.3.1-1.
+2024-07-19 00:36:21.030445 +0000 build-archlinux42: output:               pcre2-10.44-1  systemd-libs-256.1-1  xz-5.6.2-1.
+2024-07-19 00:36:21.030450 +0000 build-archlinux42: output: .
+2024-07-19 00:36:21.030456 +0000 build-archlinux42: output: Total Download Size:    29.92 MiB.
+2024-07-19 00:36:21.030465 +0000 build-archlinux42: output: Total Installed Size:  145.92 MiB.
+2024-07-19 00:36:21.030493 +0000 build-archlinux42: output: Net Upgrade Size:        0.89 MiB.
+2024-07-19 00:36:21.030621 +0000 build-archlinux42: output: .
+2024-07-19 00:36:21.030724 +0000 build-archlinux42: output: :: Proceed with installation? [Y/n] .
+2024-07-19 00:36:21.030856 +0000 build-archlinux42: output: :: Retrieving packages....
+2024-07-19 00:36:21.031574 +0000 build-archlinux42: output:  guile-3.0.10-1-x86_64 downloading....
+2024-07-19 00:36:21.031855 +0000 build-archlinux42: output:  openssl-3.3.1-1-x86_64 downloading....
+2024-07-19 00:36:21.032016 +0000 build-archlinux42: output:  glib2-2.80.3-2-x86_64 downloading....
+2024-07-19 00:36:21.032172 +0000 build-archlinux42: output:  groff-1.23.0-6-x86_64 downloading....
+2024-07-19 00:36:21.032368 +0000 build-archlinux42: output:  pcre2-10.44-1-x86_64 downloading....
+2024-07-19 00:37:07.741285 +0000 build-archlinux42: output: error: failed retrieving file 'pcre2-10.44-1-x86_64.pkg.tar.zst.sig' from md.mirrors.hacktegic.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds.
+2024-07-19 00:37:07.741786 +0000 build-archlinux42: output: error: failed retrieving file 'groff-1.23.0-6-x86_64.pkg.tar.zst.sig' from md.mirrors.hacktegic.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds.
+2024-07-19 00:37:07.741873 +0000 build-archlinux42: output: error: failed retrieving file 'openssl-3.3.1-1-x86_64.pkg.tar.zst.sig' from md.mirrors.hacktegic.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds.
+2024-07-19 00:37:07.741920 +0000 build-archlinux42: output: warning: too many errors from md.mirrors.hacktegic.com, skipping for the remainder of this transaction.
+2024-07-19 00:37:07.741966 +0000 build-archlinux42: output: error: failed retrieving file 'glib2-2.80.3-2-x86_64.pkg.tar.zst.sig' from md.mirrors.hacktegic.com : Operation too slow. Less than 1 bytes/sec transferred the last 10 seconds.
+2024-07-19 00:37:07.741996 +0000 build-archlinux42: output: warning: failed to retrieve some files.
+2024-07-19 00:37:07.742027 +0000 build-archlinux42: output: error: failed to commit transaction (unexpected error).
+2024-07-19 00:37:07.742057 +0000 build-archlinux42: output: Errors occurred, no packages were upgraded..
+2024-07-19 00:37:07.826949 +0000 build-archlinux42: output: .[?25hContainer root failed with error code 1.
+2024-07-19 00:37:07.834014 +0000 build-archlinux42: output: 
+2024-07-19 00:37:31.885566 +0000 > closing log
